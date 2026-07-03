@@ -1,0 +1,132 @@
+{
+  "manifest": {
+    "id": "doa-public-monster-library-fixture",
+    "name": "Public Monster Library Fixture",
+    "version": "0.0.1",
+    "sourceBook": {
+      "id": "public_monster_library_fixture",
+      "name": "Public Monster Library Fixture",
+      "required": false,
+      "derived": true
+    },
+    "licenseSummary": "Original DOA fixture data shaped like the future SRD/GCS package contract.",
+    "packageUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/converted/doa-monsters.json",
+    "dataUrl": "https://raw.githubusercontent.com/Zuljita/DungeonsOnAutomaticMonsters/main/converted/doa-monsters.json",
+    "sources": [
+      {
+        "id": "doa_fixture",
+        "name": "DOA fixture data",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Public Monster Library Fixture Copyright 2026 Zuljita"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "id": "public_fixture_clockwork_sentry",
+      "name": "Public Fixture Clockwork Sentry",
+      "pageRef": "PKG-FIXTURE",
+      "class": "Construct",
+      "classTags": ["construct"],
+      "tags": ["dangerous", "guarded", "constructed", "ancient"],
+      "iq": 8,
+      "appearance": "1",
+      "lair": null,
+      "treasure": {
+        "money": null,
+        "items": "salvageable gears",
+        "strategy": "Incidental",
+        "change": null,
+        "estimatedMoneyAverage": 150,
+        "estimatedItemAverage": 1,
+        "estimatedMoneyPerAppearance": 150
+      },
+      "size": {
+        "modifier": "0",
+        "heightSizeModifier": 0,
+        "hexes": "1 x 1",
+        "heightHexes": 2,
+        "lengthHexes": 1,
+        "widthHexes": 1
+      },
+      "grappling": {
+        "skill": 12,
+        "damage": "1d",
+        "controlMaximum": 12
+      },
+      "effectiveness": {
+        "offenseRating": 18,
+        "protectionRating": 20,
+        "combatEffectivenessRating": 38,
+        "treasureAdjustedCombatEffectiveness": 43,
+        "wanderingCombatEffectiveness": 38,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": 0.25,
+        "wanderingWeight": 1,
+        "lightSensitive": false
+      },
+      "stats": {
+        "attributes": {
+          "st": 12,
+          "dx": 11,
+          "iq": 8,
+          "ht": 12,
+          "hp": 14,
+          "will": 10,
+          "per": 10,
+          "fp": null,
+          "speed": 5.75,
+          "move": 5,
+          "dodge": 8,
+          "dr": 4
+        },
+        "attacks": [
+          {
+            "name": "Gear-edged slam",
+            "skill": 12,
+            "damage": "1d crushing",
+            "reach": "C,1",
+            "notes": "A simple original fixture attack used to test publishable stat export."
+          }
+        ],
+        "traits": ["Does not breathe", "Unliving"],
+        "skills": [
+          {
+            "name": "Observation",
+            "level": 11
+          }
+        ],
+        "notes": ["Original DOA fixture monster for validating public package stat transport."]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "sourceMonsterId": "clockwork-sentry-fixture",
+        "sourceName": "Clockwork Sentry Fixture",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Public Monster Library Fixture Copyright 2026 Zuljita",
+        "conversionVersion": "0.0.1",
+        "conversionNotes": ["Original fixture record used to test the public monster package contract."],
+        "manualReviewStatus": "approved",
+        "packageSourceId": "doa_fixture",
+        "license": "DOA fixture data; not third-party rules text",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "clockwork-sentry-fixture",
+        "publicStats": true,
+        "notes": "SRD-shaped fixture record used until reviewed SRD/GCS source data is imported."
+      },
+      "sourceBook": "public_monster_library_fixture",
+      "source": {
+        "workbook": "doa-public-monster-library-fixture@0.0.1",
+        "sheet": "doa_fixture",
+        "row": 1
+      }
+    }
+  ]
+}

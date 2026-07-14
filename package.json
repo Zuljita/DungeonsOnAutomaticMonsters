@@ -5,6 +5,13 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "type": "module",
   "scripts": {
+    "fetch:srds": "node scripts/fetch-srds.mjs",
+    "parse:srd-3-5": "node scripts/parse-srd-3-5.mjs",
+    "parse:srd-5-1": "node scripts/run-python-script.mjs scripts/parse-srd-5-1.py",
+    "parse:srds": "npm run parse:srd-3-5 && npm run parse:srd-5-1",
+    "convert:enraged-eggplant": "node scripts/run-python-script.mjs .agents/skills/convert-gurps-monsters-to-gcs/scripts/batch_convert_missing.py --overlap data/enraged-eggplant/srd-overlap.json --coverage data/enraged-eggplant/gcs-coverage.json --markdown data/enraged-eggplant/srd-overlap-monsters.md --output-dir converted/enraged-eggplant --selection all --library-root \"data/GCS Master Library\"",
+    "validate:gct-enraged-eggplant": "node scripts/run-python-script.mjs .agents/skills/convert-gurps-monsters-to-gcs/scripts/validate_gct.py converted/enraged-eggplant/gcs",
+    "validate:enraged-eggplant": "node scripts/validate-package.mjs converted/enraged-eggplant/doa-monsters.review-required.json --allow-review-required",
     "test": "node scripts/validate-package.mjs converted/doa-monsters.json"
   }
 }

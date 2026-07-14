@@ -1,0 +1,15 @@
+# Private/reference-only source material and local derived working files.
+data/
+
+# Generated EE conversion queue remains local until individual records are reviewed.
+converted/enraged-eggplant/
+
+# Defensive guards: SRD working corpora belong under data/, not tracked sources/.
+sources/srd-3-5/raw/
+sources/srd-3-5/parsed/
+sources/srd-5-1/raw/
+sources/srd-5-1/parsed/
+
+# Generated Python bytecode from the project-local conversion skill.
+__pycache__/
+*.py[cod]

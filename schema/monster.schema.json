@@ -24,12 +24,18 @@
           }
         },
         "licenseSummary": { "type": "string", "minLength": 1 },
+        "licenseUrl": { "type": "string", "minLength": 1 },
+        "noticeUrl": { "type": "string", "minLength": 1 },
         "packageUrl": { "type": ["string", "null"] },
         "dataUrl": { "type": ["string", "null"] },
         "sources": {
           "type": "array",
           "minItems": 1,
           "items": { "$ref": "#/$defs/source" }
+        },
+        "credits": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/credit" }
         }
       }
     },
@@ -40,17 +46,56 @@
     }
   },
   "$defs": {
+    "contentLicense": {
+      "enum": ["cc_by_4_0", "ogl_1_0a"]
+    },
+    "credit": {
+      "type": "object",
+      "required": ["name", "role", "scope", "creditLine"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "sourceTitle": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "creditLine": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 }
+      }
+    },
     "source": {
       "type": "object",
       "required": ["id", "name", "sourceSystem", "sourceLicense", "sourceUrl", "sourceCopyrightNotice"],
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
-        "sourceSystem": { "enum": ["srd_3_5", "srd_5_1", "gcs_public", "doa_fixture"] },
-        "sourceLicense": { "enum": ["ogl_1_0a", "cc_by_4_0", "gcs_public", "doa_authored"] },
+        "sourceSystem": { "enum": ["srd_3_5", "srd_5_1", "gcs_public", "gurps_4e_fan_conversion", "doa_fixture"] },
+        "sourceLicense": { "enum": ["ogl_1_0a", "cc_by_4_0", "gcs_public", "author_permission", "doa_authored"] },
+        "contentLicense": { "$ref": "#/$defs/contentLicense" },
+        "contentLicenseUrl": { "type": "string", "minLength": 1 },
         "sourceUrl": { "type": "string", "minLength": 1 },
-        "sourceCopyrightNotice": { "type": "string", "minLength": 1 }
-      }
+        "sourceCopyrightNotice": { "type": "string", "minLength": 1 },
+        "credits": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/credit" }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["sourceLicense"],
+            "properties": { "sourceLicense": { "const": "author_permission" } }
+          },
+          "then": {
+            "required": ["credits"],
+            "properties": { "credits": { "minItems": 1 } }
+          }
+        }
+      ]
     },
     "monster": {
       "type": "object",
@@ -98,9 +143,11 @@
         "notes"
       ],
       "properties": {
-        "kind": { "enum": ["workbook_metadata", "srd", "gcs_public", "doa_authored"] },
-        "sourceSystem": { "enum": ["srd_3_5", "srd_5_1", "gcs_public", "doa_fixture"] },
-        "sourceLicense": { "enum": ["ogl_1_0a", "cc_by_4_0", "gcs_public", "doa_authored"] },
+        "kind": { "enum": ["workbook_metadata", "srd", "gcs_public", "fan_authorized", "doa_authored"] },
+        "sourceSystem": { "enum": ["srd_3_5", "srd_5_1", "gcs_public", "gurps_4e_fan_conversion", "doa_fixture"] },
+        "sourceLicense": { "enum": ["ogl_1_0a", "cc_by_4_0", "gcs_public", "author_permission", "doa_authored"] },
+        "contentLicense": { "$ref": "#/$defs/contentLicense" },
+        "contentLicenseUrl": { "type": "string", "minLength": 1 },
         "sourceMonsterId": { "type": "string", "minLength": 1 },
         "sourceName": { "type": "string", "minLength": 1 },
         "sourceUrl": { "type": "string", "minLength": 1 },
@@ -109,12 +156,40 @@
         "conversionNotes": { "type": "array", "items": { "type": "string" } },
         "manualReviewStatus": { "enum": ["draft", "review_required", "approved", "rejected"] },
         "packageSourceId": { "type": "string", "minLength": 1 },
-        "license": { "type": ["string", "null"] },
+        "license": {
+          "type": ["string", "null"],
+          "description": "Legacy human-readable license note; use contentLicense and contentLicenseUrl for machine-readable release terms."
+        },
         "url": { "type": ["string", "null"] },
         "originalId": { "type": ["string", "null"] },
         "publicStats": { "const": true },
-        "notes": { "type": ["string", "null"] }
-      }
+        "notes": { "type": ["string", "null"] },
+        "credits": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/credit" }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["sourceLicense"],
+            "properties": { "sourceLicense": { "const": "author_permission" } }
+          },
+          "then": {
+            "required": ["credits"],
+            "properties": { "credits": { "minItems": 1 } }
+          }
+        },
+        {
+          "if": {
+            "required": ["manualReviewStatus"],
+            "properties": { "manualReviewStatus": { "const": "approved" } }
+          },
+          "then": {
+            "required": ["contentLicense", "contentLicenseUrl"]
+          }
+        }
+      ]
     }
   }
 }

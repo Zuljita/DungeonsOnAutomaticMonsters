@@ -49,7 +49,7 @@ const artByMonsterId = artRecordMap(artManifest);
 
 const publicPermissionUrl = "https://dungeonsonautomatic.com/data/monsters/enraged-eggplant-permission.txt";
 const publicDataUrl = `https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-${version}.json`;
-const publicArtBaseUrl = "https://dungeonsonautomatic.com/assets/monsters/enraged-eggplant";
+const publicArtBaseUrl = "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant";
 
 function publicArt(monster) {
   const record = artByMonsterId.get(monster.id);

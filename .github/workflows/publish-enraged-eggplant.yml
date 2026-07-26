@@ -1,0 +1,59 @@
+name: Publish Enraged Eggplant Monster Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: SemVer package version, for example 0.2.0
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version }}
+      RELEASE_TAG: monster-library-v${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Build approval-gated package
+        run: npm run promote:enraged-eggplant -- --version "$VERSION"
+      - name: Bundle generated monster art
+        run: |
+          cd art
+          zip -r ../enraged-eggplant-art.zip enraged-eggplant/README.md enraged-eggplant/image-manifest.json enraged-eggplant/portraits enraged-eggplant/tokens enraged-eggplant/hex-tokens
+      - name: Advance the stable package pointer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add converted/doa-monsters.json packages/latest/manifest.json
+          git commit -m "Publish Enraged Eggplant monster package ${VERSION}"
+          git push
+      - name: Create private source release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "$RELEASE_TAG"
+          "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
+          "enraged-eggplant-art.zip#AI-generated portraits, transparent top-down tokens, and flat-top hex tokens"
+          --title "Enraged Eggplant Monster Library ${VERSION}"
+          --notes "Approval-gated source artifact for mirroring to the public site."
+      - name: Ask public site to mirror the package
+        env:
+          GH_TOKEN: ${{ secrets.DOA_SITE_MONSTER_DISPATCH_TOKEN }}
+        run: >-
+          gh api repos/Zuljita/DungeonsOnAutomaticSite/dispatches
+          --method POST
+          --field event_type=monster_package_published
+          --field "client_payload[source_tag]=$RELEASE_TAG"
+          --field "client_payload[asset_name]=doa-monsters.json"
+          --field "client_payload[art_asset_name]=enraged-eggplant-art.zip"

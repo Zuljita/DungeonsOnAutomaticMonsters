@@ -1,3 +1,5 @@
+import { checkFieldShape } from "./review/field-policy.mjs";
+
 const PROVENANCE_KINDS = new Set([
   "workbook_metadata",
   "srd",
@@ -132,6 +134,10 @@ function validateMonster(monster, index, manifest, sourceIds, sourceById, monste
   requiredObject(monster.treasure, `${path}.treasure`, errors);
   requiredObject(monster.size, `${path}.size`, errors);
   requiredObject(monster.grappling, `${path}.grappling`, errors);
+  // lair/treasure/grappling always carry their full key set so a consumer can
+  // read a field without an existence check, and a null reads as "known absent"
+  // rather than "field forgotten". See review/policy/0.2.0-empty-field-policy.md.
+  errors.push(...checkFieldShape(monster, path));
   requiredObject(monster.encounter, `${path}.encounter`, errors);
   requiredObject(monster.source, `${path}.source`, errors);
   if (monster.sourceBook && manifest?.sourceBook?.id && monster.sourceBook !== manifest.sourceBook.id) {

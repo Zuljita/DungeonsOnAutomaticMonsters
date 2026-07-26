@@ -2,7 +2,14 @@
 data/
 
 # Generated EE conversion queue remains local until individual records are reviewed.
-converted/enraged-eggplant/
+# Matched per entry, not as a directory: git does not descend into an excluded
+# directory, so a negation inside one never takes effect.
+converted/enraged-eggplant/*
+# ...but the reviewed output and its checklist are tracked: they contain only
+# records that carry a review decision, and the publish workflow promotes from
+# the reviewed package on a clean checkout, where the local queue does not exist.
+!converted/enraged-eggplant/doa-monsters.reviewed.json
+!converted/enraged-eggplant/CHECKLIST.md
 
 # Defensive guards: SRD working corpora belong under data/, not tracked sources/.
 sources/srd-3-5/raw/

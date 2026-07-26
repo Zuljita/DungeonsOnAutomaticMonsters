@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - run: npm run review:verify
       - name: Build approval-gated package
         run: npm run promote:enraged-eggplant -- --version "$VERSION"
       - name: Build web thumbnails

@@ -13,8 +13,11 @@ This repository owns the publishable monster-data contract, conversion tools, va
 - `sources/srd-3-5/manifest.json` - 3.5-era SRD OGL source manifest.
 - `sources/enraged-eggplant/manifest.json` - author-authorized GURPS fan-conversion source manifest.
 - `converted/doa-monsters.json` - generated package output. The initial file is a DOA-authored contract fixture, not converted SRD content.
+- `converted/enraged-eggplant/doa-monsters.review-required.json` - 304 converted Enraged Eggplant candidates; never consumable until every included record is manually approved.
 - `packages/latest/manifest.json` - stable pointer metadata for consumers.
 - `scripts/validate-package.mjs` - no-dependency validation checks for package/provenance basics.
+- `scripts/build-enraged-eggplant-package.mjs` - approval-gated promotion into the stable public package contract.
+- `art/enraged-eggplant/` - LFS-backed portraits, transparent overhead tokens, flat-top hex tokens, prompts, and the image manifest for all 304 candidates.
 - `licenses/` - license boundary notes and required notice templates.
 - `CREDITS.md` - originator-credit policy and canonical structured credit lines.
 - `LICENSE.md` - repository-wide license map for data, software, and source-specific exceptions.
@@ -22,7 +25,9 @@ This repository owns the publishable monster-data contract, conversion tools, va
 
 ## Status
 
-Initial scaffold. The package format is intentionally usable before the full SRD conversion exists so the app and site can integrate against a stable contract.
+Before the first approved promotion, the stable package remains the contract fixture. The Enraged Eggplant conversion contains 304 structurally valid candidates, all currently marked `review_required`. Promotion refuses to build a public package until every candidate has `manualReviewStatus: "approved"`.
+
+The image library is complete independently of that mechanical-review gate: all 304 candidates have a portrait, transparent top-down token, and deterministic flat-top hex token.
 
 ## Licensing
 
@@ -80,3 +85,11 @@ Treat `converted/doa-monsters.json` as the public API. Converter internals can c
 ```bash
 npm test
 ```
+
+After mechanical review is complete, build the release artifact and update the stable pointer with:
+
+```bash
+npm run promote:enraged-eggplant -- --version 0.2.0
+```
+
+The promoted package rewrites private provenance links to the public attribution notice hosted by `DungeonsOnAutomaticSite`. SRD-name overlap remains record metadata only; the package keeps Enraged Eggplant's author-permitted GURPS mechanics in their own provenance category.

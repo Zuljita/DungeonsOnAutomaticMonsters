@@ -10,6 +10,26 @@ sources/srd-3-5/parsed/
 sources/srd-5-1/raw/
 sources/srd-5-1/parsed/
 
-# Generated Python bytecode from the project-local conversion skill.
+# Local generation inputs, scratch queues, and agent state.
+tmp/
+.agents/
+pending.json
+scratch.py
+
+# Rejected/alternate image generations are not release assets.
+art/enraged-eggplant/review/
+art/enraged-eggplant/portraits/*_v[0-9]*.png
+art/enraged-eggplant/tokens/*_v[0-9]*.png
+
+# Local-only recovery and experimental generation helpers.
+scripts/audit-codex-art.py
+scripts/generate-comfy-art.py
+scripts/qa-images.py
+scripts/reset-by-time.py
+scripts/reset-tokens.py
+scripts/restore-codex-finals.py
+
+# Generated Python bytecode.
 __pycache__/
+scripts/__pycache__/
 *.py[cod]

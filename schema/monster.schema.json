@@ -28,6 +28,7 @@
         "noticeUrl": { "type": "string", "minLength": 1 },
         "packageUrl": { "type": ["string", "null"] },
         "dataUrl": { "type": ["string", "null"] },
+        "art": { "$ref": "#/$defs/artManifest" },
         "sources": {
           "type": "array",
           "minItems": 1,
@@ -116,11 +117,78 @@
         "effectiveness": { "type": "object", "required": ["combatEffectivenessRating", "threatTier"] },
         "encounter": { "type": "object" },
         "stats": { "type": "object", "required": ["attributes", "attacks", "traits", "skills", "notes"] },
+        "art": { "$ref": "#/$defs/monsterArt" },
         "provenance": { "$ref": "#/$defs/provenance" },
         "sourceBook": { "type": "string", "minLength": 1 },
         "sourceBooks": { "type": "array", "items": { "type": "string" } },
         "source": { "type": "object" }
       }
+    },
+    "artManifest": {
+      "type": "object",
+      "required": ["manifestUrl", "baseUrl", "generator", "styleId", "portraitCount", "tokenCount", "hexTokenCount"],
+      "properties": {
+        "manifestUrl": { "type": "string", "format": "uri" },
+        "baseUrl": { "type": "string", "format": "uri" },
+        "generator": { "type": "string", "minLength": 1 },
+        "styleId": { "type": "string", "minLength": 1 },
+        "portraitCount": { "type": "integer", "minimum": 1 },
+        "tokenCount": { "type": "integer", "minimum": 1 },
+        "hexTokenCount": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "monsterArt": {
+      "type": "object",
+      "required": ["kind", "generator", "styleId", "portrait", "token", "hexToken"],
+      "properties": {
+        "kind": { "const": "ai_generated" },
+        "generator": { "type": "string", "minLength": 1 },
+        "styleId": { "type": "string", "minLength": 1 },
+        "portrait": { "$ref": "#/$defs/artAsset" },
+        "token": { "$ref": "#/$defs/tokenAsset" },
+        "hexToken": { "$ref": "#/$defs/hexTokenAsset" }
+      }
+    },
+    "artAsset": {
+      "type": "object",
+      "required": ["url", "alt", "mediaType", "width", "height", "promptSha256"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "alt": { "type": "string", "minLength": 1 },
+        "mediaType": { "const": "image/png" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "promptSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "tokenAsset": {
+      "allOf": [
+        { "$ref": "#/$defs/artAsset" },
+        {
+          "type": "object",
+          "required": ["view", "grid", "transparent", "footprint"],
+          "properties": {
+            "view": { "const": "top_down" },
+            "grid": { "const": "flat_top_hex" },
+            "transparent": { "const": true },
+            "footprint": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "hexTokenAsset": {
+      "allOf": [
+        { "$ref": "#/$defs/tokenAsset" },
+        {
+          "type": "object",
+          "required": ["shape", "derivedFrom", "derivationStyleId"],
+          "properties": {
+            "shape": { "const": "flat_top_hex" },
+            "derivedFrom": { "const": "token" },
+            "derivationStyleId": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
     },
     "provenance": {
       "type": "object",

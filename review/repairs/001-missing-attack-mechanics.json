@@ -23,6 +23,7 @@
             "damage": "Binding ST 10",
             "reach": "8-yard emanation",
             "autoHit": true,
+            "bindingSt": 10,
             "notes": "No attack roll. Emanation covering an 8-yard radius, usable only where the area holds dense vegetation. Victims caught in the area are bound at effective ST 10 and stay bound for roughly 100 seconds; escape is a Quick Contest against the Binding's ST. Persistent, so the binding is not consumed by one escape."
           }
         ]
@@ -117,6 +118,7 @@
             "damage": null,
             "reach": "C",
             "autoHit": false,
+            "afflictionPoints": 103,
             "notes": "Requires one minute of preparation in contact with the victim. The swarm parasitically possesses an SM-2 or larger creature and controls all its actions, or animates a corpse of up to 18 HP. An inhabited corpse grabs, lifts, strikes and throws at ST equal to its HP, uses the swarm's DX, and has Move equal to 18 minus the corpse's HP. Resolve as Possession with the Parasitic enhancement."
           }
         ]
@@ -140,6 +142,7 @@
             "damage": "Constriction Attack, effective ST 24 (thrust 2d+1 crushing)",
             "reach": "C",
             "autoHit": true,
+            "bindingSt": 24,
             "notes": "No attack roll is necessary; the quarry may defend only by dodging and retreating. Moving through an SM+2 or smaller creature is an automatic slam. A victim who fails to dodge is pinned if smaller than the pudding, or grappled if equal or larger. Breaking free is a Quick Contest of ST (only every 10 seconds if pinned; on a 17 or 18 the victim cannot escape unaided); the pudding has +10 ST when pinning and +5 when grappling. Engulfed victims cannot breathe and begin to suffocate when out of breath. It can pin or grapple one foe at a time; others are pushed along in front of it unless they win a Quick Contest of ST. It may constrict an engulfed victim every turn at effective ST 24."
           },
           {
@@ -176,6 +179,7 @@
             "damage": "Constriction Attack, effective ST 12 (thrust 1d-1 crushing)",
             "reach": "C",
             "autoHit": true,
+            "bindingSt": 12,
             "notes": "No attack roll is necessary; the quarry may defend only by dodging and retreating. Moving through an SM-1 or smaller creature is an automatic slam. A victim who fails to dodge is pinned if smaller than the ooze, or partly stuck and grappled if equal or larger. Breaking free is a Quick Contest of ST. The ooze may constrict an engulfed victim at effective ST 12."
           }
         ]
@@ -219,6 +223,7 @@
             "damage": "Constriction Attack, effective ST 30 (thrust 3d crushing)",
             "reach": "C",
             "autoHit": true,
+            "bindingSt": 30,
             "notes": "No attack roll is necessary; the quarry may defend only by dodging and retreating. Moving through an SM+1 or smaller creature is an automatic slam. A victim who fails to dodge is pinned if smaller than the cube, or partly stuck and grappled if equal or larger. Breaking free is a Quick Contest of ST (only every 10 seconds if pinned; on a 17 or 18 the victim cannot escape unaided); the cube has +10 ST when pinning and +5 when grappling. Engulfed victims cannot breathe and begin to suffocate when out of breath. It may constrict an engulfed victim every turn at effective ST 30."
           },
           {
@@ -235,6 +240,7 @@
             "damage": null,
             "reach": "C",
             "autoHit": true,
+            "afflictionPoints": 22,
             "notes": "Contact agent, always on, no attack roll. Bare skin touching the cube must roll against HT or be paralysed for 3 seconds per point of margin of failure, then stunned with a HT roll once per second to recover. Underwater the slime is diluted and victims resist at +3."
           }
         ]

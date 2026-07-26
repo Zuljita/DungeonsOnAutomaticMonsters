@@ -99,11 +99,48 @@ export function pickBestAttack(attacks) {
   return best;
 }
 
+/**
+ * The best disabling ability on a record, or null.
+ *
+ * The rating model keeps `affliction` separate from `attack` precisely because a
+ * save-or-disable ability is rarely the creature's best damage roll: a
+ * cockatrice's petrification does no damage at all and would never be picked as
+ * the best attack, yet it is the entire reason the creature is dangerous. Scored
+ * independently, it contributes whichever attack wins the damage comparison.
+ *
+ * One lever per construction. A Binding is priced by its ST, which is the term
+ * the model provides for it; everything else is priced by the point cost the
+ * source states for the construction, at the model's standard 1-per-5-points.
+ * Using both on one Binding would price the same ability twice.
+ */
+export function pickBestAffliction(attacks) {
+  let best = null;
+  let bestValue = 0;
+  for (const attack of attacks ?? []) {
+    const bindingSt = numberOrNull(attack.bindingSt) ?? 0;
+    const abilityPoints = bindingSt > 0 ? 0 : Math.max(0, numberOrNull(attack.afflictionPoints) ?? 0);
+    if (bindingSt === 0 && abilityPoints === 0) continue;
+    const value = bindingSt > 0 ? bindingSt : Math.ceil(abilityPoints / 5);
+    if (value > bestValue) {
+      bestValue = value;
+      best = {
+        name: attack.name,
+        enhancementPercent: 0,
+        abilityPoints,
+        bindingSt,
+        usesFatigueOrSpell: attack.usesFatigueOrSpell === true,
+      };
+    }
+  }
+  return best;
+}
+
 export function combatProfileFromStats(stats, label) {
   const bestAttack = pickBestAttack(stats.attacks);
   const attributes = stats.attributes ?? {};
   return {
     label,
+    affliction: pickBestAffliction(stats.attacks),
     attackSkill: bestAttack
       ? { bestSkill: numberOrNull(bestAttack.skill), ranged: isRangedReach(bestAttack.reach) }
       : undefined,
@@ -205,12 +242,18 @@ function attackSkillContribution(profile) {
 function afflictionContribution(profile) {
   const affliction = profile.affliction;
   if (!affliction) return { id: "affliction", label: "Affliction", value: 0 };
-  let value = affliction.enhancementPercent / 5;
-  const notes = [`enhancement ${affliction.enhancementPercent}% / 5`];
-  if ((affliction.terrorOrTurningPoints ?? 0) > 0) {
-    const terror = Math.ceil(affliction.terrorOrTurningPoints / 5);
-    value += terror;
-    notes.push(`terror/turning +${terror}`);
+  const enhancementPercent = affliction.enhancementPercent ?? 0;
+  let value = enhancementPercent / 5;
+  const notes = [affliction.name ? `${affliction.name}:` : "affliction:"];
+  if (enhancementPercent > 0) notes.push(`enhancement ${enhancementPercent}% / 5`);
+  // `abilityPoints` and `terrorOrTurningPoints` are the same lever: the model
+  // prices an ability it cannot otherwise measure at 1 per 5 character points,
+  // the way it already prices durability, healing, and narrow-DR traits.
+  const points = (affliction.abilityPoints ?? 0) + (affliction.terrorOrTurningPoints ?? 0);
+  if (points > 0) {
+    const scored = Math.ceil(points / 5);
+    value += scored;
+    notes.push(`${points} points / 5 = +${scored}`);
   }
   if ((affliction.bindingSt ?? 0) > 0) {
     value += affliction.bindingSt;

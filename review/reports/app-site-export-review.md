@@ -45,6 +45,8 @@ matrix cannot silently stop covering a family:
 | Disabling the package source book removes every package record | pass |
 | `CER = OR + PR` for every record (the app's own validator rule) | pass — 304/304 |
 | `resolveMonsterCer` returns the package's stored rating | pass — no record is silently recomputed by the consumer |
+| Every stored rating is reproducible from stats by the app's own calculator | pass — 304/304, so the package and the app cannot drift on how a hazard is priced |
+| Save-or-disable hazards contribute to their record's offense rating | pass — 82 records carry a priced disabling ability, none scoring zero |
 | Lair, treasure and grappling are null and keep their full key set | pass — 304/304 |
 | Fixed-seed encounter placement is deterministic | pass — seeds 7, 20260726 and 99 each place the same monster twice |
 | Placed encounters carry approved status, public-stat provenance and full stats | pass |
@@ -77,7 +79,8 @@ now carries a download row with the three assets, named `<monster-id>-portrait.p
 | --- | --- |
 | `tests/enraged-eggplant-package-smoke.ts` | New. The whole review above, as a runnable smoke. |
 | `scripts/run-test-tier.ts`, `package.json` | Register `ee-package:smoke` in the deterministic tier. |
-| `src/modules/module-types.ts` | `MonsterProvenance` gained `credits`, `contentLicense` and `contentLicenseUrl`. The published contract requires structured originator credit on every author-permission record, and the consumer type did not model it, so consumers could not reproduce the credit line without an unchecked cast. |
+| `src/modules/module-types.ts` | `MonsterProvenance` gained `credits`, `contentLicense` and `contentLicenseUrl`. The published contract requires structured originator credit on every author-permission record, and the consumer type did not model it, so consumers could not reproduce the credit line without an unchecked cast. `MonsterAttack` gained `autoHit`, `afflictionPoints`, `bindingSt` and `usesFatigueOrSpell`. |
+| `src/modules/cer-calculator.ts` | `combatProfileFromMonsterStats` now reads those fields, so a monster whose danger is an aura or a save-or-disable ability rates for it when the app derives a rating from stats. `AfflictionProfile` gained `abilityPoints`, scored at 1 per 5 points like the model's other trait-point terms. The Lady Ion worked example is unchanged. |
 
 ## What still needs a person
 

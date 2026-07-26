@@ -2,12 +2,25 @@
 
 import test from "node:test";
 import assert from "node:assert/strict";
-import { effectivenessFromStats, cerFromOrPr, threatTierFromCer, parseDamageExpression } from "../review/cer.mjs";
+import {
+  cerFromOrPr,
+  combatProfileFromStats,
+  effectivenessFromStats,
+  parseDamageExpression,
+  pickBestAffliction,
+  threatTierFromCer,
+} from "../review/cer.mjs";
 import { applyRepairs, getPath, setPath, validateRepairFile } from "../review/repairs.mjs";
 import { recordHash, validateEntry, effectiveDecisions } from "../review/ledger.mjs";
 import { buildRecord, assertNoLoss, CONTENT_LICENSE } from "../review/build-candidate.mjs";
 import { checkDeferredPolicy, checkFieldShape } from "../review/field-policy.mjs";
-import { deriveEncounter, hasDisablingAttack, recordFlags, selectBatch } from "../review/queue.mjs";
+import {
+  deriveEncounter,
+  hasDisablingAttack,
+  hasUnratedDisablingAttack,
+  recordFlags,
+  selectBatch,
+} from "../review/queue.mjs";
 import { validatePackage } from "../package-validation.mjs";
 import { fixtureDecision, fixtureManifestEntry, fixturePackage, fixtureRecord } from "./fixtures.mjs";
 
@@ -46,6 +59,63 @@ test("CER: ranged reach earns the accuracy credit", () => {
   const melee = effectivenessFromStats({ ...base, attacks: [{ name: "Ray", skill: 12, damage: "1d burning", reach: "C" }] });
   const ranged = effectivenessFromStats({ ...base, attacks: [{ name: "Ray", skill: 12, damage: "1d burning", reach: "100/200" }] });
   assert.equal(ranged.offenseRating - melee.offenseRating, 2);
+});
+
+test("CER: a save-or-disable hazard rates even when it does no damage", () => {
+  // A petrifying gaze is never a creature's best damage roll — it has none. The
+  // affliction term is scored separately so it still counts.
+  const attributes = { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 };
+  const withoutGaze = effectivenessFromStats({
+    attributes,
+    attacks: [{ name: "Bite", skill: 10, damage: "1d cutting", reach: "C" }],
+    traits: [],
+  });
+  const withGaze = effectivenessFromStats({
+    attributes,
+    attacks: [
+      { name: "Bite", skill: 10, damage: "1d cutting", reach: "C" },
+      { name: "Petrifying Gaze", skill: null, damage: null, reach: "Cone 15", afflictionPoints: 76 },
+    ],
+    traits: [],
+  });
+  // 76 points / 5, rounded up.
+  assert.equal(withGaze.offenseRating - withoutGaze.offenseRating, 16);
+  // The damage term is untouched: the gaze did not become the "best attack".
+  assert.equal(withGaze.protectionRating, withoutGaze.protectionRating);
+});
+
+test("CER: a Binding is priced by its ST, and never also by its point cost", () => {
+  const attributes = { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 };
+  const engulf = { name: "Engulf", skill: null, damage: null, reach: "C", bindingSt: 24, afflictionPoints: 159 };
+  const profile = combatProfileFromStats({ attributes, attacks: [engulf], traits: [] });
+  assert.equal(profile.affliction.bindingSt, 24);
+  // Point cost is dropped, not added to the ST: 159/5 + 24 would be 56.
+  assert.equal(profile.affliction.abilityPoints, 0);
+  // The whole offense rating is the binding: no skill, no damage, FP and Move at baseline.
+  assert.equal(effectivenessFromStats({ attributes, attacks: [engulf], traits: [] }).offenseRating, 24);
+});
+
+test("CER: the strongest disabling ability is the one that scores", () => {
+  const attacks = [
+    { name: "Punch", skill: 10, damage: "1d-2 crushing", reach: "C" },
+    { name: "Babble", skill: null, damage: null, reach: null, afflictionPoints: 21 },
+    { name: "Touch of Insanity", skill: null, damage: null, reach: "C", afflictionPoints: 48 },
+  ];
+  assert.equal(pickBestAffliction(attacks).name, "Touch of Insanity");
+  assert.equal(pickBestAffliction([]), null);
+  assert.equal(pickBestAffliction([{ name: "Punch", skill: 10, damage: "1d" }]), null);
+});
+
+test("CER: an ability that costs fatigue contributes half", () => {
+  const attributes = { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 };
+  const base = { name: "Roar", skill: null, damage: null, reach: "8 yards", afflictionPoints: 40 };
+  const free = effectivenessFromStats({ attributes, attacks: [base], traits: [] }).offenseRating;
+  const costly = effectivenessFromStats({
+    attributes,
+    attacks: [{ ...base, usesFatigueOrSpell: true }],
+    traits: [],
+  }).offenseRating;
+  assert.equal(free - costly, 4);
 });
 
 test("CER: floors at 1 and bands the threat tier", () => {
@@ -257,7 +327,25 @@ test("encounter derivation: swarms are single creatures and disabling attackers 
   const petrifier = fixtureRecord();
   petrifier.stats.attacks = [{ name: "Petrification", skill: null, damage: null, reach: "C", notes: "Affliction 1 (HT), paralysis variant." }];
   assert.equal(hasDisablingAttack(petrifier), true);
+  assert.equal(hasUnratedDisablingAttack(petrifier), true);
   assert.equal(deriveEncounter(petrifier, "minor").averageNumberAppearing, 2);
+});
+
+test("encounter derivation: the cap lifts once the rating can see the ability", () => {
+  // The appearing-count cap compensates for an ability the rating cannot price.
+  // Once the affliction term scores it, the compensation is no longer warranted.
+  const rated = fixtureRecord();
+  rated.stats.attacks = [{
+    name: "Petrification",
+    skill: null,
+    damage: null,
+    reach: "C",
+    afflictionPoints: 56,
+    notes: "Affliction 1 (HT), paralysis variant.",
+  }];
+  assert.equal(hasDisablingAttack(rated), true);
+  assert.equal(hasUnratedDisablingAttack(rated), false);
+  assert.equal(deriveEncounter(rated, "minor").averageNumberAppearing, 6);
 });
 
 test("encounter derivation: an immunity trait is not mistaken for a disabling attack", () => {

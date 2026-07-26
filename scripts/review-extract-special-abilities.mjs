@@ -53,6 +53,14 @@ const NON_RATED = [
   "Obscure",
   "Innate Attack",
 ];
+/**
+ * Constructions whose effect can take a character out of the fight. These are
+ * what the affliction term exists to price; a plain damaging aura is already
+ * priced by the damage term.
+ */
+const DISABLING =
+  /Affliction|Terror|Possession|Dominance|Binding|Paralysis|Petrif|Attribute Penalty|Hallucinat|Disadvantage,|Coma|Stun/i;
+
 const SECTION_LABELS = new Set([
   "Advantages", "Disadvantages", "Traits", "Notes", "Features", "Perks", "Quirks",
   "Skills", "Creature Type", "Attribute Modifiers", "Secondary Characteristic Modifiers",
@@ -91,9 +99,18 @@ for (const section of source.split(/\n(?=## )/)) {
   const added = [];
   const riders = [];
   const abilityNotes = [];
+  const annotations = [];
 
   for (const construction of constructions(header)) {
-    if (existing.includes(construction.key)) continue;
+    if (existing.includes(construction.key)) {
+      // The parser already captured this ability, but not the inputs the
+      // affliction term needs to score it. A basilisk's petrifying gaze
+      // survived conversion as an attack and still rated zero, because it does
+      // no damage. Annotate it in place rather than adding a duplicate entry.
+      const rating = ratingFields(construction);
+      if (Object.keys(rating).length > 0) annotations.push({ construction, rating });
+      continue;
+    }
     const resolution = prose.get(construction.label.toLowerCase())
       ?? summarize(construction);
     if (construction.followUp) {
@@ -107,6 +124,7 @@ for (const section of source.split(/\n(?=## )/)) {
         damage: `${construction.damage} ${construction.damageType}`,
         reach: construction.reach,
         autoHit: construction.autoHit,
+        ...ratingFields(construction),
         notes: resolution,
       });
     } else if (construction.offensive) {
@@ -116,6 +134,7 @@ for (const section of source.split(/\n(?=## )/)) {
         damage: null,
         reach: construction.reach,
         autoHit: false,
+        ...ratingFields(construction),
         notes: resolution,
       });
     } else {
@@ -123,11 +142,30 @@ for (const section of source.split(/\n(?=## )/)) {
     }
   }
 
-  if (added.length === 0 && riders.length === 0 && abilityNotes.length === 0) continue;
+  if (added.length === 0 && riders.length === 0 && abilityNotes.length === 0 && annotations.length === 0) continue;
 
   const set = {};
-  if (added.length > 0) {
+  if (added.length > 0 || annotations.length > 0) {
     const attacks = structuredClone(record.stats.attacks);
+    for (const { construction, rating } of annotations) {
+      const target = matchingAttack(attacks, construction.key);
+      if (target) {
+        Object.assign(target, rating);
+        continue;
+      }
+      // Nothing carries it, so the "already present" match was a false positive:
+      // a disadvantage or perk that names the ability without granting it, like
+      // the allip's "Uncontrollable Appetite (Touch of Insanity)". Add it.
+      attacks.push({
+        name: construction.label,
+        skill: null,
+        damage: construction.damageType ? `${construction.damage} ${construction.damageType}` : null,
+        reach: construction.reach,
+        autoHit: construction.damageType ? construction.autoHit : false,
+        ...rating,
+        notes: prose.get(construction.label.toLowerCase()) ?? summarize(construction),
+      });
+    }
     for (const rider of riders) {
       const parent = attacks.find(attack => rider.construction.followUp.toLowerCase().includes(attack.name.toLowerCase()))
         ?? added.find(attack => rider.construction.followUp.toLowerCase().includes(attack.name.toLowerCase()));
@@ -150,26 +188,49 @@ for (const section of source.split(/\n(?=## )/)) {
     if (attached) set["stats.attacks"] = attacks;
   }
 
-  const rated = added.filter(attack => attack.damage !== null);
+  const damaging = added.filter(attack => attack.damage !== null);
+  const scored = [...added, ...annotations.map(entry => entry.rating)]
+    .filter(entry => entry.bindingSt > 0 || entry.afflictionPoints > 0);
+  const restoredNames = [...added.map(a => a.name), ...riders.map(r => r.construction.label)];
+  const restoredCount = added.length + riders.length + abilityNotes.length;
+
+  const rationaleParts = [];
+  if (restoredCount > 0) {
+    rationaleParts.push(
+      `The conversion's attack parser only matches "Name (skill): damage" paragraphs, so ${restoredCount} ability `
+      + `construction(s) stated by the source produced nothing: `
+      + `${[...restoredNames, ...abilityNotes.map(note => note.split(":")[0])].join(", ")}. `
+      + `Restored from the source with its own resolution text.`,
+    );
+  }
+  if (annotations.length > 0) {
+    rationaleParts.push(
+      `${annotations.length} ability construction(s) survived conversion but carried no rating input, so they scored `
+      + `zero despite being the reason the creature is dangerous: `
+      + `${annotations.map(entry => entry.construction.label).join(", ")}. Annotated in place with the point cost or `
+      + `Binding ST the source states.`,
+    );
+  }
+  rationaleParts.push(
+    damaging.length > 0 || scored.length > 0
+      ? `${damaging.length} damaging and ${scored.length} disabling construction(s) now contribute to the rating.`
+      : `No rating change: none of these is a construction the CER path can price.`,
+  );
+
   repairs.push({
     recordId: record.id,
     monster: record.name,
-    rationale:
-      `The conversion's attack parser only matches "Name (skill): damage" paragraphs, so `
-      + `${added.length + riders.length + abilityNotes.length} ability construction(s) stated by the source `
-      + `produced nothing: ${[...added.map(a => a.name), ...riders.map(r => r.construction.label), ...abilityNotes.map(note => note.split(":")[0])].join(", ")}. `
-      + `Restored from the source with its own resolution text. `
-      + (rated.length > 0
-        ? `${rated.length} damaging construction(s) are rated; afflictions, terror, binding, possession and utility powers are runnable but unrated.`
-        : `None of them is a damaging construction, so the rating is unchanged.`),
+    rationale: rationaleParts.join(" "),
     ...(Object.keys(set).length > 0 ? { set } : {}),
     ...(abilityNotes.length > 0 ? { appendStatNotes: abilityNotes } : {}),
     appendConversionNotes: [
-      `Issue #5: restored ${added.length + riders.length + abilityNotes.length} special ability construction(s) `
-      + `the attack parser dropped (${[...added.map(a => a.name), ...riders.map(r => r.construction.label)].join(", ") || "utility powers"}). `
-      + (rated.length > 0
-        ? `${rated.length} damaging construction(s) now contribute to the offense rating.`
-        : `No rated change: none of the restored abilities is a damaging attack the CER path can price.`),
+      `Issue #5: ${restoredCount} special ability construction(s) restored`
+      + `${restoredNames.length > 0 ? ` (${restoredNames.join(", ")})` : ""}`
+      + `${annotations.length > 0 ? ` and ${annotations.length} annotated with the source's stated cost` : ""}. `
+      + (scored.length > 0
+        ? `${scored.length} save-or-disable construction(s) are scored through the affliction term at the source's `
+          + `stated point cost, or at Binding ST where the source builds the ability as a Binding.`
+        : `No disabling construction on this record carries a cost the affliction term can score.`),
     ],
   });
 }
@@ -196,14 +257,40 @@ if (report) {
   console.log(`Wrote ${OUT_PATH}: ${repairs.length} record(s), ${skipped.length} construction(s) skipped.`);
 }
 
+/**
+ * Rating inputs for a restored ability.
+ *
+ * A save-or-disable ability contributes to the offense rating through the
+ * model's affliction term, which is scored independently of the best attack —
+ * so a petrification that does no damage still counts. One lever per
+ * construction: a Binding is priced by its ST, everything else by the point cost
+ * the source states, at the model's standard 1-per-5-points.
+ */
+function ratingFields(construction) {
+  if (construction.bindingSt > 0) {
+    return {
+      bindingSt: construction.bindingSt,
+      ...(construction.usesFatigueOrSpell ? { usesFatigueOrSpell: true } : {}),
+    };
+  }
+  if (construction.disabling && construction.points > 0) {
+    return {
+      afflictionPoints: construction.points,
+      ...(construction.usesFatigueOrSpell ? { usesFatigueOrSpell: true } : {}),
+    };
+  }
+  return {};
+}
+
 /** Named power constructions in a monster's header block. */
 function* constructions(header) {
   for (const raw of header.split("\n")) {
     const line = raw.trim().replace(/^[->\s]+/, "");
-    const match = line.match(/^([A-Z][A-Za-z'’()/,\- ]{2,44}?)\s*(?:\[[-\d]+\])?\s*:\s*(.+)$/);
+    const match = line.match(/^([A-Z][A-Za-z'’()/,\- ]{2,44}?)\s*(?:\[(-?\d+)\])?\s*:\s*(.+)$/);
     if (!match) continue;
     const label = match[1].trim();
-    const body = match[2].trim();
+    const labelCost = match[2];
+    const body = match[3].trim();
     if (SECTION_LABELS.has(label)) continue;
 
     const damaging = Object.entries(DAMAGING).find(([kind]) => body.includes(kind));
@@ -218,6 +305,14 @@ function* constructions(header) {
       ?? body.match(/Area Effect,\s*(\d+\s*yards?)/i)
       ?? body.match(/(Cone\s*\d+)/i);
 
+    // The construction's own point cost, stated either after the label
+    // ("Inhabit [103]: …") or at the end of the line ("… [56].").
+    const trailingCosts = [...body.matchAll(/\[(-?\d+)\]/g)].map(entry => Number(entry[1]));
+    const points = labelCost !== undefined && labelCost !== null
+      ? Number(labelCost)
+      : (trailingCosts.at(-1) ?? 0);
+    const bindingMatch = body.match(/\bBinding\s+(\d+)/);
+
     yield {
       label,
       key: label.toLowerCase().split("(")[0].trim(),
@@ -228,6 +323,10 @@ function* constructions(header) {
       followUp: followUpMatch ? followUpMatch[1].trim() : null,
       offensive: Boolean(damaging) || ["Affliction", "Internal Affliction", "Terror", "Binding", "Possession", "Dominance"].some(kind => body.includes(kind)),
       autoHit: isAutoHit(body),
+      points,
+      bindingSt: bindingMatch ? Number(bindingMatch[1]) : 0,
+      disabling: DISABLING.test(body),
+      usesFatigueOrSpell: /Costs Fatigue/i.test(body),
     };
   }
 }
@@ -272,6 +371,12 @@ function summarize(construction) {
  * names petrification without granting it, and would otherwise mask the fact
  * that its petrification aura went missing.
  */
+/** The attack that carries a named ability: by name first, then by its notes. */
+function matchingAttack(attacks, key) {
+  return attacks.find(attack => attack.name.toLowerCase().includes(key))
+    ?? attacks.find(attack => [attack.notes, attack.damage].filter(Boolean).join(" ").toLowerCase().includes(key));
+}
+
 function attackHaystack(record) {
   return [
     ...record.stats.attacks.flatMap(attack => [attack.name, attack.notes, attack.damage]),

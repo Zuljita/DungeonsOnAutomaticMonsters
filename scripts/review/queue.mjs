@@ -115,10 +115,11 @@ export function deriveEncounter(record, threatTier) {
   else if (gregarious && threatTier === "minor") averageNumberAppearing = 6;
 
   // A creature that can remove a player character from the fight is not fodder,
-  // whatever its rating says. The CER path prices damage and durability, not
-  // save-or-disable effects, so the correction belongs here — in how many turn
-  // up — rather than in a rating that would then no longer equal OR + PR.
-  const disabling = hasDisablingAttack(record);
+  // whatever its rating says. Where the disabling ability carries the rating
+  // inputs the affliction term needs, the rating now sees it and no correction
+  // is warranted. The cap remains only for abilities that are still unpriced —
+  // the source states no point cost or Binding ST to score them by.
+  const disabling = hasUnratedDisablingAttack(record);
   if (disabling && averageNumberAppearing > 2) averageNumberAppearing = 2;
 
   // Weaker creatures turn up more often on a wandering roll than apex threats.
@@ -138,8 +139,21 @@ export function deriveEncounter(record, threatTier) {
  * style entries that name a disabling effect without granting one.
  */
 export function hasDisablingAttack(record) {
+  return disablingAttacks(record).length > 0;
+}
+
+/** A disabling attack the affliction term cannot score. */
+export function hasUnratedDisablingAttack(record) {
+  return disablingAttacks(record).some(attack => !isRatedAffliction(attack));
+}
+
+export function isRatedAffliction(attack) {
+  return Number(attack.bindingSt) > 0 || Number(attack.afflictionPoints) > 0;
+}
+
+function disablingAttacks(record) {
   const pattern = /affliction|paraly|petrif|possession|energy drain|attribute penalty|\bterror\b|binding|\bsleep\b|\bstun\b|\bcharm\b|hallucinat/i;
-  return (record.stats?.attacks ?? []).some(attack =>
+  return (record.stats?.attacks ?? []).filter(attack =>
     pattern.test([attack.name, attack.damage, attack.notes].filter(Boolean).join(" ")));
 }
 

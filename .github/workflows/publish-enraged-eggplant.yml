@@ -44,7 +44,7 @@ jobs:
           git add converted/doa-monsters.json packages/latest/manifest.json
           git commit -m "Publish Enraged Eggplant monster package ${VERSION}"
           git push
-      - name: Create private source release
+      - name: Create source release
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
@@ -52,7 +52,12 @@ jobs:
           "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
           --title "Enraged Eggplant Monster Library ${VERSION}"
           --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
+      # Optional convenience only. Without DOA_SITE_MONSTER_DISPATCH_TOKEN the
+      # release above is still complete, and the site's "Mirror Public Monster
+      # Package" workflow can be run manually with the release tag. Do not fail a
+      # finished publish because the notification could not be sent.
       - name: Ask public site to mirror the package
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.DOA_SITE_MONSTER_DISPATCH_TOKEN }}
         run: >-

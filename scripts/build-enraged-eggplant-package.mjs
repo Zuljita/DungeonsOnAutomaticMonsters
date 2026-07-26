@@ -53,11 +53,13 @@ const artByMonsterId = artRecordMap(artManifest);
 const publicPermissionUrl = "https://dungeonsonautomatic.com/data/monsters/enraged-eggplant-permission.txt";
 
 /**
- * Structured credits carry their own url, and it points at the permission record
- * in this repository. This repository is private, so a credit link that survives
- * promotion is a dead link for every public consumer and a pointer at a private
- * source. Rewrite credit urls to the public permission record everywhere they
- * appear: manifest, manifest sources, and each record's provenance.
+ * Structured credits carry their own url, and it points at a `blob/main` path in
+ * this repository. A published package should not depend on this repository's
+ * file layout: the link breaks the moment the permission record is renamed or
+ * moved, and it sends consumers to source control rather than to the canonical
+ * public record. Rewrite credit urls to the site-hosted permission text
+ * everywhere they appear: manifest, manifest sources, and each record's
+ * provenance.
  */
 function publicCredits(credits) {
   return (credits ?? []).map(credit => ({ ...credit, url: publicPermissionUrl }));

@@ -27,10 +27,15 @@ jobs:
       - run: npm test
       - name: Build approval-gated package
         run: npm run promote:enraged-eggplant -- --version "$VERSION"
-      - name: Bundle generated monster art
+      - name: Build web thumbnails
         run: |
-          cd art
-          zip -r ../enraged-eggplant-art.zip enraged-eggplant/README.md enraged-eggplant/image-manifest.json enraged-eggplant/portraits enraged-eggplant/tokens enraged-eggplant/hex-tokens
+          pip install pillow
+          python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
+      - name: Upload art to public R2 bucket
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/upload-art-to-r2.mjs
       - name: Advance the stable package pointer
         run: |
           git config user.name "github-actions[bot]"
@@ -44,9 +49,8 @@ jobs:
         run: >-
           gh release create "$RELEASE_TAG"
           "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
-          "enraged-eggplant-art.zip#AI-generated portraits, transparent top-down tokens, and flat-top hex tokens"
           --title "Enraged Eggplant Monster Library ${VERSION}"
-          --notes "Approval-gated source artifact for mirroring to the public site."
+          --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
       - name: Ask public site to mirror the package
         env:
           GH_TOKEN: ${{ secrets.DOA_SITE_MONSTER_DISPATCH_TOKEN }}
@@ -56,4 +60,3 @@ jobs:
           --field event_type=monster_package_published
           --field "client_payload[source_tag]=$RELEASE_TAG"
           --field "client_payload[asset_name]=doa-monsters.json"
-          --field "client_payload[art_asset_name]=enraged-eggplant-art.zip"

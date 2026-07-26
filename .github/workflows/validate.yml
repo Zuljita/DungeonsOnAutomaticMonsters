@@ -16,3 +16,6 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      # The conversion queue is untracked, so this validates the review ledger
+      # and reports "skipped" for the parts that need the local base package.
+      - run: npm run review:verify

@@ -54,18 +54,19 @@ matrix cannot silently stop covering a family:
 | Every record exposes portrait, overhead token and hex token URLs | pass |
 | GM Markdown names the monster and exposes CER | pass |
 | Player Markdown suppresses CER and review provenance | pass |
-| No record links to a private repository URL | pass, **after a fix** — see below |
+| No record links back into source control | pass, **after a fix** — see below |
 | Every attack entry carries GM-facing resolution text | pass — 304/304 |
 
 ## Two defects this review found and fixed
 
-**1. Private repository URLs survived promotion into the public package.**
+**1. Source-control URLs survived promotion into the public package.**
 `scripts/build-enraged-eggplant-package.mjs` rewrote `provenance.sourceUrl` and `provenance.url` to the public
 permission record, but not the `url` on structured credits. Every one of the 304 records shipped a
-`provenance.credits[].url` pointing at `github.com/Zuljita/DungeonsOnAutomaticMonsters`, a private repository —
-a dead link for every public consumer and a pointer at a private source. The same applied to
-`manifest.credits[]` and `manifest.sources[].credits[]`. Promotion now rewrites credit URLs everywhere they
-appear, and the smoke asserts no private URL survives.
+`provenance.credits[].url` pointing at a `blob/main` path in `github.com/Zuljita/DungeonsOnAutomaticMonsters`.
+A published package should not depend on this repository's file layout: that link breaks the moment the
+permission record is renamed or moved, and it sends consumers to source control rather than to the canonical
+public record. The same applied to `manifest.credits[]` and `manifest.sources[].credits[]`. Promotion now
+rewrites credit URLs everywhere they appear, and the smoke asserts none survives.
 
 **2. The public site rendered three images but offered no downloads.**
 `monsters.html` displayed the portrait, overhead token and hex token in the record dialog, but there was no way

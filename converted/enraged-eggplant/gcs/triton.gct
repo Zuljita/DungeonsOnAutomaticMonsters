@@ -1,0 +1,216 @@
+{
+	"version": 5,
+	"id": "BapDSJYrZyDoV2Q6Y",
+	"traits": [
+		{
+			"id": "TJFKMHXEA_LRgpZ5y",
+			"name": "Triton",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Triton [Monster Manual, page 245]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Triton [Monster Manual, page 245]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 51 points; exact GCS library substitutions produce 51 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t2CSmtY_F3aJPTlWf",
+					"name": "Amphibious",
+					"reference": "B40,P42",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Amphibious (Accessibility, Only skill penalties, -50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 10,
+					"modifiers": [
+						{
+							"id": "mnaaTFKsmH9M64KW5",
+							"name": "Accessibility",
+							"reference": "B110,P99",
+							"cost_adj": "-1%",
+							"levels": 50,
+							"local_notes": "Accessibility, Only skill penalties"
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tvZsu69xf_3RnlKVD",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mt_W4nZDzm-nN3IBr",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "toGfELhZGQQTqxyU0",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Triton [Monster Manual, page 245]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe (Gills, -50%)",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tiyDj1zwBbidAxTtG",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 2,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "thG37thVf3SOJZkDK",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tyufZ7iQDxHWXgwuz",
+					"name": "Nictitating Membrane",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Nictitating Membrane 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to all HT rolls concerned with eye damage",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 1,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tof7m9H6Xr8vAFlf9",
+					"name": "Pressure Support",
+					"reference": "B77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Pressure Support 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tc5XIxl9gSU8ufe4z",
+					"name": "Speak Underwater",
+					"reference": "B87,P78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Speak Underwater\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tsDOQlMbnQ8VbyWrZ",
+					"name": "No Legs (Semi-Aquatic)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Semi-Aquatic)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 51
+			}
+		}
+	]
+}

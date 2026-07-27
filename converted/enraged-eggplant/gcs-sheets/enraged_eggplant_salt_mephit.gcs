@@ -1,0 +1,1001 @@
+{
+	"version": 5,
+	"id": "An6X9kAu2EFo4Zenc",
+	"total_points": 76,
+	"profile": {
+		"name": "Salt Mephit",
+		"title": "Outsider (Earth)",
+		"player_name": "Dungeons on Automatic",
+		"SM": -1
+	},
+	"settings": {
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"base": "($dx + $ht) / 4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"base": "Math.floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"value": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"value": "Math.round($fp / 3)",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"value": "$fp - 1"
+					},
+					{
+						"state": "Rested",
+						"value": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"value": "Math.round(-$hp * 5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"value": "Math.round(-$hp * 4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"value": "Math.round(-$hp * 3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"value": "Math.round(-$hp * 2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"value": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"value": "Math.round($hp / 3)",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"value": "$hp - 1"
+					},
+					{
+						"state": "Healthy",
+						"value": "$hp"
+					}
+				]
+			}
+		],
+		"damage_progression": "basic_set",
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 6
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 12
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 10
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 4
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0
+		},
+		{
+			"attr_id": "dx",
+			"adj": 0
+		},
+		{
+			"attr_id": "iq",
+			"adj": 0
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0
+		},
+		{
+			"attr_id": "will",
+			"adj": 0
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0
+		},
+		{
+			"attr_id": "per",
+			"adj": 0
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0
+		}
+	],
+	"traits": [
+		{
+			"id": "ThXQMIM5RWsCh3tNM",
+			"name": "Salt Mephit",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Salt Mephit [Monster Manual, page 184]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 76 points; exact GCS library substitutions produce 76 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tDNk_J1cjNgDMvn-4",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tkxOZyfx0Oe1zOzb5",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tcF45SMYMPVWsD5wg",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tHVJ_ed9EjCgcl0DI",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "thfZK0MxBHbDr1_2v",
+					"name": "Blunt Claws",
+					"reference": "B42,MA42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blunt Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"base_points": 3,
+					"weapons": [
+						{
+							"id": "wGKpwAPTK_WiV8WBz",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1",
+								"modifier_per_die": 1
+							},
+							"usage": "Punch",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 (+1 per die) cr"
+							}
+						},
+						{
+							"id": "wo02dGcA3xKo8kxwU",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tkeHIRvnYVKNJcZ4l",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t3esgrNQ1MQ37Na7W",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tYFeu_yUmvKG7pTgQ",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Cannot Hover, -15%; Winged, -25%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "m58FAY1Ck7RCrEPrB",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "msNk6BpqvhcCghKu5",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						}
+					],
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "tflBlxHNAmKYsD7kM",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tQl1eYdbEb1J_MpG9",
+					"name": "Regeneration",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Regeneration (Fast; Accessibility, Only if in an arid environment, -30%)",
+					"base_points": 35,
+					"calc": {
+						"points": 35
+					}
+				},
+				{
+					"id": "tmQBXoSELIsZTBSY1",
+					"name": "Breath Weapon",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Breath Weapon: Small Piercing Attack 1d (Costs Fatigue, 1 FP, -5%; Jet, +0%; Magical, -10%; Side Effect, Itching, +60%) [5].",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tw1mpZ3-732IOPQZx",
+					"name": "Drain Moisture",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Drain Moisture: Fatigue Attack 1d (Area Effect, 4 yards, +100%; Cosmic, Irresistible Attack, +300%; Costs Fatigue, 4 FP, -20%; Dehydration, +20%; Emanation, -20%; Magical, -10%; No Signature, +20%) [49].",
+					"base_points": 49,
+					"calc": {
+						"points": 49
+					}
+				},
+				{
+					"id": "tZqNPEyx24ezvz8px",
+					"name": "Brittle",
+					"reference": "DFM13",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Brittle\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -15 point(s); library calculation is -15.",
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tZcE8W2opNk7N_Kcq",
+					"name": "Curious",
+					"reference": "B129",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Curious (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll when presented with an interesting item or situation",
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tCV3o0zzvUaKaEFbe",
+					"name": "Skinny",
+					"reference": "B18",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Skinny\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "disguise"
+							},
+							"amount": -2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "shadowing"
+							},
+							"amount": -2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to ST vs. knockback",
+							"amount": -2
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"qualifier": {
+									"compare": "at_most",
+									"qualifier": 14
+								},
+								"which": "ht"
+							}
+						]
+					},
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tQXzdk5np44ZXXmwb",
+					"name": "Vulnerability (Sound, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Salt Mephit [Monster Manual, page 184]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Sound, x2)",
+					"base_points": -20,
+					"calc": {
+						"points": -20
+					}
+				}
+			],
+			"calc": {
+				"points": 76
+			},
+			"melee_weapons": [
+				{
+					"id": "Ai1vGEN6LMUmE9ANO",
+					"damage": {
+						"type": "cr",
+						"base": "1d-2"
+					},
+					"usage": "Blunt Claws",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 0
+						}
+					],
+					"usage_notes": "Blunt Claws (10): thrust 1d-2 crushing (KYOS: 1d-3 crushing), Reach C."
+				},
+				{
+					"id": "Am2dwubtE76X4gvyw",
+					"damage": {
+						"type": "pi-",
+						"base": "1d"
+					},
+					"usage": "Breath Weapon",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 3
+						}
+					],
+					"usage_notes": "Breath Weapon (13): A 10-yard jet of salt crystals erupts from the mephit’s mouth. It uses Innate Attack (Breath) to hit. Don’t apply range penalties; treat this as a long melee weapon rather than a ranged attack. It does 1d small piercing damage, and has a 1/2D range of 5 yards. If any damage penetrates the target’s DR, he must make a HT roll, at -1 per 2 points of injury or suffer from itching skin and eyes for (20 – HT) minutes. The target is at -2 to DX for the duration of the itch. Scratching for one full second relieves the itch, but the target can do nothing else while scratching. This ability costs 1 FP to use."
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"id": "AnoGXPK6GjxheB2rb",
+			"name": "Brawling",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		},
+		{
+			"id": "AQZgccI_7pt4el9Ci",
+			"name": "Innate Attack (Breath)",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 10 in the source conversion."
+		},
+		{
+			"id": "Aq1IARl8A4WTE6duI",
+			"name": "Innate Attack (Gaze)",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 10 in the source conversion."
+		}
+	],
+	"notes": [
+		{
+			"id": "AEu9LRRdfbCmD6cAf",
+			"text": "Typical Stats from the reviewed package: ST 9, DX 10, IQ 9, HT 11, HP 9, WILL 9, PER 9, FP 11, SPEED 5.25, MOVE 5, DODGE 8, DR 1. GCS derives its own values by applying the ancestry; where the two differ, the package's Typical Stats are what the Dungeons on Automatic encounter tables use."
+		},
+		{
+			"id": "A8VWpxZxH2BhnNHDV",
+			"text": "Encounter rating: CER 5 (offense 5, protection 0), threat tier minor, appearing 4."
+		},
+		{
+			"id": "A35Z_XM6WSTIdfOrc",
+			"text": "Drain Moisture (1d fatigue), reach 4 yards: By spending 4 FP, a salt mephit can drain moisture from the area around him. Every creature within 4 yards of him takes 1d fatigue damage. Treat FP lost to the attack identically to FP lost to dehydration for all purposes, notably recovery."
+		},
+		{
+			"id": "ADdyx9jrQuQoiBEm6",
+			"text": "GCS ancestry draft: gcs/salt-mephit.gct"
+		},
+		{
+			"id": "AZIPAuUnlpb6glmpT",
+			"text": "Source template total: 76 points."
+		},
+		{
+			"id": "A9PCOMsBorMabDP19",
+			"text": "Library-rebuilt template total: 76 points."
+		},
+		{
+			"id": "AARnW9_AuzJ4CGfj6",
+			"text": "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path."
+		},
+		{
+			"id": "AKw0ETGfqGgj9F3vK",
+			"text": "Review attacks, special abilities, encounter frequency, treasure, grappling, and GCS modifiers before approval."
+		},
+		{
+			"id": "AKyaU2xdD26rVBqXj",
+			"text": "Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission."
+		}
+	],
+	"created_date": "1970-01-01T00:00:00Z",
+	"modified_date": "1970-01-01T00:00:00Z"
+}

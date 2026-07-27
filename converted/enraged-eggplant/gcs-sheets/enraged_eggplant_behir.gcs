@@ -1,0 +1,1651 @@
+{
+	"version": 5,
+	"id": "A8RaB0XOm2J5KqV9t",
+	"total_points": 373,
+	"profile": {
+		"name": "Behir",
+		"title": "Magical Beast",
+		"player_name": "Dungeons on Automatic",
+		"SM": 5
+	},
+	"settings": {
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"base": "($dx + $ht) / 4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"base": "Math.floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"value": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"value": "Math.round($fp / 3)",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"value": "$fp - 1"
+					},
+					{
+						"state": "Rested",
+						"value": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"value": "Math.round(-$hp * 5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"value": "Math.round(-$hp * 4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"value": "Math.round(-$hp * 3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"value": "Math.round(-$hp * 2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"value": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"value": "Math.round($hp / 3)",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"value": "$hp - 1"
+					},
+					{
+						"state": "Healthy",
+						"value": "$hp"
+					}
+				]
+			}
+		],
+		"damage_progression": "basic_set",
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 6
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 12
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 10
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 4
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0
+		},
+		{
+			"attr_id": "dx",
+			"adj": 0
+		},
+		{
+			"attr_id": "iq",
+			"adj": 0
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0
+		},
+		{
+			"attr_id": "will",
+			"adj": 0
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0
+		},
+		{
+			"attr_id": "per",
+			"adj": 0
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0
+		}
+	],
+	"traits": [
+		{
+			"id": "TUPeEyK0Yuv9Stlyo",
+			"name": "Behir",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Behir [Monster Manual, page 25]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 369 points; exact GCS library substitutions produce 373 points. Library adjustment: +4.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t4te2fhEVu22o-FHm",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+25 (Size Modifier, -50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 125 point(s); library calculation is 125.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 25,
+					"modifiers": [
+						{
+							"id": "m52NCaCtpHRvhfJlG",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 5
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 125,
+						"current_level": 25
+					}
+				},
+				{
+					"id": "t2oxDWdN9tpqcIaHi",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tdhjy5aehKNAckBwr",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t_WINBSM-emltj_vs",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tH63WEtil_zuR5_D8",
+					"name": "Increased Basic Speed",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Speed +0.25\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_speed",
+							"amount": 0.25,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tFVXEvvg5YGLeV6wy",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tk_warbvnl8Q28D8E",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tI23tffiwL8f73S1O",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tU4TWrpargmYHtkwy",
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: FP+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 12.",
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 12,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t3SwAN9mBpSWkXeZD",
+					"name": "Constriction Attack",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Constriction Attack\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: If you succeed on a grapple against an opponent no larger than your own SM, on your next turn, and each successive turn, roll a Quick Contest of your ST vs. your victim’s ST or HT, whichever is higher. If you win, your victim takes damage equal to your margin of victory; otherwise, no damage is inflicted",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tFDvCYA-aVvgf7zmd",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tf1NMA3WhIjM_Ds3x",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 4 (Partial, Skull, -70%; Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 4 point(s); library calculation is 4.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"modifiers": [
+						{
+							"id": "mOtLgwDsfdDMzPnwG",
+							"name": "Partial",
+							"reference": "B47",
+							"cost_adj": "-10%",
+							"levels": 7,
+							"local_notes": "Partial, Skull"
+						},
+						{
+							"id": "mFka9hITVeLOjeMS7",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 4,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tSmAo5X4evACPfulF",
+					"name": "Discriminatory Smell",
+					"reference": "B49,P47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Discriminatory Smell\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that utilizes sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t9aNBW-TgHso6GKVv",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "ttavL93ysdPihyKJX",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tgQhUrK0mWuT0w2Wa",
+					"name": "Extra Legs (Twelve Legs)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Extra Legs (Twelve Legs)",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tqy0SJIg6dQmrU6Qt",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tFvOF4Chzel2wCKJB",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "t8iVn_3MfHtag_YoI",
+					"name": "Nictitating Membrane",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Nictitating Membrane 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to all HT rolls concerned with eye damage",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tOYpELXl_5Nc-w_uY",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tU9F4c4zAJRUdnzrg",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tTVwf1Mr2wu_C1QLk",
+					"name": "Reduced Consumption",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Reduced Consumption 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t9rmP-FE1gun9bDk9",
+					"name": "Sharp Claws",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"weapons": [
+						{
+							"id": "wU-l6_iZTK1302FF0",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Slash",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						},
+						{
+							"id": "w1VjEBywsgXnn5N9t",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tDBvnzCW2WT69wF3i",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "w-9N50p6SM3BUY70a",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tijYDGUrZbQhvTTi6",
+					"name": "Super Climbing",
+					"reference": "B89,P79",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Super Climbing 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6. Library note: Climbing Move: @New Climbing Move@",
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 6,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tWISPTCOhus8sP5-y",
+					"name": "Breathe Electricity",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Breathe Electricity: Natural Weapon (Burning; Cannot Parry, -40%; Cone 1, +60%; Costs Fatigue, 2 FP, -10%; Hidden, +20%; Increased 1/2D, 2x, +5%; Intangible, +50%; Magical, -10%; Ranged, +100%; Reduced Damage, -2 per die, -60%; Reduced Range, 1/5, -20%; Side Effect, Stunning, +50%; Single, -20%; Surge, Arcing, +100%) [17].",
+					"base_points": 17,
+					"calc": {
+						"points": 17
+					}
+				},
+				{
+					"id": "tErWZnt3RqW26lDL6",
+					"name": "Electricity Resistance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Electricity Resistance [65]: DR 20 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Electricity, -40%; Tough Skin, -40%) [50] + Immunity to Electrical Conduction [5] + Immunity to Noxious Electrical Effects [10].",
+					"base_points": 65,
+					"calc": {
+						"points": 65
+					}
+				},
+				{
+					"id": "tBJATJDeOwslmkz2G",
+					"name": "Bad Grip",
+					"reference": "B123",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Bad Grip 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to tasks that require a firm grip (max 3 levels)",
+							"amount": -2,
+							"per_level": true
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "no fine manipulators"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": -10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tjvii57V28zWD41Kr",
+					"name": "Ham-Fisted",
+					"reference": "B138",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Ham-Fisted 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "artist"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "jeweler"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "knot-tying"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "leatherworking"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "lockpicking"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "pickpocket"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "sewing"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "sleight of hand"
+							},
+							"amount": -3,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "surgery"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "machinist"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "mechanic"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "fast-draw"
+							},
+							"amount": -3
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from others where being tidy or well-groomed would matter",
+							"amount": -1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "to any Influence roll where being tidy or well-groomed would matter",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "high manual dexterity"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tFy6f2Nu3zIYFrxPS",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t0b-jJt4YkdnKJMaQ",
+					"name": "Intolerance (Dragons)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Intolerance (Dragons)",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tucQ6ndSm57aQ7jaV",
+					"name": "Loner",
+					"reference": "B142",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Loner (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tInI35VrGWNl-7S0P",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t4zlry3kOb95I3O0x",
+					"name": "Short Arms",
+					"reference": "DW96",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Short Arms\nNative library match: Discworld Roleplaying Game/Discworld Roleplaying Game Traits (Discworld Roleplaying Game Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tIDaK3OK8XtyFKCQd",
+					"name": "Scales",
+					"reference": "PU2:12",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Scales\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tDiuME5Q2FfVeMPtH",
+					"name": "Early Maturation 7",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Behir [Monster Manual, page 25]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Early Maturation 7",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 373
+			},
+			"melee_weapons": [
+				{
+					"id": "ASf_Oy0GDLYxv-gNh",
+					"damage": {
+						"type": "cut",
+						"base": "5d-1"
+					},
+					"usage": "Sharp Claws",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 2
+						}
+					],
+					"usage_notes": "Sharp Claws (12): thrust 5d-1 cutting (KYOS: 6d+1 cutting), Reach C."
+				},
+				{
+					"id": "AL1eIYaPRy6Uuyzh1",
+					"damage": {
+						"type": "cut",
+						"base": "5d-1"
+					},
+					"usage": "Sharp Teeth",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 2
+						}
+					],
+					"usage_notes": "Sharp Teeth (12): thrust 5d-1 cutting (KYOS: 6d+1 cutting), Reach C."
+				},
+				{
+					"id": "A9fc_9mL_DuXvWL_h",
+					"damage": {
+						"type": "burn",
+						"base": "1d+2"
+					},
+					"usage": "Breathe Electricity",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 4
+						}
+					],
+					"usage_notes": "Breathe Electricity (14): The behir breathes out a bolt of lightning, dealing thrust 1d+2 burning surge damage (KYOS: 2d+1) as large-area injury. Wearing any metal armor anywhere means having DR 1 against it, if that would be worse for the victim. Anyone wounded must make a HT roll at -1 per 2 HP of injury or be stunned, rolling against HT each turn thereafter to recover. This is a cone attack that uses rules from Area and Spreading Attacks (pp. B413-414). The cone is 1-yard wide and has a length of 7 yards (ST/5). Each use costs 2 FP. It is possible to make the cone wider by using the rules from Cones of Power (GURPS Dungeon Fantasy Monsters 4: Dragons, p. 10)."
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"id": "AwKzJCG-B5WZhkkh9",
+			"name": "Brawling",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		},
+		{
+			"id": "ATOfyxcylvqI6Vh53",
+			"name": "Innate Attack (Breath)",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 14 in the source conversion."
+		},
+		{
+			"id": "AJhfLXdqcpcRYSmw_",
+			"name": "Tracking",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		},
+		{
+			"id": "AjOFPoWeuJaWTwMNX",
+			"name": "Wrestling",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		}
+	],
+	"notes": [
+		{
+			"id": "AuBatWf-xg1hTdPTf",
+			"text": "Typical Stats from the reviewed package: ST 35, DX 10, IQ 9, HT 13, HP 35, WILL 11, PER 11, FP 17, SPEED 6, MOVE 8, DODGE 9, DR 6. GCS derives its own values by applying the ancestry; where the two differ, the package's Typical Stats are what the Dungeons on Automatic encounter tables use."
+		},
+		{
+			"id": "A4sh9uOpUTA92Qntd",
+			"text": "Encounter rating: CER 75 (offense 36, protection 39), threat tier major, appearing 1."
+		},
+		{
+			"id": "AhR7duAimDpNrpyXh",
+			"text": "GCS ancestry draft: gcs/behir.gct"
+		},
+		{
+			"id": "AhXYgOgCyoh9KCKv9",
+			"text": "Source template total: 369 points."
+		},
+		{
+			"id": "AhovrGJHjJoI0AdYB",
+			"text": "Library-rebuilt template total: 373 points."
+		},
+		{
+			"id": "AXXnKJS-rDosCWoos",
+			"text": "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path."
+		},
+		{
+			"id": "AOwY5R5j12w9_4fDz",
+			"text": "Review attacks, special abilities, encounter frequency, treasure, grappling, and GCS modifiers before approval."
+		},
+		{
+			"id": "AyvUy9Ovnk0szu4F2",
+			"text": "Exact GCS library matches change the template by +4 point(s)."
+		},
+		{
+			"id": "AtbWqCTLYbiMQboBd",
+			"text": "Size 12 hexes."
+		},
+		{
+			"id": "AHzFyxZqj40LFvfTr",
+			"text": "Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission."
+		}
+	],
+	"created_date": "1970-01-01T00:00:00Z",
+	"modified_date": "1970-01-01T00:00:00Z"
+}

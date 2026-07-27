@@ -1,0 +1,584 @@
+{
+	"version": 5,
+	"id": "BFGkCcXZLIoqussIj",
+	"traits": [
+		{
+			"id": "T04x0FMQZvZCDDJ3V",
+			"name": "War Pony",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): War Pony [Monster Manual, page 277]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: War Pony [Monster Manual, page 277]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -31 points; exact GCS library substitutions produce -31 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tfObjg90k0opg_opd",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+8 (No Fine Manipulators, -40%; Size Modifier, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 32 point(s); library calculation is 32.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 8,
+					"modifiers": [
+						{
+							"id": "macHFgLu-gf6wq5Sz",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "mNl0PTY3Nnbd1oXS5",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 2
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 32,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tcLgbMRHkdOyr53mF",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -120 point(s); library calculation is -120.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -120,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tnqnkcoZtdXBQcWq8",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tYuU8c4NG9J5-lb57",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "teBY39k0jDTgdbEge",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "t9KlZ6QLiRzJ65vB2",
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: FP+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tCjk1P-_d9tMs1VZ6",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tDwHQZv2ZcxWWsYYK",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mzr-lcWveXfIWojJp",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t8GivEC_FE9Uy20CW",
+					"name": "Enhanced Move 1 (Ground)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): War Pony [Monster Manual, page 277]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Enhanced Move 1 (Ground)",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tY5Do6Ssvq_3STmw2",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extra Legs (Four Legs)\nNative library match: After the End/After the End Mutations (After the End Mutations.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tevZG6wkqvLP91jGg",
+					"name": "Hooves",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Hooves\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"base_points": 3,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"foot"
+							],
+							"amount": 1
+						}
+					],
+					"weapons": [
+						{
+							"id": "w3OsgIRZrBeWK9wxw",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Trample",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tf_Qmtc7EiCu9-Sfa",
+					"name": "Lifting ST",
+					"reference": "B65,P58",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Lifting ST 3 (Size Modifier, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mcmJzhoUd3BtKqXPQ",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 2
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"limitation": "lifting_only",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 8,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tKK2TmT7Qj4RfXgST",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 4 point(s); library calculation is 4.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 4,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tA81YxAFI8G1Vl_ep",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tNoSSweCL_PUJTYtP",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 1 (Cold)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1. Library note: Cold",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 1,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tl1kTp_a9XsA2cd9g",
+					"name": "Ultrahearing",
+					"reference": "B94,P51",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Ultrahearing\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tJWib64Jtuo3WRC1y",
+					"name": "Domestic Animal",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): War Pony [Monster Manual, page 277]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Domestic Animal",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "t-nAQPMoE54iH8Bbw",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t5wq9CpW_j2SXQo8J",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tymozMLQov50EpDoW",
+					"name": "Restricted Diet (Herbivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): War Pony [Monster Manual, page 277]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Herbivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "teqmfOl9py1pF7B0y",
+					"name": "Short Lifespan",
+					"reference": "B154",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Short Lifespan 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tg-CQTDcX6SbVIlyg",
+					"name": "Weak Bite",
+					"reference": "B161",
+					"tags": [
+						"Animal",
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Weak Bite\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -2 point(s); library calculation is -2.",
+					"base_points": -2,
+					"weapons": [
+						{
+							"id": "wEQ3jtM5qUiYB-YeE",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1",
+								"modifier_per_die": -2
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 (-2 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": -2
+					}
+				},
+				{
+					"id": "tC_E7QDW8fZN0zs6L",
+					"name": "Fur",
+					"reference": "B101",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fur\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				}
+			],
+			"calc": {
+				"points": -31
+			}
+		}
+	]
+}

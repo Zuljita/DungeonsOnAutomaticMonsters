@@ -1,0 +1,425 @@
+{
+	"version": 5,
+	"id": "BSzWk7BatffpQUqbD",
+	"traits": [
+		{
+			"id": "TSoQ-Ygb_UITU4yVt",
+			"name": "Ice Mephit",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Ice Mephit [Monster Manual, page 182]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 103 points; exact GCS library substitutions produce 103 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "thbnetrCKOR-Jm8Ua",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST-3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tet8tziVFJA65knW9",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tPahyeNkT0gvDX_Dx",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tilyJS5Dwv77GO60F",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t1eahm13MZ0YDnHUY",
+					"name": "Blunt Claws",
+					"reference": "B42,MA42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blunt Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"base_points": 3,
+					"weapons": [
+						{
+							"id": "waZ20Npt4jQVHONCc",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1",
+								"modifier_per_die": 1
+							},
+							"usage": "Punch",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 (+1 per die) cr"
+							}
+						},
+						{
+							"id": "w_w33BWMKjMYmxAb5",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tpcI_b9C3EVFUOJ1-",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tLnx4SUxO5zcztBBR",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Cannot Hover, -15%; Winged, -25%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mffdyiyG11tzC-wRr",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "mAQyeayL4elAz-hr9",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						}
+					],
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "t5_5wbetliqn8-iew",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tpMHPy4D0alpz5bgo",
+					"name": "Regeneration",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Regeneration (Fast; Accessibility, Only if the ambient temperature is 32°F or below, -40%)",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tuZUkeQBbrZAyPawk",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 4 (Cold)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 4 point(s); library calculation is 4. Library note: Cold",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 4,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tq1XpSPdFok-3Pe66",
+					"name": "Cold Resistance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Cold Resistance [60]: DR 20 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Cold, -40%; Tough Skin, -40%) [50] + Immunity to Noxious Cold Effects [10].",
+					"base_points": 60,
+					"calc": {
+						"points": 60
+					}
+				},
+				{
+					"id": "tUQAvNeGBgiy9JNdJ",
+					"name": "Breath Weapon",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Breath Weapon: Small Piercing Attack 1d (Costs Fatigue, 1 FP, -5%; Jet, +0%; Magical, -10%; Side Effect, -2 to DX, +70%) [5].",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tqR_s9kf8sJHO3CKI",
+					"name": "Chill Metal",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Chill Metal: Affliction 1 (HT; Accessibility, Only on metal objects, -30%; Advantage, Chill Metal, +50%; Costs Fatigue, 3 FP, -15%; Fixed Duration, +0%; Magical, -10%; Malediction 2, +150%; No Signature, +20%) [27]. Note: “Chill Metal” is Burning Attack 1 (Aura, +80%; Magical, -10%; Melee Attack, Reach C, -30%; No Incendiary Effect, -10%; Side Effect, DX-2 and Numb, +90%) [5].",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tsk-5mo4EjtePJWSa",
+					"name": "Curious",
+					"reference": "B129",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Curious (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll when presented with an interesting item or situation",
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tpt65iR7AJEBN0mIN",
+					"name": "Skinny",
+					"reference": "B18",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Skinny\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "disguise"
+							},
+							"amount": -2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "shadowing"
+							},
+							"amount": -2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to ST vs. knockback",
+							"amount": -2
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"qualifier": {
+									"compare": "at_most",
+									"qualifier": 14
+								},
+								"which": "ht"
+							}
+						]
+					},
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t_zHPSMQMxhIF94zC",
+					"name": "Vulnerability (Fire, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Fire, x2)",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tDv8yPVQt5DnqCxVi",
+					"name": "Point reconciliation (unparsed source construction)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ice Mephit [Monster Manual, page 182]",
+					"tags": [
+						"Review Required",
+						"Source Reconciliation"
+					],
+					"local_notes": "Source construction: Automated source children total 81; published source template total 103. Replace this adjustment after resolving grouped abilities, replacements, unusual cost notation, or a source arithmetic error.",
+					"base_points": 22,
+					"calc": {
+						"points": 22
+					}
+				}
+			],
+			"calc": {
+				"points": 103
+			}
+		}
+	]
+}

@@ -1,0 +1,615 @@
+{
+	"version": 5,
+	"id": "BpSY_YvSFCLmi0vUG",
+	"traits": [
+		{
+			"id": "TQF6iLpK9kDVtdIa0",
+			"name": "Mastiff",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Mastiff [Races of Faerun, page 174]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Mastiff [Races of Faerun, page 174]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -48 points; exact GCS library substitutions produce -48 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tj8JMk2Fk0aP-3rB3",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2 (No Fine Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mv88lritwPF3C1j_j",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tO7Nt0j2l-xZ52dRk",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -120 point(s); library calculation is -120.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -120,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tZwMv3kBARepai42Q",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tA7b8MOAADwwAeWQe",
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: FP+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tpRNHRIGE4xCEjvY-",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tOVdA__wHF-bziF6t",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+8\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 8,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tsqnceZX4BIx6i7U0",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tAhvSbIgk7xxX66EX",
+					"name": "Acute Taste and Smell 3",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Mastiff [Races of Faerun, page 174]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Acute Taste and Smell 3",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tpiB6vVU6lGKvcIgt",
+					"name": "Discriminatory Smell",
+					"reference": "B49,P47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Discriminatory Smell\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that utilizes sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tFzyIzX16GJcpEG4A",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mg8mUC4hsPiUYrusM",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tKi2DsFNRdk1eLch_",
+					"name": "Enhanced Move 0.5 (Ground)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Mastiff [Races of Faerun, page 174]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Enhanced Move 0.5 (Ground)",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tnrRgUE7D6mpEH9w-",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extra Legs (Four Legs)\nNative library match: After the End/After the End Mutations (After the End Mutations.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "td1KhXPkTUV6SNyjU",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tqCd1gmr5B3OdiiW3",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tNAFoyLazqMGoWLOs",
+					"name": "Reduced Consumption",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Reduced Consumption 2 (Cast-Iron Stomach, -50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mTTbsKFmtLArCy_pY",
+							"name": "Cast-Iron Stomach",
+							"reference": "B80",
+							"cost_adj": "-50%"
+						}
+					],
+					"calc": {
+						"points": 2,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t4QKsMCepy12T7sPa",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "w-04Vu3nhwh1EBMUE",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "teWJmYOJe7_gC-KXP",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 1 (Cold)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1. Library note: Cold",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 1,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tAU_EDZd_9nTyGuqv",
+					"name": "Ultrahearing",
+					"reference": "B94,P51",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Ultrahearing\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tyF20vTt1PD7YHebs",
+					"name": "Bloodlust",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Bloodlust (9)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15. Library note: You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
+					"cr": 9,
+					"base_points": -10,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tAbpS3vJR5jkCWygr",
+					"name": "Domestic Animal",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Mastiff [Races of Faerun, page 174]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Domestic Animal",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tR8cHyH-hS8y12KIQ",
+					"name": "Gluttony",
+					"reference": "B137",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Gluttony (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tgRJgtqhyV3mn7nmk",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tWyMu2NDP3oRVQKBY",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tt83Hl6s2sdibGG5A",
+					"name": "Short Lifespan",
+					"reference": "B154",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Short Lifespan 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tlVLf6ki3geug1HVo",
+					"name": "Stubbornness",
+					"reference": "B157",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Stubbornness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from others",
+							"amount": -1
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tkysvpT9pvpYcePBy",
+					"name": "Fur",
+					"reference": "B101",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fur\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tb-tjENGwmVf-Pywh",
+					"name": "Born Biter 2",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Mastiff [Races of Faerun, page 174]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Born Biter 2",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": -48
+			}
+		}
+	]
+}

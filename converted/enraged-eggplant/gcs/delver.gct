@@ -1,0 +1,488 @@
+{
+	"version": 5,
+	"id": "BleXKqaE2bhIDCwWH",
+	"traits": [
+		{
+			"id": "Tw27meTWJPaPgJGwy",
+			"name": "Delver",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Delver [Monster Manual, page 39]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 279 points; exact GCS library substitutions produce 279 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "toKJ9nCkXS7z4PLVj",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+20 (No Fine Manipulators, -40%; Size Modifier, -30%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 60 point(s); library calculation is 60.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 20,
+					"modifiers": [
+						{
+							"id": "mbq3-Sp15xvWZcAp2",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "maTbCaPMF1xntS0Pm",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 3
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 60,
+						"current_level": 20
+					}
+				},
+				{
+					"id": "t_22bHE4HvAmUWi97",
+					"name": "Decreased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "te_Hpw2Spb6OPJKRU",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tVN_WEvtvjXnVsvA4",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "teijcK8QU7tFI9Q1D",
+					"name": "Extra Hit Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HP+6 (Size Modifier, -30%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 6,
+					"modifiers": [
+						{
+							"id": "mDqzpxi7FZnyWZZ1x",
+							"name": "Size",
+							"cost_adj": "-10%",
+							"levels": 3
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "hp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tOzUXueQTgXsi8vLY",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tVH4bte0ED2RtraLf",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "twJ585gxnkT0XpiB6",
+					"name": "Blunt Claws",
+					"reference": "B42,MA42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blunt Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"base_points": 3,
+					"weapons": [
+						{
+							"id": "wX6AQhAsNRYvPbV3g",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1",
+								"modifier_per_die": 1
+							},
+							"usage": "Punch",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 (+1 per die) cr"
+							}
+						},
+						{
+							"id": "wT00wJG97XlAxHKfn",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "t_jVpUtIIba-rXmEu",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "thC4j5WpDClFUIyB5",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tIsECDuq2XRnB89c6",
+					"name": "Injury Tolerance (No Eyes, No Head, No Neck)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Eyes, No Head, No Neck)",
+					"base_points": 17,
+					"calc": {
+						"points": 17
+					}
+				},
+				{
+					"id": "t_Pq5SPQ7Nl1nQlZd",
+					"name": "Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tVHvcF_lIUGe3bnyx",
+					"name": "Tunneling",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Tunneling (Move 1; Hands-Free, +20%)",
+					"base_points": 42,
+					"calc": {
+						"points": 42
+					}
+				},
+				{
+					"id": "t4HRDN1gSkgiWpWho",
+					"name": "Acid Resistance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Acid Resistance [58]: DR 20 (Includes Internal, +20%; Limited, Acid, -40%; Tough Skin, -40%) [40] + Immunity to Noxious Acidic Effects [10] + Internal Sealed (Acid-Resistant Only, -60%) [2] + Sealed (Acid-Resistant Only, -60%) [6].",
+					"base_points": 58,
+					"calc": {
+						"points": 58
+					}
+				},
+				{
+					"id": "t0JvML46N6CdMTlvs",
+					"name": "Corrosive Slime",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Corrosive Slime [71]: Corrosion Attack 1d-2 (Accessibility, Only against organics, -40%; Aura, +80%; Melee Attack, Reach C, -30%) [5] + Corrosion Attack 2d (Accessibility, Only against metal, -40%; Aura, +80%; Melee Attack, Reach C, -30%) [22] + Corrosion Attack 4d (Accessibility, Only against stone, -40%; Aura, +80%; Melee Attack, Reach C, -30%) [44].",
+					"base_points": 71,
+					"calc": {
+						"points": 71
+					}
+				},
+				{
+					"id": "tcxfbw1-G8NF-K3Q8",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t36PtjtgpP35yMg_2",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tLOyhBty3BwqEZJX6",
+					"name": "Restricted Diet (Minerals)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Delver [Monster Manual, page 39]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Minerals)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tD-6QyugzW2-BwaGe",
+					"name": "No Legs (Slithers)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Slithers)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 279
+			}
+		}
+	]
+}

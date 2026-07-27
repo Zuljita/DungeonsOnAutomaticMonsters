@@ -1,0 +1,1160 @@
+{
+	"version": 5,
+	"id": "AS6odSY84DFUReeJx",
+	"total_points": -111,
+	"profile": {
+		"name": "Monstrous Centipede (Huge)",
+		"title": "Vermin",
+		"player_name": "Dungeons on Automatic",
+		"SM": 2
+	},
+	"settings": {
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"base": "($dx + $ht) / 4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"base": "Math.floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"value": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"value": "Math.round($fp / 3)",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"value": "$fp - 1"
+					},
+					{
+						"state": "Rested",
+						"value": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"value": "Math.round(-$hp * 5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"value": "Math.round(-$hp * 4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"value": "Math.round(-$hp * 3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"value": "Math.round(-$hp * 2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"value": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"value": "Math.round($hp / 3)",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"value": "$hp - 1"
+					},
+					{
+						"state": "Healthy",
+						"value": "$hp"
+					}
+				]
+			}
+		],
+		"damage_progression": "basic_set",
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 6
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 12
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 10
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 4
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0
+		},
+		{
+			"attr_id": "dx",
+			"adj": 0
+		},
+		{
+			"attr_id": "iq",
+			"adj": 0
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0
+		},
+		{
+			"attr_id": "will",
+			"adj": 0
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0
+		},
+		{
+			"attr_id": "per",
+			"adj": 0
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0
+		}
+	],
+	"traits": [
+		{
+			"id": "TeQ52MzZq20LT5Ll9",
+			"name": "Monstrous Centipede (Huge)",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Monstrous Centipede (Huge) [Monster Manual, page 286]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -111 points; exact GCS library substitutions produce -111 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tuOn3ZyNU-Koly2st",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+14 (No Manipulators, -40%; Size Modifier, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 56 point(s); library calculation is 56.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 14,
+					"modifiers": [
+						{
+							"id": "mOTjXn9CMP4Ds_Lkw",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "m8Gqga5rdK9cOCY7B",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 2
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 56,
+						"current_level": 14
+					}
+				},
+				{
+					"id": "t1KVzLGmKjAOr1NoA",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-9\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -180 point(s); library calculation is -180.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 9,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -180,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tojbzP7SEqrn9soKI",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tRgWDOui-RBxZqw23",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tuxCe7PxDtE-sSRoz",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "t4BeYHMDiASmMGlIZ",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "teA65HV_w7hjBckhs",
+					"name": "Acute Thermal Infrared Vision 4",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Acute Thermal Infrared Vision 4",
+					"base_points": 8,
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "tc0gtfXIu1FhOiEF-",
+					"name": "Clinging",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Clinging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tSjhXvbPPf2ZKDwPi",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tAso9pMjMACxRH4o0",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tUwXVEJQGShJisLsH",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tmSj4GSA0QnmamdZE",
+					"name": "Injury Tolerance (No Brain, No Eyes, No Neck, No Vitals)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Brain, No Eyes, No Neck, No Vitals)",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tTbl933RLXSxeCG3y",
+					"name": "Reduced Consumption",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Reduced Consumption 3 (Cast Iron Stomach, -50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mKCd2xr2XWCyP-rLw",
+							"name": "Cast-Iron Stomach",
+							"reference": "B80",
+							"cost_adj": "-50%"
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t5TFRXI8c4OtRKpLf",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wpOjTr_TUfKOCGsdU",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tgRPDjz1iVWMkW0Dd",
+					"name": "Slippery",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Slippery 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tSfGWwaEMhK2g1Qkm",
+					"name": "Thermal Infrared Vision (Biological (Passive), -5%; Short-Range 1, -10%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Thermal Infrared Vision (Biological (Passive), -5%; Short-Range 1, -10%)",
+					"base_points": 9,
+					"calc": {
+						"points": 9
+					}
+				},
+				{
+					"id": "tt2xxyAVIlQwRx2XD",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Poison: Toxic Attack 1d (Cyclic, 1 hour, 4 cycles, Resistible, +40%; Follow-Up, Bite, +0%; Resistible, HT-2, -20%; Symptoms, 2/3 HP, -3 DX, +30%) [6].",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tXGQF7RDtbY96BNqS",
+					"name": "Blindness",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blindness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50. Library note: Cannot target hit locations",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"tags": {
+								"compare": "contains",
+								"qualifier": "combat"
+							},
+							"amount": -6
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tr_UfBbAMPyC_5IPJ",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tH5zCQm8cgCPUbKCq",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tufWlQhWWTv4Ie2fZ",
+					"name": "No Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tt4aOZz9zEojc1Xp3",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tJX2qWuMczffzyR9-",
+					"name": "Short Lifespan",
+					"reference": "B154",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Short Lifespan 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": -30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t4bJXWfyRuwItbRYd",
+					"name": "Wild Animal with Mute",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Huge) [Monster Manual, page 286]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Wild Animal with Mute",
+					"base_points": -40,
+					"calc": {
+						"points": -40
+					}
+				},
+				{
+					"id": "tydGG2tuRtS4Ul6pH",
+					"name": "No Legs (Slithers)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Slithers)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": -111
+			},
+			"melee_weapons": [
+				{
+					"id": "ACkZgogF1Y_UGCWVq",
+					"damage": {
+						"type": "cut",
+						"base": "2d+2"
+					},
+					"usage": "Mandibles",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 2
+						}
+					],
+					"usage_notes": "Mandibles (12): thrust 2d+2 cutting (KYOS: 4d cutting) plus follow-up 1d toxic (4 1-hour cycles, resisted by HT-2, -3 DX after loss of 2/3 HP), Reach C."
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"id": "AZxIXccMg78Gz7owh",
+			"name": "Brawling",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		},
+		{
+			"id": "A20GR-42L9yYyvOkF",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		},
+		{
+			"id": "A_h4seraUW6PuiPHW",
+			"name": "Tracking",
+			"difficulty": "dx/a",
+			"points": 1,
+			"local_notes": "Stated level 12 in the source conversion."
+		}
+	],
+	"notes": [
+		{
+			"id": "ALpRlvO_kEikkxJao",
+			"text": "Typical Stats from the reviewed package: ST 24, DX 10, IQ 1, HT 12, HP 24, WILL 8, PER 8, FP 12, SPEED 5.25, MOVE 5, DODGE 8, DR 4. GCS derives its own values by applying the ancestry; where the two differ, the package's Typical Stats are what the Dungeons on Automatic encounter tables use."
+		},
+		{
+			"id": "A76rC2qFJb50Ai_Fc",
+			"text": "Encounter rating: CER 35 (offense 17, protection 18), threat tier standard, appearing 2."
+		},
+		{
+			"id": "A4Jr8CsfoNOiuwHOo",
+			"text": "GCS ancestry draft: gcs/monstrous-centipede-huge.gct"
+		},
+		{
+			"id": "AdLY1fwgouVpUdgPs",
+			"text": "Source template total: -111 points."
+		},
+		{
+			"id": "Ak2JnsyiFxrktauV0",
+			"text": "Library-rebuilt template total: -111 points."
+		},
+		{
+			"id": "Atz2v7YtiKB5aE9ib",
+			"text": "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path."
+		},
+		{
+			"id": "Ao5YvBQlqb2pCE5eQ",
+			"text": "Review attacks, special abilities, encounter frequency, treasure, grappling, and GCS modifiers before approval."
+		},
+		{
+			"id": "AX2-4rTHo8XxsecFi",
+			"text": "Poison (follow-up on Bite): Toxic Attack 1d (Cyclic, 1 hour, 4 cycles, Resistible, +40%; Follow-Up, Bite, +0%; Resistible, HT-2, -20%; Symptoms, 2/3 HP, -3 DX, +30%) Resolve as stated by the construction; the source gives no separate resolution text."
+		},
+		{
+			"id": "AvtY1zENyMi31IrRH",
+			"text": "Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission."
+		}
+	],
+	"created_date": "1970-01-01T00:00:00Z",
+	"modified_date": "1970-01-01T00:00:00Z"
+}

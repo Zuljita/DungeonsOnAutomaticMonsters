@@ -1,0 +1,693 @@
+{
+	"version": 5,
+	"id": "BsUAVcyL1sIOp0Fib",
+	"traits": [
+		{
+			"id": "T2529yzIRJrGa2HBS",
+			"name": "Solar",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Solar [Monster Manual, page 12]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 671 points; exact GCS library substitutions produce 671 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t-WRhLonMe-nXu7Nj",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+10 (Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 90 point(s); library calculation is 90.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 10,
+					"modifiers": [
+						{
+							"id": "mTV7fILVe90OstiHF",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 90,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tA8_qZqddQk59Yhle",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 80 point(s); library calculation is 80.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 80,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tODveEc-CRFfB_Inh",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 80 point(s); library calculation is 80.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 80,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tl4SN6uIEe4IiUjKV",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "twl6w0mSZ0Zy24DUf",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tt-TPLI8tfPGn7dvx",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tPWzBFVVbdluBvE3R",
+					"name": "Increased Basic Speed",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Speed +1.00\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_speed",
+							"amount": 0.25,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tM2IuLrgvcVXwDNf_",
+					"name": "Appearance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Appearance (Very Handsome/Very Beautiful; Universal, +25%)",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "t7xeIyrVpcvKl28Wt",
+					"name": "Combat Reflexes",
+					"reference": "B43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Combat Reflexes\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: Never freeze",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "fast-draw"
+							},
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "dodge",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "parry",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "block",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "fright_check",
+							"amount": 2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
+							"amount": 6
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to initiative rolls for your side (+2 if you are the leader)",
+							"amount": 1
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Enhanced Time Sense"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t0NGEUZHQI9VjpgNU",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Dark Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 25 point(s); library calculation is 25.",
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tErz434Zx0bs4Rgbq",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 3 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mBW-RsWgHth_EwGQs",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t3DhLysmzpxH6Iqth",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "t0kntvyuYGLSetYEY",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Cannot Hover, -15%; Winged, -25%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mQvda3vSiZ6ILPyvm",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "mTQmzydz0g_Bq973K",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						}
+					],
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "tCX7VqxVvXohqC6JY",
+					"name": "Immunity to Petrification",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Petrification",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tQD-ZbiHKRTQ6GcNt",
+					"name": "Regeneration",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Regeneration (Fast; Bane, Unholy Weapons, -10%)",
+					"base_points": 45,
+					"calc": {
+						"points": 45
+					}
+				},
+				{
+					"id": "t5VH3vwR_AC8sxYB5",
+					"name": "Resistant to Poison (+3)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Resistant to Poison (+3)",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tGLGMhIOSqZ-MRgLF",
+					"name": "See Invisible",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: See Invisible (Magical; Magical, -10%)",
+					"base_points": 14,
+					"calc": {
+						"points": 14
+					}
+				},
+				{
+					"id": "tW6GjuCFQFX5_4PzK",
+					"name": "Unaging",
+					"reference": "B95,PSI18",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unaging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "ten9YzCyVANHAFLr-",
+					"name": "Voice",
+					"reference": "B97",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Voice\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "diplomacy"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fast-talk"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "mimicry"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "performance"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "politics"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "public speaking"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "sex appeal"
+							},
+							"amount": 2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "singing"
+							},
+							"amount": 2
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from others who can hear your voice",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tsUBMfCWVe6FrbaSN",
+					"name": "Detect Evil",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Detect Evil: Detect (Evil; Cannot Analyze, -10%; Magical, -10%) [8].",
+					"base_points": 8,
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "tUbXPtPomOJcv1_ti",
+					"name": "Elemental Resistance (E,F)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Elemental Resistance (E,F) [48]: DR 10 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Electricity, Fire, -35%; Tough Skin, -40%) [28] + Immunity to Electrical Conduction [5] + Immunity to Noxious High-Temperature (Electricity and Fire) Effects [15].",
+					"base_points": 48,
+					"calc": {
+						"points": 48
+					}
+				},
+				{
+					"id": "ti-vo9k7_fabpAFFv",
+					"name": "Tongues",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Tongues: Cosmic Power 3 (Limited, One Spoken Language, -50%; Magical, -10%) [12].",
+					"base_points": 12,
+					"calc": {
+						"points": 12
+					}
+				},
+				{
+					"id": "tRbec3uUQnLn_Gjuv",
+					"name": "Spell-Like Abilities (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Spell-Like Abilities (Alternative Abilities) [132]:",
+					"base_points": 132,
+					"calc": {
+						"points": 132
+					}
+				},
+				{
+					"id": "tetiv7ZbgGtU-b0Gg",
+					"name": "Intolerance (Fiends)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Intolerance (Fiends)",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t3-I9Ymlpi7a4Z1o-",
+					"name": "Pacifism (Cannot Harm Innocents)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Pacifism (Cannot Harm Innocents)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tkpLIER-9zmdGwKrV",
+					"name": "Truthfulness",
+					"reference": "B159",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Truthfulness (9)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -7 point(s); library calculation is -7. Library note: Make a self-control roll whenever you must keep silent about an uncomfortable truth (lying by omission). Roll at -5 if you actually have to tell a falsehood! If you fail, you blurt out the truth, or stumble so much that your lie is obvious.",
+					"cr": 9,
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fast-talk"
+							},
+							"amount": -5
+						}
+					],
+					"calc": {
+						"points": -7
+					}
+				},
+				{
+					"id": "tebfhH1L59f41WNU2",
+					"name": "Vulnerability (Unholy Weapons, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Solar [Monster Manual, page 12]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Unholy Weapons, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tx1EelNh-YJ5vSCXL",
+					"name": "Holy Touch",
+					"reference": null,
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Holy Touch\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 671
+			}
+		}
+	]
+}

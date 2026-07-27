@@ -34,6 +34,9 @@ const CONTENT_TYPES = new Map([
   [".json", "application/json"],
   [".md", "text/markdown"],
   [".txt", "text/plain"],
+  // GCS templates and character sheets are JSON with their own extensions.
+  [".gct", "application/json"],
+  [".gcs", "application/json"],
 ]);
 
 const SUBDIRS = ["portraits", "tokens", "hex-tokens", "thumbs"];

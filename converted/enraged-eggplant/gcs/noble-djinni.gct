@@ -1,0 +1,333 @@
+{
+	"version": 5,
+	"id": "BUZdbmKulF2s06vrd",
+	"traits": [
+		{
+			"id": "TpPw0jkU13GJEC-4w",
+			"name": "Noble Djinni",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Noble Djinni [Monster Manual, page 115]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 407 points; exact GCS library substitutions produce 407 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tK3JzyrFWJzrOf76n",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+5 (Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 45 point(s); library calculation is 45.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 5,
+					"modifiers": [
+						{
+							"id": "mulNtlKzz01AGROOz",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 45,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tthATYG3ybVGnsA5Z",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tEAIpMLU8mExlPRW8",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t4PiTzfkLst5hSX11",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tCGajS08d_ed8vNB8",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mTDZTJQyxHjFI9rm7",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tXHmvgbdybOs5jxz2",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tx_aOY8UHYYktvwQo",
+					"name": "Filter Lungs",
+					"reference": "B55",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Filter Lungs\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tjWvXW6m0qLnCf54y",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Magical, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 36 point(s); library calculation is 36. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "myHuPIyNVmxYDUAkF",
+							"name": "Magical",
+							"reference": "P27",
+							"cost_adj": "-10%",
+							"local_notes": "Requires ambient Mana, and vulnerable to anti-powers."
+						}
+					],
+					"calc": {
+						"points": 36
+					}
+				},
+				{
+					"id": "tqy8GCf9FBoYzWw2r",
+					"name": "Telecommunication",
+					"reference": "B91,P81,PSI17",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Telesend (Magical, -10%; Universal, +50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 42 point(s); library calculation is 42.",
+					"base_points": 0,
+					"modifiers": [
+						{
+							"id": "mvfb-AT2ZbStZq4oo",
+							"name": "Telesend",
+							"reference": "B91",
+							"cost_adj": "30"
+						},
+						{
+							"id": "mSEUg7XPlmhOZcJpA",
+							"name": "Magical",
+							"reference": "P27",
+							"cost_adj": "-10%",
+							"local_notes": "Requires ambient Mana, and vulnerable to anti-powers."
+						},
+						{
+							"id": "mA5FYKUkaBHfc-CTv",
+							"name": "Universal",
+							"reference": "B91",
+							"cost_adj": "50%"
+						}
+					],
+					"calc": {
+						"points": 42
+					}
+				},
+				{
+					"id": "tiJO1z5Uw9FP2YHgQ",
+					"name": "Unaging",
+					"reference": "B95,PSI18",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unaging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tiDd3H5YENxldmqRG",
+					"name": "Plane Shift",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Plane Shift: Jumper (Limited Access, Elemental, Material and Astral Planes only, -10%; Magical, -10%) [80].",
+					"base_points": 80,
+					"calc": {
+						"points": 80
+					}
+				},
+				{
+					"id": "tZBQuQ_gMVV_Oq6XU",
+					"name": "Wish",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Wish: Super Luck (Accessibility, Only works on non-genies, who captured the djinn, -5%; Game Time, +0%; Magical, -10%; Wishing, +0%) [85].",
+					"base_points": 85,
+					"calc": {
+						"points": 85
+					}
+				},
+				{
+					"id": "tz7FOiKtdUOWulg9L",
+					"name": "Spell-Like Abilities (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Spell-Like Abilities (Alternative Abilities) [76]:",
+					"base_points": 76,
+					"calc": {
+						"points": 76
+					}
+				},
+				{
+					"id": "tIaELE8VZges8sPbR",
+					"name": "Vulnerability (Earth/Stone, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Noble Djinni [Monster Manual, page 115]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Earth/Stone, x2)",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				}
+			],
+			"calc": {
+				"points": 407
+			}
+		}
+	]
+}

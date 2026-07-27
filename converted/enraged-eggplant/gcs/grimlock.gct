@@ -1,0 +1,248 @@
+{
+	"version": 5,
+	"id": "BMh9e03sCsS9pQneu",
+	"traits": [
+		{
+			"id": "T2tOCKl4Fyxy4QmVw",
+			"name": "Grimlock",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Grimlock [Monster Manual, page 140]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -22 points; exact GCS library substitutions produce -22 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "teyWkf8jRZbyCehap",
+					"name": "Attributes",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Attributes: ST+2 [20]; HT+1 [10].",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tZLMM-9ZWzO68VodA",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tyuyzBMa1unk0yQti",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mw_R1cjxM5p29MIxX",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tMSE8f3O_P17sv4Rp",
+					"name": "Dark Vision",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Dark Vision (Hypersensory, Smell and Hearing, +25%)",
+					"base_points": 32,
+					"calc": {
+						"points": 32
+					}
+				},
+				{
+					"id": "tV4IMY44r7EQH7Lbw",
+					"name": "Discriminatory Smell",
+					"reference": "B49,P47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Discriminatory Smell\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that utilizes sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tLtTKGlGAnpZrD-P-",
+					"name": "Injury Tolerance (No Eyes)",
+					"reference": "B61",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Eyes)\nNative library match: Ultra Tech/Ultra Tech Meta-Traits (Ultra Tech Meta-Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tD9ev6kugCj-Ac-Ps",
+					"name": "Appearance (Ugly)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Appearance (Ugly)",
+					"base_points": -8,
+					"calc": {
+						"points": -8
+					}
+				},
+				{
+					"id": "tltahrTkvAZeDRCrb",
+					"name": "Odious Racial Habit (Eats sapient beings)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Odious Racial Habit (Eats sapient beings)",
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tL0kwJ2Ysc_4Ft3Fn",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t7igpe53sJk2dpzt-",
+					"name": "Social Stigma (Savage)",
+					"reference": "DF3:11",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"local_notes": "Source construction: Social Stigma (Savage)\nNative library match: Dungeon Fantasy/Dungeon Fantasy 3/Dungeon Fantasy 3 Traits (Dungeon Fantasy 3 Traits.adq). Fan source stated -10 point(s); library calculation is -10. Library note: -2 reaction; -4 to skills; Denied entry to town on 6 or less",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tOOFkX-XuWJa2Njb8",
+					"name": "Limited Camouflage (Rock)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Limited Camouflage (Rock)",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tYxwP3avhiEdEw8b2",
+					"name": "Point reconciliation (unparsed source construction)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Grimlock [Monster Manual, page 140]",
+					"tags": [
+						"Review Required",
+						"Source Reconciliation"
+					],
+					"local_notes": "Source construction: Automated source children total 33; published source template total -22. Replace this adjustment after resolving grouped abilities, replacements, unusual cost notation, or a source arithmetic error.",
+					"base_points": -55,
+					"calc": {
+						"points": -55
+					}
+				}
+			],
+			"calc": {
+				"points": -22
+			}
+		}
+	]
+}

@@ -1,0 +1,558 @@
+{
+	"version": 5,
+	"id": "BdggKG6OPK0M33uPD",
+	"traits": [
+		{
+			"id": "TbVyd4YySp6C057lN",
+			"name": "Phase Spider",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Phase Spider [Monster Manual, page 207]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 232 points; exact GCS library substitutions produce 232 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tf2CXpIeoccI3ClhX",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+6 (No Fine Manipulators, -40%; Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 6,
+					"modifiers": [
+						{
+							"id": "m00prvInk4Bqpw2jy",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "m-dZHcXaQDNXClc3L",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "thCTUI6gunRtxrgPn",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2 (No Fine Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mi3SOMdDwoUnPbKLA",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tSCiVDzrtG1-Z9Du9",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -60 point(s); library calculation is -60.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -60,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tTcv83T_YzRzYTWYr",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tQqaTLAGJqng9wP5T",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tL3cUOdHpPNL8JesS",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t5ZGl-nXNsjSEDXHI",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 25 point(s); library calculation is 25.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 25,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t2kBoxULpqRuNWMmm",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move +2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tJ9lqAu8WugP3KZYX",
+					"name": "Clinging",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Clinging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tJd3DyGHWcdYfeQp1",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t4xmv5751Pb09afbR",
+					"name": "Extra Legs (Eight Legs)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Extra Legs (Eight Legs)",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "ttoXNFL3T1yjxfdOm",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fangs\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "wNTfdvi4xIVBKDBP_",
+							"sv": 1,
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tRyXu0sguOjIzsY41",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tBx2Yh9tsnq6p8RuU",
+					"name": "Injury Tolerance (No Head, No Neck)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Head, No Neck)",
+					"base_points": 12,
+					"calc": {
+						"points": 12
+					}
+				},
+				{
+					"id": "tAywJiNV3dLHclLyD",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 9\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 9,
+					"calc": {
+						"points": 9,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tL78RsR9qqBq3zE-v",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tNGu5AjuZTEKC6wCm",
+					"name": "Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tzr1LmBbEQuW4od1b",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Poison: Toxic Attack 1d-1 (Cyclic, 1 minute, 4 cycles, Resistible, +80%; Follow-Up, Sharp Teeth, +0%; Resistible, HT-3, -15%; Symptoms, 1/3 HP, -2 HT, +30%) [6].",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tYWRgoXOr0wo7FvNF",
+					"name": "Ethereal Jaunt",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Ethereal Jaunt: Jumper (Planar; Accessibility, Only on the Ethereal Plane and planes that border it, -5%; Based on Will, +20%; Limited Access, Ethereal, -20%; Magical, -10%; Reduced Time 4, +80%; Reliable 2, +10%; Takes Recharge, 5 seconds, -10%) [165].",
+					"base_points": 165,
+					"calc": {
+						"points": 165
+					}
+				},
+				{
+					"id": "tW9lKNGlHNaPA2Nr6",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Mental"
+					],
+					"local_notes": "Source construction: Bestial\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tIjKtXB-79LIHQTRd",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tHY2akGAyLSBNmRdv",
+					"name": "Mute",
+					"reference": "DFM13",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Mute\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -25 point(s); library calculation is -25.",
+					"base_points": -25,
+					"calc": {
+						"points": -25
+					}
+				},
+				{
+					"id": "tks_S7UsmTP3bxv_8",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "t3nymd_6dgE2glBDB",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Phase Spider [Monster Manual, page 207]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "thn4JEHPLQ3kEwQB-",
+					"name": "Semi-Upright",
+					"reference": "B153",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Semi-Upright\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Moving while upright reduces Move by 40%",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				}
+			],
+			"calc": {
+				"points": 232
+			}
+		}
+	]
+}

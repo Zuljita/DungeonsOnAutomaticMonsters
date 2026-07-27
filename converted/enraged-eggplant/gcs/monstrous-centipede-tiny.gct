@@ -1,0 +1,554 @@
+{
+	"version": 5,
+	"id": "B18W2Xcc1jMYN0K2g",
+	"traits": [
+		{
+			"id": "TFsw86hhQoXoocV_8",
+			"name": "Monstrous Centipede (Tiny)",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Monstrous Centipede (Tiny) [Monster Manual, page 286]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -270 points; exact GCS library substitutions produce -270 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t5kRQiy07KW2k4gHr",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST-7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -70 point(s); library calculation is -70.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -70,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tRolNNK_SgDW_g0Hh",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-9\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -180 point(s); library calculation is -180.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 9,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -180,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tb9XltPtI2-2TNN5B",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tOgYX9bJ61QMkCRaW",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tcQpbBTEn8ZMc3WrP",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tWiGeow8Vwrw7ibue",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tqvJxycnPgKpg39F4",
+					"name": "Acute Thermal Infrared Vision 4",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Acute Thermal Infrared Vision 4",
+					"base_points": 8,
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "t8-3d0T1KHPYDGEKK",
+					"name": "Clinging",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Clinging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tEURBHpPQ9Df5aUSh",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tHsY87Iju6kNWYmCJ",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tdDqiO5Mw2UpNHHla",
+					"name": "Injury Tolerance (No Brain, No Eyes, No Neck, No Vitals)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Brain, No Eyes, No Neck, No Vitals)",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tGLBGw1N52WfZnom9",
+					"name": "Reduced Consumption",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Reduced Consumption 3 (Cast Iron Stomach, -50%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mEq2MyCT-qP1uIQS_",
+							"name": "Cast-Iron Stomach",
+							"reference": "B80",
+							"cost_adj": "-50%"
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t7B7IGWF6Uu7fJdL0",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wQS-sAasy1ueQTG-w",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tDCbHUuHljR1BSi1Q",
+					"name": "Slippery",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Slippery 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t74nBOvidKFR2NHRh",
+					"name": "Thermal Infrared Vision (Biological (Passive), -5%; Short-Range 1, -10%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Thermal Infrared Vision (Biological (Passive), -5%; Short-Range 1, -10%)",
+					"base_points": 9,
+					"calc": {
+						"points": 9
+					}
+				},
+				{
+					"id": "tGY1Ug-c8vzbHDwEb",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Poison: Toxic Attack 1d-2 (Cyclic, 1 hour, 3 cycles, Resistible, +30%; Follow-Up, Bite, +0%; Resistible, HT, -30%; Symptoms, 2/3 HP, -1 DX, +10%) [3].",
+					"base_points": 3,
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tW2bLa3cZkKE6T-GN",
+					"name": "Blindness",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blindness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50. Library note: Cannot target hit locations",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"tags": {
+								"compare": "contains",
+								"qualifier": "combat"
+							},
+							"amount": -6
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tc76QhOikkWf_mWsr",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "twZwwURVCrj8XgX39",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tvRxjA5J3FXWkX077",
+					"name": "No Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tgfG72z-MzzO8J9PO",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tOkIGy929LktBQleB",
+					"name": "Short Lifespan",
+					"reference": "B154",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Short Lifespan 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": -30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tfbcp2Z5-I09A3SJQ",
+					"name": "Wild Animal with Mute",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Centipede (Tiny) [Monster Manual, page 286]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Wild Animal with Mute",
+					"base_points": -40,
+					"calc": {
+						"points": -40
+					}
+				},
+				{
+					"id": "tMrNNyI8skoKDMHEh",
+					"name": "No Legs (Slithers)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Slithers)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": -270
+			}
+		}
+	]
+}

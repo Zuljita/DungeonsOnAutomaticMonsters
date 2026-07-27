@@ -1,0 +1,517 @@
+{
+	"version": 5,
+	"id": "BH96XHeDXV1V-fwKp",
+	"traits": [
+		{
+			"id": "TiN1nsRoi3gMAsLbD",
+			"name": "Destrachan",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Destrachan [Monster Manual, page 49]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Destrachan [Monster Manual, page 49]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 218 points; exact GCS library substitutions produce 218 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tkGGjC9Yu05fULXUl",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+8 (Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 72 point(s); library calculation is 72.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 8,
+					"modifiers": [
+						{
+							"id": "m8vUaUbtuHaZmCsZt",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 72,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tf9OEtIxi-Pkx8vTm",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tIAXELt6CiwmjHjsg",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "txc86GEznKQEkdr-Z",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move +1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tpNg69mbPM3an4gSW",
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Acute Hearing 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "hearing",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t732wwsMFZksxOZJk",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 2 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mAcIUmPb0dbz4v_nz",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 6,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tK6quxF-0H-uvovB3",
+					"name": "Discriminatory Hearing",
+					"reference": "B49,P47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Discriminatory Hearing\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to Shadowing skill when following a noisy target",
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that utilizes hearing",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t8GucI6z-Umo1WMyC",
+					"name": "Injury Tolerance (No Eyes)",
+					"reference": "B61",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Eyes)\nNative library match: Ultra Tech/Ultra Tech Meta-Traits (Ultra Tech Meta-Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tRXvvr70GsDoVWrTw",
+					"name": "Protected Hearing",
+					"reference": "B78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Protected Hearing\nNative library match: After the End/After the End Mutations (After the End Mutations.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t2H3GzVeA0ZSSJS8D",
+					"name": "Sharp Claws",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"weapons": [
+						{
+							"id": "wD6FJrkWd2mdhkQ3m",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Slash",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						},
+						{
+							"id": "wRyrXsjQ0egpPwgW8",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "ty--tYTKvYD7F-Zf1",
+					"name": "Sonar (Accessibility, In air, -10%; Biological (Passive), -5%; Restricted Arc, 60°, -75%; Targeting, +20%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Destrachan [Monster Manual, page 49]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Sonar (Accessibility, In air, -10%; Biological (Passive), -5%; Restricted Arc, 60°, -75%; Targeting, +20%)",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tVb4K1XBqsWuDBSqX",
+					"name": "Subsonic Hearing",
+					"reference": "B89,P51",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Subsonic Hearing\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "to1Z3ZwHpQuS5tMHk",
+					"name": "Ultrahearing",
+					"reference": "B94,P51",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Ultrahearing\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tAPR3GCLae4ZMF9nk",
+					"name": "Destructive Harmonics (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Destrachan [Monster Manual, page 49]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Destructive Harmonics (Alternative Abilities) [78]: Burning Attack 4d (Accessibility, Only one material at a time, -10%; Alternative Enhancements (Cone 10, +150% or Area Effect, 8 yards, +150% and Emanation, -20%), +176%; Costs Fatigue, 1 FP, -5%; Environmental, Sound-transmitting mediums, -10%; Magical, -10%; No Incendiary Effect, -10%; Side Effect, Deafness, +70%; Underwater, +20%) [65] + Affliction 1 (HT; Alternative Enhancements (Cone 10, +150% or Area Effect, 8 yards, +150% and Emanation, -20%), +176%; Armor Divisor, (5), +150%; Costs Fatigue, 1 FP, -5%; Environmental, Sound-transmitting mediums, -10%; Magical, -10%; Unconsciousness, +200%; Underwater, +20%) [63/5 = 13].",
+					"base_points": 78,
+					"calc": {
+						"points": 78
+					}
+				},
+				{
+					"id": "t-LAw2bPBq1lfLd4v",
+					"name": "Bad Grip",
+					"reference": "B123",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Bad Grip 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to tasks that require a firm grip (max 3 levels)",
+							"amount": -2,
+							"per_level": true
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "no fine manipulators"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tktWkoyWLxlGYRWR8",
+					"name": "Blindness",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blindness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50. Library note: Cannot target hit locations",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"tags": {
+								"compare": "contains",
+								"qualifier": "combat"
+							},
+							"amount": -6
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "t4f9VsnEclgs6Sa0c",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cannot Speak\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15.",
+					"base_points": -15,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "stuttering"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "t9O77EMpSzyNDTwe3",
+					"name": "Sadism",
+					"reference": "B152",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Sadism (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15. Library note: Make a self-control roll whenever you have an opportunity to indulge your desires and know you shouldn’t (e.g., because the prisoner is one who should be released unharmed). If you fail, you cannot restrain yourself.",
+					"cr": 12,
+					"base_points": -15,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from those who become aware of your Sadism unless they are from a culture that holds life in little esteem",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "ttX2w8EpMoCINIk3O",
+					"name": "Point reconciliation (unparsed source construction)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Destrachan [Monster Manual, page 49]",
+					"tags": [
+						"Review Required",
+						"Source Reconciliation"
+					],
+					"local_notes": "Source construction: Automated source children total 140; published source template total 218. Replace this adjustment after resolving grouped abilities, replacements, unusual cost notation, or a source arithmetic error.",
+					"base_points": 78,
+					"calc": {
+						"points": 78
+					}
+				}
+			],
+			"calc": {
+				"points": 218
+			}
+		}
+	]
+}

@@ -1,0 +1,1115 @@
+{
+	"version": 5,
+	"id": "Btw0OkYIWw4xnP0Qe",
+	"traits": [
+		{
+			"id": "T3W_5Yci8KvD34lHi",
+			"name": "Couatl",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 566 points; exact GCS library substitutions produce 566 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tjEO5K-FJZAtZfzip",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+14 (No Manipulators, -40%; Size Modifier, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 56 point(s); library calculation is 56.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 14,
+					"modifiers": [
+						{
+							"id": "mZnqPyiOeBzKD6FG0",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "mIredGz709jLPIy6u",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 2
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 56,
+						"current_level": 14
+					}
+				},
+				{
+					"id": "to7AnM8jHeJUkFHIi",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2 (No Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "m7j9zO8COrSS345Ki",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tH-R9sZmTBSLTrA8q",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 60 point(s); library calculation is 60.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 60,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "taYOwKvsE7pfrwdTm",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tFinhyPrn0_v-1hzs",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tlWLtB7jom9XOf5Xq",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "twGPS8f_nuyOj8avp",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tU0NH1Kh4xbltSjjP",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move -2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tIK76gAtU34Gb5hgj",
+					"name": "Acute Taste and Smell 3",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Acute Taste and Smell 3",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tq2GYTok8X_wGy3ds",
+					"name": "Amphibious",
+					"reference": "B40,P42",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Amphibious\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tE8WRdOeGwfg1IxVy",
+					"name": "Constriction Attack",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Constriction Attack\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: If you succeed on a grapple against an opponent no larger than your own SM, on your next turn, and each successive turn, roll a Quick Contest of your ST vs. your victim’s ST or HT, whichever is higher. If you win, your victim takes damage equal to your margin of victory; otherwise, no damage is inflicted",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tQVq_Fim8C90xYQc_",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe (Oxygen Storage, 200x, -20%)",
+					"base_points": 16,
+					"calc": {
+						"points": 16
+					}
+				},
+				{
+					"id": "tncrsYLLq1PJy4pyM",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tyuBAMOHWyyGnoAtz",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 4 (Flexible, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 16 point(s); library calculation is 16.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"modifiers": [
+						{
+							"id": "mYAK4k7dArdkIVwXK",
+							"name": "Flexible",
+							"reference": "B47",
+							"cost_adj": "-20%"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 16,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tHepxs6oWsY9_YS7j",
+					"name": "ER 10 (Magic)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: ER 10 (Magic)",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "t1naK35x8cmyjJs1m",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 10,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t6IjFgHSdKtOI8AUn",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fangs\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "wTAneSbHnzTPCcj6a",
+							"sv": 1,
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "ts7Jd4qOKRItObvIB",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Cannot Hover, -15%; Winged, -25%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mlTYvQQX8Zco3soo1",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "mDzm3WrTT3OQaEddz",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						}
+					],
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "t5Oxq5DOZY_oFE22L",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tDfWp6Lk4RbQrREsO",
+					"name": "Less Sleep",
+					"reference": "B65",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Less Sleep 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8. Library note: Require 1 hour/level less sleep for a full night's rest (max 4)",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tPqe6Pl_KQ1bmS2Qf",
+					"name": "Nictitating Membrane",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Nictitating Membrane 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to all HT rolls concerned with eye damage",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 2,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tIxCuEbVeJyezyoGw",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tHJuPS-Zgoi87ZNRb",
+					"name": "Protected Vision",
+					"reference": "B78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Protected Vision\nNative library match: After the End/After the End Mutations (After the End Mutations.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tGMHZ3V85ybCWQ8j5",
+					"name": "Reduced Consumption",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Reduced Consumption 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t-4duW0AlozJIiRYx",
+					"name": "See Invisible",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: See Invisible (Magic; Magical, -10%; True Sight, +50%)",
+					"base_points": 21,
+					"calc": {
+						"points": 21
+					}
+				},
+				{
+					"id": "tadkZ_6NvCStX5SVT",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 2 (Hot)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 2 point(s); library calculation is 2. Library note: Hot",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 2,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tdtr41pt1tyl_CBbH",
+					"name": "Terrain Adaptation (Slippery)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Terrain Adaptation (Slippery)",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tuUMotJfP_XsBXW-U",
+					"name": "Terrain Adaptation (Uneven)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Terrain Adaptation (Uneven)",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t1ES20L9Gyx7WwmzG",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Poison: Toxic Attack 1d-1 (Cyclic, 1 hour, 2 cycles, Resistible, +20%; Follow-Up, Bite, +0%; Resistible, HT-3, -15%; Symptoms, 1/3 HP, -3 ST, +45%; Symptoms, 2/3 HP, -4 ST, +20%) [6].",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				},
+				{
+					"id": "tNsVeVz865G150l9H",
+					"name": "Nondetection",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Nondetection: Obscure 10 (Divination; Always On, -50%; Defensive, +50%; Magical, -10%; No Area of Effect, -50%; Stealthy, +100%) [28].",
+					"base_points": 28,
+					"calc": {
+						"points": 28
+					}
+				},
+				{
+					"id": "tSJTFvDCLKZo0YSAy",
+					"name": "Sun Awe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Sun Awe: Terror (-3) (Sight; Awe; Accessibility, Only in direct sunlight, -30%; Magical, -10%) [36].",
+					"base_points": 36,
+					"calc": {
+						"points": 36
+					}
+				},
+				{
+					"id": "tms4pAIM3YN--h1Fo",
+					"name": "Spell-Like Abilities (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Spell-Like Abilities (Alternative Abilities) [91]:",
+					"base_points": 91,
+					"calc": {
+						"points": 91
+					}
+				},
+				{
+					"id": "tEfX8LCI0K_rAA2Bp",
+					"name": "Mind Clouding",
+					"reference": "PSI66",
+					"tags": [
+						"Mental",
+						"Psionics",
+						"Sense and Defense",
+						"Telepathy"
+					],
+					"local_notes": "Source construction: Mind Clouding 2\nNative library match: Psionics/Psionics Traits (Psionics Traits.adq). Fan source stated 12 point(s); library calculation is 12. Library note: Sense and defense ability. People don't perceive your presence. ",
+					"points_per_level": 6,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to Stealth against subject who fails to resist Mind Clouding, double if standing still",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": 12,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tyAg3bQWpZdsXdQDW",
+					"name": "Mind Shield",
+					"reference": "B70,P62,PSI15",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Mental"
+					],
+					"local_notes": "Source construction: Mind Shield 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 4,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 8,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tUgKYU2UxJgsOnur0",
+					"name": "Psi Sense 2",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Psi Sense 2",
+					"base_points": 13,
+					"calc": {
+						"points": 13
+					}
+				},
+				{
+					"id": "tDZKex0Rnedz2p9N7",
+					"name": "Telespeak 4",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Telespeak 4",
+					"base_points": 45,
+					"calc": {
+						"points": 45
+					}
+				},
+				{
+					"id": "tzq0FutiwyOzRSbvp",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t46N-0BiUTNzuB6Ko",
+					"name": "No Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tALL_csejtLPACr-h",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tNHytqyozydWtDZze",
+					"name": "Truthfulness",
+					"reference": "B159",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Truthfulness (6)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10. Library note: Make a self-control roll whenever you must keep silent about an uncomfortable truth (lying by omission). Roll at -5 if you actually have to tell a falsehood! If you fail, you blurt out the truth, or stumble so much that your lie is obvious.",
+					"cr": 6,
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fast-talk"
+							},
+							"amount": -5
+						}
+					],
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t4wl7vHZeKdoIaS6d",
+					"name": "Scales",
+					"reference": "PU2:12",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Scales\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tLCneKc8f9qT3Knrc",
+					"name": "Born Biter 2",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Born Biter 2",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tBgvK73MaurLPFQwi",
+					"name": "Early Maturation 4",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Couatl [Monster Manual, page 37, Expanded Psionic Handbook, page 193]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Early Maturation 4",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tnHxFuTTSqQM34bAl",
+					"name": "No Legs (Slithers)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Slithers)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 550
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "s0NxAHKvjEjACLgeF",
+			"name": "Mind Clouding",
+			"reference": "PSI66",
+			"tags": [
+				"PsionicSkill:Sense and Defense",
+				"PsionicSkill:Telepathy",
+				"Psionics",
+				"Sense and Defense",
+				"Telepathy"
+			],
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Mind Clouding"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 4,
+			"local_notes": "Source construction: Mind Clouding (H) IQ+0\nNative library match: Psionics/Psionics Skills (Psionics Skills.skl). Fan source allocates 4 point(s)."
+		},
+		{
+			"id": "s6gZBQ7cuyO_DdE-Z",
+			"name": "Mind Shield",
+			"reference": "PSI66",
+			"tags": [
+				"PsionicSkill:Sense and Defense",
+				"PsionicSkill:Telepathy",
+				"Psionics",
+				"Sense and Defense",
+				"Telepathy"
+			],
+			"difficulty": "will/h",
+			"defaults": [
+				{
+					"type": "will",
+					"modifier": -6
+				}
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Mind Shield"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 4,
+			"local_notes": "Source construction: Mind Shield (H) Will+0\nNative library match: Psionics/Psionics Skills (Psionics Skills.skl). Fan source allocates 4 point(s)."
+		},
+		{
+			"id": "sMUh6r0lgokU2e6yB",
+			"name": "Psi Sense",
+			"reference": "PSI41",
+			"tags": [
+				"Divination",
+				"ESP",
+				"PsionicSkill:Divination",
+				"PsionicSkill:ESP",
+				"Psionics"
+			],
+			"difficulty": "per/h",
+			"defaults": [
+				{
+					"type": "per",
+					"modifier": -6
+				}
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Signature Sniffer"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					},
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Psi Sense"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"points": 4,
+			"local_notes": "Source construction: Psi Sense (H) Per+0\nNative library match: Psionics/Psionics Skills (Psionics Skills.skl). Fan source allocates 4 point(s)."
+		},
+		{
+			"id": "sTKI4Y2DI0yiNVRv6",
+			"name": "Telesend",
+			"reference": "PSI60",
+			"tags": [
+				"Communication",
+				"PsionicSkill:Communication",
+				"PsionicSkill:Telepathy",
+				"Psionics",
+				"Telepathy"
+			],
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Telespeak"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					},
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "Telesend"
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "_"
+						}
+					}
+				]
+			},
+			"points": 4,
+			"local_notes": "Source construction: Telesend (H) IQ+0\nNative library match: Psionics/Psionics Skills (Psionics Skills.skl). Fan source allocates 4 point(s)."
+		}
+	]
+}

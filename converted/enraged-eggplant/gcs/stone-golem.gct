@@ -1,0 +1,704 @@
+{
+	"version": 5,
+	"id": "B-nLz_-okrD6lfRdg",
+	"traits": [
+		{
+			"id": "TYj1FP1T_WyEpUgR2",
+			"name": "Stone Golem",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Stone Golem [Monster Manual, page 137]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 57 points; exact GCS library substitutions produce 57 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tYGvaum45tdIMkoAf",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+15 (Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 135 point(s); library calculation is 135.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 15,
+					"modifiers": [
+						{
+							"id": "mqIEAwJbBglOwsVe_",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 135,
+						"current_level": 15
+					}
+				},
+				{
+					"id": "tZoWpsCpZFb0v7ugB",
+					"name": "Decreased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tw5BUl1GdFE61yVUt",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-10\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -200 point(s); library calculation is -200.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -200,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "t47v_mxXP1CtJtPh1",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tA5uT3nNNX7_y6vUX",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tMKbZHGgac78o_fYf",
+					"name": "Extra Hit Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HP+12 (Size Modifier, -10%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 22 point(s); library calculation is 22.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 12,
+					"modifiers": [
+						{
+							"id": "maUfTpopoyfeythfo",
+							"name": "Size",
+							"cost_adj": "-10%",
+							"levels": 1
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "hp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 22,
+						"current_level": 12
+					}
+				},
+				{
+					"id": "t9vV2gtumV3OA4wTk",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+10\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 50 point(s); library calculation is 50.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 50,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tOOryF5sPO_x3vEjF",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+10\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 50 point(s); library calculation is 50.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 50,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tasHIprvl821XYtw4",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move -1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tQQRLvkXYsjCbGL4b",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Dark Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 25 point(s); library calculation is 25.",
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tVyEtMd1NrDeJCZNk",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tiuHJ8F2vH2IzO3XO",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tV3b29UtonkUBxQ2s",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tMRL-zaN1M2dUsXf2",
+					"name": "Doesn’t Sleep",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Sleep",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tE-sIpuWRNqvlAGoK",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tKFbSiZDzoN9CJA_R",
+					"name": "Immunity to Metabolic Hazards",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Metabolic Hazards",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tsm7GFZ4Y2XJeekvk",
+					"name": "Immunity to Mind Control",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Mind Control",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "t6Aetpw9QKjRQFt6x",
+					"name": "Injury Tolerance (Homogenous, No Blood, No Eyes)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Stone Golem [Monster Manual, page 137]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (Homogenous, No Blood, No Eyes)",
+					"base_points": 50,
+					"calc": {
+						"points": 50
+					}
+				},
+				{
+					"id": "txzeslvi1JyvIhsrz",
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Magic Resistance 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t91elsIrKC-5-W_5P",
+					"name": "Pressure Support",
+					"reference": "B77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Pressure Support 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tbMH9ZSt-Zi9-GvqX",
+					"name": "Unaging",
+					"reference": "B95,PSI18",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unaging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tKTcDDK2Hk_cxr3F4",
+					"name": "Unfazeable",
+					"reference": "B95",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Unfazeable\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: Exempt from fright checks. Reaction modifiers do not affect you.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "twJrQOa8USnTxJWgn",
+					"name": "Vacuum Support",
+					"reference": "B96",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Vacuum Support\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tvBAHAIViozePbVlJ",
+					"name": "Automaton",
+					"reference": "DFM12",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Automaton\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -85 point(s); library calculation is -85.",
+					"base_points": -85,
+					"calc": {
+						"points": -85
+					}
+				},
+				{
+					"id": "t3STdJAnASkrruPCY",
+					"name": "Cannot Learn",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Cannot Learn\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "ttAJWhqpObPJbI2Dd",
+					"name": "No Sense of Smell/Taste",
+					"reference": "B146",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Sense of Smell/Taste\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tz5z1idU-rhC96y3x",
+					"name": "Numb",
+					"reference": "B146",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Numb\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"base_points": -20,
+					"calc": {
+						"points": -20
+					}
+				},
+				{
+					"id": "t9nrD_Vzvg4dNXpqB",
+					"name": "Mute",
+					"reference": "DFM13",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Mute\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -25 point(s); library calculation is -25.",
+					"base_points": -25,
+					"calc": {
+						"points": -25
+					}
+				},
+				{
+					"id": "tpmv0Tbf4bxjaV0lT",
+					"name": "Reprogrammable",
+					"reference": "B150",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Mental"
+					],
+					"local_notes": "Source construction: Reprogrammable\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tO2T-nhe9RKr3CU_Q",
+					"name": "Social Stigma (Valuable Property)",
+					"reference": "B156",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"local_notes": "Source construction: Social Stigma (Valuable Property)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t1o0oIWKJ0nJglxQm",
+					"name": "Unhealing (Total)",
+					"reference": "B160",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unhealing (Total)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tZl3_5-rUQ-8zr_EZ",
+					"name": "Unnatural",
+					"reference": "DFM14",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unnatural\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tb6j715bY8mf6tJAO",
+					"name": "Wealth (Dead Broke)",
+					"reference": "B25",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"local_notes": "Source construction: Wealth (Dead Broke)\nNative library match: Ultra Tech/Ultra Tech Traits (Ultra Tech Traits.adq). Fan source stated -25 point(s); library calculation is -25.",
+					"base_points": -25,
+					"calc": {
+						"points": -25
+					}
+				},
+				{
+					"id": "tzJ2zMiYmpMchBmG3",
+					"name": "Not Subject to Fatigue",
+					"reference": "TT2:12",
+					"tags": [
+						"Exotic",
+						"Feature",
+						"Physical"
+					],
+					"local_notes": "Source construction: Not Subject to Fatigue\nNative library match: Template Toolkit/Template Toolkit 2 - Races/Template Toolkit 2 - Races Traits (Template Toolkit 2 - Races Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tmMrBXi3jj-Z0JD-j",
+					"name": "Sterile",
+					"reference": "TT2:12",
+					"tags": [
+						"Feature",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sterile\nNative library match: Template Toolkit/Template Toolkit 2 - Races/Template Toolkit 2 - Races Traits (Template Toolkit 2 - Races Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tqnDZjkdrih6U_IyQ",
+					"name": "Taboo Trait (Fixed IQ)",
+					"reference": null,
+					"tags": [
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Taboo Trait (Fixed IQ)\nNative library match: Ultra Tech/Ultra Tech Meta-Traits (Ultra Tech Meta-Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 57
+			}
+		}
+	]
+}

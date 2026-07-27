@@ -1,0 +1,647 @@
+{
+	"version": 5,
+	"id": "BscjvzyTvkXDkQnCu",
+	"traits": [
+		{
+			"id": "TAnNv2nSOFdgdjkMC",
+			"name": "Assassin Vine",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Assassin Vine [Monster Manual, page 20]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 92 points; exact GCS library substitutions produce 92 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tRGRf8cFdei-G2PXE",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+10 (No Fine Manipulators, -40%, Size Modifier, -20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 10,
+					"modifiers": [
+						{
+							"id": "muKhxNOzw6WYw-AYC",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "m51Bjb1YxCdfhSqIR",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 2
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tfCUjgYXu3fBVwwfE",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-9\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -180 point(s); library calculation is -180.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 9,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -180,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tLeyvAr-9yA8uJqKv",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "trpNQR8HK0I0Nb3X7",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tyiF2EPki9dqcToCC",
+					"name": "Decreased Basic Speed",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Speed -1.00\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_speed",
+							"amount": -0.25,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t-bKSVz6B-gPetlND",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move -4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tBO9mohbNJiHpPVQU",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tIFZvnR-qGBhzd93Q",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+9\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 45 point(s); library calculation is 45.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 9,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 45,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tqu0XGzi_fl2I5vGG",
+					"name": "Constriction Attack",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Constriction Attack\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: If you succeed on a grapple against an opponent no larger than your own SM, on your next turn, and each successive turn, roll a Quick Contest of your ST vs. your victim’s ST or HT, whichever is higher. If you win, your victim takes damage equal to your margin of victory; otherwise, no damage is inflicted",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tV5R5SiirSX_b1VAE",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "t9jaNEwbkkXjG9wat",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink (Water Only, -50%)",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t9R5c138t9dJsiaTb",
+					"name": "Doesn’t Sleep",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Sleep",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tMWorcN5YG_WAZbSj",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tNfWSWSEVT-S-GmYj",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: High Pain Threshold\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: Never suffer shock penalties when injured",
+					"base_points": 10,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all HT rolls to avoid knockdown and stunning",
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist torture",
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tqA03mtM6QaAFg1QQ",
+					"name": "Immunity to Metabolic Hazards",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Metabolic Hazards",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tkNdALxjlNbqndfOb",
+					"name": "Immunity to Mind Control",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Mind Control",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tI3XfbKxjTntcxTCH",
+					"name": "Injury Tolerance (Homogenous, No Head, No Blood, No Eyes, No Neck)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (Homogenous, No Head, No Blood, No Eyes, No Neck)",
+					"base_points": 62,
+					"calc": {
+						"points": 62
+					}
+				},
+				{
+					"id": "tfAO7vYaG3TRs0c7X",
+					"name": "Regrowth",
+					"reference": "B80,P71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Regrowth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"base_points": 40,
+					"calc": {
+						"points": 40
+					}
+				},
+				{
+					"id": "tWhVXYqsbPFTgzICm",
+					"name": "Unfazeable",
+					"reference": "B95",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Unfazeable\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: Exempt from fright checks. Reaction modifiers do not affect you.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tXYR-SBhBUrn5RMy5",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 6,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tKLOpCDmsOEGO4jB9",
+					"name": "Vibration Sense (Air)",
+					"reference": "B96",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Vibration Sense (Air)\nNative library match: After the End/After the End Mutations (After the End Mutations.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tbjP7Y6_jeqXPZu5a",
+					"name": "Elemental Resistance (C,F)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Elemental Resistance (C,F): DR 5 (Limited, Cold, Fire, -35%; Tough Skin, -40%) [7].",
+					"base_points": 7,
+					"calc": {
+						"points": 7
+					}
+				},
+				{
+					"id": "thJx-ICFjRnXgbZRq",
+					"name": "Entangle",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Entangle: Binding 10 (Area Effect, 8 yards, +150%; Emanation, -20%; Environmental, Victim must be standing in dense vegetation, -40%; Extended Duration, 10x, +40%; Magical, -10%; Persistent, +40%) [52].",
+					"base_points": 52,
+					"calc": {
+						"points": 52
+					}
+				},
+				{
+					"id": "tirqylLoVlfLobSKy",
+					"name": "Blindness",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blindness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50. Library note: Cannot target hit locations",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"tags": {
+								"compare": "contains",
+								"qualifier": "combat"
+							},
+							"amount": -6
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tST5kykLZXduP8ZgS",
+					"name": "Deafness",
+					"reference": "B129",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Deafness\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"base_points": -20,
+					"calc": {
+						"points": -20
+					}
+				},
+				{
+					"id": "tRZv7-6W25IBvkrv1",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "toV8gxIBFWENydoNp",
+					"name": "No Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tKFpAA0ElqrpEIvWS",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tOUHfEwTNAqMb08vD",
+					"name": "Wild Animal with Mute",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Wild Animal with Mute",
+					"base_points": -40,
+					"calc": {
+						"points": -40
+					}
+				},
+				{
+					"id": "tbvuhoDudt0r12JNg",
+					"name": "Limited Camouflage (Vegetation)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Assassin Vine [Monster Manual, page 20]",
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Limited Camouflage (Vegetation)",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "t0J548sWKTXwP2Je9",
+					"name": "Cannot Jump",
+					"reference": "TT2:46",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical",
+						"Quirk"
+					],
+					"local_notes": "Source construction: Cannot Jump\nNative library match: Template Toolkit/Template Toolkit 2 - Races/Template Toolkit 2 - Races Traits (Template Toolkit 2 - Races Traits.adq). Fan source stated -1 point(s); library calculation is -1.",
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"id": "t0aJ9jorDCRKXzDh_",
+					"name": "No Legs (Slithers)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Slithers)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 92
+			}
+		}
+	]
+}

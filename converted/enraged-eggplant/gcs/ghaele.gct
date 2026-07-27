@@ -1,0 +1,848 @@
+{
+	"version": 5,
+	"id": "BUY9Vy-qZX6xYHRJQ",
+	"traits": [
+		{
+			"id": "TGmS52NQIK0Y-gx56",
+			"name": "Ghaele",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Ghaele [Monster Manual, page 94]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 436 points; exact GCS library substitutions produce 436 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t9pA8DE3-ZNAW85Rj",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 50 point(s); library calculation is 50.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 50,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tREY3HHFuXcj9gOj5",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tjZuotnS9BCa_K5P4",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t8K5TSw6rHUTc80Wc",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tJmCKqae8cfo6gu16",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tDmwzjgfoV7ImSSQ6",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move +1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tWkngn3mmdBfM6PiD",
+					"name": "Combat Reflexes",
+					"reference": "B43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Combat Reflexes\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15. Library note: Never freeze",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "fast-draw"
+							},
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "dodge",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "parry",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "block",
+							"amount": 1
+						},
+						{
+							"type": "attribute_bonus",
+							"attribute": "fright_check",
+							"amount": 2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
+							"amount": 6
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to initiative rolls for your side (+2 if you are the leader)",
+							"amount": 1
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Enhanced Time Sense"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "toxUvVuijPEtsCGhO",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "t_4BHhAZpgzwPKUTx",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tf6f9Ibo03oxB882-",
+					"name": "Immunity to Petrification",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Petrification",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tHaabXTd-ujh_t8yY",
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Magic Resistance 3 (Improved, +150%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mPC3g_5u9kfyOgW3v",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t09dtdEGdh8P77zSk",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tyylPfl7HJ0PdSYk0",
+					"name": "See Invisible",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: See Invisible (Magical; Magical, -10%)",
+					"base_points": 14,
+					"calc": {
+						"points": 14
+					}
+				},
+				{
+					"id": "tMhcetHuXZDQnllR0",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 6,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tpRfOWoloonipNMku",
+					"name": "Light Resistance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Light Resistance [30]: DR 10 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Light, -40%; Tough Skin, -40%) [25] + Protected Vision [5].",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tdhv6LsO9doqFdq58",
+					"name": "Tongues",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Tongues: Cosmic Power 3 (Limited, One Spoken Language, -50%; Magical, -10%) [12].",
+					"base_points": 12,
+					"calc": {
+						"points": 12
+					}
+				},
+				{
+					"id": "t5GPsjWaT_95a_JtK",
+					"name": "Veiling",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Veiling: Morph (Cosmetic, -50%; Magical, -10%; Retains Shape, -20%) [20].",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tInUiQ31bgU9Tr1-a",
+					"name": "Spell-Like Abilities (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Spell-Like Abilities (Alternative Abilities) [97]:",
+					"base_points": 97,
+					"calc": {
+						"points": 97
+					}
+				},
+				{
+					"id": "t20DA3folaOlxwrk7",
+					"name": "Charitable",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Charitable (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15. Library note: Make a self-control roll in any situation where you could render aid or are specifically asked for help, but should resist the urge",
+					"cr": 12,
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tHRB_xK3rGTSMCvHj",
+					"name": "Code of Honor (Celestial Elardin)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Code of Honor (Celestial Elardin)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tGnMBFvTJj4y6GYkR",
+					"name": "Impulsiveness",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Impulsiveness (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10. Library note: Make a self-control roll whenever it would be wise to wait and ponder. If you fail, you must act",
+					"cr": 12,
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tlCG1AHolahBusQeL",
+					"name": "Intolerance (Fiends)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Intolerance (Fiends)",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t-p8OVMsCm2m8uTCW",
+					"name": "No Sense of Humor",
+					"reference": "B146",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: No Sense of Humor\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from others in any situation where No Sense of Humor becomes evident",
+							"amount": -2
+						}
+					],
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "ts-M_NuLeggiT3wJv",
+					"name": "Pacifism (Cannot Harm Innocents)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Pacifism (Cannot Harm Innocents)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t2CjE_XvTN5TvJZ9U",
+					"name": "Vulnerability (Cold Iron, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Cold Iron, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "ta_ddHMltg4m924aD",
+					"name": "Vulnerability (Unholy Weapons, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Unholy Weapons, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tdpnKIdkBP89_r7pe",
+					"name": "Anarchic Touch",
+					"reference": null,
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Anarchic Touch\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "t_fdYnceCfX5E59u6",
+					"name": "Holy Touch",
+					"reference": null,
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Holy Touch\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tS-naNyM8joTmbqQD",
+					"name": "Illumination",
+					"reference": "PU2:10",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Illumination\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tyzbXyynzk5i6WnFj",
+					"name": "Early Maturation 1",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Early Maturation 1",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t273_TPDCepUeDuDF",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2 (No Fine Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mxh6kX3KCX58ZHIKg",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tvoRxphimN_iYCQ2k",
+					"name": "360° Vision",
+					"reference": "B34,P39",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: 360° Vision (Panoptic I, +20%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"base_points": 25,
+					"modifiers": [
+						{
+							"id": "mUa7htx5vvFIPtn3F",
+							"name": "Panoptic 1",
+							"reference": "P39",
+							"cost_adj": "20%"
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tVKOGr3FXwuwuv5hp",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Dark Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 25 point(s); library calculation is 25.",
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "toFz9m2-385qH7QyE",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tPr2xkwaokqBfOFBG",
+					"name": "Doesn’t Sleep",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Sleep",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "t6xmoZT-FbHShSsB9",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"calc": {
+						"points": 40
+					}
+				},
+				{
+					"id": "tOfslUOQ7mkxYR2kT",
+					"name": "Immunity to Metabolic Hazards",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Metabolic Hazards",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "t7TDDpLKAy6FIY6MH",
+					"name": "Injury Tolerance (Diffuse)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (Diffuse)",
+					"base_points": 100,
+					"calc": {
+						"points": 100
+					}
+				},
+				{
+					"id": "twMQnRFbFYHnFFqte",
+					"name": "Injury Tolerance (No Eyes)",
+					"reference": "B61",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Eyes)\nNative library match: Ultra Tech/Ultra Tech Meta-Traits (Ultra Tech Meta-Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tzMjW2un993osJd8R",
+					"name": "Light Ray",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Light Ray: Burning Attack 2d (Costs Fatigue, 1 FP, -5%; Magical, -10%; Nuisance Effect, Reflective, -5%) [8].",
+					"base_points": 8,
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "tWnQqBHv_vgeFPEs3",
+					"name": "No Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -50 point(s); library calculation is -50.",
+					"base_points": -50,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "tDn0hDb5ZgqRFDTUe",
+					"name": "No Legs (Aerial)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Legs (Aerial)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "flight"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t9ogQo8AaP1MIlzl7",
+					"name": "Point reconciliation (unparsed source construction)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Ghaele [Monster Manual, page 94]",
+					"tags": [
+						"Review Required",
+						"Source Reconciliation"
+					],
+					"local_notes": "Source construction: Automated source children total 570; published source template total 436. Replace this adjustment after resolving grouped abilities, replacements, unusual cost notation, or a source arithmetic error.",
+					"base_points": -134,
+					"calc": {
+						"points": -134
+					}
+				}
+			],
+			"calc": {
+				"points": 436
+			}
+		}
+	]
+}

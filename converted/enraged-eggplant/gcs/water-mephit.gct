@@ -1,0 +1,533 @@
+{
+	"version": 5,
+	"id": "BGVBxSq085lLVXG62",
+	"traits": [
+		{
+			"id": "T2euJldrhyfZEugc8",
+			"name": "Water Mephit",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Water Mephit [Monster Manual, page 185]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 105 points; exact GCS library substitutions produce 105 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tJ6pJaHNhahm50FzM",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST-3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tq-ycVhWRBGVeGFxK",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tbEW0l1te2hOnmog_",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t69SjO_4BVcYq_ncA",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tkk5ZIPWRbeyXUPwo",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move -1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tGQsqKX-w3uBn2i1a",
+					"name": "Amphibious",
+					"reference": "B40,P42",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Amphibious\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tcrDIc6sZkUtutw7P",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe (Gills, -50%)",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tlssc0xjn7w14yXHV",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink (Food Only, -50%)",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tK8P4ROR6esn1u29R",
+					"name": "Double-Jointed",
+					"reference": "DFA49",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Double-Jointed\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 5
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tN5rLtyRhmAm_ZhN4",
+					"name": "Enhanced Move 1 (Water)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Enhanced Move 1 (Water)",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tEpfdrwlsufM5N8wz",
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Flight (Cannot Hover, -15%; Winged, -25%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24. Library note: Air Move is Basic Speed x 2 (drop all fractions)",
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "m46w08XS-hDF7fNUn",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "mlSfo0fett-YJvPeD",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						}
+					],
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "t9Sg6ubFNSxeRQ7By",
+					"name": "Injury Tolerance (Homogenous, No Blood)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (Homogenous, No Blood)",
+					"base_points": 45,
+					"calc": {
+						"points": 45
+					}
+				},
+				{
+					"id": "thHaYWQrkAd9nuNVj",
+					"name": "Pressure Support",
+					"reference": "B77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Pressure Support 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tNBcj_ONbRtd8w6eL",
+					"name": "Regeneration",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Regeneration (Fast; Accessibility, Only when submerged in water, -30%)",
+					"base_points": 35,
+					"calc": {
+						"points": 35
+					}
+				},
+				{
+					"id": "tJRuzTtdEC551E6O5",
+					"name": "Speak Underwater",
+					"reference": "B87,P78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Speak Underwater\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tkFRL0DFi6U5wfR2E",
+					"name": "Unaging",
+					"reference": "B95,PSI18",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unaging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tKhKnzKDEOppSekt5",
+					"name": "Universal Digestion",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Universal Digestion (Liquids Only, -60%)",
+					"base_points": 2,
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tsiM3kTfqgchpjO0N",
+					"name": "Breath Weapon",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Breath Weapon: Crushing Attack 2d (Cone 1, +60%; Cosmic, Does knockback-based damage against diffuse targets, +50%; Costs Fatigue, 1 FP, -5%; Double Knockback, +20%; Increased 1/2D, 5x, +10%; Magical, -10%; No Blunt Trauma, ‑20%; No Wounding, Except against diffuse targets, ‑25%; Reduced Range, 1/10, -30%) [15].",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tUh-aOQiWwpxFXlOr",
+					"name": "Elemental Resistance (A,F)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Elemental Resistance (A,F): DR 5 (Includes Eyes, +10%; Limited, Acid, Fire, -35%; Tough Skin, -40%) [9].",
+					"base_points": 9,
+					"calc": {
+						"points": 9
+					}
+				},
+				{
+					"id": "tvaaN7Uz6V-W2pb_f",
+					"name": "Curious",
+					"reference": "B129",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Curious (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll when presented with an interesting item or situation",
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tXVk3E3Mthag_iOhA",
+					"name": "Odious Racial Habit (Vulgar and annoying behavior)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Odious Racial Habit (Vulgar and annoying behavior)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tDHw5TiSaRO8Z7Yym",
+					"name": "Skinny",
+					"reference": "B18",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Skinny\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "disguise"
+							},
+							"amount": -2
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "shadowing"
+							},
+							"amount": -2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to ST vs. knockback",
+							"amount": -2
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"qualifier": {
+									"compare": "at_most",
+									"qualifier": 14
+								},
+								"which": "ht"
+							}
+						]
+					},
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tjIjSGoyxEH-0lBMH",
+					"name": "Vulnerability (Cold, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Cold, x2)",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tWnJ5g_72by2jPO_k",
+					"name": "Vulnerability (Dehydration, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Water Mephit [Monster Manual, page 185]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Dehydration, x2)",
+					"base_points": -20,
+					"calc": {
+						"points": -20
+					}
+				},
+				{
+					"id": "tQAQLHrtepwAj0C9M",
+					"name": "Scales",
+					"reference": "PU2:12",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Scales\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tekPFUcNcdnpbngv7",
+					"name": "Playful",
+					"reference": "PU6:15",
+					"tags": [
+						"Mental",
+						"Quirk",
+						"Social"
+					],
+					"local_notes": "Source construction: Playful\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated -1 point(s); library calculation is -1.",
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				}
+			],
+			"calc": {
+				"points": 105
+			}
+		}
+	]
+}

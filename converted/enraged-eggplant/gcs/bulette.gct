@@ -1,0 +1,784 @@
+{
+	"version": 5,
+	"id": "BSAi9RlkVrC7D8vL5",
+	"traits": [
+		{
+			"id": "Tt7HzLhCcvosFb2X_",
+			"name": "Bulette",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Bulette [Monster Manual, page 30]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 135 points; exact GCS library substitutions produce 135 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t4wZEku9rRzxZziBV",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+15 (No Fine Manipulators, -40%; Size Modifier, -30%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 45 point(s); library calculation is 45.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 15,
+					"modifiers": [
+						{
+							"id": "mUWArqjO5CV6DS-wH",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "mQTe5Q1ymrP6U2bgy",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 3
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 45,
+						"current_level": 15
+					}
+				},
+				{
+					"id": "tnzXlOxeHaQMNSHNv",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+1 (No Fine Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 12 point(s); library calculation is 12.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mFSmTLdeNOjZPfvUj",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 12,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tsISBgvRFguOG29Qp",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -140 point(s); library calculation is -140.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -140,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "td_sOBB5wOyYwMs1C",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tiaUiq69Sg1CpDqhW",
+					"name": "Increased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM+3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t4CaQ9JLW7j3ad6Vk",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+7\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 35 point(s); library calculation is 35.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tb7vykDbuq2qy0rIf",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+8\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 8,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tAQuhWQ7gftxpy3kr",
+					"name": "Blunt Claws",
+					"reference": "B42,MA42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Blunt Claws\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 3 point(s); library calculation is 3.",
+					"base_points": 3,
+					"weapons": [
+						{
+							"id": "wkTfRR7taCaG2cfgI",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"base": "-1",
+								"modifier_per_die": 1
+							},
+							"usage": "Punch",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 (+1 per die) cr"
+							}
+						},
+						{
+							"id": "w6BXEKuTzOwcbN2dc",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "t8U06N2tkx3XPBH3z",
+					"name": "DR 5 (Inner Layer)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: DR 5 (Inner Layer)",
+					"base_points": 25,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"skull",
+								"face",
+								"neck",
+								"torso",
+								"vitals",
+								"groin",
+								"arm",
+								"hand",
+								"leg",
+								"foot",
+								"tail",
+								"wing",
+								"fin",
+								"brain"
+							],
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tyD5hO5QMYXpf23Ka",
+					"name": "DR 5",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: DR 5 (Outer Layer; Directional, Top, -20%; Partial, Torso Only, -10%)",
+					"base_points": 18,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"skull",
+								"face",
+								"neck",
+								"torso",
+								"vitals",
+								"groin",
+								"arm",
+								"hand",
+								"leg",
+								"foot",
+								"tail",
+								"wing",
+								"fin",
+								"brain"
+							],
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 18
+					}
+				},
+				{
+					"id": "tXISAK_F7E2onyDDw",
+					"name": "DR 5",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: DR 5 (Outer Layer; Partial, Skull Only, -70%)",
+					"base_points": 8,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"skull",
+								"face",
+								"neck",
+								"torso",
+								"vitals",
+								"groin",
+								"arm",
+								"hand",
+								"leg",
+								"foot",
+								"tail",
+								"wing",
+								"fin",
+								"brain"
+							],
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "taJqaWzaeNdYAlvUL",
+					"name": "DR 5",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: DR 5 (Outer Layer; Partial, Face Only, -50%)",
+					"base_points": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"skull",
+								"face",
+								"neck",
+								"torso",
+								"vitals",
+								"groin",
+								"arm",
+								"hand",
+								"leg",
+								"foot",
+								"tail",
+								"wing",
+								"fin",
+								"brain"
+							],
+							"amount": 5
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t6St-hsFyih6bGY0q",
+					"name": "Discriminatory Smell",
+					"reference": "B49,P47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Discriminatory Smell\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that utilizes sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t3N3o3BAlfbJFWMA8",
+					"name": "Extra Legs",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Extra Legs (Four Legs; Short, -50%)",
+					"base_points": 3,
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "t1R9-20iC31SZ8JsJ",
+					"name": "Fearlessness",
+					"reference": "B55,MA44",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Fearlessness 4\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fright_check",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Fearfulness"
+								}
+							}
+						]
+					},
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tgqoHn9Up0VDxn8uZ",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tp3N_vpSChnyBUs7Y",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t8ALr7sS2UZ98GZtG",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "waMq7V-h8pko6I3MP",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tkHDQss7WArlaXjM8",
+					"name": "Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tB6TC2YR50-dCu0KU",
+					"name": "Super Jump",
+					"reference": "B89,P79",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Super Jump 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10. Library note: @New Move and Jump Stats@",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tweUdZApWK3s-yUZw",
+					"name": "Tunneling (Move 6)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Tunneling (Move 6)",
+					"base_points": 60,
+					"calc": {
+						"points": 60
+					}
+				},
+				{
+					"id": "t1y1MP33zIZxXJczo",
+					"name": "Universal Digestion",
+					"reference": "B95,P86",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Universal Digestion (Matter Eater, +300%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"base_points": 5,
+					"modifiers": [
+						{
+							"id": "mYD8mHF9azf_W5ega",
+							"name": "Matter Eater",
+							"reference": "P86",
+							"cost_adj": "300%"
+						}
+					],
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tKdMSfrte84b55358",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Horizontal\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tt5qr8mvTWHkHQYz6",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tmgx3wdxR6H9omDF8",
+					"name": "Restricted Diet (Fresh Meat)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Fresh Meat)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tbW_qebx2YvH_vMIY",
+					"name": "Wild Animal",
+					"reference": "DFM14",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Wild Animal\nNative library match: Dungeon Fantasy RPG/Dungeon Fantasy RPG Traits (Dungeon Fantasy RPG Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to any non-combat roll for an unexpected task or one not trained for",
+							"amount": -2
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tdLVEcbPI43Ur0X55",
+					"name": "Can’t eat elven flesh",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Quirk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Can’t eat elven flesh",
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"id": "tKTwHfY1KhhSd-_Zr",
+					"name": "Dislikes dwarven flesh",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Quirk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Dislikes dwarven flesh",
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"id": "thwwAvf74Wh1cQ8rF",
+					"name": "Born Biter 1",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Bulette [Monster Manual, page 30]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Born Biter 1",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 135
+			}
+		}
+	]
+}

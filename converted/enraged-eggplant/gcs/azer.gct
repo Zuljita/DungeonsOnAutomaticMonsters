@@ -1,0 +1,223 @@
+{
+	"version": 5,
+	"id": "Byp6v07TT7u-vnFax",
+	"traits": [
+		{
+			"id": "TDqMDc0NEOuFJkihW",
+			"name": "Azer",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Azer [Monster Manual, page 21]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Azer [Monster Manual, page 21]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 77 points; exact GCS library substitutions produce 77 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tp-gfFLDV9XsAnbdh",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "toqMu0Ckou6vGExi_",
+					"name": "Decreased Size Modifier",
+					"reference": "B19",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: SM-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 0 point(s); library calculation is 0.",
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "sm",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tYo6wwGCDeEDQ22u2",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move -1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tC61whXAlHWnI3h3O",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Dark Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 25 point(s); library calculation is 25.",
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tiVyZ9spFJ0nrskyZ",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 4 point(s); library calculation is 4.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tAqu2hjCFb72jd2lW",
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Magic Resistance 1 (Improved, +150%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mBL23jDSFGFcHump4",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t8Gc6sMSOwV6o9hBv",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 5 (Hot)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 5 point(s); library calculation is 5. Library note: Hot",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "trC6A4gDrOhAmw7DI",
+					"name": "Fire Resistance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Azer [Monster Manual, page 21]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Fire Resistance [60]: DR 20 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Fire, -40%; Tough Skin, -40%) [50] + Immunity to Noxious Fire Effects [10].",
+					"base_points": 60,
+					"calc": {
+						"points": 60
+					}
+				},
+				{
+					"id": "tK1GnnpmBzwYrzeWH",
+					"name": "Heat Aura",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Azer [Monster Manual, page 21]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Heat Aura: Burning Attack 1 point (Always On, -20%; Aura, +80%; Magical, -10%; Melee Attack, Reach C, -30%) [3].",
+					"base_points": 3,
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tdNjs5cH8ZVD76ivU",
+					"name": "Vulnerability (Cold, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Azer [Monster Manual, page 21]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Cold, x2)",
+					"base_points": -30,
+					"calc": {
+						"points": -30
+					}
+				}
+			],
+			"calc": {
+				"points": 77
+			}
+		}
+	]
+}

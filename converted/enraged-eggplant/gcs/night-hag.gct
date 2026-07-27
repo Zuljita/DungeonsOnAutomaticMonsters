@@ -1,0 +1,538 @@
+{
+	"version": 5,
+	"id": "BHOqGXIrEOo1PQBJe",
+	"traits": [
+		{
+			"id": "TtUqxLp1Lo8WIMCuD",
+			"name": "Night Hag",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Night Hag [Monster Manual, page 193]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 306 points; exact GCS library substitutions produce 306 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tYFpEEfkuNHXOs_cO",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tez_aTDOzH4I9g-VB",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t6Yikn8pJsB5lW3Ok",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 3 (Tough Skin, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 9 point(s); library calculation is 9.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mOp-6QFX_sE7-ccqf",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tjg2waVUkKHUwyRYf",
+					"name": "Doesn’t Eat or Drink",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Eat or Drink",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tl1tv8P-ZusfgsiU3",
+					"name": "Doesn’t Sleep",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Sleep",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "t8cjzGb27eF5sh-4_",
+					"name": "Eidetic Memory",
+					"reference": "B51",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Eidetic Memory\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tPc2cZpi6Em_tnn4G",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fangs\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "weTh7VidTa4WhWpxS",
+							"sv": 1,
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tSWFSaU1on7EEM6c-",
+					"name": "Immunity to Mind Control",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Mind Control",
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "trV7udCgYuxFakjiB",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tXr-C6EJb6CIR14Rt",
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Magic Resistance 2 (Improved, +150%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "m7-AZ_xxmlgjMIq_U",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t-v5sX0RNZn_b9k9u",
+					"name": "Unaging",
+					"reference": "B95,PSI18",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Unaging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tu9iNN8N85UauhNbs",
+					"name": "Dream Haunting",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Dream Haunting: Leech 1 (Accessibility, Only on sleepers, -20%; Magical, -10%; Malediction 1, +100%; Missed Sleep, +50%; Ranged, +40%; Steal FP, -25%) [59].",
+					"base_points": 59,
+					"calc": {
+						"points": 59
+					}
+				},
+				{
+					"id": "tdEoaOoKtZTtoGm05",
+					"name": "Heartstone",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Heartstone [39]: Immunity to Disease (Breakable, DR 3, Cannot Be Repaired, SM-5, -40%; Can Be Stolen, Quick Contest of DX, -30%; Magical, -10%; Only works 10 times for the thief, +10%) [3] + Insubstantiality (Breakable, DR 3, Cannot Be Repaired, SM-5, -40%; Can Be Stolen, Quick Contest of DX, Does not work for the thief, -15%; Can Carry Objects, Light Encumbrance, +20%; No Vertical Move, -10%; Magical, -10%) [36].",
+					"base_points": 39,
+					"calc": {
+						"points": 39
+					}
+				},
+				{
+					"id": "tpZfdPzqwBz9VH3_6",
+					"name": "Elemental Resistance (C,F)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Elemental Resistance (C,F) [70]: DR 20 (Includes Eyes, +10%; Includes Internal, +20%; Limited, Cold, Fire, -35%; Tough Skin, -40%) [55] + Immunity to Noxious Extreme Temperature Effects (Cold and Fire) Effects [15].",
+					"base_points": 70,
+					"calc": {
+						"points": 70
+					}
+				},
+				{
+					"id": "ttJSFVpg1R5howp5m",
+					"name": "Demon Fever",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Demon Fever: Toxic Attack 1d-2 (Follow-Up, Bite, +0%; Resistible, HT-4, -10%; Onset, 1d days, -30%; Cyclic, 24-hour cycle with 4 cycles, Resistible, Mildly contagious, +40%; Symptoms, 1/3 HP, HT-2, +30%; Symptoms, 1/2 HP, Coughing, +40%) [4].",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "t8zXypty3-94Ni9a1",
+					"name": "Spell-Like Abilities (Alternative Abilities)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Spell-Like Abilities (Alternative Abilities) [73]:",
+					"base_points": 73,
+					"calc": {
+						"points": 73
+					}
+				},
+				{
+					"id": "t8ish4gJTc0k8wChi",
+					"name": "Appearance (Hideous)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Appearance (Hideous)",
+					"base_points": -16,
+					"calc": {
+						"points": -16
+					}
+				},
+				{
+					"id": "tI2UcxaXzvjsqNwS-",
+					"name": "Callous",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Callous\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5.",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "psychology"
+							},
+							"amount": -3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "teaching"
+							},
+							"amount": -3
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from past victims and anyone with Empathy",
+							"amount": -1
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
+							"amount": 1
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tSvnRlmALACSUrt6t",
+					"name": "Odious Racial Habit (Eats sapient beings)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Odious Racial Habit (Eats sapient beings)",
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tdgStk49W_hrhh2De",
+					"name": "Sadism",
+					"reference": "B152",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Sadism (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15. Library note: Make a self-control roll whenever you have an opportunity to indulge your desires and know you shouldn’t (e.g., because the prisoner is one who should be released unharmed). If you fail, you cannot restrain yourself.",
+					"cr": 12,
+					"base_points": -15,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from those who become aware of your Sadism unless they are from a culture that holds life in little esteem",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tDiSTEh-r18nfndzl",
+					"name": "Selfish",
+					"reference": "B153",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Selfish (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+					"cr": 12,
+					"base_points": -5,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from others when your Selfishness surfaces",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tQpbJM9SVIvhbTOXB",
+					"name": "Social Stigma (Monster)",
+					"reference": "B155",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"local_notes": "Source construction: Social Stigma (Monster)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15.",
+					"base_points": -15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "intimidation"
+							},
+							"amount": 1
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from others",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tWcrsomTpTMk1PyRx",
+					"name": "Vulnerability (Cold Iron, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Cold Iron, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tr4bZCJZ97wDQp5_E",
+					"name": "Vulnerability (Holy Weapons, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Night Hag [Monster Manual, page 193]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Holy Weapons, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t5WOS4Bh-dHQ5wMHu",
+					"name": "Unholy Touch",
+					"reference": null,
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Unholy Touch\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 306
+			}
+		}
+	]
+}

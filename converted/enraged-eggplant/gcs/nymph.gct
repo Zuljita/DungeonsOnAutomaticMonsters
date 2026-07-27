@@ -1,0 +1,429 @@
+{
+	"version": 5,
+	"id": "BF5j7vxZOy2uVAddC",
+	"traits": [
+		{
+			"id": "Td4uRtFNRXYWAe1Ni",
+			"name": "Nymph",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Nymph [Monster Manual, page 197]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 214 points; exact GCS library substitutions produce 214 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tfcvgNGNvKxytHlbZ",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: ST-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tApUDrUDl5bgGy4lH",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t2yGoUvNc66kedOnx",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tcmDnumTH4mV3U6ob",
+					"name": "Amphibious",
+					"reference": "B40,P42",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Amphibious\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tWwF4yQCHANToDqku",
+					"name": "Animal Empathy",
+					"reference": "B40,P48",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Animal Empathy\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tSsbfP3mG7Cs0ydqE",
+					"name": "Blessed (The King’s Two Bodies)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Blessed (The King’s Two Bodies)",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "t1IeloYlwQxSJl9u4",
+					"name": "Appearance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Appearance (Transcendent; Universal, +25%)",
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tVAgr0QQb1of7onzs",
+					"name": "Charisma",
+					"reference": "B41",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Charisma 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fortune-telling"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "leadership"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "panhandling"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "public speaking"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from sapient being with whom you actively interact (converse, lecture, etc.)",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "to Influence rolls",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tufhgo2zeWp2sLgjY",
+					"name": "Doesn’t Breathe",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe (Gills, -50%)",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tWvVzZcm3ORWBMcPc",
+					"name": "Immunity to Sleep Effects",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Sleep Effects",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t5JYVD2ox8oOWm2Bj",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tjxiVL-AU3bfzfiiQ",
+					"name": "Pressure Support",
+					"reference": "B77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Pressure Support 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tg0sXWdl15BLi2W3w",
+					"name": "Speak Underwater",
+					"reference": "B87,P78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Speak Underwater\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t5VBICjn4rbUQw57a",
+					"name": "Blinding Beauty",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Blinding Beauty [86]: Affliction 1 (HT; Area Effect, 8 yards, +150%; Disadvantage, Blindness, +50%; Emanation, -20%; Extended Duration, Permanent, +150%; Increased Immunity 2, -20%; Link, +10%; Magical, -10%; Vision-Based, +150%) [56] + Terror (Sight; Awe; Link, +10%; Magical, -10%) [30].",
+					"base_points": 86,
+					"calc": {
+						"points": 86
+					}
+				},
+				{
+					"id": "te5plmirIyuZLOlaP",
+					"name": "Stunning Glance",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Stunning Glance: Affliction 1 (Will; Based on Will, +20%; Magical, -10%; Malediction 2, +150%; Vision-Based, -20%) [24].",
+					"base_points": 24,
+					"calc": {
+						"points": 24
+					}
+				},
+				{
+					"id": "tkFDIVOcPyVieSSGm",
+					"name": "Compulsive Carousing",
+					"reference": "B128",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Compulsive Carousing (15)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -2 point(s); library calculation is -2.",
+					"cr": 15,
+					"base_points": -5,
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from like-minded extroverts",
+							"amount": 1
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "or worse from sober-minded citizens (GM discretion)",
+							"amount": -1
+						}
+					],
+					"calc": {
+						"points": -2
+					}
+				},
+				{
+					"id": "tvFRxFEzIUliBOu-M",
+					"name": "Impulsiveness",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Impulsiveness (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10. Library note: Make a self-control roll whenever it would be wise to wait and ponder. If you fail, you must act",
+					"cr": 12,
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t4oBMPz3_vrF7JY4Q",
+					"name": "Sense of Duty (Nature)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Sense of Duty (Nature)",
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tM8oObUKIbgCEzCIQ",
+					"name": "Short Attention Span",
+					"reference": "B153",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: Short Attention Span (12)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -10 point(s); library calculation is -10. Library note: Make a self-control roll whenever you must maintain interest in something for an extended period of time, or whenever a distraction is offered. If you fail, you automatically fail at the task at hand.",
+					"cr": 12,
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t8jbOPZ-Xu7f41nnH",
+					"name": "Vulnerability (Cold Iron, x2)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Vulnerability (Cold Iron, x2)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tkVr7JDitpkat3JKK",
+					"name": "Immunity to Satyr Pipes",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Nymph [Monster Manual, page 197]",
+					"tags": [
+						"Perk",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Immunity to Satyr Pipes",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 214
+			}
+		}
+	]
+}

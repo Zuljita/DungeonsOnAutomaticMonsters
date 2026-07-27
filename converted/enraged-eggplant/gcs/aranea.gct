@@ -1,0 +1,585 @@
+{
+	"version": 5,
+	"id": "BcN3SU6RshSn_IdyG",
+	"traits": [
+		{
+			"id": "TY1BMiUpTTWdO4Ep-",
+			"name": "Aranea",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Aranea [Monster Manual, page 15]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 182 points; exact GCS library substitutions produce 182 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tyNyhFgqD3bZuC-2v",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tPI9w8L_iVqLq_Nx8",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tf-Y_m7HxjJwv_e_h",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: HT+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "ht",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tFqCIkygZF9xHEffe",
+					"name": "Increased Basic Speed",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Speed +0.5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_speed",
+							"amount": 0.25,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tGol3PrO16nSP1AvC",
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: Basic Move +1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tg0XD_sqa9wKHudAs",
+					"name": "Clinging",
+					"reference": "B43,P45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Clinging\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tnptRQoyxy76mJfUG",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tYuB2er-C7hzCy8IU",
+					"name": "Extra Legs (Eight Legs)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Extra Legs (Eight Legs)",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tkk6ZcM3VvKhPwEQ0",
+					"name": "Infravision",
+					"reference": "B60,P87",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Infravision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tJJSxspAjsV7jJdi5",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t88DlaOYTp290QlAF",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Sharp Teeth\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wWVRbMAEa9OEd6bGC",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tTiFz75YjF2IYjq1H",
+					"name": "Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "twbN9p9CwdMs2OjBy",
+					"name": "Alter Perception",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Alter Perception: Illusion (Costs Fatigue, 1 FP, -5%; Magical, -10%; Mental, +100%; Short-Range 2, -20%; Visual Only, -30%) [34].",
+					"base_points": 34,
+					"calc": {
+						"points": 34
+					}
+				},
+				{
+					"id": "tZyVJlNBF2z6XyByP",
+					"name": "Change Shape",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Change Shape [40]: Alternate Form (Humanoid; Active Change, +20%; Magical, -10%; Reduced Time 1, +20%) [20] + Alternate Form (Hybrid; Active Change, +20%; Magical, -10%; Reduced Time 1, +20%) [20].",
+					"base_points": 40,
+					"calc": {
+						"points": 40
+					}
+				},
+				{
+					"id": "tLBuM3rEOIV3CnkW5",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Poison: Toxic Attack 1d-1 (Cyclic, 1 hour, 3 cycles, Resistible, +20%; Follow-Up, Sharp Teeth, +0%; Resistible, HT-3, -15%; Symptoms, 2/3 HP, -3 ST, +15%) [4].",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tmqYrry6I6ied-gIf",
+					"name": "Web",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Web: Binding 10 (Area Effect, 2 yards, +50%; Biological, -10%; Costs Fatigue, 1 FP, -5%; Persistent, +40%; Reduced Range, 1/10, -30%) [29].",
+					"base_points": 29,
+					"calc": {
+						"points": 29
+					}
+				},
+				{
+					"id": "tH_-CZR5A_6kSPUMS",
+					"name": "Climbing Line",
+					"reference": "PU2:10",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"local_notes": "Source construction: Climbing Line\nNative library match: Power Ups/Power Ups Traits (Power Ups Traits.adq). Fan source stated 1 point(s); library calculation is 1.",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "te1Hwpu6AViJGRADm",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t88OSeKpAUk-pPVvv",
+					"name": "Hideous",
+					"reference": "DW28",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Hideous\nNative library match: Discworld Roleplaying Game/Discworld Roleplaying Game Traits (Discworld Roleplaying Game Traits.adq). Fan source stated -16 point(s); library calculation is -16.",
+					"base_points": -16,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Intimidation"
+							},
+							"amount": 2
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from others",
+							"amount": -4
+						}
+					],
+					"calc": {
+						"points": -16
+					}
+				},
+				{
+					"id": "tb1qVLOyPnygY0Aqc",
+					"name": "Phobia (Fire) (12)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Phobia (Fire) (12)",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "twqscaAN-28BA-r3Z",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Restricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tmmVJJRlOQb2TyHDX",
+					"name": "Short Arms",
+					"reference": "DW96",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Short Arms\nNative library match: Discworld Roleplaying Game/Discworld Roleplaying Game Traits (Discworld Roleplaying Game Traits.adq). Fan source stated -10 point(s); library calculation is -10.",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tJCH8q8ehh3Fiy2wE",
+					"name": "Social Stigma (Monster)",
+					"reference": "B155",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"local_notes": "Source construction: Social Stigma (Monster)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -15 point(s); library calculation is -15.",
+					"base_points": -15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "intimidation"
+							},
+							"amount": 1
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "from others",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tewHVhaCzes2Ucrnz",
+					"name": "Brain is in the hump on the back (requires a Physiology or other appropriate skill roll to target, but lack...",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Brain is in the hump on the back (requires a Physiology or other appropriate skill roll to target, but lacks DR 2)",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tBoFNwHw4XN63y9JD",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Fangs\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 2 point(s); library calculation is 2.",
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "wW3TRKdn0fsmWqh2K",
+							"sv": 1,
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Bite",
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tkMg16lEwQJsXnLA_",
+					"name": "Social Stigma (Monster) [-15]. Ugly",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Social Stigma (Monster) [-15]. Ugly",
+					"base_points": -8,
+					"calc": {
+						"points": -8
+					}
+				},
+				{
+					"id": "t-d_0Y7hkyPwvfWox",
+					"name": "Four Eyes",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Four Eyes",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tOuN9_Ia08elSjUUt",
+					"name": "Point reconciliation (unparsed source construction)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aranea [Monster Manual, page 15]",
+					"tags": [
+						"Review Required",
+						"Source Reconciliation"
+					],
+					"local_notes": "Source construction: Automated source children total 176; published source template total 182. Replace this adjustment after resolving grouped abilities, replacements, unusual cost notation, or a source arithmetic error.",
+					"base_points": 6,
+					"calc": {
+						"points": 6
+					}
+				}
+			],
+			"calc": {
+				"points": 182
+			}
+		}
+	]
+}

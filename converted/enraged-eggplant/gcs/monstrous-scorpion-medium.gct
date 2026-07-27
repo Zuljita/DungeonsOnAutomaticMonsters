@@ -1,0 +1,388 @@
+{
+	"version": 5,
+	"id": "BdcLcNwNiDuXxVpAp",
+	"traits": [
+		{
+			"id": "TayM11r5T7OPFj3aR",
+			"name": "Monstrous Scorpion (Medium)",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Monstrous Scorpion (Medium) [Monster Manual, page 287]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published -52 points; exact GCS library substitutions produce -52 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tukeqFDw2PH4nXBTZ",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+2 (No Fine Manipulators, -40%)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 24 point(s); library calculation is 24.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "meGm9FrY88cD8cwln",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%"
+						}
+					],
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tZKE_poMkNZMHJ4DQ",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-8\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -160 point(s); library calculation is -160.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 8,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -160,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tHuWa9yb81_TqL4nA",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"local_notes": "Source construction: Will+6\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 30 point(s); library calculation is 30.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "will",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tSX--z2Ebniz3tPum",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per+8\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 40 point(s); library calculation is 40.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 8,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "twYaipWvz1IfvpTcR",
+					"name": "Ambidexterity",
+					"reference": "B39",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Ambidexterity\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t-xZqJwrBu9axMHl4",
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: DR 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tD8QOh7p_4W5e-8IW",
+					"name": "Extra Legs (Eight Legs)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Extra Legs (Eight Legs)",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "teX0xjvAbAMGvkeQA",
+					"name": "Injury Tolerance (No Brain, No Neck, No Vitals)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Injury Tolerance (No Brain, No Neck, No Vitals)",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tXztdguxJfyQ-tVc-",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 5\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "ttYXDUG6mEtOTCatJ",
+					"name": "Peripheral Vision",
+					"reference": "B74,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Peripheral Vision\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 15 point(s); library calculation is 15.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "ts8JUqddmvw-AyMsc",
+					"name": "Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Subsonic Hearing (Biological (Passive), -5%; Melee Attack, Reach C, -30%)",
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tLfDbtRY5pNlsWyjc",
+					"name": "Temperature Tolerance",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Temperature Tolerance 2 (Hot)\nNative library match: Home Brew/Enraged Eggplant/Magic/Wizardry (Clerical) (Wizardry (Clerical).adq). Fan source stated 2 point(s); library calculation is 2. Library note: Hot",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 2,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t2J0UrMyW9TcATwj6",
+					"name": "Pincers",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Pincers [18]: Extra Mouth 2 (Accessibility, Only to opt for a free grapple on a pincer hit, -60%; Link, +10%) [5] + Natural Weapon (Pincer; Cutting; Link, Extra Mouth, +10%) [8] + Good Grip 1 [5].",
+					"base_points": 18,
+					"calc": {
+						"points": 18
+					}
+				},
+				{
+					"id": "tL2P7qIuuGbrOpZO0",
+					"name": "Sting",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Sting: Striker (Impaling; Cannot Parry, -40%) [5].",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tNhRT8QIMDTOCO3nd",
+					"name": "Poison",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: - Poison: Toxic Attack 1d-1 (Cyclic, 1 hour, 4 cycles, Resistible, +40%; Follow-Up, Sting, +0%; Resistible, HT-2, -20%; Symptoms, 2/3 HP, -2 HT and -1 DX, +20%) [5].",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tjHHLvZrn4Z-dBS_7",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Cold-Blooded (50°)\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -5 point(s); library calculation is -5. Library note: Under 50-degrees",
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to HT to resist the effects of temperature",
+							"amount": 2
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "toT2_-g5uaM4wEbOe",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: No Fine Manipulators\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -30 point(s); library calculation is -30.",
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "t8M9oTHM62RTGlIEc",
+					"name": "Resitricted Diet (Carnivore)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Resitricted Diet (Carnivore)",
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "ti6Woq3fRxQY6lTwz",
+					"name": "Wild Animal with Mute",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Monstrous Scorpion (Medium) [Monster Manual, page 287]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Wild Animal with Mute",
+					"base_points": -40,
+					"calc": {
+						"points": -40
+					}
+				}
+			],
+			"calc": {
+				"points": -52
+			}
+		}
+	]
+}

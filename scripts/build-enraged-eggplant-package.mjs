@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { validatePackage } from "./package-validation.mjs";
 import { artRecordMap, readPngMetadata, validateImageManifest } from "./art-validation.mjs";
@@ -66,6 +66,34 @@ function publicCredits(credits) {
 }
 const publicDataUrl = `https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-${version}.json`;
 const publicArtBaseUrl = "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant";
+
+/**
+ * GCS v5 downloads. The .gct is the reviewed ancestry template — drop it on a
+ * character to apply the creature. The .gcs is a ready-to-open sheet built from
+ * that same template, so the two cannot disagree about what the monster is.
+ */
+function publicFiles(monster) {
+  for (const [label, local] of [
+    ["gct", `converted/enraged-eggplant/gcs/${monster.provenance.sourceMonsterId}.gct`],
+    ["gcs", `converted/enraged-eggplant/gcs-sheets/${monster.id}.gcs`],
+  ]) {
+    if (!existsSync(resolve(local))) {
+      throw new Error(`Refusing to publish a ${label} URL for ${monster.id}: ${local} does not exist.`);
+    }
+  }
+  return {
+    gct: {
+      url: `${publicArtBaseUrl}/gct/${monster.provenance.sourceMonsterId}.gct`,
+      mediaType: "application/json",
+      format: "gcs_v5_ancestry_template",
+    },
+    gcs: {
+      url: `${publicArtBaseUrl}/gcs/${monster.id}.gcs`,
+      mediaType: "application/json",
+      format: "gcs_v5_character_sheet",
+    },
+  };
+}
 
 function publicArt(monster) {
   const record = artByMonsterId.get(monster.id);
@@ -143,6 +171,7 @@ const published = {
   monsters: candidate.monsters.map(monster => ({
     ...monster,
     art: publicArt(monster),
+    files: publicFiles(monster),
     provenance: {
       ...monster.provenance,
       sourceUrl: publicPermissionUrl,

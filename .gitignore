@@ -10,6 +10,12 @@ converted/enraged-eggplant/*
 # the reviewed package on a clean checkout, where the local queue does not exist.
 !converted/enraged-eggplant/doa-monsters.reviewed.json
 !converted/enraged-eggplant/CHECKLIST.md
+# GCS v5 downloads are published artifacts, and the publish workflow runs on a
+# clean checkout where the local conversion queue does not exist.
+!converted/enraged-eggplant/gcs/
+!converted/enraged-eggplant/gcs/**
+!converted/enraged-eggplant/gcs-sheets/
+!converted/enraged-eggplant/gcs-sheets/**
 
 # Defensive guards: SRD working corpora belong under data/, not tracked sources/.
 sources/srd-3-5/raw/

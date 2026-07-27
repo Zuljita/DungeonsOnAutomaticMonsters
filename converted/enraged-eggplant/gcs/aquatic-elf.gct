@@ -1,0 +1,234 @@
+{
+	"version": 5,
+	"id": "BpMfNdrwqr5kjDo2D",
+	"traits": [
+		{
+			"id": "TZ2C0m5J2CeXpzidd",
+			"name": "Aquatic Elf",
+			"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aquatic Elf [Stormwrack, page 148]",
+			"local_notes": "Fan-derived draft authorized for publication. Enraged Eggplant granted unrestricted permission to use, adapt, convert, and publish these statistics. Originator credit: Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); adapted and republished with permission. Source heading: Aquatic Elf [Stormwrack, page 148]. SRD name overlap does not make these GURPS mechanics SRD content. Review status: draft. Fan document published 48 points; exact GCS library substitutions produce 48 points. Library adjustment: +0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tvjBmtCPIiNMrvbKN",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"local_notes": "Source construction: DX+1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 20 point(s); library calculation is 20.",
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tq6xB5cLBUeAhUB3I",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"local_notes": "Source construction: IQ-1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated -20 point(s); library calculation is -20.",
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t4wBExir4yodkjjoI",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"local_notes": "Source construction: Per +1\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "per",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t2XIIyI40vYJ16Y8J",
+					"name": "Amphibious",
+					"reference": "B40,P42",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Amphibious\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tYAvNtET0z_Kd8J-F",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Extended Lifespan 3\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 6 point(s); library calculation is 6.",
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tMKe_JMvEtcnxucv7",
+					"name": "Night Vision",
+					"reference": "B71,P87",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Source construction: Night Vision 8\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 8 point(s); library calculation is 8.",
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 8,
+					"calc": {
+						"points": 8,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tk6kntHEgn4yvVDus",
+					"name": "Pressure Support",
+					"reference": "B77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Pressure Support 2\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 10 point(s); library calculation is 10.",
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tBnTCmpT4C6oSwiJz",
+					"name": "Speak Underwater",
+					"reference": "B87,P78",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "Source construction: Speak Underwater\nNative library match: Basic Set/Basic Set Traits (Basic Set Traits.adq). Fan source stated 5 point(s); library calculation is 5.",
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tztxNZlbhiz0nAbl0",
+					"name": "Elven Reverie",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aquatic Elf [Stormwrack, page 148]",
+					"tags": [
+						"Advantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Elven Reverie [9]: Doesn’t Sleep (Accessibility, Not when diseased, poisoned, or under 2/3 HP, -20%; Mental Only, Has to rest the body, -50%) [6] + Less Sleep 4 (Accessibility, Not when diseased, poisoned, or under 2/3 HP, -20%; Physical Only, -50%) [3].",
+					"base_points": 9,
+					"calc": {
+						"points": 9
+					}
+				},
+				{
+					"id": "t-0_ZsBUkHnU7zOYM",
+					"name": "Weakness (Immersion in fresh water, 1d per 30 minutes)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aquatic Elf [Stormwrack, page 148]",
+					"tags": [
+						"Disadvantage",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Weakness (Immersion in fresh water, 1d per 30 minutes)",
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tH-_JUoUPqKKtuC7Z",
+					"name": "Doesn’t Breathe (Gills)",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aquatic Elf [Stormwrack, page 148]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Doesn’t Breathe (Gills)",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "tbuEmcllAc4tkxpes",
+					"name": "Early Maturation 2.5",
+					"reference": "Enraged Eggplant, Monsters (May 11, 2024): Aquatic Elf [Stormwrack, page 148]",
+					"tags": [
+						"Feature",
+						"Review Required"
+					],
+					"local_notes": "Source construction: Early Maturation 2.5",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 48
+			}
+		}
+	]
+}

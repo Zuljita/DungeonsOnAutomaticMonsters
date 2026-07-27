@@ -17,6 +17,10 @@ const opt = (name, fallback) => {
 const BUCKET = opt("bucket", "doa-assets");
 const ART_DIR = opt("art-dir", "art/enraged-eggplant");
 const PREFIX = opt("prefix", "monsters/enraged-eggplant");
+// The art tree is a fixed set of subdirectories, but the GCS templates and
+// sheets are flat directories of files. --flat uploads everything directly
+// inside --art-dir instead of walking the art subdirectory list.
+const FLAT = process.argv.includes("--flat");
 const CONCURRENCY = Number(opt("concurrency", "8"));
 const FORCE = args.includes("--force");
 
@@ -62,6 +66,14 @@ async function listRemote() {
 
 async function collectLocal() {
   const files = [];
+  if (FLAT) {
+    for (const name of await readdir(ART_DIR)) {
+      if (CONTENT_TYPES.has(path.extname(name).toLowerCase())) {
+        files.push({ local: path.join(ART_DIR, name), key: `${PREFIX}/${name}` });
+      }
+    }
+    return files;
+  }
   for (const subdir of SUBDIRS) {
     const dir = path.join(ART_DIR, subdir);
     let names = [];
@@ -101,7 +113,7 @@ async function upload(file) {
 
 const remote = await listRemote();
 const local = await collectLocal();
-if (local.length === 0) throw new Error(`No art files found under ${ART_DIR}`);
+if (local.length === 0) throw new Error(`No uploadable files found under ${ART_DIR}`);
 
 const pending = [];
 let skipped = 0;

@@ -1,4 +1,5 @@
 import { checkFieldShape } from "./review/field-policy.mjs";
+import { checkDescriptionShape } from "./review/descriptions.mjs";
 
 const PROVENANCE_KINDS = new Set([
   "workbook_metadata",
@@ -138,6 +139,10 @@ function validateMonster(monster, index, manifest, sourceIds, sourceById, monste
   // read a field without an existence check, and a null reads as "known absent"
   // rather than "field forgotten". See review/policy/0.2.0-empty-field-policy.md.
   errors.push(...checkFieldShape(monster, path));
+  // description is optional at the contract level so packages released before the
+  // field existed stay valid, but any description present must state its own
+  // authorship and licence. See review/policy/description-policy.md.
+  errors.push(...checkDescriptionShape(monster, path));
   requiredObject(monster.encounter, `${path}.encounter`, errors);
   requiredObject(monster.source, `${path}.source`, errors);
   if (monster.sourceBook && manifest?.sourceBook?.id && monster.sourceBook !== manifest.sourceBook.id) {

@@ -12,6 +12,12 @@
 import { readFileSync } from "node:fs";
 import { effectivenessFromStats } from "./cer.mjs";
 import { applyRepairs, loadRepairFiles, repairsByRecord } from "./repairs.mjs";
+import {
+  DESCRIPTION_NOTE,
+  applyDescription,
+  descriptionsByRecord,
+  loadDescriptionFile,
+} from "./descriptions.mjs";
 import { effectiveDecisions, readLedger, recordHash } from "./ledger.mjs";
 import { ENCOUNTER_DERIVATION_NOTE, deriveEncounter, recordFlags } from "./queue.mjs";
 
@@ -34,6 +40,7 @@ export function loadInputs(root = ".") {
     base,
     manifestByName,
     repairs: repairsByRecord(loadRepairFiles(root)),
+    descriptions: descriptionsByRecord(loadDescriptionFile(root)),
     decisions: effectiveDecisions(readLedger(root)),
   };
 }
@@ -42,9 +49,17 @@ export function loadInputs(root = ".") {
  * Build one reviewed record. Returns the record plus the review dossier used by
  * the queue view, the checklist, and the integrity checks.
  */
-export function buildRecord(baseRecord, { repairs = [], decision = null, manifestEntry = null } = {}) {
+export function buildRecord(
+  baseRecord,
+  { repairs = [], description = null, decision = null, manifestEntry = null } = {},
+) {
   const baseSha256 = recordHash(baseRecord);
-  const { record: repaired, applied } = applyRepairs(baseRecord, repairs);
+  const { record: repairedRecord, applied } = applyRepairs(baseRecord, repairs);
+
+  // Every record carries the description key, described or not, for the reason
+  // lair and treasure carry theirs: a consumer reads the field without an
+  // existence check, and a null reads as "known absent" rather than "forgotten".
+  const repaired = applyDescription(repairedRecord, description);
 
   // Ratings are always re-derived from the reviewed stats unless a repair pins
   // them, so a mechanics repair can never leave a stale CER behind.
@@ -109,6 +124,7 @@ export function buildRecord(baseRecord, { repairs = [], decision = null, manifes
   }
 
   notes.push(FIELD_POLICY_NOTE);
+  if (description) notes.push(DESCRIPTION_NOTE);
 
   repaired.provenance = {
     ...repaired.provenance,
@@ -163,11 +179,12 @@ export function buildRecord(baseRecord, { repairs = [], decision = null, manifes
 }
 
 export function buildReviewedPackage(root = ".") {
-  const { base, manifestByName, repairs, decisions } = loadInputs(root);
+  const { base, manifestByName, repairs, descriptions, decisions } = loadInputs(root);
   const dossiers = [];
   const monsters = base.monsters.map(baseRecord => {
     const built = buildRecord(baseRecord, {
       repairs: repairs.get(baseRecord.id) ?? [],
+      description: descriptions.get(baseRecord.id) ?? null,
       decision: decisions.get(baseRecord.id) ?? null,
       manifestEntry: manifestByName.get(baseRecord.name) ?? null,
     });
@@ -182,6 +199,9 @@ export function buildReviewedPackage(root = ".") {
   }
   for (const id of decisions.keys()) {
     if (!knownIds.has(id)) throw new Error(`Review decision targets unknown record id ${id}.`);
+  }
+  for (const id of descriptions.keys()) {
+    if (!knownIds.has(id)) throw new Error(`Description targets unknown record id ${id}.`);
   }
 
   const anyApproved = monsters.some(record => record.provenance.manualReviewStatus === "approved");

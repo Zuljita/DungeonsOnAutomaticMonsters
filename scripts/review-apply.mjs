@@ -18,6 +18,7 @@ import {
 } from "./review/build-candidate.mjs";
 import { renderChecklist } from "./review/checklist.mjs";
 import { checkDeferredPolicy } from "./review/field-policy.mjs";
+import { checkDescriptionPolicy } from "./review/descriptions.mjs";
 import { validatePackage } from "./package-validation.mjs";
 
 const check = process.argv.includes("--check");
@@ -27,7 +28,10 @@ const packageText = serializePackage(reviewed);
 const checklistText = `${renderChecklist({ dossiers, reviewed })}\n`;
 
 const errors = validatePackage(reviewed, { allowUnapproved: true });
-for (const record of reviewed.monsters) errors.push(...checkDeferredPolicy(record));
+for (const record of reviewed.monsters) {
+  errors.push(...checkDeferredPolicy(record));
+  errors.push(...checkDescriptionPolicy(record));
+}
 if (errors.length > 0) {
   console.error(`Reviewed candidate package is invalid:\n${errors.join("\n")}`);
   process.exit(1);

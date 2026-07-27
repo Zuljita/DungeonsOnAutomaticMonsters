@@ -124,3 +124,14 @@ npm run promote:enraged-eggplant -- --version 0.2.0
 ```
 
 The promoted package rewrites private provenance links to the public attribution notice hosted by `DungeonsOnAutomaticSite`. SRD-name overlap remains record metadata only; the package keeps Enraged Eggplant's author-permitted GURPS mechanics in their own provenance category.
+
+### Published identity: the shelf and the credit
+
+`scripts/package-identity.mjs` owns what a promoted package is published *as*, and keeps two things apart:
+
+- **The shelf** — consumers see this library as **Dungeons on Automatic Monster Library**, on the package manifest and on the source-book toggle it presents as. That is a label.
+- **The credit** — who authored the conversion. That is a licence condition, and it stays on every record in `provenance.credits`, `creditLine`, and `sourceCopyrightNotice`, plus the manifest's own `credits` and `sources`. The identity helper writes labels only and returns nothing that could overwrite those on spread; `scripts/test/package-identity.test.mjs` asserts it.
+
+The source-book **id** is not part of the rename. Dungeons on Automatic writes it into every saved profile and dungeon state as an enabled source book, so changing it would silently drop this library from every existing save. The id is a key, the name is a label, and only the label is ours to restyle.
+
+`packageUrl` is the canonical bestiary page, `https://dungeonsonautomatic.com/monsters` — consumers deep-link a record as `${packageUrl}#${monster.id}`, and `/monsters.html` only 308s there.

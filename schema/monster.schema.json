@@ -50,6 +50,36 @@
     "contentLicense": {
       "enum": ["cc_by_4_0", "ogl_1_0a"]
     },
+    "description": {
+      "type": "object",
+      "required": ["text", "authorship", "basis", "contentLicense", "contentLicenseUrl"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string", "minLength": 80, "maxLength": 600 },
+        "authorship": {
+          "enum": ["doa_authored"],
+          "description": "Who wrote the prose. Only project-authored description text is currently publishable; imported description text would need its own source licence and is not covered by this enum."
+        },
+        "basis": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "record.stats.traits",
+              "record.stats.attacks",
+              "record.class",
+              "record.size",
+              "record.notes",
+              "art.portrait.prompt",
+              "art.token.prompt"
+            ]
+          },
+          "description": "What the prose was written from. Every permitted value is project-owned material; SRD text is not a permitted basis."
+        },
+        "contentLicense": { "$ref": "#/$defs/contentLicense" },
+        "contentLicenseUrl": { "type": "string", "minLength": 1 }
+      }
+    },
     "credit": {
       "type": "object",
       "required": ["name", "role", "scope", "creditLine"],
@@ -111,6 +141,10 @@
         "iq": { "type": ["number", "null"] },
         "appearance": { "type": ["string", "null"] },
         "lair": { "type": ["string", "null"] },
+        "description": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/description" }],
+          "description": "Reader-facing prose about the creature, or null when none is authored. Carries its own authorship and release terms because description text need not share the record's source or licence."
+        },
         "treasure": { "type": "object" },
         "size": { "type": "object" },
         "grappling": { "type": "object" },

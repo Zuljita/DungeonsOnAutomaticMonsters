@@ -7,6 +7,7 @@ This repository is multi-licensed. A single blanket license does not apply to ev
 Except where a record, source manifest, asset manifest, or notice says otherwise, the following original Dungeons on Automatic material is licensed under the [Creative Commons Attribution 4.0 International license](licenses/CC-BY-4.0.txt):
 
 - monster records, original monster prose, calculations, tags, metadata, and database selection or arrangement in `converted/` and released package assets;
+- original monster description prose in `content/descriptions/`, which each released record restates in its own `description.contentLicense`;
 - source and package metadata in `sources/` and `packages/`;
 - project documentation, including `README.md`, `ROADMAP.md`, `CREDITS.md`, and `docs/`.
 

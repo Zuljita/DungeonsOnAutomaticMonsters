@@ -26,6 +26,19 @@ The credit must travel with the work through:
 
 A comparison that changes no published content is recorded in the private/review audit, but does not by itself make EE the originator of the independently authored record. If comparison causes an EE-originated construction to be adopted, structured EE credit is required before publication.
 
+## Monster descriptions
+
+Reader-facing `description` text is original Dungeons on Automatic prose, written from each record's own
+converted statistics and from this project's art direction for the creature. It is not EE-originated: the
+authorized source is a mechanics conversion and states no creature descriptions. It is not SRD-derived
+either, and no SRD is a permitted basis for it.
+
+Each description therefore carries its own `authorship` and `contentLicense` in the data, distinct from the
+record's. That separation is what keeps the rule above honest in both directions: an EE-originated record
+does not silently acquire DOA-authored prose under EE's credit, and DOA-authored prose does not dilute or
+displace the originator credit the record still carries. See
+[review/policy/description-policy.md](review/policy/description-policy.md).
+
 ## Structured Credit
 
 EE-derived package sources and records use this shape:

@@ -5,7 +5,7 @@
 //   CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... \
 //     node scripts/upload-art-to-r2.mjs [--bucket doa-assets] \
 //       [--art-dir art/enraged-eggplant] [--prefix monsters/enraged-eggplant] \
-//       [--concurrency 8] [--force]
+//       [--concurrency 8] [--force] [--flat] [--attachment]
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
@@ -23,6 +23,14 @@ const PREFIX = opt("prefix", "monsters/enraged-eggplant");
 const FLAT = process.argv.includes("--flat");
 const CONCURRENCY = Number(opt("concurrency", "8"));
 const FORCE = args.includes("--force");
+// The download attribute is ignored for cross-origin links, and these assets
+// live on assets.dungeonsonautomatic.com while the site is on the apex domain.
+// Without Content-Disposition a click opens the file — a .gcs sheet renders as
+// raw JSON in a tab instead of landing on disk where GCS can open it.
+const ATTACHMENT = args.includes("--attachment");
+// Thumbnails are display-only: the gallery renders all 304 through <img>, and
+// nothing links them as a download.
+const ATTACHMENT_SKIP_SUBDIRS = new Set(["thumbs"]);
 
 const TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -100,12 +108,25 @@ async function collectLocal() {
   return files;
 }
 
+function attachmentHeader(file) {
+  if (!ATTACHMENT) return null;
+  const parts = file.key.split("/");
+  const name = parts.pop();
+  if (ATTACHMENT_SKIP_SUBDIRS.has(parts.pop())) return null;
+  return `attachment; filename="${name.replace(/"/g, "")}"`;
+}
+
 async function upload(file) {
   const body = await readFile(file.local);
   const contentType = CONTENT_TYPES.get(path.extname(file.local).toLowerCase());
+  const disposition = attachmentHeader(file);
   const response = await fetch(`${API}/${encodeURIComponent(file.key).replace(/%2F/g, "/")}`, {
     method: "PUT",
-    headers: { ...HEADERS, "Content-Type": contentType },
+    headers: {
+      ...HEADERS,
+      "Content-Type": contentType,
+      ...(disposition ? { "Content-Disposition": disposition } : {}),
+    },
     body,
   });
   if (!response.ok) throw new Error(`upload ${file.key} failed: ${response.status} ${await response.text()}`);

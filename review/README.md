@@ -36,6 +36,7 @@ that are no longer valid instead of silently approving different data.
 | `npm run review:apply` | Regenerate the reviewed package and `CHECKLIST.md`. `--check` fails instead of writing. |
 | `npm run review:verify` | Integrity gate: ledger validity, hash drift, approval gates, regenerability, promotion refusal. |
 | `npm run review:audit-cer` | Regenerate `review/reports/cer-audit.md`. |
+| `npm run review:audit-traits` | Regenerate `review/reports/trait-source-audit.md`: what the source's racial template states that the published record does not. Runs as part of `npm test` in `--check` form; reports "skipped" where the ignored source corpus is absent. |
 | `npm run promote:enraged-eggplant -- --version X.Y.Z` | Build the public package. Refuses if any included record is not `approved`. |
 
 ## Batches

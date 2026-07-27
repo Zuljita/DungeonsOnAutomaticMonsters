@@ -5,7 +5,7 @@
 //   CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... \
 //     node scripts/upload-art-to-r2.mjs [--bucket doa-assets] \
 //       [--art-dir art/enraged-eggplant] [--prefix monsters/enraged-eggplant] \
-//       [--concurrency 8] [--force] [--flat] [--attachment]
+//       [--concurrency 8] [--max-attempts 6] [--force] [--flat] [--attachment]
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
@@ -22,6 +22,7 @@ const PREFIX = opt("prefix", "monsters/enraged-eggplant");
 // inside --art-dir instead of walking the art subdirectory list.
 const FLAT = process.argv.includes("--flat");
 const CONCURRENCY = Number(opt("concurrency", "8"));
+const MAX_ATTEMPTS = Number(opt("max-attempts", "6"));
 const FORCE = args.includes("--force");
 // The download attribute is ignored for cross-origin links, and these assets
 // live on assets.dungeonsonautomatic.com while the site is on the apex domain.
@@ -116,7 +117,14 @@ function attachmentHeader(file) {
   return `attachment; filename="${name.replace(/"/g, "")}"`;
 }
 
-async function upload(file) {
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+/**
+ * The Cloudflare API rate-limits bulk writes: a forced re-upload of the whole
+ * art tree drew 167 429s in one run. Back off and retry rather than failing the
+ * publish, honouring Retry-After when the API sends one.
+ */
+async function upload(file, attempt = 1) {
   const body = await readFile(file.local);
   const contentType = CONTENT_TYPES.get(path.extname(file.local).toLowerCase());
   const disposition = attachmentHeader(file);
@@ -129,7 +137,18 @@ async function upload(file) {
     },
     body,
   });
-  if (!response.ok) throw new Error(`upload ${file.key} failed: ${response.status} ${await response.text()}`);
+  if (response.ok) return;
+
+  const retryable = response.status === 429 || response.status >= 500;
+  if (retryable && attempt <= MAX_ATTEMPTS) {
+    const retryAfter = Number(response.headers.get("retry-after"));
+    const backoff = Number.isFinite(retryAfter) && retryAfter > 0
+      ? retryAfter * 1000
+      : Math.min(30_000, 500 * 2 ** (attempt - 1));
+    await sleep(backoff + Math.floor(backoff * 0.25 * attempt % 400));
+    return upload(file, attempt + 1);
+  }
+  throw new Error(`upload ${file.key} failed: ${response.status} ${await response.text()}`);
 }
 
 const remote = await listRemote();

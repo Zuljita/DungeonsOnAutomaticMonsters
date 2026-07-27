@@ -38,13 +38,13 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs --prefix monsters/enraged-eggplant/gct --flat
-          node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs-sheets --prefix monsters/enraged-eggplant/gcs --flat
+          node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs --prefix monsters/enraged-eggplant/gct --flat --attachment --force
+          node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs-sheets --prefix monsters/enraged-eggplant/gcs --flat --attachment --force
       - name: Upload art to public R2 bucket
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        run: node scripts/upload-art-to-r2.mjs
+        run: node scripts/upload-art-to-r2.mjs --attachment --force
       - name: Advance the stable package pointer
         run: |
           git config user.name "github-actions[bot]"

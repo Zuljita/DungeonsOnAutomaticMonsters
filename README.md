@@ -36,7 +36,8 @@ Two review gates are recorded per record: GCS arithmetic and library fidelity, a
 opening each `.gct` in the GCS desktop application to confirm the displayed ancestry total, is tracked
 separately as `checks.gcsVisualPass` and is `false` for every record — no script performs it and no decision
 claims it. Release notes and known limitations are in [docs/releases/0.2.0.md](docs/releases/0.2.0.md) and
-[docs/releases/0.3.1.md](docs/releases/0.3.1.md).
+[docs/releases/0.3.1.md](docs/releases/0.3.1.md) and
+[docs/releases/0.3.2.md](docs/releases/0.3.2.md).
 
 The image library is complete independently of that mechanical-review gate: all 304 candidates have a portrait, transparent top-down token, and deterministic flat-top hex token.
 

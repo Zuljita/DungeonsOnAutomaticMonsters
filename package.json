@@ -12,7 +12,7 @@
     "convert:enraged-eggplant": "node scripts/run-python-script.mjs .agents/skills/convert-gurps-monsters-to-gcs/scripts/batch_convert_missing.py --overlap data/enraged-eggplant/srd-overlap.json --coverage data/enraged-eggplant/gcs-coverage.json --markdown data/enraged-eggplant/srd-overlap-monsters.md --output-dir converted/enraged-eggplant --selection all --library-root \"data/GCS Master Library\"",
     "validate:gct-enraged-eggplant": "node scripts/run-python-script.mjs .agents/skills/convert-gurps-monsters-to-gcs/scripts/validate_gct.py converted/enraged-eggplant/gcs",
     "validate:enraged-eggplant": "node scripts/validate-package.mjs converted/enraged-eggplant/doa-monsters.review-required.json --allow-review-required",
-    "test": "npm run test:unit && npm run validate:public && npm run validate:enraged-eggplant-art",
+    "test": "npm run test:unit && npm run validate:public && npm run validate:enraged-eggplant-art && npm run review:audit-traits:check",
     "test:unit": "node --test \"scripts/test/*.test.mjs\"",
     "validate:public": "node scripts/validate-package.mjs converted/doa-monsters.json",
     "validate:enraged-eggplant-candidate": "node scripts/validate-package.mjs converted/enraged-eggplant/doa-monsters.reviewed.json --allow-unapproved",
@@ -32,6 +32,8 @@
     "art:thumbnails": "python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs",
     "art:upload": "node scripts/upload-art-to-r2.mjs",
     "build:gcs-sheets": "node scripts/build-gcs-sheets.mjs",
-    "validate:gcs-sheets": "node scripts/build-gcs-sheets.mjs --check"
+    "validate:gcs-sheets": "node scripts/build-gcs-sheets.mjs --check",
+    "review:audit-traits": "node scripts/review-trait-audit.mjs",
+    "review:audit-traits:check": "node scripts/review-trait-audit.mjs --check"
   }
 }

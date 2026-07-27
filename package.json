@@ -27,6 +27,8 @@
     "art:enraged-eggplant:hex-tokens": "python scripts/build-hex-token.py --input-dir art/enraged-eggplant/tokens --output-dir art/enraged-eggplant/hex-tokens",
     "validate:enraged-eggplant-art": "node scripts/validate-enraged-eggplant-art.mjs",
     "art:thumbnails": "python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs",
-    "art:upload": "node scripts/upload-art-to-r2.mjs"
+    "art:upload": "node scripts/upload-art-to-r2.mjs",
+    "build:gcs-sheets": "node scripts/build-gcs-sheets.mjs",
+    "validate:gcs-sheets": "node scripts/build-gcs-sheets.mjs --check"
   }
 }

@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { validatePackage } from "./package-validation.mjs";
 import { artRecordMap, readPngMetadata, validateImageManifest } from "./art-validation.mjs";
+import { publicPackageIdentity } from "./package-identity.mjs";
 
 const args = process.argv.slice(2);
 const valueFor = name => {
@@ -146,11 +147,8 @@ function publicArt(monster) {
 const published = {
   manifest: {
     ...candidate.manifest,
-    id: "enraged-eggplant-monsters",
-    name: "Enraged Eggplant Monster Library",
+    ...publicPackageIdentity(candidate.manifest),
     version,
-    licenseSummary: "Fan-authored GURPS monster statistics adapted and republished with unrestricted author permission; attribution retained.",
-    packageUrl: "https://dungeonsonautomatic.com/monsters.html",
     dataUrl: publicDataUrl,
     art: {
       manifestUrl: `${publicArtBaseUrl}/image-manifest.json`,

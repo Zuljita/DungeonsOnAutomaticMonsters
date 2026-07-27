@@ -1,0 +1,752 @@
+{
+  "version": 1,
+  "issue": 26,
+  "title": "Flight the racial template states but the Typical Stats summary omits",
+  "summary": "The authorized source states each creature's traits twice: once in the racial template (**Advantages:** and its companion lines) and again as a **Traits:** summary inside Typical Stats. The conversion reads the summary. For these 33 records the summary omits a Flight advantage the racial template states, so every downstream artifact described a flying creature that cannot fly. Ten of them kept Enhanced Move (Air), a modifier that multiplies an air Move only Flight can provide, which is how the gap surfaced. Six fly without wings (the genies, Bralani, Ghaele), so no check against the artwork would have found them. Restored from the racial template with the modifiers the source states; costs are dropped because record traits state modifiers, not prices. CER is unaffected: scripts/review/cer.mjs reads only high pain threshold, recovery, combat reflexes and unfazeable from the trait list, so every rating is unchanged by this repair.",
+  "repairs": [
+    {
+      "recordId": "enraged_eggplant_quasit",
+      "monster": "Quasit",
+      "rationale": "The source states Flight (Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Alternate Form (A bat, a toad, or a SM-3 centipede; Magical)",
+          "Appearance (Ugly)",
+          "Callous",
+          "Doesn’t Eat or Drink",
+          "Flight (Winged)",
+          "Immunity to Noxious Fire Effects",
+          "Immunity to Poison",
+          "Infravision",
+          "Rapid Healing",
+          "Sadism (12)",
+          "Social Stigma (Monster)",
+          "Trickster (12)",
+          "Unaging",
+          "Vulnerability (Cold Iron, x2)",
+          "Vulnerability (Holy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_chimera",
+      "monster": "Chimera",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Bestial",
+          "Born Biter 2",
+          "Catfall",
+          "Chauvinistic",
+          "Combat Reflexes",
+          "Discriminatory Smell",
+          "Doesn’t Sleep (Temporary Disadvantage, No Extra Head 1)",
+          "Early Maturation 3",
+          "Extra Attack 2",
+          "Extra Head 2",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Greed (15)",
+          "Hidebound",
+          "Horizontal",
+          "Immunity to Petrification",
+          "Infravision",
+          "Injury Tolerance (No Blood; Accessibility, Only to stop bleeding from a severed head)",
+          "Laziness",
+          "Likes meat",
+          "Miserliness (12)",
+          "Night Vision 5",
+          "No Fine Manipulators",
+          "Odious Racial Habit (Eats sapient beings)",
+          "Perfect Balance",
+          "Peripheral Vision",
+          "Regeneration (Slow)",
+          "Regrowth (Head Only; Nuisance Effect, Takes a month)",
+          "Short Lifespan 2",
+          "Social Stigma (Monster)",
+          "Tail",
+          "Uncongenial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_giant_bee",
+      "monster": "Giant Bee",
+      "rationale": "The source states Flight (Small Wings, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Absolute Direction",
+          "Cold-Blooded (50°)",
+          "Discriminatory Smell",
+          "Extra Legs (Six Legs; Cannot Kick)",
+          "Flight (Small Wings)",
+          "Horizontal",
+          "Night Vision 9",
+          "No Fine Manipulators",
+          "Peripheral Vision",
+          "Polarization Detection",
+          "Restricted Diet (Pollen)",
+          "Short Lifespan 2",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_giant_wasp",
+      "monster": "Giant Wasp",
+      "rationale": "The source states Flight (Small Wings, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Absolute Direction",
+          "Cold-Blooded (50°)",
+          "Discriminatory Smell",
+          "Extra Legs (Six Legs; Cannot Kick)",
+          "Flight (Small Wings)",
+          "Horizontal",
+          "Night Vision 9",
+          "No Fine Manipulators",
+          "Peripheral Vision",
+          "Polarization Detection",
+          "Restricted Diet (Carnivore)",
+          "Short Lifespan 2",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_cloaker",
+      "monster": "Cloaker",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Small Wings, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Combat Reflexes",
+          "Double-Jointed",
+          "Flight (Cannot Hover; Small Wings)",
+          "Horizontal",
+          "Infravision",
+          "Injury Tolerance (No Head, No Neck)",
+          "Limited Camouflage (Cloaks)",
+          "Loner (12)",
+          "No Fine Manipulators",
+          "No Legs (Slithers)",
+          "Odious Racial Habit (Eats sapient beings)",
+          "Protected Hearing",
+          "Reduced Consumption 4",
+          "Social Stigma (Monster)",
+          "Subsonic Speech"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_cockatrice",
+      "monster": "Cockatrice",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Slow, -25%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Flight (Cannot Hover; Slow; Winged)",
+          "Immunity to Cockatrice Petrification",
+          "Night Vision 4",
+          "No Fine Manipulators",
+          "No Physical Attack on Arms",
+          "Penetrating Voice",
+          "Short Lifespan 2",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_nalfeshnee",
+      "monster": "Nalfeshnee",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Small Wings, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Anarchic Touch",
+          "Appearance (Hideous)",
+          "Combat Reflexes",
+          "Doesn’t Eat or Drink",
+          "Flight (Cannot Hover; Small Wings)",
+          "Gluttony (12)",
+          "Hooves",
+          "Immunity to Electrical Conduction",
+          "Immunity to Noxious High-Temperature (Electricity and Fire) Effects",
+          "Immunity to Poison",
+          "Infravision",
+          "Laziness",
+          "Magic Resistance 2 (Improved)",
+          "See Invisible (Magical; Magical; True Sight)",
+          "Selfish (9)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Unholy Touch",
+          "Vulnerability (Cold Iron, x2)",
+          "Vulnerability (Holy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_succubus",
+      "monster": "Succubus",
+      "rationale": "The source states Flight (Cannpt Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers. The source spells one modifier \"Cannpt Hover\"; the record states the corrected \"Cannot Hover\".",
+      "set": {
+        "stats.traits": [
+          "Anarchic Touch",
+          "Appearance (Very Beautiful)",
+          "Callous",
+          "Doesn’t Eat or Drink",
+          "Flexibility",
+          "Flight (Cannot Hover; Winged)",
+          "Immunity to Electrical Conduction",
+          "Immunity to Noxious High-Temperature (Electricity and Fire) Effects",
+          "Immunity to Poison",
+          "Infravision",
+          "Lecherousness (12)",
+          "Magic Resistance 2 (Improved)",
+          "Selfish (12)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Unholy Touch",
+          "Voice",
+          "Vulnerability (Cold Iron, x2)",
+          "Vulnerability (Holy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_vrock",
+      "monster": "Vrock",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Anarchic Touch",
+          "Appearance (Ugly)",
+          "Bad Temper (12)",
+          "Combat Reflexes",
+          "Doesn’t Sleep (No immunity against sleep effects)",
+          "Feathers",
+          "Flight (Cannot Hover; Winged)",
+          "Greed (12)",
+          "Immunity to Electrical Conduction",
+          "Immunity to Noxious High-Temperature (Electricity and Fire) Effects",
+          "Immunity to Poison",
+          "Infravision",
+          "Magic Resistance 2 (Improved)",
+          "Sadism (12)",
+          "Selfish (12)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Unholy Touch",
+          "Vulnerability (Cold Iron, x2)",
+          "Vulnerability (Holy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_erinyes",
+      "monster": "Erinyes",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Appearance (Very Beautiful)",
+          "Axiomatic Touch",
+          "Callous",
+          "Combat Reflexes",
+          "Dark Vision",
+          "Doesn’t Eat or Drink",
+          "Flight (Cannot Hover; Winged)",
+          "Immunity to Noxious Acidic Effects",
+          "Immunity to Noxious Cold Effects",
+          "Immunity to Noxious Fire Effects",
+          "Immunity to Poison",
+          "Internal Sealed (Acid-Resistant Only)",
+          "Magic Resistance 2 (Improved)",
+          "Sealed (Acid-Resistant Only)",
+          "See Invisible (Magical; Magical; True Sight)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Unholy Touch",
+          "Vulnerability (Holy Weapons, x2)",
+          "Vulnerability (Silver, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_horned_devil_cornugon",
+      "monster": "Horned Devil (Cornugon)",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Appearance (Ugly)",
+          "Axiomatic Touch",
+          "Callous",
+          "Combat Reflexes",
+          "Dark Vision",
+          "Doesn’t Eat or Drink",
+          "Flight (Cannot Hover; Winged)",
+          "Immunity to Noxious Fire Effects",
+          "Immunity to Poison",
+          "Magic Resistance 3 (Improved)",
+          "Regeneration (Fast; Bane, Holy Weapons)",
+          "Scales",
+          "Selfish (12)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Temperature Tolerance 8",
+          "Unaging",
+          "Unholy Touch",
+          "Vulnerability (Holy Weapons, x2)",
+          "Vulnerability (Silver, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_pit_fiend",
+      "monster": "Pit Fiend",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Appearance (Monstrous)",
+          "Axiomatic Touch",
+          "Callous",
+          "Combat Reflexes",
+          "Dark Vision",
+          "Doesn’t Eat or Drink",
+          "Extra Attack 2",
+          "Flight (Cannot Hover; Winged)",
+          "Immunity to Noxious Fire Effects",
+          "Immunity to Poison",
+          "Magic Resistance 4 (Improved)",
+          "Regeneration (Fast; Bane, Holy Weapons)",
+          "Scales",
+          "Selfish (9)",
+          "Social Stigma (Monster)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Unholy Touch",
+          "Vulnerability (Holy Weapons, x2)",
+          "Vulnerability (Silver, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_dire_bat",
+      "monster": "Dire Bat",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Enhanced Move 1 (Air)",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Fur",
+          "Night Vision 9",
+          "No Fine Manipulators",
+          "Short Lifespan 1",
+          "Sonar (Accessibility, In air; Biological (Passive); Restricted Arc, 60°; Targeting)",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_eagle",
+      "monster": "Eagle",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Vision 4",
+          "Enhanced Move 1 (Air)",
+          "Feathers",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Short Lifespan 1",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_raven",
+      "monster": "Raven",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Vision 2",
+          "Enhanced Move 1 (Air)",
+          "Feathers",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Short Lifespan 1",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_dragonne",
+      "monster": "Dragonne",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Small Wings, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Bestial",
+          "Born Biter 2",
+          "Catfall",
+          "Combat Reflexes",
+          "Discriminatory Smell",
+          "Flexibility",
+          "Flight (Cannot Hover; Small Wings)",
+          "Hidebound",
+          "Horizontal",
+          "Infravision",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Penetrating Voice",
+          "Perfect Balance",
+          "Restricted Diet (Carnivore)",
+          "Scales",
+          "Tail",
+          "Terrain Adaptation (Uneven)",
+          "Ultrahearing"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_giant_eagle",
+      "monster": "Giant Eagle",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Vision 4",
+          "Enhanced Move 1 (Air)",
+          "Feathers",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Restricted Diet (Carnivore)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_bralani",
+      "monster": "Bralani",
+      "rationale": "The source states Flight (Lighter Than Air, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Anarchic Touch",
+          "Bad Temper (12)",
+          "Code of Honor (Celestial Eladrin)",
+          "Combat Reflexes",
+          "Doesn’t Eat or Drink",
+          "Early Maturation 0.5",
+          "Extended Lifespan 2.5",
+          "Flight (Lighter Than Air)",
+          "Holy Touch",
+          "Immunity to Petrification",
+          "Impulsiveness (12)",
+          "Intolerance (Fiends)",
+          "Magic Resistance 2 (Improved)",
+          "Night Vision 5",
+          "Pacifism (Cannot Harm Innocents)",
+          "Temperature Tolerance 6",
+          "Vilnerability (Cold Iron, x2)",
+          "Vulnerability (Unholy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_ghaele",
+      "monster": "Ghaele",
+      "rationale": "The source states Flight in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Anarchic Touch",
+          "Charitable (12)",
+          "Code of Honor (Celestial Eladrin)",
+          "Combat Reflexes",
+          "Doesn’t Eat or Drink",
+          "Early Maturation 1",
+          "Extended Lifespan 3",
+          "Flight",
+          "Holy Touch",
+          "Illumination",
+          "Immunity to Petrification",
+          "Impulsiveness (12)",
+          "Intolerance (Fiends)",
+          "Magic Resistance 3 (Improved)",
+          "Night Vision 5",
+          "No Sense of Humor",
+          "Pacifism (Cannot Harm Innocents)",
+          "Protected Vision",
+          "See Invisible (Magical; Magical)",
+          "Temperature Tolerance 6",
+          "Vulnerability (Cold Iron, x2)",
+          "Vulnerability (Unholy Weapons, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_gargoyle",
+      "monster": "Gargoyle",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Callous",
+          "Doesn’t Breathe",
+          "Doesn’t Eat or Drink",
+          "Flight (Cannot Hover; Winged)",
+          "Infravision",
+          "Limited Camouflage (Stone)",
+          "Odious Racial Habit (Eats sapient beings)",
+          "Sadism (12)",
+          "Short Lifespan 1",
+          "Social Stigma (Monster)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_djinni",
+      "monster": "Djinni",
+      "rationale": "The source states Flight (Magical, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Doesn’t Eat or Drink",
+          "Filter Lungs",
+          "Flight (Magical)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Vulnerability (Earth/Stone, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_noble_djinni",
+      "monster": "Noble Djinni",
+      "rationale": "The source states Flight (Magical, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Doesn’t Eat or Drink",
+          "Filter Lungs",
+          "Flight (Magical)",
+          "Telesend (Magical; Universal)",
+          "Unaging",
+          "Vulnerability (Earth/Stone, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_efreeti",
+      "monster": "Efreeti",
+      "rationale": "The source states Flight (Magical, -10%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Callous",
+          "Doesn’t Eat or Drink",
+          "Filter Lungs",
+          "Flight (Magical)",
+          "Immunity to Noxious Fire Effects",
+          "Infravision",
+          "Selfish (12)",
+          "Telesend (Magical; Universal)",
+          "Temperature Tolerance 5 (Hot)",
+          "Unaging",
+          "Vulnerability (Cold, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_janni",
+      "monster": "Janni",
+      "rationale": "The source states Flight (Magical, -10%; Slow, Move 1, -45%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Appearance (Attractive)",
+          "Combat Reflexes",
+          "Extended Lifespan 1",
+          "Flight (Magical; Slow, Move 1)",
+          "Infravision",
+          "Telesend (Magical; Universal)",
+          "Temperature Tolerance 4 (Hot)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_harpy",
+      "monster": "Harpy",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Hearing 3",
+          "Callous",
+          "Flight (Cannot Hover; Winged)",
+          "Infravision",
+          "Odious Racial Habit (Eats sapient beings)",
+          "Penetrating Voice",
+          "Sadism (12)",
+          "Social Stigma (Monster)",
+          "Voice"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_lammasu",
+      "monster": "Lammasu",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Catfall",
+          "Clinging (Requires claw-holds)",
+          "Combat Reflexes",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Horizontal",
+          "Night Vision 5",
+          "No Fine Manipulators",
+          "Perfect Balance",
+          "Temperature Tolerance 1 (Hot)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_ooze_mephit",
+      "monster": "Ooze Mephit",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flying creature with no means of flight. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Amphibious",
+          "Bad Smell",
+          "Curious (12)",
+          "Doesn’t Breathe (Gills)",
+          "Doesn’t Eat or Drink",
+          "Flight (Cannot Hover; Winged)",
+          "Regeneration (Fast; Accessibility, Only if in a wet or muddy environment)",
+          "Skinny",
+          "Slippery 5",
+          "Speak Underwater",
+          "Vulnerability (Dehydration, x2)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_roc",
+      "monster": "Roc",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Vision 4",
+          "Enhanced Move 1 (Air)",
+          "Feathers",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Restricted Diet (Carnivore)",
+          "Wild Animal"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_androsphinx",
+      "monster": "Androsphinx",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Enhanced Move 1 (Air)",
+          "Extended Lifespan 2 [4]",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Horizontal",
+          "Infravision",
+          "Night Vision 6",
+          "No Fine Manipulators"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_criosphinx",
+      "monster": "Criosphinx",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Enhanced Move 1 (Air)",
+          "Extended Lifespan 2",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Horizontal",
+          "Infravision",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Restricted Diet (Carnivore)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_gynosphinx",
+      "monster": "Gynosphinx",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Enhanced Move 1 (Air)",
+          "Extended Lifespan 2 [4]",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Horizontal",
+          "Infravision",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "See Invisible (Magic; Magical)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_hieracosphinx",
+      "monster": "Hieracosphinx",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Acute Vision 4",
+          "Bloodlust (12)",
+          "Bully (12)",
+          "Callous",
+          "Combat Reflexes",
+          "Enhanced Move 1 (Air)",
+          "Extended Lifespan 2",
+          "Extra Legs (Four Legs)",
+          "Flight (Cannot Hover; Winged)",
+          "Fur",
+          "Horizontal",
+          "Infravision",
+          "Night Vision 6",
+          "No Fine Manipulators",
+          "Restricted Diet (Carnivore)"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_giant_bat",
+      "monster": "Giant Bat",
+      "rationale": "The source states Flight (Cannot Hover, -15%; Winged, -25%) in this creature's racial template, but omits it from the Typical Stats \"Traits:\" line that the conversion reads, so the published record described a flyer that could not fly while still carrying Enhanced Move 1 (Air), a modifier that multiplies an air Move it did not have. Restored from the racial template with its stated modifiers.",
+      "set": {
+        "stats.traits": [
+          "Enhanced Move 1 (Air)",
+          "Flight (Cannot Hover; Winged)",
+          "Foot Manipulators",
+          "Fur",
+          "Night Vision 9",
+          "No Fine Manipulators",
+          "Short Lifespan 1",
+          "Sonar (Accessibility, In air; Biological (Passive); Restricted Arc, 60°; Targeting)",
+          "Wild Animal"
+        ]
+      }
+    }
+  ]
+}

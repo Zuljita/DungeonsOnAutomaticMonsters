@@ -20,8 +20,16 @@ base conversion output  +  review/repairs/  +  review/decisions.jsonl
 
 ## Why the base file is untracked and the lock is not
 
-The conversion queue stays local until records are reviewed (see `.gitignore`). That is deliberate, but it
-means the repository cannot see the records a decision was made about. `review/base-lock.json` closes the
+The conversion queue stays local until records are reviewed (see `.gitignore`). A review-capable checkout
+needs **two** untracked files under `converted/enraged-eggplant/`, both produced by
+`npm run convert:enraged-eggplant` (which needs the ignored `data/` corpus) or copied from a checkout that
+has run it:
+
+- `doa-monsters.review-required.json` — the base conversion output every repair and decision applies to;
+- `conversion-manifest.json` — the per-record conversion manifest the dossier builder joins against.
+
+Every review command checks for both up front and names whichever are missing. That untracked base is
+deliberate, but it means the repository cannot see the records a decision was made about. `review/base-lock.json` closes the
 gap: it stores the sha256 of every base record, and every ledger entry stores the same hash for the record it
 decided. If someone re-runs the conversion and a record changes, `npm run review:verify` names the decisions
 that are no longer valid instead of silently approving different data.

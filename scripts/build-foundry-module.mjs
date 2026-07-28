@@ -13,7 +13,7 @@
 // artifacts are recorded.
 
 import { createHash } from "node:crypto";
-import { execFileSync } from "node:child_process";
+import { execFileSync, execSync } from "node:child_process";
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import {
@@ -56,23 +56,44 @@ console.log(`Emitted ${module_.actors.length} Actor sources and module.json to $
 if (args.includes("--pack")) {
   const packsDir = join(moduleDir, "packs");
   mkdirSync(packsDir, { recursive: true });
-  const npx = process.platform === "win32" ? "npx.cmd" : "npx";
-  execFileSync(
-    npx,
-    [
-      "--yes",
-      "@foundryvtt/foundryvtt-cli",
-      "package",
-      "pack",
-      PACK_NAME,
-      "--in",
-      sourceDir,
-      "--out",
-      packsDir,
-    ],
-    { stdio: "inherit", shell: process.platform === "win32" },
-  );
+  runPackageRunner([
+    "@foundryvtt/foundryvtt-cli",
+    "package",
+    "pack",
+    PACK_NAME,
+    "--in",
+    sourceDir,
+    "--out",
+    packsDir,
+  ]);
   console.log(`Compiled LevelDB pack at ${join(packsDir, PACK_NAME)}`);
+}
+
+/**
+ * Run `npx --yes <args>` without handing an argument array to a shell (#51).
+ * Under an npm script, npm_execpath lets us invoke npm's own entry point with
+ * node directly — no shell, no .cmd shim. Outside npm, Windows needs a shell
+ * to run the npx.cmd shim, so the command is built as one explicitly quoted
+ * string; every argument here is a tracked constant or a path this script
+ * resolved itself, and anything quote-bearing is refused outright.
+ */
+function runPackageRunner(cliArgs) {
+  if (process.env.npm_execpath) {
+    execFileSync(
+      process.execPath,
+      [process.env.npm_execpath, "exec", "--yes", "--", ...cliArgs],
+      { stdio: "inherit" },
+    );
+    return;
+  }
+  if (process.platform === "win32") {
+    for (const arg of cliArgs) {
+      if (/["']/.test(arg)) throw new Error(`Refusing to shell-quote an argument containing quotes: ${arg}`);
+    }
+    execSync(["npx", "--yes", ...cliArgs].map(arg => `"${arg}"`).join(" "), { stdio: "inherit" });
+    return;
+  }
+  execFileSync("npx", ["--yes", ...cliArgs], { stdio: "inherit" });
 }
 
 let zipPath;
@@ -81,10 +102,15 @@ if (args.includes("--zip")) {
   zipPath = join(outRoot, `${MODULE_ID}-${version}.zip`);
   rmSync(zipPath, { force: true });
   // The zip roots at the module directory contents, which is what Foundry's
-  // installer expects the download to contain.
+  // installer expects the download to contain. Paths travel as environment
+  // variables so nothing is interpolated into the PowerShell command (#51).
   if (process.platform === "win32") {
-    execFileSync("powershell", ["-NoProfile", "-Command",
-      `Compress-Archive -Path '${moduleDir}\\*' -DestinationPath '${zipPath}'`]);
+    execFileSync(
+      "powershell",
+      ["-NoProfile", "-Command",
+        "Get-ChildItem -LiteralPath $env:DOA_ZIP_SOURCE | Compress-Archive -DestinationPath $env:DOA_ZIP_DEST"],
+      { env: { ...process.env, DOA_ZIP_SOURCE: moduleDir, DOA_ZIP_DEST: zipPath } },
+    );
   } else {
     execFileSync("zip", ["-qr", zipPath, "."], { cwd: moduleDir });
   }

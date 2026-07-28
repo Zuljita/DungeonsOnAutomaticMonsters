@@ -1,3 +1,9 @@
+# All text files check out with LF everywhere. The review:verify gate compares
+# tracked generated files byte-for-byte against a regeneration that writes LF,
+# so a CRLF checkout (Windows autocrlf default) made it report drift that did
+# not exist (#49). Binary files are auto-detected and untouched.
+* text=auto eol=lf
+
 art/enraged-eggplant/portraits/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/tokens/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/hex-tokens/*.png filter=lfs diff=lfs merge=lfs -text

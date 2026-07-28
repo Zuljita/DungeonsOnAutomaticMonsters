@@ -20,6 +20,7 @@ This repository owns the publishable monster-data contract, conversion tools, va
 - `packages/latest/manifest.json` - stable pointer metadata for consumers.
 - `scripts/validate-package.mjs` - no-dependency validation checks for package/provenance basics.
 - `scripts/build-enraged-eggplant-package.mjs` - approval-gated promotion into the stable public package contract.
+- `scripts/build-foundry-module.mjs` - builds the installable Foundry VTT compendium module (GURPS Game Aid) from the published package. See [docs/foundry/README.md](docs/foundry/README.md).
 - `art/enraged-eggplant/` - LFS-backed portraits, transparent overhead tokens, flat-top hex tokens, prompts, and the image manifest for all 304 candidates.
 - `licenses/` - license boundary notes and required notice templates.
 - `CREDITS.md` - originator-credit policy and canonical structured credit lines.

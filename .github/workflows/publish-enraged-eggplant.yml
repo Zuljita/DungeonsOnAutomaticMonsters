@@ -29,6 +29,13 @@ jobs:
       - run: npm run validate:gcs-sheets
       - name: Build approval-gated package
         run: npm run promote:enraged-eggplant -- --version "$VERSION"
+      - name: Build Foundry VTT module
+        run: |
+          node scripts/build-foundry-module.mjs --pack --zip --update-latest-manifest
+          mkdir -p dist/foundry/release
+          cp "dist/foundry/dungeons-on-automatic-monsters/module.json" dist/foundry/release/
+          cp "dist/foundry/dungeons-on-automatic-monsters-${VERSION}.zip" dist/foundry/release/
+          sha256sum "dist/foundry/release/dungeons-on-automatic-monsters-${VERSION}.zip"
       - name: Build web thumbnails
         run: |
           pip install pillow
@@ -40,6 +47,13 @@ jobs:
         run: |
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs --prefix monsters/enraged-eggplant/gct --flat --attachment --force
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs-sheets --prefix monsters/enraged-eggplant/gcs --flat --attachment --force
+      - name: Upload Foundry module manifest and download to public R2 bucket
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        # module.json must NOT be an attachment: Foundry's installer fetches it
+        # inline from the stable manifest URL.
+        run: node scripts/upload-art-to-r2.mjs --art-dir dist/foundry/release --prefix monsters/enraged-eggplant/foundry --flat --force
       - name: Upload art to public R2 bucket
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -58,6 +72,8 @@ jobs:
         run: >-
           gh release create "$RELEASE_TAG"
           "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
+          "dist/foundry/release/dungeons-on-automatic-monsters-${VERSION}.zip#Foundry VTT module ${VERSION} (GURPS Game Aid)"
+          "dist/foundry/release/module.json#Foundry VTT module manifest ${VERSION}"
           --title "Enraged Eggplant Monster Library ${VERSION}"
           --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
       # Fast path only. The site also polls this repo's latest release hourly and

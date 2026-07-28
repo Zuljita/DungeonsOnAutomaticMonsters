@@ -50,6 +50,8 @@ const CONTENT_TYPES = new Map([
   // GCS templates and character sheets are JSON with their own extensions.
   [".gct", "application/json"],
   [".gcs", "application/json"],
+  // The Foundry module download is a zip archive.
+  [".zip", "application/zip"],
 ]);
 
 const SUBDIRS = ["portraits", "tokens", "hex-tokens", "thumbs"];

@@ -42,28 +42,27 @@ each one carries the sanity check that follows in its `provenance.conversionNote
 
 | Threat tier | Records | Min CER | Median CER | Max CER |
 | --- | ---: | ---: | ---: | ---: |
-| minor | 130 | 1 | 11 | 24 |
+| minor | 130 | 1 | 12 | 24 |
 | standard | 109 | 25 | 37 | 58 |
 | major | 46 | 60 | 76 | 99 |
 | severe | 19 | 101 | 125 | 523 |
 
-Records whose ratings changed from the conversion baseline: **181**.
+Records whose ratings changed from the conversion baseline: **185**.
 The conversion baseline ceilinged the damage base before applying the damage-type multiplier, ignored ranged
 accuracy and auto-hit, and priced no save-or-disable ability at all; the reviewed values come from the
 consumer implementation.
 
 ## Low tail — CER at the floor
 
-22 record(s) sit at the CER floor of 1, meaning offense plus protection came out at or below zero.
+21 record(s) sit at the CER floor of 1, meaning offense plus protection came out at or below zero.
 These are genuinely feeble creatures whose rating is a floor, not a measurement.
 
 | Monster | OR | PR | Attacks | HP | Dodge | DR | Reading |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | Quasit | -3 | -3 | 1 | 2 | 8 | 5 | feeble on both axes; floor is correct |
 | Imp | -3 | -3 | 2 | 2 | 8 | 5 | feeble on both axes; floor is correct |
-| Monstrous Centipede (Tiny) | -4 | -8 | 1 | 3 | 8 | — | feeble on both axes; floor is correct |
-| Monstrous Centipede (Small) | -1 | -4 | 1 | 7 | 8 | — | feeble on both axes; floor is correct |
-| Monstrous Centipede (Medium) | 1 | -1 | 1 | 9 | 8 | 1 | no meaningful defense; floor is correct |
+| Monstrous Centipede (Tiny) | -4 | -6 | 1 | 3 | 8 | — | feeble on both axes; floor is correct |
+| Monstrous Centipede (Small) | -1 | -2 | 1 | 7 | 8 | — | feeble on both axes; floor is correct |
 | Monstrous Scorpion (Tiny) | -1 | -8 | 2 | 3 | 8 | 1 | feeble on both axes; floor is correct |
 | Monstrous Scorpion (Small) | 3 | -3 | 2 | 8 | 8 | 1 | no meaningful defense; floor is correct |
 | Weasel | 2 | -1 | 2 | 4 | 9 | — | no meaningful defense; floor is correct |
@@ -87,8 +86,8 @@ These are genuinely feeble creatures whose rating is a floor, not a measurement.
 | Monster | CER | OR | PR | Tier | Appearing | Unpriced mechanics |
 | --- | ---: | ---: | ---: | --- | ---: | --- |
 | Tarrasque | 523 | 324 | 199 | severe | 1 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
-| Purple Worm | 231 | 135 | 96 | severe | 1 | Save-or-disable effect; Multi-hex body |
-| Nightcrawler | 225 | 117 | 108 | severe | 1 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Multi-hex body |
+| Purple Worm | 231 | 135 | 96 | severe | 1 | Save-or-disable effect; Extreme mobility or reach |
+| Nightcrawler | 225 | 117 | 108 | severe | 1 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Kraken | 216 | 50 | 166 | severe | 1 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Cachalot Whale | 195 | 83 | 112 | severe | 1 | Extreme mobility or reach |
 | Titan | 192 | 126 | 66 | severe | 1 | Gaze, aura, engulf, contact, or area attack; Multi-hex body |
@@ -97,9 +96,9 @@ These are genuinely feeble creatures whose rating is a floor, not a measurement.
 | Black Pudding | 132 | 44 | 88 | severe | 1 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Storm Giant | 125 | 78 | 47 | severe | 1 | Unusual immunities; Multi-hex body |
 | Greater Stone Golem | 122 | 17 | 105 | severe | 1 | Unusual immunities; Save-or-disable effect; Multi-hex body |
-| Frost Worm | 120 | 74 | 46 | severe | 1 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Multi-hex body |
+| Frost Worm | 120 | 74 | 46 | severe | 1 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Monstrous Scorpion (Colossal) | 114 | 65 | 49 | severe | 1 | Save-or-disable effect; Multi-hex body |
-| Remorhaz | 110 | 64 | 46 | severe | 1 | Multi-hex body |
+| Remorhaz | 110 | 64 | 46 | severe | 1 | Extreme mobility or reach |
 | Roc | 110 | 61 | 49 | severe | 1 | Extreme mobility or reach |
 | Orca | 106 | 46 | 60 | severe | 1 | Extreme mobility or reach |
 | Nightwalker | 104 | 45 | 59 | severe | 1 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
@@ -118,13 +117,13 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 
 ## Priority mechanics the rating cannot price
 
-258 of 304 records carry at least one priority mechanic that the rating does not read.
+267 of 304 records carry at least one priority mechanic that the rating does not read.
 
 | Monster | CER | Tier | Peer median (tier) | Mechanics the rating cannot see |
 | --- | ---: | --- | ---: | --- |
 | Tarrasque | 523 | severe | 125 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
-| Purple Worm | 231 | severe | 125 | Save-or-disable effect; Multi-hex body |
-| Nightcrawler | 225 | severe | 125 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Multi-hex body |
+| Purple Worm | 231 | severe | 125 | Save-or-disable effect; Extreme mobility or reach |
+| Nightcrawler | 225 | severe | 125 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Kraken | 216 | severe | 125 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Cachalot Whale | 195 | severe | 125 | Extreme mobility or reach |
 | Titan | 192 | severe | 125 | Gaze, aura, engulf, contact, or area attack; Multi-hex body |
@@ -133,9 +132,9 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Black Pudding | 132 | severe | 125 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Storm Giant | 125 | severe | 125 | Unusual immunities; Multi-hex body |
 | Greater Stone Golem | 122 | severe | 125 | Unusual immunities; Save-or-disable effect; Multi-hex body |
-| Frost Worm | 120 | severe | 125 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Multi-hex body |
+| Frost Worm | 120 | severe | 125 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Monstrous Scorpion (Colossal) | 114 | severe | 125 | Save-or-disable effect; Multi-hex body |
-| Remorhaz | 110 | severe | 125 | Multi-hex body |
+| Remorhaz | 110 | severe | 125 | Extreme mobility or reach |
 | Roc | 110 | severe | 125 | Extreme mobility or reach |
 | Orca | 106 | severe | 125 | Extreme mobility or reach |
 | Nightwalker | 104 | severe | 125 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
@@ -143,14 +142,14 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Dire Shark | 101 | severe | 125 | Extreme mobility or reach |
 | Balor | 99 | major | 76 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Glabrezu | 97 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Nalfeshnee | 95 | major | 76 | Unusual immunities; Save-or-disable effect; Multi-hex body |
+| Nalfeshnee | 95 | major | 76 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Marut | 95 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
 | Baleen Whale | 93 | major | 76 | Extreme mobility or reach |
 | Cloud Giant | 93 | major | 76 | Gaze, aura, engulf, contact, or area attack; Multi-hex body |
 | Frost Giant | 92 | major | 76 | Unusual immunities; Multi-hex body |
 | Red Dragon | 90 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
-| Pit Fiend | 89 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
-| Monstrous Centipede (Colossal) | 84 | major | 76 | Save-or-disable effect; Multi-hex body |
+| Pit Fiend | 89 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
+| Monstrous Centipede (Colossal) | 86 | major | 76 | Save-or-disable effect; Multi-hex body |
 | Ice Devil (Gelugon) | 83 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
 | Stone Giant | 83 | major | 76 | Multi-hex body |
 | Monstrous Scorpion (Gargantuan) | 82 | major | 76 | Save-or-disable effect; Multi-hex body |
@@ -160,9 +159,9 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Marilith | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Brass Dragon | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Silver Dragon | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
-| Hydra | 76 | major | 76 | Multi-hex body |
-| Pyrohydra | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Multi-hex body |
-| Cryohydra | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Multi-hex body |
+| Hydra | 76 | major | 76 | Regeneration or extreme durability; Multi-hex body |
+| Pyrohydra | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Multi-hex body |
+| Cryohydra | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Multi-hex body |
 | Nightwing | 76 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Behir | 75 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Bronze Dragon | 75 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
@@ -184,7 +183,7 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Aboleth | 65 | major | 76 | Spellcasting or psionics; Extreme mobility or reach |
 | Solar | 63 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
 | Zelekhut | 63 | major | 76 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
-| Horned Devil (Cornugon) | 62 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
+| Horned Devil (Cornugon) | 62 | major | 76 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
 | Kolyarut | 61 | major | 76 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect |
 | Athach | 60 | major | 76 | Multi-hex body |
 | Couatl | 58 | standard | 37 | Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
@@ -192,16 +191,17 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Retriever | 57 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
 | Stone Golem | 56 | standard | 37 | Unusual immunities; Save-or-disable effect |
 | Razor Boar | 56 | standard | 37 | Regeneration or extreme durability; Extreme mobility or reach |
-| Chimera | 55 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
+| Chimera | 55 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
+| Monstrous Centipede (Gargantuan) | 55 | standard | 37 | Save-or-disable effect; Multi-hex body |
 | Roper | 55 | standard | 37 | Unusual immunities |
-| Monstrous Centipede (Gargantuan) | 53 | standard | 37 | Save-or-disable effect; Multi-hex body |
 | Dire Boar | 53 | standard | 37 | Regeneration or extreme durability; Extreme mobility or reach |
 | Monstrous Scorpion (Huge) | 52 | standard | 37 | Save-or-disable effect |
-| Delver | 52 | standard | 37 | Unusual immunities; Multi-hex body |
+| Delver | 52 | standard | 37 | Unusual immunities; Extreme mobility or reach |
 | Manticore | 52 | standard | 37 | Extreme mobility or reach |
 | Planetar | 50 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
 | Bulette | 50 | standard | 37 | Extreme mobility or reach |
 | Nightmare | 50 | standard | 37 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
+| Dire Wolverine | 49 | standard | 37 | Extreme mobility or reach |
 | Unicorn | 49 | standard | 37 | Unusual immunities; Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
 | Howler | 48 | standard | 37 | Unusual immunities |
 | Trumpet Archon | 47 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
@@ -211,33 +211,37 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Assassin Vine | 45 | standard | 37 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
 | Owlbear | 45 | standard | 37 | Extreme mobility or reach |
 | Shambling Mound | 44 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
-| Bralani | 43 | standard | 37 | Unusual immunities; Save-or-disable effect |
-| Ghaele | 43 | standard | 37 | Unusual immunities; Save-or-disable effect |
+| Bralani | 43 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Ghaele | 43 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Hieracosphinx | 43 | standard | 37 | Extreme mobility or reach |
 | Astral Deva | 42 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Hezrou | 42 | standard | 37 | Unusual immunities; Save-or-disable effect |
+| Dragonne | 42 | standard | 37 | Extreme mobility or reach |
 | Tendriculos | 42 | standard | 37 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Extreme mobility or reach |
 | Gorgon | 41 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Leonal | 41 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Hippogriff | 41 | standard | 37 | Extreme mobility or reach |
-| Achaierai | 40 | standard | 37 | Unusual immunities |
+| Spider Eater | 41 | standard | 37 | Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
+| Dread Wraith | 41 | standard | 37 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
+| Achaierai | 40 | standard | 37 | Unusual immunities; Regeneration or extreme durability |
 | Hound Archon | 40 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
 | Avoral | 40 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Mohrg | 40 | standard | 37 | Unusual immunities; Save-or-disable effect |
-| Dread Wraith | 40 | standard | 37 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
-| Vrock | 39 | standard | 37 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Ankheg | 39 | standard | 37 | Extreme mobility or reach |
+| Vrock | 39 | standard | 37 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Hellcat (Bezekira) | 39 | standard | 37 | Unusual immunities; Save-or-disable effect |
 | Arrowhawk | 38 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Abyssal Greater Basilisk | 38 | standard | 37 | Insubstantiality / possession; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
 | Chuul | 37 | standard | 37 | Unusual immunities; Save-or-disable effect |
+| Monstrous Centipede (Huge) | 37 | standard | 37 | Save-or-disable effect |
 | Nessian Warhound | 37 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Hellwasp Swarm | 37 | standard | 37 | Insubstantiality / possession; Unusual immunities; Swarm; Extreme mobility or reach |
 | Gynosphinx | 37 | standard | 37 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Devourer | 36 | standard | 37 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
 | Chain Devil (Kyton) | 36 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
-| Erinyes | 36 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Dire Badger | 36 | standard | 37 | Extreme mobility or reach |
+| Erinyes | 36 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
 | Annis | 36 | standard | 37 | Gaze, aura, engulf, contact, or area attack |
-| Monstrous Centipede (Huge) | 35 | standard | 37 | Save-or-disable effect |
 | Troll | 35 | standard | 37 | Regeneration or extreme durability |
 | Criosphinx | 35 | standard | 37 | Extreme mobility or reach |
 | Yeth Hound | 35 | standard | 37 | Extreme mobility or reach |
@@ -245,10 +249,9 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Xill | 34 | standard | 37 | Insubstantiality / possession; Save-or-disable effect |
 | Shocker Lizard | 33 | standard | 37 | Unusual immunities; Save-or-disable effect |
 | Scrag | 33 | standard | 37 | Regeneration or extreme durability |
-| Spider Eater | 33 | standard | 37 | Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
 | Basilisk | 32 | standard | 37 | Insubstantiality / possession; Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Save-or-disable effect |
 | Bearded Devil (Barbazu) | 32 | standard | 37 | Unusual immunities; Save-or-disable effect |
-| Lammasu | 32 | standard | 37 | Gaze, aura, engulf, contact, or area attack |
+| Lammasu | 32 | standard | 37 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Winter Wolf | 32 | standard | 37 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Gibbering Mouther | 31 | standard | 37 | Unusual immunities |
 | Bison | 30 | standard | 37 | Extreme mobility or reach |
@@ -256,7 +259,7 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Mimic | 29 | standard | 37 | Unusual immunities; Extreme mobility or reach |
 | Sea Cat | 29 | standard | 37 | Regeneration or extreme durability; Extreme mobility or reach |
 | Troglodyte | 29 | standard | 37 | Unusual immunities |
-| Otyugh | 28 | standard | 37 | Multi-hex body |
+| Otyugh | 28 | standard | 37 | Extreme mobility or reach |
 | Griffon | 28 | standard | 37 | Extreme mobility or reach |
 | Giant Owl | 28 | standard | 37 | Extreme mobility or reach |
 | Dark Naga | 28 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
@@ -275,119 +278,124 @@ directly. It is roughly twice the next-highest record, which is the correct shap
 | Giant Eagle | 26 | standard | 37 | Extreme mobility or reach |
 | Spirit Naga | 26 | standard | 37 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Axebeak | 25 | standard | 37 | Extreme mobility or reach |
-| Flesh Golem | 24 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Rat Swarm | 24 | minor | 11 | Unusual immunities; Swarm |
-| Rakshasa | 24 | minor | 11 | Gaze, aura, engulf, contact, or area attack |
-| Vampire Spawn | 24 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Swarm |
-| Manta Ray | 23 | minor | 11 | Extreme mobility or reach |
-| Medusa | 23 | minor | 11 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Water Naga | 23 | minor | 11 | Save-or-disable effect; Extreme mobility or reach |
-| Phase Spider | 23 | minor | 11 | Insubstantiality / possession; Save-or-disable effect |
-| Sahuagin Mutant | 23 | minor | 11 | Extreme mobility or reach |
-| Wraith | 23 | minor | 11 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
-| Invisible Stalker | 22 | minor | 11 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
-| Magma Mephit | 22 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
-| Sahuagin | 22 | minor | 11 | Extreme mobility or reach |
-| Bodak | 21 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Monstrous Scorpion (Large) | 21 | minor | 11 | Save-or-disable effect |
-| War Pony | 21 | minor | 11 | Extreme mobility or reach |
-| Ice Mephit | 21 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
-| Nymph | 21 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Rast | 21 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
-| Malenti | 21 | minor | 11 | Extreme mobility or reach |
-| Azer | 20 | minor | 11 | Unusual immunities |
-| Choker | 20 | minor | 11 | Extreme mobility or reach |
-| Giant Octopus | 20 | minor | 11 | Extreme mobility or reach |
-| Krenshar | 20 | minor | 11 | Unusual immunities; Extreme mobility or reach |
-| Fire Mephit | 20 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
-| Blink Dog | 19 | minor | 11 | Extreme mobility or reach |
-| Janni | 19 | minor | 11 | Gaze, aura, engulf, contact, or area attack |
-| Hell Hound | 19 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
-| Squid | 18 | minor | 11 | Extreme mobility or reach |
-| Drider | 18 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Ghast | 18 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Bat Swarm | 18 | minor | 11 | Unusual immunities; Swarm; Extreme mobility or reach |
-| Spectre | 18 | minor | 11 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
-| Ethereal Marauder | 17 | minor | 11 | Insubstantiality / possession |
-| Will-o’-wisp | 17 | minor | 11 | Save-or-disable effect; Extreme mobility or reach |
-| Giant Praying Mantis | 17 | minor | 11 | Extreme mobility or reach |
-| Chaos Beast | 16 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Ettercap | 16 | minor | 11 | Save-or-disable effect |
-| Night Hag | 16 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Mastiff | 15 | minor | 11 | Extreme mobility or reach |
-| Aranea | 14 | minor | 11 | Save-or-disable effect |
-| Thoqqua | 14 | minor | 11 | Unusual immunities |
-| Babau | 14 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Dire Bat | 14 | minor | 11 | Extreme mobility or reach |
-| Octopus | 14 | minor | 11 | Extreme mobility or reach |
-| Air Mephit | 14 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Swarm; Extreme mobility or reach |
-| Monstrous Centipede (Large) | 13 | minor | 11 | Save-or-disable effect |
-| Darkmantle | 13 | minor | 11 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
-| Ravid | 13 | minor | 11 | Unusual immunities; Extreme mobility or reach |
-| Dretch | 12 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Hyena | 12 | minor | 11 | Extreme mobility or reach |
-| Earth Mephit | 12 | minor | 11 | Regeneration or extreme durability; Extreme mobility or reach |
-| Satyr | 12 | minor | 11 | Save-or-disable effect |
-| Vargouille | 12 | minor | 11 | Save-or-disable effect; Extreme mobility or reach |
-| Allip | 11 | minor | 11 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect; Spellcasting or psionics |
-| Efreeti | 11 | minor | 11 | Unusual immunities |
-| Belker | 10 | minor | 11 | Unusual immunities; Extreme mobility or reach |
-| Doppelganger | 10 | minor | 11 | Save-or-disable effect |
-| Monitor Lizard | 10 | minor | 11 | Regeneration or extreme durability; Save-or-disable effect |
-| Tojanida | 10 | minor | 11 | Unusual immunities; Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
-| Xorn | 10 | minor | 11 | Insubstantiality / possession; Unusual immunities |
-| Jackal | 10 | minor | 11 | Extreme mobility or reach |
-| Shadow | 8 | minor | 11 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
-| Water Mephit | 8 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Swarm; Extreme mobility or reach |
-| Giant Wasp | 8 | minor | 11 | Save-or-disable effect |
-| Dryad | 8 | minor | 11 | Gaze, aura, engulf, contact, or area attack |
-| Ooze Mephit | 8 | minor | 11 | Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability |
-| Giant Bombardier Beetle | 8 | minor | 11 | Gaze, aura, engulf, contact, or area attack |
-| Ethereal Filcher | 7 | minor | 11 | Insubstantiality / possession; Spellcasting or psionics |
-| Ghoul | 7 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Lacedon | 7 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Magmin | 7 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
-| Monstrous Scorpion (Medium) | 6 | minor | 11 | Save-or-disable effect |
-| Derro | 6 | minor | 11 | Gaze, aura, engulf, contact, or area attack |
-| Flying Snake | 6 | minor | 11 | Extreme mobility or reach |
-| Giant Bee | 5 | minor | 11 | Save-or-disable effect |
-| Riding Dog | 5 | minor | 11 | Extreme mobility or reach |
-| Salt Mephit | 5 | minor | 11 | Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Extreme mobility or reach |
-| Phantom Fungus | 5 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Pseudodragon | 5 | minor | 11 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
-| Grig | 5 | minor | 11 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
-| Succubus | 4 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Homunculus | 4 | minor | 11 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
-| Cockatrice | 3 | minor | 11 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
-| Dust Mephit | 3 | minor | 11 | Regeneration or extreme durability; Extreme mobility or reach |
-| Steam Mephit | 2 | minor | 11 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
-| Pixie | 2 | minor | 11 | Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
-| Giant Bat | 2 | minor | 11 | Extreme mobility or reach |
-| Quasit | 1 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Imp | 1 | minor | 11 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
-| Monstrous Centipede (Tiny) | 1 | minor | 11 | Save-or-disable effect |
-| Monstrous Centipede (Small) | 1 | minor | 11 | Save-or-disable effect |
-| Monstrous Centipede (Medium) | 1 | minor | 11 | Save-or-disable effect |
-| Monstrous Scorpion (Tiny) | 1 | minor | 11 | Save-or-disable effect |
-| Monstrous Scorpion (Small) | 1 | minor | 11 | Save-or-disable effect |
-| Lemure | 1 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Eagle | 1 | minor | 11 | Extreme mobility or reach |
-| Raven | 1 | minor | 11 | Extreme mobility or reach |
-| Air Elemental | 1 | minor | 11 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
-| Earth Elemental | 1 | minor | 11 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
-| Fire Elemental | 1 | minor | 11 | Unusual immunities; Save-or-disable effect; Swarm |
-| Water Elemental | 1 | minor | 11 | Unusual immunities; Save-or-disable effect; Swarm |
-| Shrieker | 1 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Violet Fungus | 1 | minor | 11 | Unusual immunities; Save-or-disable effect |
-| Stirge | 1 | minor | 11 | Extreme mobility or reach |
+| Flesh Golem | 24 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Rat Swarm | 24 | minor | 12 | Unusual immunities; Swarm |
+| Rakshasa | 24 | minor | 12 | Gaze, aura, engulf, contact, or area attack |
+| Vampire Spawn | 24 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Save-or-disable effect; Swarm |
+| Manta Ray | 23 | minor | 12 | Extreme mobility or reach |
+| Medusa | 23 | minor | 12 | Insubstantiality / possession; Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Water Naga | 23 | minor | 12 | Save-or-disable effect; Extreme mobility or reach |
+| Phase Spider | 23 | minor | 12 | Insubstantiality / possession; Save-or-disable effect |
+| Sahuagin Mutant | 23 | minor | 12 | Extreme mobility or reach |
+| Wraith | 23 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
+| Invisible Stalker | 22 | minor | 12 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
+| Magma Mephit | 22 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
+| Sahuagin | 22 | minor | 12 | Extreme mobility or reach |
+| Bodak | 21 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Monstrous Scorpion (Large) | 21 | minor | 12 | Save-or-disable effect |
+| War Pony | 21 | minor | 12 | Extreme mobility or reach |
+| Ice Mephit | 21 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
+| Nymph | 21 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Rast | 21 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
+| Malenti | 21 | minor | 12 | Extreme mobility or reach |
+| Azer | 20 | minor | 12 | Unusual immunities |
+| Choker | 20 | minor | 12 | Extreme mobility or reach |
+| Giant Octopus | 20 | minor | 12 | Extreme mobility or reach |
+| Krenshar | 20 | minor | 12 | Unusual immunities; Extreme mobility or reach |
+| Fire Mephit | 20 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
+| Blink Dog | 19 | minor | 12 | Extreme mobility or reach |
+| Janni | 19 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
+| Hell Hound | 19 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
+| Squid | 18 | minor | 12 | Extreme mobility or reach |
+| Drider | 18 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Ghast | 18 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Bat Swarm | 18 | minor | 12 | Unusual immunities; Swarm; Extreme mobility or reach |
+| Spectre | 18 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
+| Ethereal Marauder | 17 | minor | 12 | Insubstantiality / possession |
+| Will-o’-wisp | 17 | minor | 12 | Save-or-disable effect; Extreme mobility or reach |
+| Giant Praying Mantis | 17 | minor | 12 | Extreme mobility or reach |
+| Chaos Beast | 16 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Ettercap | 16 | minor | 12 | Save-or-disable effect |
+| Night Hag | 16 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Monstrous Centipede (Large) | 15 | minor | 12 | Save-or-disable effect |
+| Gargoyle | 15 | minor | 12 | Extreme mobility or reach |
+| Tojanida | 15 | minor | 12 | Unusual immunities; Save-or-disable effect; Spellcasting or psionics; Extreme mobility or reach |
+| Mastiff | 15 | minor | 12 | Extreme mobility or reach |
+| Aranea | 14 | minor | 12 | Save-or-disable effect |
+| Thoqqua | 14 | minor | 12 | Unusual immunities; Extreme mobility or reach |
+| Babau | 14 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Dire Bat | 14 | minor | 12 | Extreme mobility or reach |
+| Octopus | 14 | minor | 12 | Extreme mobility or reach |
+| Air Mephit | 14 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Swarm; Extreme mobility or reach |
+| Darkmantle | 13 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
+| Ravid | 13 | minor | 12 | Unusual immunities; Extreme mobility or reach |
+| Dretch | 12 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Hyena | 12 | minor | 12 | Extreme mobility or reach |
+| Earth Mephit | 12 | minor | 12 | Regeneration or extreme durability; Extreme mobility or reach |
+| Satyr | 12 | minor | 12 | Save-or-disable effect |
+| Vargouille | 12 | minor | 12 | Save-or-disable effect; Extreme mobility or reach |
+| Allip | 11 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect; Spellcasting or psionics |
+| Djinni | 11 | minor | 12 | Extreme mobility or reach |
+| Noble Djinni | 11 | minor | 12 | Extreme mobility or reach |
+| Efreeti | 11 | minor | 12 | Unusual immunities; Extreme mobility or reach |
+| Belker | 10 | minor | 12 | Unusual immunities; Extreme mobility or reach |
+| Badger | 10 | minor | 12 | Extreme mobility or reach |
+| Doppelganger | 10 | minor | 12 | Save-or-disable effect |
+| Monitor Lizard | 10 | minor | 12 | Regeneration or extreme durability; Save-or-disable effect |
+| Xorn | 10 | minor | 12 | Insubstantiality / possession; Unusual immunities; Extreme mobility or reach |
+| Jackal | 10 | minor | 12 | Extreme mobility or reach |
+| Shadow | 8 | minor | 12 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
+| Water Mephit | 8 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Swarm; Extreme mobility or reach |
+| Giant Wasp | 8 | minor | 12 | Save-or-disable effect; Extreme mobility or reach |
+| Dryad | 8 | minor | 12 | Gaze, aura, engulf, contact, or area attack |
+| Ooze Mephit | 8 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Extreme mobility or reach |
+| Giant Bombardier Beetle | 8 | minor | 12 | Gaze, aura, engulf, contact, or area attack |
+| Ethereal Filcher | 7 | minor | 12 | Insubstantiality / possession; Spellcasting or psionics |
+| Ghoul | 7 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Lacedon | 7 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Magmin | 7 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect |
+| Monstrous Scorpion (Medium) | 6 | minor | 12 | Save-or-disable effect |
+| Derro | 6 | minor | 12 | Gaze, aura, engulf, contact, or area attack |
+| Harpy | 6 | minor | 12 | Extreme mobility or reach |
+| Flying Snake | 6 | minor | 12 | Extreme mobility or reach |
+| Giant Bee | 5 | minor | 12 | Save-or-disable effect; Extreme mobility or reach |
+| Riding Dog | 5 | minor | 12 | Extreme mobility or reach |
+| Salt Mephit | 5 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Extreme mobility or reach |
+| Phantom Fungus | 5 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Pseudodragon | 5 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Grig | 5 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
+| Succubus | 4 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Homunculus | 4 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Cockatrice | 3 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Dust Mephit | 3 | minor | 12 | Regeneration or extreme durability; Extreme mobility or reach |
+| Monstrous Centipede (Medium) | 2 | minor | 12 | Save-or-disable effect |
+| Steam Mephit | 2 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
+| Pixie | 2 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
+| Giant Bat | 2 | minor | 12 | Extreme mobility or reach |
+| Quasit | 1 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
+| Imp | 1 | minor | 12 | Unusual immunities; Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |
+| Monstrous Centipede (Tiny) | 1 | minor | 12 | Save-or-disable effect |
+| Monstrous Centipede (Small) | 1 | minor | 12 | Save-or-disable effect |
+| Monstrous Scorpion (Tiny) | 1 | minor | 12 | Save-or-disable effect |
+| Monstrous Scorpion (Small) | 1 | minor | 12 | Save-or-disable effect |
+| Lemure | 1 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Eagle | 1 | minor | 12 | Extreme mobility or reach |
+| Raven | 1 | minor | 12 | Extreme mobility or reach |
+| Air Elemental | 1 | minor | 12 | Unusual immunities; Save-or-disable effect; Swarm; Extreme mobility or reach |
+| Earth Elemental | 1 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect |
+| Fire Elemental | 1 | minor | 12 | Unusual immunities; Save-or-disable effect; Swarm |
+| Water Elemental | 1 | minor | 12 | Unusual immunities; Save-or-disable effect; Swarm |
+| Shrieker | 1 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Violet Fungus | 1 | minor | 12 | Unusual immunities; Save-or-disable effect |
+| Stirge | 1 | minor | 12 | Extreme mobility or reach |
 
 ## Encounter metadata
 
 Appearing counts and wandering weights are derived from the reviewed threat tier and creature class; the
 source states neither. The rule is recorded on every record.
 
-82 record(s) carry a save-or-disable ability the rating now prices.
-A further 10 carry one it still cannot — the source states no point
+84 record(s) carry a save-or-disable ability the rating now prices.
+A further 1 carry one it still cannot — the source states no point
 cost or Binding ST to score them by — and those keep their appearing count capped at two, because the rating
 understates how dangerous a group of them is. Distribution:
 
@@ -398,7 +406,7 @@ understates how dangerous a group of them is. Distribution:
 | 1 | 3 | 25 |
 | 1 | 4 | 20 |
 | 2 | 3 | 84 |
-| 2 | 4 | 4 |
-| 4 | 4 | 42 |
-| 6 | 4 | 64 |
+| 2 | 4 | 1 |
+| 4 | 4 | 44 |
+| 6 | 4 | 65 |
 

@@ -151,10 +151,47 @@ export function isRatedAffliction(attack) {
   return Number(attack.bindingSt) > 0 || Number(attack.afflictionPoints) > 0;
 }
 
+/**
+ * Issue #14 adjudications: constructs the keyword detector matches that are not
+ * in-combat save-or-disable abilities, so the affliction term is the wrong
+ * instrument and the appearing-count cap should not apply on their account.
+ * Every exclusion is also named in the record's conversionNotes (repair 006).
+ */
+const DISABLING_DETECTOR_EXCLUSIONS = new Map([
+  // Group damaging area attack (3+ vrocks, 16 seconds of dancing); the words
+  // "stunning, paralyzing" describe how to interrupt the dance, not an effect
+  // on its victims. The vrock's actual disable, Stunning Screech, is priced.
+  ["enraged_eggplant_vrock", ["Dance of Ruin"]],
+  // Out-of-combat curse-disease: sets in one day after contact and runs for 60
+  // days. It cannot change a fight; the mummy's in-combat disable, Despair, is
+  // priced. The rating's blindness to it is recorded on the record.
+  ["enraged_eggplant_mummy", ["Mummy Rot"]],
+  // The follow-up is a stated Fatigue Attack construction — resistible fatigue
+  // damage, not a save-or-disable affliction. The detector matched the words
+  // "Missed Sleep" inside the construction's modifier list.
+  ["enraged_eggplant_dark_naga", ["Sting"]],
+  // Out-of-combat: preys on sleeping victims at a distance, over nights. A
+  // combat rating is the wrong instrument; recorded on the record instead.
+  ["enraged_eggplant_night_hag", ["Dream Haunting"]],
+  // Self-targeted travel ability; the detector matched "sleep" in prose about
+  // the projecting creature's own unattended body.
+  ["enraged_eggplant_nightmare", ["Astral Projection"]],
+  ["enraged_eggplant_cauchemar", ["Astral Projection"]],
+  // Egg implantation in an already-paralyzed host over six weeks — entirely
+  // out of combat. The paralytic Sting itself is priced as an affliction.
+  ["enraged_eggplant_spider_eater", ["Implant"]],
+  // "Sleep arrows" are ammunition the longbow can fire, described as gear in
+  // the attack line, not an ability construction of the creature. The bow's
+  // own damage is what the rating prices.
+  ["enraged_eggplant_pixie", ["SM-2 Longbow"]],
+]);
+
 function disablingAttacks(record) {
   const pattern = /affliction|paraly|petrif|possession|energy drain|attribute penalty|\bterror\b|binding|\bsleep\b|\bstun\b|\bcharm\b|hallucinat/i;
+  const excluded = DISABLING_DETECTOR_EXCLUSIONS.get(record.id) ?? [];
   return (record.stats?.attacks ?? []).filter(attack =>
-    pattern.test([attack.name, attack.damage, attack.notes].filter(Boolean).join(" ")));
+    !excluded.includes(attack.name)
+    && pattern.test([attack.name, attack.damage, attack.notes].filter(Boolean).join(" ")));
 }
 
 export const ENCOUNTER_DERIVATION_NOTE =

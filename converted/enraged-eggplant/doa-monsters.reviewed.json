@@ -15525,9 +15525,10 @@
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 2 special ability construction(s) restored (Spores, Dance of Ruin) and 1 annotated with the source's stated cost. 1 save-or-disable construction(s) are scored through the affliction term at the source's stated point cost, or at Binding ST where the source builds the ability as a Binding.",
           "GCS ancestry reconciliation adjudicated: the published template total is 371 points and the parsed source children sum to 381, a difference of -10. Classified as grouped construction not decomposed — consistent with grouped abilities the prose parser did not split into individual children (alternative abilities, linked constructions, and spell or breath-weapon groups). The points are real and priced in the author's total; only the decomposition is missing. The authorized source total is preserved; the remaining manual step is opening gcs/vrock.gct in GCS to replace the reconciliation child with native constructions where the grouped ability can be decomposed.",
+          "Issue #14: Dance of Ruin adjudicated as a group damaging mechanic, not a disable: it needs three or more vrocks dancing for 16 seconds, so no single-creature rating prices it. The rating remains deliberately blind to it; the encounter layer's appearing count for a standard-tier demon is 2 either way.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 23, PR 16, CER 39, threat tier standard.",
           "Conversion baseline reported OR 17, PR 16, CER 33 (tier standard). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b2-gcs-reconciliation); GCS fidelity check passed, DOA playability check passed.",
@@ -44398,9 +44399,10 @@
           "Library-rebuilt template total: 230 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 2 special ability construction(s) restored (Despair, Mummy Rot). 1 save-or-disable construction(s) are scored through the affliction term at the source's stated point cost, or at Binding ST where the source builds the ability as a Binding.",
+          "Issue #14: Mummy Rot adjudicated as an out-of-combat curse-disease (one-day onset, 60-day course) and intentionally left out of the combat rating; GMs should treat it as an aftermath cost of fighting the mummy hand-to-hand, not as encounter difficulty.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 8, PR 19, CER 27, threat tier standard.",
           "Conversion baseline reported OR 3, PR 19, CER 22 (tier minor). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -44605,9 +44607,10 @@
           "Library-rebuilt template total: 127 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 1 special ability construction(s) restored (Poison). No disabling construction on this record carries a cost the affliction term can score.",
+          "Issue #14: the Sting's fatigue-damage follow-up adjudicated as damage, not a disable; like all follow-up damage it rides outside the one-best-attack rating, which prices the Sting's primary impaling damage.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 15, PR 13, CER 28, threat tier standard.",
           "Conversion baseline reported OR 16, PR 13, CER 29 (tier standard). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (solitary): average number appearing 1, wandering weight 3. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (solitary): average number appearing 1, wandering weight 3. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -45299,7 +45302,7 @@
         "threatTier": "minor"
       },
       "encounter": {
-        "averageNumberAppearing": 2,
+        "averageNumberAppearing": 4,
         "treasureMultiplier": null,
         "wanderingWeight": 4,
         "lightSensitive": null
@@ -45418,9 +45421,10 @@
           "Source template total: 306 points.",
           "Library-rebuilt template total: 306 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
+          "Issue #14: Dream Haunting adjudicated as an out-of-combat predation ability and intentionally left out of the combat rating; the record's threat to a sleeping camp is a scenario consideration, not encounter difficulty.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 9, PR 7, CER 16, threat tier minor.",
           "Conversion baseline reported OR 10, PR 7, CER 17 (tier minor). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 2, wandering weight 4. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 4, wandering weight 4. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -45652,9 +45656,10 @@
           "Library-rebuilt template total: 372 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 1 special ability construction(s) restored (Flaming Hooves) and 2 annotated with the source's stated cost. 2 save-or-disable construction(s) are scored through the affliction term at the source's stated point cost, or at Binding ST where the source builds the ability as a Binding.",
+          "Issue #14: Astral Projection adjudicated as a self-targeted travel ability, not an attack; the rating owes it nothing.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 26, PR 24, CER 50, threat tier standard.",
           "Conversion baseline reported OR 15, PR 24, CER 39 (tier standard). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 2, wandering weight 3. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -45885,9 +45890,10 @@
           "Library-rebuilt template total: 431 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 1 special ability construction(s) restored (Flaming Hooves) and 2 annotated with the source's stated cost. 2 save-or-disable construction(s) are scored through the affliction term at the source's stated point cost, or at Binding ST where the source builds the ability as a Binding.",
+          "Issue #14: Astral Projection adjudicated as a self-targeted travel ability, not an attack; the rating owes it nothing.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 35, PR 39, CER 74, threat tier major.",
           "Conversion baseline reported OR 24, PR 39, CER 63 (tier major). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 1, wandering weight 2. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 1, wandering weight 2. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -51267,6 +51273,7 @@
           "Library-rebuilt template total: 142 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 2 special ability construction(s) restored (Fear, Sleep). No disabling construction on this record carries a cost the affliction term can score.",
+          "Issue #14: the Sleep and Fear tunes remain unpriced: the source builds them as skill contests with no stated construction or cost, so the rating has no reproducible lever for them. The rating is deliberately blind to both, and the appearing-count cap of 2 remains as compensation for how dangerous a piping satyr is to a group.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 8, PR 4, CER 12, threat tier minor.",
           "Encounter metadata derived (gregarious): average number appearing 2, wandering weight 4. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
@@ -53742,9 +53749,9 @@
         "controlMaximum": null
       },
       "effectiveness": {
-        "offenseRating": 19,
+        "offenseRating": 27,
         "protectionRating": 14,
-        "combatEffectivenessRating": 33,
+        "combatEffectivenessRating": 41,
         "treasureAdjustedCombatEffectiveness": null,
         "wanderingCombatEffectiveness": null,
         "threatTier": "standard"
@@ -53776,7 +53783,8 @@
             "skill": 14,
             "damage": "thrust 3d-1 large piercing (KYOS: 5d-1 large piercing) plus follow-up affliction (resisted by HT, onset 1 minute, paralysis for margin of failure weeks, then physical stun)",
             "reach": "C-1",
-            "notes": "Sting (14): thrust 3d-1 large piercing (KYOS: 5d-1 large piercing) plus follow-up affliction (resisted by HT, onset 1 minute, paralysis for margin of failure weeks, then physical stun), Reach C-1. Poison: Affliction 1 (HT; Extended Duration, 10,000x, +160%; Follow-Up, Sting, +0%; Onset, 1 minute, -10%; Paralysis, +150%) Resolve as stated by the construction; the source gives no separate resolution text."
+            "notes": "Sting (14): thrust 3d-1 large piercing (KYOS: 5d-1 large piercing) plus follow-up affliction (resisted by HT, onset 1 minute, paralysis for margin of failure weeks, then physical stun), Reach C-1. Poison: Affliction 1 (HT; Extended Duration, 10,000x, +160%; Follow-Up, Sting, +0%; Onset, 1 minute, -10%; Paralysis, +150%) Resolve as stated by the construction; the source gives no separate resolution text.",
+            "afflictionPoints": 40
           },
           {
             "name": "Mandibles",
@@ -53849,9 +53857,10 @@
           "Library-rebuilt template total: 126 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 2 special ability construction(s) restored (Implant, Poison). No disabling construction on this record carries a cost the affliction term can score.",
-          "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 19, PR 14, CER 33, threat tier standard.",
+          "Issue #14: Sting's paralytic follow-up priced through the affliction term at 40 points, the computed cost of the source's stated construction (Affliction 1 at a net +300%). Implant remains unpriced: implantation happens to an already-paralyzed host over six weeks, outside any combat the rating measures.",
+          "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 27, PR 14, CER 41, threat tier standard.",
           "Conversion baseline reported OR 20, PR 14, CER 34 (tier standard). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (gregarious): average number appearing 2, wandering weight 3. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (gregarious): average number appearing 2, wandering weight 3. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -54364,7 +54373,7 @@
         "threatTier": "minor"
       },
       "encounter": {
-        "averageNumberAppearing": 2,
+        "averageNumberAppearing": 6,
         "treasureMultiplier": null,
         "wanderingWeight": 4,
         "lightSensitive": null
@@ -54463,9 +54472,10 @@
           "Source template total: 205 points.",
           "Library-rebuilt template total: 205 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
+          "Issue #14: the longbow's 'sleep arrows' are ammunition, not a creature ability; the rating prices the bow's stated damage. A GM arming pixies with sleep or amnesia arrows should treat that as equipment, exactly as the source presents it.",
           "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 4, PR -2, CER 2, threat tier minor.",
           "Conversion baseline reported OR 5, PR -2, CER 3 (tier minor). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (gregarious): average number appearing 2, wandering weight 4. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (gregarious): average number appearing 6, wandering weight 4. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",
@@ -55405,15 +55415,15 @@
         "controlMaximum": null
       },
       "effectiveness": {
-        "offenseRating": 5,
+        "offenseRating": 10,
         "protectionRating": 5,
-        "combatEffectivenessRating": 10,
+        "combatEffectivenessRating": 15,
         "treasureAdjustedCombatEffectiveness": null,
         "wanderingCombatEffectiveness": null,
         "threatTier": "minor"
       },
       "encounter": {
-        "averageNumberAppearing": 2,
+        "averageNumberAppearing": 4,
         "treasureMultiplier": null,
         "wanderingWeight": 4,
         "lightSensitive": null
@@ -55461,7 +55471,8 @@
             "damage": null,
             "reach": null,
             "autoHit": false,
-            "notes": "Affliction 1 (HT; Accessibility, Must hit unprotected face, -20%; Blockable, -5%; Disadvantage, Blindness, +50%; Fixed Duration, +0%; Increased 1/2D, 2x, +5%; Increased Range, 2x, +10%; Jet, +0%; Limited Use, 4/day, -20%; Only on air, -10%; Reduced Duration, 1/60, -35%; Vision-Based, +150%) [23/5=5]. Resolve as stated by the construction; the source gives no separate resolution text."
+            "notes": "Affliction 1 (HT; Accessibility, Must hit unprotected face, -20%; Blockable, -5%; Disadvantage, Blindness, +50%; Fixed Duration, +0%; Increased 1/2D, 2x, +5%; Increased Range, 2x, +10%; Jet, +0%; Limited Use, 4/day, -20%; Only on air, -10%; Reduced Duration, 1/60, -35%; Vision-Based, +150%) [23/5=5]. Resolve as stated by the construction; the source gives no separate resolution text.",
+            "afflictionPoints": 23
           }
         ],
         "traits": [
@@ -55528,9 +55539,10 @@
           "Library-rebuilt template total: 328 points.",
           "CER was computed from parsed Typical Stats using the Dungeons On Automatic baseline CER path.",
           "Issue #5: 2 special ability construction(s) restored (Land Squirt). No disabling construction on this record carries a cost the affliction term can score.",
-          "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 5, PR 5, CER 10, threat tier minor.",
+          "Issue #14: Land Squirt priced through the affliction term at the source's stated construction cost of 23 points (Affliction 1 at a net +125%, the \"[23/5=5]\" the source writes).",
+          "CER recomputed from the reviewed Typical Stats through the canonical Dungeons on Automatic CER path: OR 10, PR 5, CER 15, threat tier minor.",
           "Conversion baseline reported OR 6, PR 5, CER 11 (tier minor). The reviewed values come from the consumer CER implementation, which rounds damage once after the damage-type multiplier and credits ranged accuracy; the conversion baseline ceilinged the damage base first and ignored range.",
-          "Encounter metadata derived (default): average number appearing 2, wandering weight 4. Appearing count capped at 2 because this creature carries a save-or-disable attack that the CER path does not price; the rating understates how dangerous a group of them is. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
+          "Encounter metadata derived (default): average number appearing 4, wandering weight 4. Encounter metadata derived for 0.2.0 from the reviewed threat tier and creature class (appearing: minor 4 / standard 2 / major 1 / severe 1, forced to 1 for solitary classes — including swarms, which are a single multi-body creature — and raised to 6 for gregarious minor creatures; wandering weight: minor 4 / standard 3 / major 2 / severe 1). The fan-conversion source states no appearing-in-numbers or wandering values, so these are derived, not source mechanics.",
           "Lair, treasure, and grappling remain unpopulated in 0.2.0 by package policy: the authorized fan-conversion source states no lair, treasure, or grappling values, and review declines to invent them. See review/policy/0.2.0-empty-field-policy.md.",
           "Description text is original Dungeons on Automatic prose written from this record's own converted statistics and from the project's art direction for the creature. It is not derived from the authorized fan-conversion source, which states no creature descriptions, and not from any SRD. It carries its own authorship and CC BY 4.0 terms in the description field. See review/policy/description-policy.md.",
           "Review approved by automated-mechanical-review on 2026-07-26 (batch ee-2026-07-26-b4-special-mechanics); GCS fidelity check passed, DOA playability check passed.",

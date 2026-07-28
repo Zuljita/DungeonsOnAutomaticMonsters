@@ -60,17 +60,25 @@ jobs:
           "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
           --title "Enraged Eggplant Monster Library ${VERSION}"
           --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
-      # Optional convenience only. Without DOA_SITE_MONSTER_DISPATCH_TOKEN the
-      # release above is still complete, and the site's "Mirror Public Monster
-      # Package" workflow can be run manually with the release tag. Do not fail a
-      # finished publish because the notification could not be sent.
+      # Fast path only. The site also polls this repo's latest release hourly and
+      # mirrors what it finds, so a publish reaches the site with or without this
+      # step. Never fail a finished publish because the notification could not be
+      # sent — but never report success for a notification that was not sent
+      # either. That is how 0.3.1 and 0.3.2 both published while the site sat on
+      # 0.2.3: DOA_SITE_MONSTER_DISPATCH_TOKEN does not exist, gh refused to run
+      # with an empty GH_TOKEN, and continue-on-error rendered the step green.
       - name: Ask public site to mirror the package
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.DOA_SITE_MONSTER_DISPATCH_TOKEN }}
-        run: >-
-          gh api repos/Zuljita/DungeonsOnAutomaticSite/dispatches
-          --method POST
-          --field event_type=monster_package_published
-          --field "client_payload[source_tag]=$RELEASE_TAG"
-          --field "client_payload[asset_name]=doa-monsters.json"
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning title=Site not notified::DOA_SITE_MONSTER_DISPATCH_TOKEN is not set, so the site was not told about $RELEASE_TAG. Its hourly mirror will pick this up within the hour; run the site's Mirror Public Monster Package workflow to publish sooner."
+            exit 0
+          fi
+          gh api repos/Zuljita/DungeonsOnAutomaticSite/dispatches \
+            --method POST \
+            --field event_type=monster_package_published \
+            --field "client_payload[source_tag]=$RELEASE_TAG" \
+            --field "client_payload[asset_name]=doa-monsters.json"
+          echo "Notified the public site to mirror $RELEASE_TAG."

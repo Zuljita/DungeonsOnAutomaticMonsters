@@ -46,6 +46,10 @@ scripts/reset-by-time.py
 scripts/reset-tokens.py
 scripts/restore-codex-finals.py
 
+# The Foundry module is a derived artifact, rebuilt from the published package
+# at release time; only its builder and validator are tracked.
+dist/
+
 # Generated Python bytecode.
 __pycache__/
 scripts/__pycache__/

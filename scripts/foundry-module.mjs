@@ -14,14 +14,26 @@
 // scripts/build-foundry-module.mjs via the official @foundryvtt/foundryvtt-cli.
 
 import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { BODY_PLAN_OVERRIDES, bodyPlan } from "./body-plan.mjs";
+
+// Re-exported so consumers of the module builder get the derivation it used.
+export { bodyPlan };
 
 export const MODULE_ID = "dungeons-on-automatic-monsters";
 export const MODULE_TITLE = "Dungeons on Automatic Monster Library (GURPS)";
 export const SYSTEM_ID = "gurps";
 export const PACK_NAME = "doa-monsters";
-// Foundry V11 moved packs to LevelDB directories; this build targets the
-// current stable generations and states so in the manifest.
-export const FOUNDRY_COMPATIBILITY = { minimum: "12", verified: "13" };
+// Foundry V11 moved packs to LevelDB directories, but the binding constraint is
+// the system: GURPS Game Aid 0.18.x declares minimum 13, so a v12 install can
+// never run the system this pack is built for. Declaring 12 would let those
+// users install a module they cannot use.
+//
+// `verified` is a claim that someone loaded the module on that generation and
+// looked at it. Until the Foundry render pass is recorded against a release,
+// that claim rests on the field mapping being checked against the system's
+// template.json, not on anyone having opened a sheet.
+export const FOUNDRY_COMPATIBILITY = { minimum: "13", verified: "13" };
 export const FOUNDRY_BASE_URL = "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry";
 
 const ID_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -84,6 +96,39 @@ function isRangedReach(reach) {
   return /ranged|missile|thrown|\d{2,}/i.test(String(reach));
 }
 
+/**
+ * Hit location tables and the per-record body plan overrides, both tracked.
+ *
+ * Hit locations have to come from a body plan the Game Aid knows, or its damage
+ * application cannot find them, so the tables are its own — see the $comment in
+ * the tables file.
+ */
+export const HIT_LOCATION_PLANS = JSON.parse(
+  readFileSync(new URL("../schema/foundry-hit-locations.json", import.meta.url), "utf8"),
+).plans;
+
+/**
+ * Hit locations for the record's body plan, carrying its DR.
+ *
+ * The source states one DR for the creature, not a per-location breakdown, so
+ * every location gets it. That is what the stat block claims; inventing lower
+ * DR for eyes and vitals would be adding a rule the source does not state.
+ * Without this the Game Aid renders an armourless monster — 248 of the 304
+ * records have DR.
+ */
+export function hitLocations(dr, plan = "humanoid") {
+  const table = HIT_LOCATION_PLANS[plan];
+  if (!table) throw new Error(`No hit location table for body plan ${JSON.stringify(plan)}`);
+  const value = String(Number(dr) || 0);
+  return listObject(table.map(location => ({
+    where: location.where,
+    import: value,
+    equipment: "",
+    penalty: String(location.penalty),
+    roll: location.roll,
+  })));
+}
+
 function creditLines(monster) {
   return (monster.provenance?.credits ?? [])
     .map(credit => credit.creditLine)
@@ -141,15 +186,32 @@ function attackEntry(attack, ranged) {
 export function foundryActor(monster, packageVersion) {
   const actorId = foundryActorId(monster.id);
   const attributes = monster.stats?.attributes ?? {};
+  const plan = bodyPlan(monster);
   const gridSize = tokenGridSize(monster.size);
   const melee = [];
   const ranged = [];
+  const hazards = [];
   for (const attack of monster.stats?.attacks ?? []) {
-    (isRangedReach(attack.reach) ? ranged : melee).push(attack);
+    // An attack with no skill is resolved by something other than an attack
+    // roll — an acid aura, an engulf, a petrifying gaze. Giving it a weapon row
+    // would put a clickable to-hit roll on the sheet for a roll that does not
+    // exist, so it keeps its prose instead. The GCS sheet builder splits the
+    // same data the same way.
+    if (typeof attack.skill !== "number") hazards.push(attack);
+    else (isRangedReach(attack.reach) ? ranged : melee).push(attack);
   }
   const notes = [];
   if (monster.description?.text) {
     notes.push({ notes: monster.description.text, pageref: "DOA", contains: {} });
+  }
+  for (const hazard of hazards) {
+    const heading = [hazard.name, hazard.damage, hazard.reach ? `reach ${hazard.reach}` : null]
+      .filter(Boolean).join(", ");
+    notes.push({
+      notes: `${heading}: ${hazard.autoHit ? "No attack roll and no active defence. " : ""}${hazard.notes ?? ""}`.trim(),
+      pageref: "DOA",
+      contains: {},
+    });
   }
   notes.push({ notes: licenseNoteText(monster, packageVersion), pageref: "DOA", contains: {} });
 
@@ -171,6 +233,10 @@ export function foundryActor(monster, packageVersion) {
         PER: attribute(attributes.per),
       },
       HP: { value: attributes.hp ?? 0, min: 0, max: attributes.hp ?? 0, points: 0 },
+      // 25 records state no FP at all: unliving things that carry "Not Subject
+      // to Fatigue" and never spend it. FP 0/0 is the honest rendering of that
+      // — the trait is on the sheet to explain it — and it is deliberate rather
+      // than a missing value falling through to zero.
       FP: { value: attributes.fp ?? 0, min: 0, max: attributes.fp ?? 0, points: 0 },
       dodge: { value: attributes.dodge ?? 0, enc_level: 0 },
       basicmove: { value: String(attributes.move ?? 0), points: 0 },
@@ -214,7 +280,8 @@ export function foundryActor(monster, packageVersion) {
         uuid: gaUuid(actorId, "ranged", index),
       }))),
       notes: listObject(notes.map((note, index) => ({ ...note, uuid: gaUuid(actorId, "notes", index) }))),
-      additionalresources: { bodyplan: "humanoid", tracker: {} },
+      hitlocations: hitLocations(attributes.dr, plan),
+      additionalresources: { bodyplan: plan, tracker: {} },
     },
     prototypeToken: {
       name: monster.name,
@@ -299,6 +366,20 @@ export function buildFoundryModule(pkg) {
   if (!Array.isArray(monsters) || monsters.length === 0) {
     throw new Error("Package has no monsters; refusing to build an empty module.");
   }
+  // An override naming a record that does not exist is a typo that would
+  // otherwise sit silently, still claiming to correct something.
+  const ids = new Set(monsters.map(monster => monster.id));
+  const strayOverrides = Object.keys(BODY_PLAN_OVERRIDES).filter(id => !ids.has(id));
+  if (strayOverrides.length > 0) {
+    throw new Error(`schema/foundry-body-plans.json overrides records not in the package: ${strayOverrides.join(", ")}`);
+  }
+  const unknownPlans = Object.entries(BODY_PLAN_OVERRIDES)
+    .filter(([, plan]) => !HIT_LOCATION_PLANS[plan])
+    .map(([id, plan]) => `${id} -> ${plan}`);
+  if (unknownPlans.length > 0) {
+    throw new Error(`schema/foundry-body-plans.json names body plans the Game Aid has no table for: ${unknownPlans.join(", ")}`);
+  }
+
   const ineligible = monsters.filter(
     monster => monster.provenance?.manualReviewStatus !== "approved" || monster.provenance?.publicStats !== true,
   );
@@ -350,6 +431,29 @@ export function validateFoundryModule(module, pkg) {
     if (!(actor.prototypeToken?.width >= 1) || actor.prototypeToken.width !== tokenGridSize(monster.size)) {
       errors.push(`${label}: token footprint does not follow the stated hex footprint`);
     }
+    const plan = actor.system?.additionalresources?.bodyplan;
+    const expected = HIT_LOCATION_PLANS[plan];
+    const locations = Object.values(actor.system?.hitlocations ?? {});
+    if (!expected) {
+      errors.push(`${label}: body plan ${JSON.stringify(plan)} is not one the Game Aid knows`);
+    } else if (locations.length !== expected.length) {
+      errors.push(`${label}: ${plan} has ${expected.length} hit locations, actor has ${locations.length}`);
+    } else if (locations.some((location, i) => location.where !== expected[i].where)) {
+      errors.push(`${label}: hit location names do not match the ${plan} table`);
+    }
+    const statedDr = String(Number(monster.stats?.attributes?.dr) || 0);
+    if (locations.some(location => location.import !== statedDr)) {
+      errors.push(`${label}: hit location DR does not match the record's stated DR of ${statedDr}`);
+    }
+
+    // Every weapon row implies a to-hit roll, so every weapon row must come
+    // from an attack that states a skill.
+    const rollable = (monster.stats?.attacks ?? []).filter(attack => typeof attack.skill === "number");
+    const weapons = Object.keys(actor.system?.melee ?? {}).length + Object.keys(actor.system?.ranged ?? {}).length;
+    if (weapons !== rollable.length) {
+      errors.push(`${label}: ${weapons} weapon row(s) for ${rollable.length} attack(s) that state a skill`);
+    }
+
     const noteTexts = Object.values(actor.system?.notes ?? {}).map(note => note.notes ?? "");
     const licenseNote = noteTexts.find(text => text.includes("Content licence:"));
     if (!licenseNote) {

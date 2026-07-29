@@ -85,6 +85,12 @@ an `approved` decision that does not assert both is rejected by the ledger valid
   application and confirmed the displayed ancestry total. No script does this, so it is tracked separately
   rather than being folded into `gcsFidelity`. It is **not** required for approval, and it is `false` for the
   0.2.0 review pass.
+- **foundryRenderPass** (`--foundry-render pass`, optional) — someone loaded the compendium in Foundry with
+  the GURPS Game Aid and confirmed the Actor renders: hit locations carrying the record's DR on the
+  creature's own body plan, attacks that roll, and a token occupying the right number of hexes. Automated
+  checks cover the field mapping against the system's `template.json` and a LevelDB pack round trip, but
+  neither is the same as looking at a sheet, so this is recorded separately and is **not** required for
+  approval.
 
 ## What the pipeline guarantees
 

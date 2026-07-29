@@ -44,6 +44,20 @@ invariant without touching disk or the CLI; it is part of `npm test`.
   texture is the published hex-token URL, sized from the record's stated hex
   footprint (diameter of the hex circle with that area: 1 hex → 1, 7 → 3,
   14 → 4).
+- **Hit locations carry the record's DR**, on a body plan derived from the limbs
+  the record's own traits state — a naga slithers so it is vermiform, a dragon
+  has four legs and wings so it is a winged quadruped. The Game Aid resolves
+  damage by matching location names against a body plan it knows, so the tables
+  are its own, transcribed into `schema/foundry-hit-locations.json`. The source
+  states one DR per creature rather than a per-location breakdown, so every
+  location gets it. Where the stated limbs cannot distinguish two plans — a
+  scorpion and an eight-legged basilisk say the same thing — the record is named
+  in [schema/foundry-body-plans.json](../../schema/foundry-body-plans.json), and
+  the full assignment for every record is in
+  [review/reports/foundry-body-plans.md](../../review/reports/foundry-body-plans.md).
+- **Attacks that allow no attack roll are not weapons.** An acid aura or a
+  petrifying gaze has no to-hit number, so it becomes a note with its resolution
+  intact rather than a weapon row implying a roll that does not exist.
 
 ## Release
 

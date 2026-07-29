@@ -28,12 +28,20 @@ export const DECISIONS = new Set(["approved", "rejected", "review_required"]);
 export const REQUIRED_CHECKS = ["gcsFidelity", "doaPlayability"];
 
 /**
- * Recorded but not required for approval. Opening a .gct in the GCS desktop
- * application and confirming the displayed ancestry total is a human step that
- * no script performs; tracking it separately keeps `gcsFidelity: true` from
- * quietly claiming it happened.
+ * Recorded but not required for approval. Both are human steps that no script
+ * performs, tracked separately so a passing automated check never quietly
+ * claims one happened:
+ *
+ * - gcsVisualPass: someone opened the .gct in the GCS desktop application and
+ *   confirmed the displayed ancestry total.
+ * - foundryRenderPass: someone loaded the compendium in Foundry with the GURPS
+ *   Game Aid and confirmed the Actor renders — hit locations carrying the DR on
+ *   the creature's own body plan, attacks that roll, and a token that occupies
+ *   the right number of hexes. The field mapping is checked against the
+ *   system's template.json and the pack round-trips through LevelDB unchanged,
+ *   but neither is the same as looking at a sheet.
  */
-export const OPTIONAL_CHECKS = ["gcsVisualPass"];
+export const OPTIONAL_CHECKS = ["gcsVisualPass", "foundryRenderPass"];
 
 export function ledgerFile(root = ".") {
   return join(root, LEDGER_PATH);

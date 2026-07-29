@@ -29,6 +29,13 @@ jobs:
       - run: npm run validate:gcs-sheets
       - name: Build approval-gated package
         run: npm run promote:enraged-eggplant -- --version "$VERSION"
+      - name: Build Foundry VTT module
+        run: |
+          node scripts/build-foundry-module.mjs --pack --zip --update-latest-manifest
+          mkdir -p dist/foundry/release
+          cp "dist/foundry/dungeons-on-automatic-monsters/module.json" dist/foundry/release/
+          cp "dist/foundry/dungeons-on-automatic-monsters-${VERSION}.zip" dist/foundry/release/
+          sha256sum "dist/foundry/release/dungeons-on-automatic-monsters-${VERSION}.zip"
       - name: Build web thumbnails
         run: |
           pip install pillow
@@ -40,6 +47,13 @@ jobs:
         run: |
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs --prefix monsters/enraged-eggplant/gct --flat --attachment --force
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs-sheets --prefix monsters/enraged-eggplant/gcs --flat --attachment --force
+      - name: Upload Foundry module manifest and download to public R2 bucket
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        # module.json must NOT be an attachment: Foundry's installer fetches it
+        # inline from the stable manifest URL.
+        run: node scripts/upload-art-to-r2.mjs --art-dir dist/foundry/release --prefix monsters/enraged-eggplant/foundry --flat --force
       - name: Upload art to public R2 bucket
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -58,19 +72,29 @@ jobs:
         run: >-
           gh release create "$RELEASE_TAG"
           "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
+          "dist/foundry/release/dungeons-on-automatic-monsters-${VERSION}.zip#Foundry VTT module ${VERSION} (GURPS Game Aid)"
+          "dist/foundry/release/module.json#Foundry VTT module manifest ${VERSION}"
           --title "Enraged Eggplant Monster Library ${VERSION}"
           --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
-      # Optional convenience only. Without DOA_SITE_MONSTER_DISPATCH_TOKEN the
-      # release above is still complete, and the site's "Mirror Public Monster
-      # Package" workflow can be run manually with the release tag. Do not fail a
-      # finished publish because the notification could not be sent.
+      # Fast path only. The site also polls this repo's latest release hourly and
+      # mirrors what it finds, so a publish reaches the site with or without this
+      # step. Never fail a finished publish because the notification could not be
+      # sent — but never report success for a notification that was not sent
+      # either. That is how 0.3.1 and 0.3.2 both published while the site sat on
+      # 0.2.3: DOA_SITE_MONSTER_DISPATCH_TOKEN does not exist, gh refused to run
+      # with an empty GH_TOKEN, and continue-on-error rendered the step green.
       - name: Ask public site to mirror the package
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.DOA_SITE_MONSTER_DISPATCH_TOKEN }}
-        run: >-
-          gh api repos/Zuljita/DungeonsOnAutomaticSite/dispatches
-          --method POST
-          --field event_type=monster_package_published
-          --field "client_payload[source_tag]=$RELEASE_TAG"
-          --field "client_payload[asset_name]=doa-monsters.json"
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning title=Site not notified::DOA_SITE_MONSTER_DISPATCH_TOKEN is not set, so the site was not told about $RELEASE_TAG. Its hourly mirror will pick this up within the hour; run the site's Mirror Public Monster Package workflow to publish sooner."
+            exit 0
+          fi
+          gh api repos/Zuljita/DungeonsOnAutomaticSite/dispatches \
+            --method POST \
+            --field event_type=monster_package_published \
+            --field "client_payload[source_tag]=$RELEASE_TAG" \
+            --field "client_payload[asset_name]=doa-monsters.json"
+          echo "Notified the public site to mirror $RELEASE_TAG."

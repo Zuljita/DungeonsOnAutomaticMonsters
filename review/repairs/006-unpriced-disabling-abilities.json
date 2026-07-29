@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "issue": 14,
+  "title": "Adjudicate the ten disabling abilities the affliction term could not see",
+  "repairs": [
+    {
+      "recordId": "enraged_eggplant_tojanida",
+      "monster": "Tojanida",
+      "rationale": "Issue #14: Land Squirt is a stated Affliction construction whose cost the source itself computes — \"Affliction 1 (HT; ...) [23/5=5]\": base 10 with a net +125% in stated modifiers is 22.5, rounded up to 23 points. Priced through the affliction term at the source's stated 23 points, the same one-lever convention as every other priced disable. The appearing-count cap lifts automatically now that the ability is rated.",
+      "set": {
+        "stats.attacks": [
+          {
+            "name": "Pincers",
+            "skill": 13,
+            "damage": "thrust 1d-3 cutting (KYOS: 1d-4 cutting)",
+            "reach": "C",
+            "notes": "Pincers (13): thrust 1d-3 cutting (KYOS: 1d-4 cutting), Reach C. The tojanida can either nip and let go or hold on and grapple the victim in addition to injuring him. Either is an attack that takes full hit location penalties – not halved for grappling. Treat this attack as a bite for these purposes (see Teeth on page 115 of GURPS Martial Arts for details). The pincers give +2 with tasks that require a firm grip (including climbing)."
+          },
+          {
+            "name": "Sharp Teeth",
+            "skill": 13,
+            "damage": "thrust 1d-3 cutting (KYOS: 1d-4 cutting)",
+            "reach": "C",
+            "notes": "Sharp Teeth (13): thrust 1d-3 cutting (KYOS: 1d-4 cutting), Reach C."
+          },
+          {
+            "name": "Ink",
+            "skill": 13,
+            "damage": "A tojanida may fill a two-yard-radius area with black ink. No one can see into the affected area, and no one within the affected area can see anything; see p. B394 for combat rules. In addition, this ink cloud imposes a -4 penalty on Smell rolls. Once created, the cloud persists for 10 seconds, drifting with the current. This cloud can only be used in water or in zero-G. When used on land, this attack takes a form of an ink jet, which can strike any target up to 20 yards away (without range or speed penalties). It can be dodged or blocked, but not parried. If the jet strikes the face, it causes no injury, but blinds the target for 3 seconds unless he makes a successful HT roll. Thick goggles, closed helmets, ultra-tech visors protect against this spell. A tojanida can use this ability only 4 times per day",
+            "reach": null,
+            "notes": "Ink (13): A tojanida may fill a two-yard-radius area with black ink. No one can see into the affected area, and no one within the affected area can see anything; see p. B394 for combat rules. In addition, this ink cloud imposes a -4 penalty on Smell rolls. Once created, the cloud persists for 10 seconds, drifting with the current. This cloud can only be used in water or in zero-G. When used on land, this attack takes a form of an ink jet, which can strike any target up to 20 yards away (without range or speed penalties). It can be dodged or blocked, but not parried. If the jet strikes the face, it causes no injury, but blinds the target for 3 seconds unless he makes a successful HT roll. Thick goggles, closed helmets, ultra-tech visors protect against this spell. A tojanida can use this ability only 4 times per day."
+          },
+          {
+            "name": "Land Squirt",
+            "skill": null,
+            "damage": null,
+            "reach": null,
+            "autoHit": false,
+            "notes": "Affliction 1 (HT; Accessibility, Must hit unprotected face, -20%; Blockable, -5%; Disadvantage, Blindness, +50%; Fixed Duration, +0%; Increased 1/2D, 2x, +5%; Increased Range, 2x, +10%; Jet, +0%; Limited Use, 4/day, -20%; Only on air, -10%; Reduced Duration, 1/60, -35%; Vision-Based, +150%) [23/5=5]. Resolve as stated by the construction; the source gives no separate resolution text.",
+            "afflictionPoints": 23
+          }
+        ]
+      },
+      "appendConversionNotes": [
+        "Issue #14: Land Squirt priced through the affliction term at the source's stated construction cost of 23 points (Affliction 1 at a net +125%, the \"[23/5=5]\" the source writes)."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_spider_eater",
+      "monster": "Spider Eater",
+      "rationale": "Issue #14: the Sting's paralytic poison is a fully stated construction — Affliction 1 (HT; Extended Duration, 10,000x, +160%; Follow-Up, Sting, +0%; Onset, 1 minute, -10%; Paralysis, +150%) — whose cost follows from the stated modifiers: base 10 at a net +300% is 40 points. Priced through the affliction term at that reproducible 40 points. Implant is excluded from the disabling-attack detector instead: eggs are laid in an already-paralyzed host and gestate for six weeks, entirely outside combat.",
+      "set": {
+        "stats.attacks": [
+          {
+            "name": "Sting",
+            "skill": 14,
+            "damage": "thrust 3d-1 large piercing (KYOS: 5d-1 large piercing) plus follow-up affliction (resisted by HT, onset 1 minute, paralysis for margin of failure weeks, then physical stun)",
+            "reach": "C-1",
+            "notes": "Sting (14): thrust 3d-1 large piercing (KYOS: 5d-1 large piercing) plus follow-up affliction (resisted by HT, onset 1 minute, paralysis for margin of failure weeks, then physical stun), Reach C-1. Poison: Affliction 1 (HT; Extended Duration, 10,000x, +160%; Follow-Up, Sting, +0%; Onset, 1 minute, -10%; Paralysis, +150%) Resolve as stated by the construction; the source gives no separate resolution text.",
+            "afflictionPoints": 40
+          },
+          {
+            "name": "Mandibles",
+            "skill": 14,
+            "damage": "thrust 2d cutting (KYOS: 3d+2 cutting)",
+            "reach": "C",
+            "notes": "Mandibles (14): thrust 2d cutting (KYOS: 3d+2 cutting), Reach C."
+          },
+          {
+            "name": "Implant",
+            "skill": null,
+            "damage": "2d toxic",
+            "reach": "C",
+            "autoHit": false,
+            "notes": "Female spider eaters lay their eggs inside paralyzed creatures of SM+2 or bigger. The eggs gestate for six weeks, then the host takes 2d toxic damage each hour for 13 cycles. This damage cannot be resisted. Once the host loses 1/2 of their HP to this effect, they begin experiencing terrible pain (p. B428) until they heal above that threshold. Once the host loses 2/3 of their HP to this effect, they begin experiencing agony (p. B428) until they heal above that threshold. The eggs can be removed with a successful Surgery roll (failure deals 1d-1 injury), or a Cure Disease spell cast at a -5 penalty. If the host dies to this effect, the young emerges, literally devouring the host from inside."
+          }
+        ]
+      },
+      "appendConversionNotes": [
+        "Issue #14: Sting's paralytic follow-up priced through the affliction term at 40 points, the computed cost of the source's stated construction (Affliction 1 at a net +300%). Implant remains unpriced: implantation happens to an already-paralyzed host over six weeks, outside any combat the rating measures."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_vrock",
+      "monster": "Vrock",
+      "rationale": "Issue #14: Dance of Ruin is a group damaging area attack (three or more vrocks, 16 seconds of dancing, 6d crushing in a 32-yard radius), not a save-or-disable ability; the detector had matched the words 'stunning, paralyzing' in prose about how to interrupt the dance. The vrock's actual disable, Stunning Screech, is already priced at its stated 29 points.",
+      "appendConversionNotes": [
+        "Issue #14: Dance of Ruin adjudicated as a group damaging mechanic, not a disable: it needs three or more vrocks dancing for 16 seconds, so no single-creature rating prices it. The rating remains deliberately blind to it; the encounter layer's appearing count for a standard-tier demon is 2 either way."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_mummy",
+      "monster": "Mummy",
+      "rationale": "Issue #14: Mummy Rot sets in one day after contact and runs for 60 days; it cannot change the fight it is contracted in, so the combat rating is the wrong instrument for it. The mummy's in-combat disable, Despair, is already priced at its stated 21 points.",
+      "appendConversionNotes": [
+        "Issue #14: Mummy Rot adjudicated as an out-of-combat curse-disease (one-day onset, 60-day course) and intentionally left out of the combat rating; GMs should treat it as an aftermath cost of fighting the mummy hand-to-hand, not as encounter difficulty."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_dark_naga",
+      "monster": "Dark Naga",
+      "rationale": "Issue #14: the Sting's follow-up is a stated Fatigue Attack 1d construction (Follow-Up; Missed Sleep, +50%; Resistible, HT-2, -20%) — resistible fatigue damage, not a save-or-disable affliction; the detector had matched 'Missed Sleep' inside the modifier list. The rating's one-best-attack model already prices the Sting's primary damage and deliberately does not stack follow-ups, the same treatment every follow-up construction gets.",
+      "appendConversionNotes": [
+        "Issue #14: the Sting's fatigue-damage follow-up adjudicated as damage, not a disable; like all follow-up damage it rides outside the one-best-attack rating, which prices the Sting's primary impaling damage."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_night_hag",
+      "monster": "Night Hag",
+      "rationale": "Issue #14: Dream Haunting preys on sleeping victims at a distance over nights. It cannot disable anyone in a fight, so a combat rating is the wrong instrument for it; naming that blindness on the record is the honest treatment.",
+      "appendConversionNotes": [
+        "Issue #14: Dream Haunting adjudicated as an out-of-combat predation ability and intentionally left out of the combat rating; the record's threat to a sleeping camp is a scenario consideration, not encounter difficulty."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_nightmare",
+      "monster": "Nightmare",
+      "rationale": "Issue #14: Astral Projection is a self-targeted travel ability — the nightmare projects its own spirit and 'cannot cast spells or otherwise affect the world in any meaningful way' while doing so. The detector had matched the word 'sleep' in prose about the projecting creature's own unattended body. Nightmare Aura and Smoke, the record's real disables, are already priced.",
+      "appendConversionNotes": [
+        "Issue #14: Astral Projection adjudicated as a self-targeted travel ability, not an attack; the rating owes it nothing."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_cauchemar",
+      "monster": "Cauchemar",
+      "rationale": "Issue #14: Astral Projection is a self-targeted travel ability — the cauchemar projects its own spirit and 'cannot cast spells or otherwise affect the world in any meaningful way' while doing so. The detector had matched the word 'sleep' in prose about the projecting creature's own unattended body. Nightmare Aura and Smoke, the record's real disables, are already priced.",
+      "appendConversionNotes": [
+        "Issue #14: Astral Projection adjudicated as a self-targeted travel ability, not an attack; the rating owes it nothing."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_pixie",
+      "monster": "Pixie",
+      "rationale": "Issue #14 predicted this one: the detector's match is on 'sleep arrows' in the longbow's ammunition description — gear the pixie usually loads, not an ability construction of the creature, and the source states no construction or cost for the arrows themselves. Confirmed a false positive and excluded from the detector.",
+      "appendConversionNotes": [
+        "Issue #14: the longbow's 'sleep arrows' are ammunition, not a creature ability; the rating prices the bow's stated damage. A GM arming pixies with sleep or amnesia arrows should treat that as equipment, exactly as the source presents it."
+      ]
+    },
+    {
+      "recordId": "enraged_eggplant_satyr",
+      "monster": "Satyr",
+      "rationale": "Issue #14: the Sleep tune is a genuine in-combat save-or-disable — a Quick Contest of Musical Instrument against Will that drops victims asleep mid-encounter — but the source states no point cost and no construction for it, so there is nothing reproducible to price it by. It stays intentionally unpriced; the appearing-count cap stays as the documented compensation.",
+      "appendConversionNotes": [
+        "Issue #14: the Sleep and Fear tunes remain unpriced: the source builds them as skill contests with no stated construction or cost, so the rating has no reproducible lever for them. The rating is deliberately blind to both, and the appearing-count cap of 2 remains as compensation for how dangerous a piping satyr is to a group."
+      ]
+    }
+  ]
+}

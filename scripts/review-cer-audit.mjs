@@ -55,6 +55,7 @@ const rows = dossiers.map(entry => {
     hazardUnrated: hasUnratedDisablingAttack(record),
     hp: record.stats.attributes.hp,
     dr: record.stats.attributes.dr,
+    fp: record.stats.attributes.fp,
     dodge: record.stats.attributes.dodge,
   };
 });
@@ -70,6 +71,7 @@ const severeRecords = rows.filter(row => row.cer >= 100).sort((a, b) => b.cer - 
 const specialRecords = rows.filter(row => row.mechanics.length > 0);
 const unpricedRecords = rows.filter(row => row.unpriced.length > 0);
 const missingDr = rows.filter(row => row.dr === null || row.dr === undefined);
+const missingFp = rows.filter(row => row.fp === null || row.fp === undefined);
 const missingDodge = rows.filter(row => row.dodge === null || row.dodge === undefined);
 
 if (format === "json") {
@@ -164,14 +166,27 @@ function renderMarkdown() {
     "",
     "## Data gaps that suppress ratings",
     "",
-    `- **${missingDr.length}** records have no parsed DR. The rating scores missing DR as 0, so their protection`,
-    "  rating is a floor rather than a measurement. Most are creatures whose source states DR as \"-\" or as a",
-    "  conditional value (\"20 vs. cold and fire\") that the Typical Stats parse cannot reduce to one number.",
+    "These are stated policy, not parse accidents; see",
+    "[`../policy/cer-scope-policy.md`](../policy/cer-scope-policy.md) (issue #17).",
+    "",
+    `- **${missingDr.length}** records have no parsed DR. Their sources state DR as \"-\" or as a conditional value`,
+    "  (\"20 vs. cold and fire\"). Policy: the uniform-DR slot scores only unconditional DR, so these score its",
+    "  unconditional portion — usually zero — and their protection rating is a deliberate floor. Weighting the",
+    "  conditional value would require an attack-mix assumption the package refuses to invent; the record's traits",
+    "  carry the conditional construction verbatim for the GM to read.",
+    `- **${missingFp.length}** records have no parsed FP (source states N/A — creatures outside the fatigue economy).`,
+    "  Policy: scored at the FP baseline, contributing 0 — neither penalised for the missing number nor credited",
+    "  for tirelessness.",
     `- **${missingDodge.length}** record(s) have no parsed Dodge (source states N/A), scored as no active defense.`,
     "",
     "## Priority mechanics the rating cannot price",
     "",
     `${unpricedRecords.length} of ${rows.length} records carry at least one priority mechanic that the rating does not read.`,
+    "",
+    "Each family's disposition — priced with a stated lever, or out of scope with the reason — is recorded in",
+    "[`../policy/cer-scope-policy.md`](../policy/cer-scope-policy.md) (issue #15). A GM should read a listed",
+    "mechanic as \"this creature is harder than its number\": the threat tier of a record in this table is a floor,",
+    "not a measurement.",
     "",
     "| Monster | CER | Tier | Peer median (tier) | Mechanics the rating cannot see |",
     "| --- | ---: | --- | ---: | --- |",

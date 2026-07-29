@@ -111,6 +111,42 @@ npm run validate:enraged-eggplant
 
 It writes all 304 SRD-overlap GCS v5 ancestry drafts under `converted/enraged-eggplant/gcs/`, including corrected rebuilds for identities already present in the imported EE library, plus a DOA review package, a per-monster checklist, and `LIBRARY-AUDIT.md`. The batch script also accepts `--selection missing` or `--selection covered` for focused audits. Only exact trait/level/self-control/modifier matches become native library records; flat mode modifiers and safely parameterized modifiers are supported. Library cost disagreements are reported separately from unresolved source-total reconciliation, and no generated record is approved automatically.
 
+## GCS Character Sheets
+
+Alongside the `.gct` ancestry templates, every reviewed record builds a ready-to-open `.gcs`
+character sheet with the creature's portrait embedded:
+
+```bash
+npm run build:gcs-sheets && npm run verify:gcs-sheets
+```
+
+A sheet is the ancestry *plus* the individual. The source states both separately — racial
+modifiers in the costed `Advantages:` block, and a typical individual in the `Typical Stats`
+block that buys attributes and traits on top of it — so the sheet carries the `.gct` container
+and the difference between the two as attribute adjustments. Dropping in the ancestry alone
+produces a bare racial template, not a monster: a Balor at DX 11 instead of 13.
+
+The ancestry half of that subtraction is computed by GCS and committed to
+`converted/enraged-eggplant/gcs-ancestry-baseline.json`, so the ordinary build is pure
+arithmetic and needs no GCS install. Regenerate it whenever the `.gct` templates change:
+
+```bash
+npm run baseline:gcs-sheets
+```
+
+`verify:gcs-sheets` is the check that keeps the two halves honest: it converts a copy of every
+sheet with the GCS desktop application and compares GCS's own computed values against the
+package, writing [review/reports/gcs-verification.md](review/reports/gcs-verification.md). All
+2,710 attribute values across the 304 records agree. Dodge agrees on 286 of 303; the remaining
+17 are source-level inconsistencies where the stated Dodge does not follow from the stated Basic
+Speed and traits, and are recorded rather than corrected.
+
+Both commands need GCS 5.x. They find it automatically on Windows, macOS and Linux, or set
+`GCS_BIN`. Only these two commands need it — `npm test` does not.
+
+Which Typical Stats block a record carries when the source states several is governed by
+[review/policy/typical-stats-variant-policy.md](review/policy/typical-stats-variant-policy.md).
+
 ## Consumer Contract
 
 Treat `converted/doa-monsters.json` as the public API. Converter internals can change, but released package records must preserve stable IDs, upstream `sourceLicense`, downstream `contentLicense`, copyright and attribution data, conversion version, and manual review status.

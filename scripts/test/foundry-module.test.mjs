@@ -4,6 +4,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  HIT_LOCATION_PLANS,
+  bodyPlan,
   buildFoundryModule,
   foundryActor,
   foundryActorId,
@@ -79,4 +81,58 @@ test("actors map the published art: portrait on the sheet, hex token on the toke
   assert.equal(actor.prototypeToken.texture.src, monster.art.hexToken.url);
   assert.equal(actor.prototypeToken.width, tokenGridSize(monster.size));
   assert.equal(actor.prototypeToken.width, actor.prototypeToken.height);
+});
+
+test("stated DR reaches every hit location, on every body plan", () => {
+  for (const monster of publishedPackage.monsters) {
+    const actor = foundryActor(monster, publishedPackage.manifest.version);
+    const plan = actor.system.additionalresources.bodyplan;
+    const table = HIT_LOCATION_PLANS[plan];
+    // The plan has to be one the Game Aid knows, or damage cannot resolve.
+    assert.ok(table, `${monster.id}: unknown body plan ${plan}`);
+    const locations = Object.values(actor.system.hitlocations);
+    assert.equal(locations.length, table.length, `${monster.id}: ${plan} location count`);
+    assert.deepEqual(locations.map(l => l.where), table.map(l => l.where), `${monster.id}: location names`);
+    const dr = String(Number(monster.stats.attributes.dr) || 0);
+    assert.ok(locations.every(location => location.import === dr), `${monster.id}: DR on every location`);
+  }
+});
+
+test("body plans follow the limbs the record states", () => {
+  const plan = id => bodyPlan(publishedPackage.monsters.find(monster => monster.id === id));
+  // Four legs and wings, not a humanoid with a cloak.
+  assert.equal(plan("enraged_eggplant_white_dragon"), "winged quadruped");
+  // Slithers, no arms.
+  assert.equal(plan("enraged_eggplant_guardian_naga"), "vermiform");
+  // Slithers with a humanoid torso and arms.
+  assert.equal(plan("enraged_eggplant_marilith"), "snakeman");
+  // Feet used as hands must not read as a second pair of arms.
+  assert.equal(plan("enraged_eggplant_ape"), "quadruped");
+  // A ring of extra-flexible arms is tentacles.
+  assert.equal(plan("enraged_eggplant_darkmantle"), "octopod");
+  // Named explicitly: the traits cannot tell a scorpion from a spider.
+  assert.equal(plan("enraged_eggplant_monstrous_scorpion_large"), "scorpion");
+});
+
+test("hazards that allow no attack roll become notes, not weapon rows", () => {
+  const aboleth = publishedPackage.monsters.find(monster => monster.id === "enraged_eggplant_aboleth");
+  const mucus = aboleth.stats.attacks.find(attack => attack.name === "Mucus Cloud");
+  assert.notEqual(typeof mucus.skill, "number", "fixture: Mucus Cloud states no attack skill");
+
+  const actor = foundryActor(aboleth, publishedPackage.manifest.version);
+  const weaponNames = [...Object.values(actor.system.melee), ...Object.values(actor.system.ranged)]
+    .map(weapon => weapon.name);
+  assert.ok(!weaponNames.includes("Mucus Cloud"), "an unrollable hazard must not get a to-hit row");
+
+  const noteTexts = Object.values(actor.system.notes).map(note => note.notes);
+  assert.ok(noteTexts.some(text => text.startsWith("Mucus Cloud")), "the hazard keeps its prose");
+});
+
+test("every weapon row corresponds to an attack that states a skill", () => {
+  for (const monster of publishedPackage.monsters) {
+    const actor = foundryActor(monster, publishedPackage.manifest.version);
+    const rollable = monster.stats.attacks.filter(attack => typeof attack.skill === "number").length;
+    const weapons = Object.keys(actor.system.melee).length + Object.keys(actor.system.ranged).length;
+    assert.equal(weapons, rollable, `${monster.id}: weapon rows must match rollable attacks`);
+  }
 });

@@ -270,9 +270,18 @@ function sheetFor(record, template, baseline) {
   // own art. The 420px web thumbnail is the right source: GCS renders the
   // portrait small, and the full-resolution PNG would inflate every sheet from
   // ~50 KB to ~3.5 MB for no visible gain.
+  // The thumbnails are generated rather than tracked, so a missing one is a
+  // build-order problem, not an optional extra: silently omitting the portrait
+  // produces a sheet that differs from the committed one and reports itself as
+  // merely "stale", which sends the next person looking in the wrong place.
   if (baseline) {
     const thumb = join(THUMB_DIR, `${record.id}.webp`);
-    if (existsSync(thumb)) profile.portrait = readFileSync(thumb).toString("base64");
+    if (!existsSync(thumb)) {
+      throw new Error(
+        `${record.id}: no portrait thumbnail at ${thumb}. Run: npm run art:thumbnails`,
+      );
+    }
+    profile.portrait = readFileSync(thumb).toString("base64");
   }
 
   // The shared settings block carries a Humanoid body type; every creature that

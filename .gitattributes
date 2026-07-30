@@ -13,3 +13,8 @@ review/reports/*.md text eol=lf
 # compares the file on disk to freshly rendered LF output byte for byte, so a
 # CRLF checkout would report every sheet stale while git sees no change.
 converted/enraged-eggplant/gcs-sheets/*.gcs text eol=lf
+
+# And for the SRD-coverage specs and everything generated from them, which
+# build-srd-monsters.mjs --check compares the same way.
+content/srd-monsters/** text eol=lf
+converted/srd-monsters/** text eol=lf

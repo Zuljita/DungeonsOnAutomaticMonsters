@@ -1,0 +1,142 @@
+// SPDX-License-Identifier: MIT
+//
+// Build the independently authored SRD-coverage monster package and its GCS v5
+// artifacts from the tracked specs under content/srd-monsters/.
+//
+//   node scripts/build-srd-monsters.mjs
+//   node scripts/build-srd-monsters.mjs --check
+//
+// The specs are the source of truth and everything under converted/srd-monsters/
+// is generated, for the same reason the Enraged Eggplant review pipeline works
+// that way: a two-megabyte package is not a reviewable artifact, and a record
+// hand-edited after generation drifts from the build that justified it. Edit the
+// spec, rebuild, and the record, the .gct and the .gcs move together.
+
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { buildRecord } from "./srd/build-srd-record.mjs";
+import { batchMonsters } from "./srd/expand-matrix.mjs";
+import { PACKAGE_SOURCE, SOURCE_BOOK_ID, manifest } from "./srd/package-source.mjs";
+import { validatePackage } from "./package-validation.mjs";
+
+const SPEC_DIR = "content/srd-monsters";
+const OUT_DIR = "converted/srd-monsters";
+const GCT_DIR = join(OUT_DIR, "gcs");
+const GCS_DIR = join(OUT_DIR, "gcs-sheets");
+const PACKAGE_PATH = join(OUT_DIR, "doa-monsters.review-required.json");
+const CHECKLIST_PATH = join(OUT_DIR, "CHECKLIST.md");
+const SETTINGS_PATH = "schema/gcs-monster-settings.json";
+const VERSION = "0.1.0-srd-land-animals-draft";
+
+const check = process.argv.includes("--check");
+const settings = JSON.parse(readFileSync(SETTINGS_PATH, "utf8"));
+
+const batches = readdirSync(SPEC_DIR)
+  .filter(name => name.endsWith(".json"))
+  .sort()
+  .map(name => ({ path: join(SPEC_DIR, name), file: JSON.parse(readFileSync(join(SPEC_DIR, name), "utf8")) }));
+
+const problems = [];
+const records = [];
+const artifacts = [];
+
+for (const { path, file } of batches) {
+  const batch = { id: file.batch, issue: file.issue, title: file.title, specPath: path.replace(/\\/g, "/") };
+  for (const spec of batchMonsters(file)) {
+    let built;
+    try {
+      built = buildRecord(spec, {
+        batch,
+        traitSets: file.traitSets ?? {},
+        source: PACKAGE_SOURCE,
+        packageSourceId: PACKAGE_SOURCE.id,
+        sourceBookId: SOURCE_BOOK_ID,
+        settings,
+      });
+    } catch (error) {
+      problems.push(`${spec.slug ?? "<unnamed spec>"}: ${error.message}`);
+      continue;
+    }
+    records.push(built.record);
+    artifacts.push({ slug: spec.slug, built });
+  }
+}
+
+if (problems.length === 0) {
+  const pkg = { manifest: manifest(VERSION, records.length), monsters: records };
+  problems.push(...validatePackage(pkg, { allowUnapproved: true }));
+
+  const files = [
+    [PACKAGE_PATH, `${JSON.stringify(pkg, null, 2)}\n`],
+    [CHECKLIST_PATH, checklist(pkg)],
+    ...artifacts.flatMap(({ slug, built }) => [
+      [join(GCT_DIR, `${slug}.gct`), `${JSON.stringify(built.template, null, "\t")}\n`],
+      [join(GCS_DIR, `${built.record.id}.gcs`), `${JSON.stringify(built.sheet, null, "\t")}\n`],
+    ]),
+  ];
+
+  for (const directory of [OUT_DIR, GCT_DIR, GCS_DIR]) {
+    if (!check) mkdirSync(directory, { recursive: true });
+  }
+
+  let written = 0;
+  let unchanged = 0;
+  for (const [target, text] of files) {
+    if (existsSync(target) && readFileSync(target, "utf8") === text) {
+      unchanged += 1;
+      continue;
+    }
+    if (check) problems.push(`${target} is stale; run npm run build:srd-monsters`);
+    else {
+      writeFileSync(target, text, "utf8");
+      written += 1;
+    }
+  }
+
+  // A record whose .gct disappeared would otherwise pass silently on a rebuild
+  // that only ever adds files.
+  if (!check && existsSync(GCT_DIR)) {
+    const expected = new Set(artifacts.map(({ slug }) => `${slug}.gct`));
+    for (const name of readdirSync(GCT_DIR)) {
+      if (!expected.has(name)) problems.push(`${join(GCT_DIR, name)} has no spec; delete it or restore the spec`);
+    }
+  }
+
+  if (problems.length === 0) {
+    console.log(check
+      ? `SRD monster artifacts are current (${unchanged} file(s), ${records.length} record(s)).`
+      : `Wrote ${written} and left ${unchanged} unchanged of ${files.length} file(s) for ${records.length} record(s).`);
+  }
+}
+
+if (problems.length > 0) {
+  console.error(`SRD monster build failed:\n${problems.map(problem => `  - ${problem}`).join("\n")}`);
+  process.exit(1);
+}
+
+function checklist(pkg) {
+  const rows = pkg.monsters.map(record => {
+    const covers = record.provenance.coversSourceIdentities
+      .map(cover => `${cover.heading} (${cover.sourceSystem === "srd_5_1" ? "5.1" : "3.5"})`)
+      .join(", ");
+    return `| ${record.name} | ${covers} | ${record.stats.attributes.st} | `
+      + `${record.effectiveness.combatEffectivenessRating} | ${record.effectiveness.threatTier} | `
+      + `${record.encounter.averageNumberAppearing} | ${record.provenance.manualReviewStatus} |`;
+  });
+  return [
+    "<!-- Generated by scripts/build-srd-monsters.mjs. Do not edit. -->",
+    "",
+    "# SRD coverage monster checklist",
+    "",
+    `${pkg.monsters.length} independently authored record(s), version ${pkg.manifest.version}.`,
+    "",
+    "Every record is `review_required`. Approval needs the two gates the review workflow defines — GCS",
+    "arithmetic and library fidelity, and DOA playability — plus a check that the encounter fields suit the",
+    "creature's role as a wandering encounter, a mount or livestock.",
+    "",
+    "| Monster | SRD headings answered | ST | CER | Threat | Appearing | Status |",
+    "| --- | --- | ---: | ---: | --- | ---: | --- |",
+    ...rows,
+    "",
+  ].join("\n");
+}

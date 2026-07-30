@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "batch": "snakes",
+  "issue": 40,
+  "title": "SRD coverage: snakes",
+  "summary": "Independently authored GURPS builds for the 4 serpent identities issue #40 enumerates. Snakes split cleanly into two mechanical shapes and the batch keeps them apart: constrictors buy Constriction Attack and the ST to use it, and venomous snakes buy fangs and a disabling ability, with a bite that does almost nothing on its own. Size Modifier comes from the published table keyed to longest dimension, which for a serpent is its full length — a nine-metre snake reads large on the table even though it is a hand's breadth wide, and the notes say so. ST comes from Basic Lift and from what the animal actually holds: a constrictor's coils have to beat the thing it is crushing.",
+  "traitSets": {
+    "serpent-body": [
+      {
+        "trait": "cannot-speak"
+      },
+      {
+        "trait": "bestial"
+      },
+      {
+        "trait": "cold-blooded"
+      },
+      {
+        "trait": "no-legs-slithers"
+      },
+      {
+        "trait": "no-fine-manipulators"
+      },
+      {
+        "trait": "injury-tolerance-no-neck"
+      },
+      {
+        "trait": "discriminatory-smell"
+      },
+      {
+        "trait": "vibration-sense-air"
+      }
+    ],
+    "carnivore": [
+      {
+        "trait": "restricted-diet-carnivore"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "constrictor-snake",
+      "name": "Constrictor Snake",
+      "class": "Animal",
+      "classTags": ["animal", "reptile"],
+      "tags": ["ambusher", "jungle", "swamp", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Constrictor Snake"},
+        {"sourceSystem": "srd_3_5", "heading": "Constrictor Snake"}
+      ],
+      "massKg": 30,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A branch over a game trail, or a hollow under a root mass near water.",
+      "traitSets": ["serpent-body", "carnivore"],
+      "traits": [
+        {"trait": "amphibious"},
+        {"trait": "constriction-attack"},
+        {"trait": "double-jointed"},
+        {"trait": "dx", "levels": 2},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 7},
+        {"trait": "sharp-teeth"},
+        {"trait": "st", "levels": 2},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Backward-curved teeth that take hold rather than cut. The bite is how the coils arrive."
+        },
+        {
+          "name": "Constrict",
+          "basis": null,
+          "type": "crushing",
+          "reach": "C",
+          "bindingSt": 12,
+          "notes": "Once it has hold, the coils go on. No attack roll and no defence: win a Quick Contest of ST each second or take crushing damage and lose the breath to shout with."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 4
+      },
+      "description": "Three metres of muscle that has never needed venom. It lies along a branch with its head down at head height and waits for something warm to pass under, and the whole encounter turns on the first second — before the coils, it is a snake; after them, it is arithmetic.",
+      "notes": [
+        "Three metres, which is the SM +1 row.",
+        "ST from Basic Lift: the coils have to beat a struggling animal of its own mass, which is what constriction is.",
+        "The coils are priced by binding ST rather than by damage, because they do their work by holding rather than by wounding.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Double Jointed; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-constrictor-snake",
+      "name": "Giant Constrictor Snake",
+      "class": "Animal",
+      "classTags": ["animal", "reptile"],
+      "tags": ["ambusher", "jungle", "swamp", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Constrictor Snake"}
+      ],
+      "massKg": 250,
+      "sizeModifier": 4,
+      "hexes": "7 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A river bank undercut by the current, with a slide worn smooth into deep water.",
+      "traitSets": ["serpent-body", "carnivore"],
+      "traits": [
+        {"trait": "amphibious"},
+        {"trait": "constriction-attack"},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "double-jointed"},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 7},
+        {"trait": "sharp-teeth"},
+        {"trait": "st", "levels": 17},
+        {"trait": "will", "levels": 6}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "Takes hold of an arm, a leg or a head and does not open again."
+        },
+        {
+          "name": "Constrict",
+          "basis": null,
+          "type": "crushing",
+          "reach": "C",
+          "bindingSt": 27,
+          "notes": "No attack roll and no defence once it has hold. Win a Quick Contest of ST each second or take crushing damage; a failure also costs the victim the ability to breathe, and drowning follows if the snake takes it into the water."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "Nine metres of river snake that eats deer whole and has no reason to think a person is different. It comes out of brown water without a sound, takes hold with the jaws, and puts three coils on before anyone upstream has noticed the splash. There is no trick to fighting it — only how fast the coils are cut.",
+      "notes": [
+        "Nine metres, which is the SM +4 row. Note that this is a length reading: the animal is enormous end to end but no wider than a thigh, so it is easy to hit and hard to stop.",
+        "ST from Basic Lift: the coils have to beat a deer, and then a person who is pulling the other way.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Double Jointed; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-poisonous-snake",
+      "name": "Giant Poisonous Snake",
+      "class": "Animal",
+      "classTags": ["animal", "reptile"],
+      "tags": ["venomous", "jungle", "underground", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Poisonous Snake"}
+      ],
+      "massKg": 20,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A rock pile or ruin with sun on one side and a hole on the other.",
+      "traitSets": ["serpent-body", "carnivore"],
+      "traits": [
+        {"trait": "dx", "levels": 4},
+        {"trait": "fangs"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "infravision"},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 7},
+        {"trait": "st-", "levels": 3},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C,1",
+          "afflictionPoints": 40,
+          "notes": "Two punctures and almost no bleeding. Roll HT: on a failure the limb swells and darkens, the victim loses the use of it within minutes, and without treatment the swelling keeps travelling. This is the entire creature."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Three metres of snake carrying enough venom to kill a horse, striking from a coil faster than anyone can pull a hand back. It has no interest in a fight it cannot win by chemistry, which is why it warns first — and why the ones that do not warn are the ones that kill people.",
+      "notes": [
+        "Three metres, which is the SM +1 row.",
+        "Weak in ST and deliberately so. The venom is priced at 40 points as a disabling ability, and it carries almost the whole rating; a bite that did meaningful damage as well would make this creature something it is not.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "viper-snake",
+      "name": "Viper Snake",
+      "class": "Animal",
+      "classTags": ["animal", "reptile"],
+      "tags": ["venomous", "hazard", "wandering-encounter"],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Poisonous Snake",
+          "alsoPrintedAs": ["Poisonous Snake"]
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Viper Snake",
+          "alsoPrintedAs": ["Snake, Viper"]
+        }
+      ],
+      "massKg": 1,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Leaf litter, a wood pile, or the warm stone beside a campfire.",
+      "traitSets": ["serpent-body", "carnivore"],
+      "traits": [
+        {"trait": "dx", "levels": 4},
+        {"trait": "fangs"},
+        {"trait": "ht", "levels": 1},
+        {"trait": "infravision"},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 7},
+        {"trait": "st-", "levels": 8},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "afflictionPoints": 25,
+          "notes": "Roll HT or lose the use of the bitten limb and take a slow, ugly wound that will not close. Untreated it is often fatal days later rather than minutes."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 6
+      },
+      "description": "Under a metre, patterned into invisibility against dead leaves, and encountered by standing on it. A viper is not a monster and does not behave like one: it strikes once, it means it, and it is gone. The consequences arrive later and are what the party will actually have to deal with.",
+      "notes": [
+        "About 90 cm, which is the SM -2 row.",
+        "The 5.1 corpus prints this as 'Poisonous Snake' and the 3.5 corpus as 'Viper Snake'; both are this record.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    }
+  ]
+}

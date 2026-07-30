@@ -33,6 +33,7 @@ const gcsFidelity = valueFor("--gcs-fidelity") === "pass";
 const doaPlayability = valueFor("--doa-playability") === "pass";
 // Recorded, never required: see OPTIONAL_CHECKS in scripts/review/ledger.mjs.
 const gcsVisualPass = valueFor("--gcs-visual") === "pass";
+const foundryRenderPass = valueFor("--foundry-render") === "pass";
 const dryRun = args.includes("--dry-run");
 const notes = args.reduce((collected, arg, index) => (
   arg === "--note" && args[index + 1] ? [...collected, args[index + 1]] : collected
@@ -62,6 +63,7 @@ for (const entry of selected) {
     && current.checks.gcsFidelity === gcsFidelity
     && current.checks.doaPlayability === doaPlayability
     && (current.checks.gcsVisualPass ?? false) === gcsVisualPass
+    && (current.checks.foundryRenderPass ?? false) === foundryRenderPass
   ) {
     skipped.push(entry.id);
     continue;
@@ -74,7 +76,7 @@ for (const entry of selected) {
     reviewedOn,
     batch: batchName,
     baseRecordSha256: entry.baseSha256,
-    checks: { gcsFidelity, doaPlayability, gcsVisualPass },
+    checks: { gcsFidelity, doaPlayability, gcsVisualPass, foundryRenderPass },
     flags: entry.flags,
     notes,
   });

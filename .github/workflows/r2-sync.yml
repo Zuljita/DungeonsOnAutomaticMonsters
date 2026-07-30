@@ -1,0 +1,52 @@
+# Make the R2 bucket match the repository without minting a package release.
+#
+# The publish workflow is the right tool when the package itself changes. When
+# only art bytes change - a token re-rendered, an orientation corrected - the
+# package JSON is identical and a new version would be an empty release. This
+# uploads the changed files instead.
+#
+# It also owns the bucket's CORS policy. The site draws an optional facing bar
+# on hex tokens and offers the marked token as a download; building that file
+# means reading the PNG into a canvas, which a browser refuses cross-origin
+# unless the bucket says otherwise.
+name: Sync art and CORS to R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_cors:
+        description: Apply scripts/r2-cors.json to the bucket
+        required: false
+        default: true
+        type: boolean
+      force:
+        description: Re-upload every file, not just changed ones
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply CORS policy
+        if: ${{ inputs.set_cors }}
+        run: npx --yes wrangler@4 r2 bucket cors set doa-assets --file scripts/r2-cors.json --force
+      - name: Upload art
+        # Without --force the script skips objects whose size already matches,
+        # so a routine run costs one HEAD per file and uploads only what moved.
+        run: >-
+          node scripts/upload-art-to-r2.mjs --attachment --concurrency 4
+          ${{ inputs.force && '--force' || '' }}

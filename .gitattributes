@@ -2,9 +2,19 @@ art/enraged-eggplant/portraits/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/tokens/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/hex-tokens/*.png filter=lfs diff=lfs merge=lfs -text
 
-# The SRD-coverage specs and everything generated from them are compared byte
-# for byte by `npm run validate:srd-monsters`, so their line endings cannot
-# depend on the checkout. Pinning them to LF keeps the check honest on Windows.
-# See issue #49 for the same problem in the older tracked generated files.
+# These reports are written by scripts, and review-trait-audit.mjs --check
+# re-renders one and compares it byte for byte. On a machine with
+# core.autocrlf=true git hands the script CRLF while the renderer emits LF, so
+# the check reports a stale report that git itself sees as unchanged. Keep them
+# LF in the working tree so the comparison means what it says.
+review/reports/*.md text eol=lf
+
+# Same reasoning for the generated GCS sheets: build-gcs-sheets.mjs --check
+# compares the file on disk to freshly rendered LF output byte for byte, so a
+# CRLF checkout would report every sheet stale while git sees no change.
+converted/enraged-eggplant/gcs-sheets/*.gcs text eol=lf
+
+# And for the SRD-coverage specs and everything generated from them, which
+# build-srd-monsters.mjs --check compares the same way.
 content/srd-monsters/** text eol=lf
 converted/srd-monsters/** text eol=lf

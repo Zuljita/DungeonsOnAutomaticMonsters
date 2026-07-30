@@ -1,0 +1,36 @@
+{
+  "$comment": "Body plan overrides for records whose stated limbs do not distinguish the plan, or state it misleadingly. scripts/foundry-module.mjs derives the plan from each record's own traits; anything named here wins instead. Keep the reason with the entry: an override is a claim that the derivation is wrong about a specific creature, and the next person needs to know why. The full derived assignment for all records is in review/reports/foundry-body-plans.md.",
+  "overrides": {
+    "enraged_eggplant_monstrous_scorpion_tiny": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_small": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_medium": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_large": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_huge": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_gargantuan": "scorpion",
+    "enraged_eggplant_monstrous_scorpion_colossal": "scorpion",
+
+    "enraged_eggplant_octopus": "octopod",
+    "enraged_eggplant_giant_octopus": "octopod",
+
+    "enraged_eggplant_squid": "squid",
+    "enraged_eggplant_giant_squid": "squid",
+    "enraged_eggplant_kraken": "squid",
+
+    "enraged_eggplant_giant_praying_mantis": "winged hexapod",
+
+    "enraged_eggplant_locathah": "mermen",
+    "enraged_eggplant_triton": "mermen",
+
+    "enraged_eggplant_behir": "vermiform",
+    "enraged_eggplant_axebeak": "avian"
+  },
+  "reasons": {
+    "scorpions": "Eight Legs with no arms is indistinguishable from a spider in the traits. Seven Monstrous Scorpion records are scorpions; the derivation's general answer, arachnoid, would lose the sting.",
+    "octopuses": "Their six extra-flexible arms are written with Foot Manipulators, which the derivation reads as feet-used-as-hands rather than tentacles, so they fall through to arachnoid on their Eight Legs.",
+    "squid": "Squid, Giant Squid and Kraken state No Legs (Aquatic) with a ring of arms, but the arm entries do not all carry Extra-Flexible, so the tentacle test misses them and they land on ichthyoid.",
+    "giant praying mantis": "States Four Legs and winged flight because its raptorial forelimbs are counted as arms; a mantis stands on six.",
+    "mermen": "Fish-tailed humanoids that state No Legs (Aquatic). The derivation sends them to ichthyoid, which has no arms; the Game Aid has a fish-tailed humanoid table that keeps them.",
+    "behir": "States Extra Legs (Twelve Legs). The derivation only recognises four, six and eight, so an unusual count falls through to humanoid; a behir is a many-legged serpent.",
+    "axebeak": "A flightless bird. With no wings to read it falls through to humanoid, and the derivation has no signal for a two-legged beaked animal."
+  }
+}

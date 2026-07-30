@@ -1,10 +1,10 @@
 {
   "id": "latest",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "status": "approved",
   "package": {
     "path": "../../converted/doa-monsters.json",
-    "publicUrl": "https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-0.3.2.json"
+    "publicUrl": "https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-0.4.0.json"
   },
   "schema": {
     "path": "../../schema/monster.schema.json"
@@ -15,5 +15,19 @@
   },
   "sources": [
     "../../sources/enraged-eggplant/manifest.json"
-  ]
+  ],
+  "foundryModule": {
+    "id": "dungeons-on-automatic-monsters",
+    "format": "foundry_vtt_module",
+    "system": "gurps",
+    "foundryCompatibility": {
+      "minimum": "13",
+      "verified": "13"
+    },
+    "version": "0.4.0",
+    "manifestUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry/module.json",
+    "downloadUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry/dungeons-on-automatic-monsters-0.4.0.zip",
+    "sha256": "32b8690f5134e86784b56db457400d1bf13297aadee478dc5355411743014d22",
+    "provenance": "Built from converted/doa-monsters.json by scripts/build-foundry-module.mjs; approved records only."
+  }
 }

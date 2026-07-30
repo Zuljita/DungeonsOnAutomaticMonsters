@@ -16,6 +16,10 @@ converted/enraged-eggplant/*
 !converted/enraged-eggplant/gcs/**
 !converted/enraged-eggplant/gcs-sheets/
 !converted/enraged-eggplant/gcs-sheets/**
+# The ancestry baseline is a build input, not a working file: build-gcs-sheets
+# subtracts it from the package to get each individual's own point spend, and a
+# clean checkout has no GCS to recompute it with.
+!converted/enraged-eggplant/gcs-ancestry-baseline.json
 
 # Defensive guards: SRD working corpora belong under data/, not tracked sources/.
 sources/srd-3-5/raw/

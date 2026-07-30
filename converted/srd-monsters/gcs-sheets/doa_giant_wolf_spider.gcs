@@ -1,0 +1,990 @@
+{
+	"version": 5,
+	"id": "COktmwhukJZ0j3dVb",
+	"total_points": -4,
+	"profile": {
+		"name": "Giant Wolf Spider",
+		"title": "Animal",
+		"player_name": "Monsters on Automatic",
+		"SM": -1
+	},
+	"settings": {
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"base": "($dx + $ht) / 4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"base": "Math.floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"value": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"value": "Math.round($fp / 3)",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"value": "$fp - 1"
+					},
+					{
+						"state": "Rested",
+						"value": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"value": "Math.round(-$hp * 5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"value": "Math.round(-$hp * 4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"value": "Math.round(-$hp * 3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"value": "Math.round(-$hp * 2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"value": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"value": "Math.round($hp / 3)",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"value": "$hp - 1"
+					},
+					{
+						"state": "Healthy",
+						"value": "$hp"
+					}
+				]
+			}
+		],
+		"damage_progression": "basic_set",
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 6
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 12
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 10
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 4
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 4
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0
+		},
+		{
+			"attr_id": "dx",
+			"adj": 0
+		},
+		{
+			"attr_id": "iq",
+			"adj": 0
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0
+		},
+		{
+			"attr_id": "will",
+			"adj": 0
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0
+		},
+		{
+			"attr_id": "per",
+			"adj": 0
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0
+		}
+	],
+	"traits": [
+		{
+			"id": "t1OksNEI078cGb_QU",
+			"name": "Giant Wolf Spider",
+			"reference": "Giant Wolf Spider [Monsters on Automatic, SRD coverage: vermin and monstrous arthropods; answers Giant Wolf Spider (SRD 5.1)]",
+			"local_notes": "Independent Monsters on Automatic build. Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tHcNc-jcwT_vm4jt-",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mdG8KXjJ6t5EgZJli",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": -6,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tev60iZGwttj8fQgE",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 4,
+					"modifiers": [
+						{
+							"id": "m_6asHCA9duxIkUA6",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 48,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tIiO-9y3dUDhqSCcG",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 8,
+					"calc": {
+						"points": -160,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tbuVm9SwMVhb4e6zT",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tNCsmtJNNTKolBRlK",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "txDqg1oDcurL3vuFH",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 8,
+					"calc": {
+						"points": 40,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tHE9aC6Qa4SYILzVJ",
+					"name": "Clinging",
+					"reference": "B43",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tYLAKF34E6Of7AOBc",
+					"name": "Damage Resistance",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tTJKsbKnfP3xgGqGG",
+					"name": "Extra Legs (Eight Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tAn-huk_P-FnhCDIR",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "wb_tXGKWSL1AbtiqL",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tkB-pUkTZEmuA6xD1",
+					"name": "Injury Tolerance (No Brain)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tjWkOyC5s7ou2zqJ0",
+					"name": "Injury Tolerance (No Neck)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t5D7ZX79wmFB2f7zd",
+					"name": "Injury Tolerance (No Vitals)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tnQLb-qPsB1dknoQl",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 6,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "t3nmKIfRhqOuinoZ8",
+					"name": "Peripheral Vision",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "txsVhHX1T6QvSFt06",
+					"name": "Super Jump",
+					"reference": "B89",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tg7rV4U5Mqn_6dd7r",
+					"name": "Vibration Sense (Air)",
+					"reference": "B96",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tGy1VmKmxuWoN5F8l",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tjEodUYRdKBTsOYVA",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "ttEV_59D6VpKqFiw0",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t8TSotk_LP5NtcG5n",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tOkXkunVntzrppbop",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tbkE5Tl2CFpMIfE8c",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -20
+			},
+			"melee_weapons": [
+				{
+					"id": "w5zeXZZFrn-4tzTLt",
+					"damage": {
+						"type": "imp",
+						"base": "1d-3"
+					},
+					"usage": "Bite",
+					"defaults": [
+						{
+							"type": "10",
+							"modifier": 6
+						}
+					],
+					"reach": "C",
+					"usage_notes": "Bite (16): 1d-3 impaling, Reach C. Roll HT or the bitten limb stiffens and the world goes grey at the edges for a few minutes."
+				}
+			]
+		}
+	],
+	"skills": [
+		{
+			"id": "s-LAPmxy_t6U75ygT",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 16."
+		},
+		{
+			"id": "soXqIp4Ahlf1dVMQc",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 12,
+			"local_notes": "Racial skill at DX+3, level 17."
+		}
+	],
+	"notes": [
+		{
+			"id": "nDiH3oJGUFHzcqJks",
+			"text": "Typical Stats from the package record: ST 9, DX 14, IQ 2, HT 11, HP 9, WILL 8, PER 10, FP 11, SPEED 6.25, MOVE 6, DODGE 9, DR 1. GCS derives its own values by applying the ancestry; where the two differ, the package's Typical Stats are what the Dungeons on Automatic encounter tables use."
+		},
+		{
+			"id": "n4TLidk2xHFGAuRvf",
+			"text": "Encounter rating: CER 12 (offense 11, protection 1), threat tier minor, appearing 2."
+		},
+		{
+			"id": "n9CYoJGsD2WhGqcV6",
+			"text": "GCS ancestry draft: gcs/giant-wolf-spider.gct"
+		},
+		{
+			"id": "nLaiavx5iFP-Y3NDg",
+			"text": "Independent build total: -20 points of racial traits plus 16 points of racial skills."
+		},
+		{
+			"id": "naGKcqMnSPng30h0h",
+			"text": "Answers the SRD heading(s): Giant Wolf Spider (SRD 5.1). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text."
+		},
+		{
+			"id": "nk2YAKuiVu4cFDBID",
+			"text": "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree."
+		},
+		{
+			"id": "naC24MHO88lmCiJ7-",
+			"text": "Body mass used to scale this build: 30 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands."
+		},
+		{
+			"id": "nGYyRcv_m0a3yyZgo",
+			"text": "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it."
+		},
+		{
+			"id": "nNQrkw9YCjlK4FsY-",
+			"text": "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one."
+		},
+		{
+			"id": "n4aBPtYgldbRSZxJU",
+			"text": "About 1.5 m across the legs, which is the SM -1 row."
+		},
+		{
+			"id": "nknaoGuy265Mq1gPw",
+			"text": "Weaker than a spider of this size might suggest, deliberately: a hunting spider spends its build on speed, jump and stealth rather than on hauling prey."
+		},
+		{
+			"id": "nheAWBqqglNCklCDc",
+			"text": "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+		},
+		{
+			"id": "nmdW_ZLXAIxIB4BaE",
+			"text": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0."
+		}
+	],
+	"created_date": "1970-01-01T00:00:00Z",
+	"modified_date": "1970-01-01T00:00:00Z"
+}

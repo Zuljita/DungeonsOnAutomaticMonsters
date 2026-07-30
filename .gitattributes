@@ -1,3 +1,10 @@
 art/enraged-eggplant/portraits/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/tokens/*.png filter=lfs diff=lfs merge=lfs -text
 art/enraged-eggplant/hex-tokens/*.png filter=lfs diff=lfs merge=lfs -text
+
+# The SRD-coverage specs and everything generated from them are compared byte
+# for byte by `npm run validate:srd-monsters`, so their line endings cannot
+# depend on the checkout. Pinning them to LF keeps the check honest on Windows.
+# See issue #49 for the same problem in the older tracked generated files.
+content/srd-monsters/** text eol=lf
+converted/srd-monsters/** text eol=lf

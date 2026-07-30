@@ -138,4 +138,12 @@ Generated repair files are regenerable byte-for-byte; edit the generator, not th
 - [`reports/cer-audit.md`](reports/cer-audit.md) — what the rating can and cannot see, per record (#6).
 - [`reports/gcs-adjudication.md`](reports/gcs-adjudication.md) — every cost and ancestry-total decision (#4).
 - [`reports/app-site-export-review.md`](reports/app-site-export-review.md) — app, site and export review (#8).
+- `reports/animal-benchmark-comparison.md` — the authored land animals against an outside mass-driven GURPS
+  animal reference (#37). **Local only, and so is its input `benchmarks/panoptesv-animalia.json`**: that
+  data is someone else's, gathered under someone else's terms, and does not belong in a public repository.
+  Regenerate with `npm run review:benchmark-animals` where the benchmark exists; the check skips cleanly
+  where it does not. No value from it may be copied into a record — see
+  [`policy/srd-independent-build-policy.md`](policy/srd-independent-build-policy.md).
 - [`policy/0.2.0-empty-field-policy.md`](policy/0.2.0-empty-field-policy.md) — lair, treasure, grappling (#7).
+- [`policy/srd-independent-build-policy.md`](policy/srd-independent-build-policy.md) — how SRD-coverage records
+  are built, credited and licensed, and why none of them approves itself (#37).

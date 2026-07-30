@@ -1,0 +1,343 @@
+{
+	"version": 5,
+	"id": "TP0aTHsZQMJR7F7Cg",
+	"traits": [
+		{
+			"id": "tybnSmFJ5UEt_DPAt",
+			"name": "Pony",
+			"reference": "Monsters on Automatic, SRD coverage: mundane land animals: Pony",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Pony (SRD 5.1); Pony (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -65 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tinK3cNEd1KAdcNxL",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 7,
+					"modifiers": [
+						{
+							"id": "mXbaWfrgkpS1d3T32",
+							"name": "Size",
+							"reference": "B19",
+							"cost_adj": "-10%",
+							"local_notes": "Strength costs less for a creature this large."
+						},
+						{
+							"id": "m5lmDTDG8E8WFxZWE",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tv4_NQqK557RM-m4D",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": -120,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tbszkHo4IW765VF9p",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tzR33v2p47aC8D9Bc",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tD2ZeAcrglLcyB_C4",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tqKoJHHNB3_G8BxBo",
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t9VCatTPuw7QquSXq",
+					"name": "Enhanced Move (Ground)",
+					"reference": "B52",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 0.5,
+					"calc": {
+						"points": 10,
+						"current_level": 0.5
+					}
+				},
+				{
+					"id": "tzelmTCDHOm0BHXGH",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t4RnA2wXJVc8W5BxC",
+					"name": "Fur",
+					"reference": "B101",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "t-2E793yZbX5X6OkH",
+					"name": "Hooves",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 3,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"foot"
+							],
+							"amount": 1
+						}
+					],
+					"weapons": [
+						{
+							"id": "wHzXLEn914c3qA64C",
+							"sv": 1,
+							"usage": "Kick",
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "tWjhNWhxgb-Ald8vS",
+					"name": "Peripheral Vision",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tKCNSy75_6QFJkmIO",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t3w1EdRbJO15f-j2l",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "t5kGVkoQrv8dKWYKc",
+					"name": "Chummy",
+					"reference": "B126",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tjfEKJqtp_V_z8JiR",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tFqgK198wca_le2Z_",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tqhclcPhw-aQAmcSU",
+					"name": "Restricted Diet (Herbivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -65
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sBD_GgzDGBzVUn0ky",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 1,
+			"local_notes": "Racial skill at DX+0, level 10."
+		}
+	]
+}

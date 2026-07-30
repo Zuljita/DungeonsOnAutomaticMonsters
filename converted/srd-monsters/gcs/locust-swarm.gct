@@ -1,0 +1,267 @@
+{
+	"version": 5,
+	"id": "TkX4RwR-i_jmNgIIc",
+	"traits": [
+		{
+			"id": "tI3ZKE57hgbUbsOOj",
+			"name": "Locust Swarm",
+			"reference": "Monsters on Automatic, SRD coverage: swarms: Locust Swarm",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Locust Swarm (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -63 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tmlgZuM162BsRuibQ",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 7,
+					"modifiers": [
+						{
+							"id": "mhXNQeMi0Z0MUI1hR",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": -42,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tkIQCqGeX0IsHXdxQ",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"modifiers": [
+						{
+							"id": "mgiD6pNKHBP4wciNG",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 24,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tddF_-EEpExILvars",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 9,
+					"calc": {
+						"points": -180,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tbpZLi5hybiM-IizI",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "teJQJDsI2WXuoRkCG",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 8,
+					"calc": {
+						"points": 40,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tVS3yZPxtkvzyYlP3",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tldN81X3qAbCmDXM_",
+					"name": "Extra Legs (Six Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tQDYUtFFaPEqQ07gX",
+					"name": "Flight",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mZRR_OvqFOpQxQrW3",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%",
+							"local_notes": "Requires room to spread and beat wings; a grounded or bound flier cannot use it."
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "thYA1mf2fD9dMp_aI",
+					"name": "Injury Tolerance (Diffuse)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 100,
+					"calc": {
+						"points": 100
+					}
+				},
+				{
+					"id": "tBt6K6IxEcTgl4uQb",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tWimks7Gn4e8qRxZb",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "t7fmqIpsMuVC5rVrh",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tGDb51iN9W_mdB-RU",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tgf0V_oWQzvo1Y3VJ",
+					"name": "Restricted Diet (Herbivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -63
+			}
+		}
+	]
+}

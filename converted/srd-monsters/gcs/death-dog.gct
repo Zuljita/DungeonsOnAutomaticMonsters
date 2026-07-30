@@ -1,0 +1,468 @@
+{
+	"version": 5,
+	"id": "TJN9AFI7Sxush9ppE",
+	"traits": [
+		{
+			"id": "tJ8EwxeK9nRTVskPi",
+			"name": "Death Dog",
+			"reference": "Monsters on Automatic, SRD coverage: mundane land animals: Death Dog",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Death Dog (SRD 5.1). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 38 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tf_I4c5ZoTGPw2bZM",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mibJMRx6v_GTVNUet",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 18,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t4CzQ7iR575zyS6di",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "mpGT97o-m98TjIaMn",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 36,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tFR2tbRZB40BOY9LJ",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": -100,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tLGathzx9JROxLQoI",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tDxZnAzJnZhQujxxd",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 25,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tRlSMs6oeOG8pdEUk",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tFq5OxRs0G9aC57jw",
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "topVEKC38Zf_5ckb_",
+					"name": "Damage Resistance",
+					"reference": "B46,B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"modifiers": [
+						{
+							"id": "mJNNbURW2uMLNQVqZ",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tFJ9xu-BMsarI2Mbc",
+					"name": "Dark Vision",
+					"reference": "B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tuogbhF_MXu0SLjRx",
+					"name": "Discriminatory Smell",
+					"reference": "B49",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that uses the sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tnCXEVd4zxhNY-ri5",
+					"name": "Extra Attack",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"local_notes": "The second head attacks independently.",
+					"points_per_level": 25,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 25,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tLdOXs1t_y9J0bIvJ",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tEpH1OJd1_Pml2ZOP",
+					"name": "Fur",
+					"reference": "B101",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tp5Di43Cu8QbXNNZf",
+					"name": "Peripheral Vision",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"local_notes": "Two heads watching opposite arcs.",
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tzFcPl5qGXLE0R8V-",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wU3tm4JQJPkDJ_NTd",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tUwnKmqAw61jMiXKN",
+					"name": "Bad Temper (12)",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tMrWW0lpnXaE4zM0i",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tM8tIhBZuLnuqgsip",
+					"name": "Bloodlust (12)",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t_ZGEC_mEWZsS2awI",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "t3aJFcdz9J3O4sgxS",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t8MyfTLDABt_T-I4T",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tD-TJ-DjPUGmvWont",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": 38
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sXegvsnND9sXhp-yI",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 15."
+		},
+		{
+			"id": "sy6OB21INaU-FywWh",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 14."
+		},
+		{
+			"id": "sGDkTXF8ckYtQ2I9M",
+			"name": "Tracking",
+			"difficulty": "per/a",
+			"points": 4,
+			"local_notes": "Racial skill at Per+1, level 12."
+		}
+	]
+}

@@ -1,0 +1,441 @@
+{
+	"version": 5,
+	"id": "TaIk3AEXuPbqyfmgZ",
+	"traits": [
+		{
+			"id": "tBEGD7h4hMylnRGc2",
+			"name": "Crocodile",
+			"reference": "Monsters on Automatic, SRD coverage: mundane birds, fish and aquatic animals: Crocodile",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Crocodile (SRD 5.1); Crocodile (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -28 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "thsDiAg6kvH9yr8Hs",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 10,
+					"modifiers": [
+						{
+							"id": "mmAxdHA-X-9rsNpAQ",
+							"name": "Size",
+							"reference": "B19",
+							"cost_adj": "-20%",
+							"local_notes": "Strength costs less for a creature this large."
+						},
+						{
+							"id": "mM-7S4_PDxZ2WxAMi",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 40,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tCshBDuSWPiYbnnYz",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 7,
+					"calc": {
+						"points": -140,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "t4yo4p5AeR3Psd3jF",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tDH9jVjgMg6et67GQ",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tOSl2_vAPpVzcBtdU",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 7,
+					"calc": {
+						"points": 35,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tvxss4QTv4hPSUnn_",
+					"name": "Amphibious",
+					"reference": "B40",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tB4sFDROblcy7v-u-",
+					"name": "Breath-Holding",
+					"reference": "B41",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tJ2nKpxmPx1R7N38a",
+					"name": "Damage Resistance",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t6_A6sFCo8-9aHE8i",
+					"name": "Enhanced Move (Water)",
+					"reference": "B52",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 0.5,
+					"calc": {
+						"points": 10,
+						"current_level": 0.5
+					}
+				},
+				{
+					"id": "trc6JBRionYqs3UyT",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tzZoVlflbS_rGjcIR",
+					"name": "Nictitating Membrane",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 2,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tEhfSa4QhMo3IOX2f",
+					"name": "Peripheral Vision",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t51KBQzyiyBtWnTXN",
+					"name": "Rapid Healing",
+					"reference": "B79",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tvnaSmh5Zxs4wPFQB",
+					"name": "Resistant to Disease (+3)",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 3,
+					"calc": {
+						"points": 3
+					}
+				},
+				{
+					"id": "t-jRpeQo8635umY5e",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wjUUkzAm2zV9Mus4v",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tuHv82cMiV8HxGwz0",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tFyowiLSFP200DgGq",
+					"name": "Bloodlust (12)",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tc7M_dZH6rtigR428",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tuEcGLpPzjTevKIhr",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tQ21XMmEHILm9YVJI",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t44rcmDhl0CTZ-MPS",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tYT390RSI3cdr3Ab1",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -28
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "s7SXKVxx69rOPG5vt",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 12."
+		},
+		{
+			"id": "s85xGB7XF1QB73ub5",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 8,
+			"local_notes": "Racial skill at DX+2, level 12."
+		},
+		{
+			"id": "sf7oe-A_XaWPVIitn",
+			"name": "Swimming",
+			"difficulty": "ht/e",
+			"points": 2,
+			"local_notes": "Racial skill at HT+1, level 13."
+		},
+		{
+			"id": "sx2vmbthAp73l16nP",
+			"name": "Tracking",
+			"difficulty": "per/a",
+			"points": 4,
+			"local_notes": "Racial skill at Per+1, level 11."
+		}
+	]
+}

@@ -1,0 +1,593 @@
+{
+	"version": 5,
+	"id": "T5DP00KysrsNUFx8U",
+	"traits": [
+		{
+			"id": "tcmOf_cnEv7TlLjtu",
+			"name": "Green Dragon Wyrmling",
+			"reference": "Monsters on Automatic, SRD coverage: dragon age and colour variants: Green Dragon Wyrmling",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Green Dragon Wyrmling (SRD 5.1). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 294 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tppas-o34J_P5UKAB",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 8,
+					"modifiers": [
+						{
+							"id": "m7kFcFqd58grzdKq5",
+							"name": "Size",
+							"reference": "B19",
+							"cost_adj": "-10%",
+							"local_notes": "Strength costs less for a creature this large."
+						}
+					],
+					"calc": {
+						"points": 72,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tfjqDyokZ8n8v_vES",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "txmM6u6WnJqSflCYQ",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tYM63Z-PfzVFs4F7k",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tNOiMlkmstluJhnSK",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tbJ3LwTk9FGHyZF47",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tKJLfRFSSpseE3Zay",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tEc_hiUbkHmbdL-dn",
+					"name": "Combat Reflexes",
+					"reference": "B43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t_KIR34E4cx290MUs",
+					"name": "Damage Resistance (Poison)",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 15,
+					"modifiers": [
+						{
+							"id": "mK1C3Clyhj2v4KsKk",
+							"name": "Limited (one damage type)",
+							"reference": "B46",
+							"cost_adj": "-40%",
+							"local_notes": "Protects against a single damage type and nothing else."
+						}
+					],
+					"calc": {
+						"points": 45,
+						"current_level": 15
+					}
+				},
+				{
+					"id": "tlHIylSvHKmRQFqjH",
+					"name": "Damage Resistance",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tNcvAsQLk52JgogtO",
+					"name": "Discriminatory Smell",
+					"reference": "B49",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 15,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Tracking"
+							},
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on any task that uses the sense of smell",
+							"amount": 4
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tzCHF-oN986vHpxqE",
+					"name": "Enhanced Move (Air)",
+					"reference": "B52",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 0.5,
+					"calc": {
+						"points": 10,
+						"current_level": 0.5
+					}
+				},
+				{
+					"id": "tUHhycXtkXyfQ_Lhx",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 10,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tH5kWByu9efeHSiUr",
+					"name": "Extra Legs (Four Legs)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tk8IY38aRpG3lJsX7",
+					"name": "Fangs",
+					"reference": "B91",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 2,
+					"weapons": [
+						{
+							"id": "wHSXQIwy9yo6xWWrl",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "imp",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 imp"
+							}
+						}
+					],
+					"calc": {
+						"points": 2
+					}
+				},
+				{
+					"id": "tYWxubS63Pxaft4jC",
+					"name": "Flight",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mSVEy--y5rC_XjjuZ",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%",
+							"local_notes": "Requires room to spread and beat wings; a grounded or bound flier cannot use it."
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tqNw4n2N7pJvmKg79",
+					"name": "Infravision",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tpHB2txS5_-CFX2CV",
+					"name": "Nictitating Membrane",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 3,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t-GD6COiznscCxjv9",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 4,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tQ15Lo0WRjZq6HQa4",
+					"name": "Peripheral Vision",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "togZrbbDTQE-40zUz",
+					"name": "Striker (Tail; Crushing; Long +1)",
+					"reference": "B88",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"modifiers": [
+						{
+							"id": "m2Fx0yuIVJTZZHrVk",
+							"name": "Long +1",
+							"reference": "B88",
+							"cost_adj": "+100%"
+						}
+					],
+					"weapons": [
+						{
+							"id": "wMm9gPCfQf71L8vmh",
+							"sv": 1,
+							"usage": "Tail",
+							"damage": {
+								"type": "cr",
+								"st": "thr"
+							},
+							"reach": "C,2",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"parry": "0",
+							"calc": {
+								"damage": "thr cr"
+							}
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tl1MVxRpB6fppdeTB",
+					"name": "Talons",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 8,
+					"weapons": [
+						{
+							"id": "wC5FlxxDhqz5jnYce",
+							"sv": 1,
+							"usage": "Talons",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "+1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"parry": "0",
+							"calc": {
+								"damage": "thr+1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "t1fslZenfzU51syQU",
+					"name": "Telescopic Vision",
+					"reference": "B92",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t8gCnj4luHI5BufC5",
+					"name": "Bad Temper (12)",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tfLc1UQfj1eXqphDf",
+					"name": "Greed (12)",
+					"reference": "B137",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tspDWBiF0nsK6TNPg",
+					"name": "Horizontal",
+					"reference": "B139",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": 294
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sotntbai45-Fzu6GD",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 14."
+		},
+		{
+			"id": "seM6yD6RDmI2I0fpi",
+			"name": "Innate Attack (Breath)",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 14."
+		},
+		{
+			"id": "soGqMm4Ls96uQ4CYL",
+			"name": "Intimidation",
+			"difficulty": "will/a",
+			"points": 4,
+			"local_notes": "Racial skill at Will+1, level 12."
+		},
+		{
+			"id": "souTvxUK7ahjgz6r2",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 2,
+			"local_notes": "Racial skill at DX+0, level 12."
+		},
+		{
+			"id": "sl_RRUm5d3s5F95jt",
+			"name": "Tracking",
+			"difficulty": "per/a",
+			"points": 4,
+			"local_notes": "Racial skill at Per+1, level 12."
+		}
+	]
+}

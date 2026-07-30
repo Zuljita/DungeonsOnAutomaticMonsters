@@ -1,0 +1,1969 @@
+{
+  "version": 1,
+  "batch": "land-animals",
+  "issue": 37,
+  "title": "SRD coverage: mundane land animals",
+  "summary": "Independently authored GURPS builds for the 33 land-animal identities issue #37 enumerates. The SRD supplies the creature identity each record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input. Every trait comes from the controlled vocabulary in scripts/srd/trait-library.mjs, which carries the published page reference and cost for each entry, so a reviewer can check a build against the rules rather than against this file's assertions. Typical Stats, damage, point totals and ratings are derived from the trait list at build time and are never authored here.",
+  "traitSets": {
+    "quadruped-beast": [
+      {
+        "trait": "extra-legs-four"
+      },
+      {
+        "trait": "horizontal"
+      },
+      {
+        "trait": "no-fine-manipulators"
+      },
+      {
+        "trait": "cannot-speak"
+      },
+      {
+        "trait": "bestial"
+      }
+    ],
+    "keen-nose": [
+      {
+        "trait": "discriminatory-smell"
+      },
+      {
+        "trait": "acute-hearing",
+        "levels": 2
+      }
+    ],
+    "carnivore": [
+      {
+        "trait": "restricted-diet-carnivore"
+      }
+    ],
+    "herbivore": [
+      {
+        "trait": "restricted-diet-herbivore"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "black-bear",
+      "name": "Bear, Black",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["omnivore", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Black Bear"},
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Bear, Black",
+          "alsoPrintedAs": ["Black Bear"]
+        }
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A hollow log, rock cleft or dug-out den under a fallen tree, used for winter sleep and for raising cubs.",
+      "traitSets": ["quadruped-beast", "keen-nose"],
+      "traits": [
+        {"trait": "st", "levels": 10},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "bad-temper"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 0},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 4
+      },
+      "description": "A stocky forest bear that climbs better than it fights and would rather rob a camp than face one. It reads a clearing by scent long before it sees anyone, and most encounters end with it ambling off. A sow with cubs is the exception: she closes fast, swats with both forepaws, and does not bluff twice.",
+      "notes": [
+        "Enhanced Move covers the short charge; a black bear does not sustain that pace."
+      ]
+    },
+    {
+      "slug": "brown-bear",
+      "name": "Bear, Brown",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["omnivore", "forest", "mountain", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Brown Bear"},
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Bear, Brown",
+          "alsoPrintedAs": ["Brown Bear"]
+        }
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A dug hillside den above the snow line, reused season after season and defended on sight.",
+      "traitSets": ["quadruped-beast", "keen-nose"],
+      "traits": [
+        {"trait": "st", "levels": 17},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "bad-temper"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 0},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 0},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Half again the mass of a black bear and with none of its willingness to withdraw. The brown bear stands to look over cover, drops, and covers the ground between in three strides. Its shoulders carry a hump of muscle built for digging, which is also what puts a season's worth of force behind a single swipe."
+    },
+    {
+      "slug": "polar-bear",
+      "name": "Bear, Polar",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "arctic", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Polar Bear"},
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Bear, Polar",
+          "alsoPrintedAs": ["Polar Bear"]
+        }
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A snow den scraped into a drift or pressure ridge; a hunting bear keeps no fixed home at all.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 19},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "amphibious"},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "temperature-tolerance", "levels": 3, "qualifier": "Cold"},
+        {"trait": "bad-temper"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "The only bear that hunts people on purpose. It crosses open ice at a walk, yellow-white against white, and swims stretches of freezing water that would kill anything it is following. Nothing about the cold slows it, and it has learned that a camp on the ice is a larder that cannot run far."
+    },
+    {
+      "slug": "boar",
+      "name": "Boar",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["omnivore", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Boar"},
+        {"sourceSystem": "srd_3_5", "heading": "Boar"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A trampled wallow in dense thorn scrub, rooted bare and stinking, with escape runs cut through the brush.",
+      "traitSets": ["quadruped-beast", "keen-nose"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "berserk"},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "dx", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 4},
+        {"trait": "striker-tusks"},
+        {"trait": "will", "levels": 3}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Tusks",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Delivered on a charge, low and upward."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 3,
+        "wanderingWeight": 6
+      },
+      "description": "A barrel of gristle on short legs, armoured across the shoulders by a shield of hardened hide it grows for fighting other boars. It does not posture. A boar that has decided on you comes straight in with its head low, and the tusks go up under whatever they meet first.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "camel",
+      "name": "Camel",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["mount", "domestic", "desert", "beast-of-burden"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Camel"},
+        {"sourceSystem": "srd_3_5", "heading": "Camel"}
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "None; a camel keeps to its caravan lines and the wells its handlers know.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "nictitating-membrane", "levels": 2},
+        {"trait": "per", "levels": 3},
+        {"trait": "peripheral-vision"},
+        {
+          "trait": "reduced-consumption",
+          "levels": 3,
+          "modifiers": [
+            {
+              "name": "Water Only",
+              "reference": "B80",
+              "cost_adj": "-50%"
+            }
+          ]
+        },
+        {"trait": "sharp-teeth"},
+        {"trait": "st", "levels": 14},
+        {"trait": "temperature-tolerance", "levels": 3, "qualifier": "Heat"},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "A camel bites to settle arguments, including with its own driver."
+        },
+        {
+          "name": "Kick",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 3
+      },
+      "description": "A long-legged pack animal built to cross ground that kills horses, carrying its own water and shrugging off heat, glare and blown sand behind a second eyelid. It is unhurried, enormously strong for its frame, and thoroughly bad-tempered: it spits, bites, and remembers who deserved it.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "cat",
+      "name": "Cat",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "urban", "familiar-scale"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Cat"},
+        {"sourceSystem": "srd_3_5", "heading": "Cat"}
+      ],
+      "sizeModifier": -3,
+      "hexes": "1 hex",
+      "lair": "A barn loft, a warm hearthstone, or whatever roof cavity has the best view of the rats.",
+      "traitSets": ["quadruped-beast", "carnivore"],
+      "traits": [
+        {"trait": "st-", "levels": 7},
+        {"trait": "dx", "levels": 4},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 1},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "acute-hearing", "levels": 3},
+        {"trait": "catfall"},
+        {"trait": "combat-reflexes"},
+        {"trait": "flexibility"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 6},
+        {"trait": "perfect-balance"},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "silence", "levels": 2},
+        {"trait": "short-lifespan", "levels": 1}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Jumping", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3}
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 5
+      },
+      "description": "Too small to threaten anyone and far too quiet to keep out. A house cat crosses a room without a sound, lands from heights that should hurt, and fits through gaps its shoulders say it should not. Its value at a table is as a witness and a nuisance, not as an opponent."
+    },
+    {
+      "slug": "cheetah",
+      "name": "Cheetah",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "plains", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Cheetah"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A shaded scrape in tall grass where cubs are left while the mother hunts.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 2},
+        {"trait": "dx", "levels": 4},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 3},
+        {"trait": "per", "levels": 5},
+        {"trait": "acute-vision", "levels": 3},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 2, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Aimed at the throat once the quarry is down."
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Used to trip a running target rather than to wound. Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "The fastest thing on four legs and the least able to keep it up. A cheetah stalks to within a hundred yards, then spends everything it has in a run of a few seconds, knocking its quarry off its feet at the end of it. Caught at that moment it is exhausted and light-boned, and it knows it.",
+      "notes": [
+        "Enhanced Move models the sprint. A cheetah that has run flat out is winded and disengages rather than fighting.",
+        "Rating caveat for review: the CER path credits Move linearly, so the sprint alone contributes 18 of this record's offense rating and lands it beside a lion. At the table a cheetah is much the lesser fight. Either the encounter weight or the sprint's accessibility should carry the correction; this build does not pre-empt that decision."
+      ]
+    },
+    {
+      "slug": "death-dog",
+      "name": "Death Dog",
+      "class": "Monstrosity",
+      "classTags": ["monstrosity", "beast"],
+      "tags": ["predator", "desert", "plains", "wandering-encounter", "diseased"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Death Dog"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A fouled dry wash or ruin littered with the picked-over remains of travellers.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 5},
+        {"trait": "per", "levels": 6},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "extra-attack", "levels": 1, "note": "The second head attacks independently."},
+        {"trait": "fur"},
+        {"trait": "peripheral-vision", "note": "Two heads watching opposite arcs."},
+        {"trait": "sharp-teeth"},
+        {"trait": "bad-temper"},
+        {"trait": "bloodlust"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "afflictionPoints": 30,
+          "notes": "Anyone bitten rolls HT. On a failure the wound will not close: it goes grey at the edges and spreads, costing 1 HP a day until the rot is cured by magic or by cutting well past the margin. The lost HP does not return until the disease is stopped."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "A two-headed hound the colour of dust, running the dry country in pairs and hating everything upright. Both heads bite, both heads watch, and neither can be approached blind. What kills travellers is rarely the wound itself but what grows in it afterwards, which is slow, visible, and does not stop on its own.",
+      "notes": [
+        "The disease is priced as a 30-point disabling ability so the rating path can see it; see review/policy/cer-scope-policy.md."
+      ]
+    },
+    {
+      "slug": "deer",
+      "name": "Deer",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["prey", "forest", "wandering-encounter", "game"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Deer"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A bed of flattened bracken in thick cover, changed nightly.",
+      "traitSets": ["quadruped-beast", "keen-nose", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 1},
+        {"trait": "cowardice"},
+        {"trait": "dx", "levels": 3},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 5},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 3},
+        {"trait": "striker-antlers", "note": "Stags only; hinds have the hooves and nothing else."},
+        {"trait": "will", "levels": 3}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Antlers",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Stags in season only."
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 10
+      },
+      "description": "Woodland game, and the reason a forest encounter table is not all teeth. A deer hears a party long before it sees one and leaves at a speed nothing on foot will match. Cornered, a stag in season is a genuine hazard; at any other time of year it simply runs.",
+      "notes": [
+        "Encounter weight is high on purpose: this is the most common thing a party meets in temperate woodland.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "dire-wolf",
+      "name": "Dire Wolf",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "pack", "forest", "mountain", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Dire Wolf"},
+        {"sourceSystem": "srd_3_5", "heading": "Dire Wolf"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A cave mouth or undercut bank fouled with bone, held by the whole pack.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 8},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 6},
+        {"trait": "combat-reflexes"},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "sharp-teeth"},
+        {"trait": "bloodlust"},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "A dire wolf bites low and drives, trying to put its target on the ground for the rest of the pack."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 5
+      },
+      "description": "A wolf grown to the size of a pony, hunting in packs that work a treeline the way soldiers work a hedgerow. They circle, they cut off the slowest, and they take turns. One is a serious fight; four is a plan being executed on you.",
+      "notes": [
+        "The pack is the threat. Run these as a coordinated group, not as four separate rolls."
+      ]
+    },
+    {
+      "slug": "dog",
+      "name": "Dog",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "companion", "urban", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Dog"}
+      ],
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "lair": "A yard, a doorway, or the lee side of whatever building feeds it.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st-", "levels": 2},
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 6},
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "sharp-teeth"},
+        {"trait": "chummy"},
+        {"trait": "short-lifespan", "levels": 1}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 0},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 6
+      },
+      "description": "The ordinary working dog of farm and street, forty pounds of noise and nose. On its own it is barely a combatant; what it is for is warning, tracking and company. Village strays run in loose packs and will follow a party for miles on the chance of scraps.",
+      "notes": [
+        "Statistics describe a small working or village dog. Larger war and hunting breeds should be built separately."
+      ]
+    },
+    {
+      "slug": "donkey",
+      "name": "Donkey",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "beast-of-burden", "mount"],
+      "covers": [
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Donkey",
+          "alsoPrintedAs": ["Burro"]
+        }
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "None; a donkey belongs to whatever holding or caravan owns its lead rope.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 3},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 3},
+        {"trait": "perfect-balance"},
+        {"trait": "peripheral-vision"},
+        {"trait": "reduced-consumption", "levels": 2},
+        {"trait": "st", "levels": 8},
+        {"trait": "stubbornness"},
+        {"trait": "terrain-adaptation", "qualifier": "Bad Footing"},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Kick",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-2",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Only when it has no way out."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Short, patient and surefooted, carrying a third of its own weight up tracks a horse would refuse. It eats what it finds, drinks little, and stops dead when it judges the next step unsafe. Handlers call that stubbornness; more of them have been saved by it than killed by it.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "elephant",
+      "name": "Elephant",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["herd", "plains", "beast-of-burden", "war-beast"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Elephant"},
+        {"sourceSystem": "srd_3_5", "heading": "Elephant"}
+      ],
+      "sizeModifier": 3,
+      "hexes": "7 hexes",
+      "lair": "None; a herd walks a circuit between water and forage and holds no fixed ground.",
+      "traitSets": ["quadruped-beast", "keen-nose", "herbivore"],
+      "omitTraits": ["no-fine-manipulators"],
+      "traits": [
+        {"trait": "st", "levels": 35},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 5},
+        {"trait": "per", "levels": 5},
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "damage-resistance-tough-skin", "levels": 3},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "extra-arm-trunk"},
+        {"trait": "striker-tusks"},
+        {"trait": "bad-temper"},
+        {"trait": "gregarious"},
+        {"trait": "increased-consumption", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Tusks",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,1"
+        },
+        {
+          "name": "Trample",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Against a target already down."
+        },
+        {
+          "name": "Trunk",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Also used to grab and throw."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 2
+      },
+      "description": "Six tons of animal that is not remotely stupid, moving in a family group led by the oldest cow. Left alone it ignores people entirely. Provoked, or separated from a calf, it comes forward at a speed nothing that size should manage, and it does not need the tusks to end the argument.",
+      "notes": [
+        "The trunk is a fine manipulator, so this build drops No Fine Manipulators from the quadruped set."
+      ]
+    },
+    {
+      "slug": "elk",
+      "name": "Elk",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["prey", "forest", "mountain", "wandering-encounter", "game"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Elk"}
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "Open woodland edge and high meadow; the herd beds where it grazes.",
+      "traitSets": ["quadruped-beast", "keen-nose", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 1},
+        {"trait": "bad-temper"},
+        {"trait": "dx", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 5},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 12},
+        {"trait": "striker-antlers"},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Antlers",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,1"
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Front hooves, brought down on a target that has gone down."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 5,
+        "wanderingWeight": 6
+      },
+      "description": "A deer the size of a horse, carrying a rack wide enough to catch on branches. Out of season it is only meat that runs away. In the rut a bull is loud, sleepless and looking for something to fight, and it will settle for a party crossing its meadow.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-badger",
+      "name": "Giant Badger",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "underground", "forest", "burrower"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Badger"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A dug sett of packed earth tunnels with several bolt holes, extended every year.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 2},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 5},
+        {"trait": "per", "levels": 5},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "tunneling"},
+        {"trait": "bad-temper"},
+        {"trait": "berserk"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Digging claws, as long as a knife. Cannot parry."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 4
+      },
+      "description": "Low, wide and built entirely out of bad attitude, with digging claws that go through packed earth and do the same to a boot. It would rather be underground than anywhere else, and a party that opens up its sett gets everything the badger has, immediately and without a warning growl."
+    },
+    {
+      "slug": "giant-boar",
+      "name": "Giant Boar",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["omnivore", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Boar"}
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A wallow the size of a cart, ringed by uprooted saplings and churned mud.",
+      "traitSets": ["quadruped-beast", "keen-nose"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "berserk"},
+        {"trait": "damage-resistance-tough-skin", "levels": 3},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 12},
+        {"trait": "striker-tusks"},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Tusks",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "Tusks the length of a forearm, driven upward on the charge."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "A boar the size of a plough horse, with hide over the shoulders that turns a spear point and a temper that has never once improved. It charges the moment it is sure, keeps going through the first wound, and is generally still coming when whoever stood the ground reconsiders.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-elk",
+      "name": "Giant Elk",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["prey", "forest", "rare", "omen"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Elk"}
+      ],
+      "sizeModifier": 3,
+      "hexes": "5 hexes",
+      "lair": "Deep old forest and high valleys, far from any road.",
+      "traitSets": ["quadruped-beast", "keen-nose", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 1},
+        {"trait": "dx", "levels": 2},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fearlessness", "levels": 2},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 18},
+        {"trait": "striker-antlers"},
+        {"trait": "will", "levels": 6}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Antlers",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,2"
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Against a target already down."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "Rare enough that seeing one is treated as a sign rather than a sighting. It stands taller at the shoulder than a mounted rider, moves through heavy timber without hurrying, and watches a party with something closer to judgement than fear. Killing one is legal almost nowhere and forgiven almost never.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-goat",
+      "name": "Giant Goat",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["mountain", "wandering-encounter", "livestock"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Goat"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "Ledges and scree above the tree line, on ground nothing else will stand on.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "dx", "levels": 1},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "perfect-balance"},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 8},
+        {"trait": "striker-ram"},
+        {"trait": "terrain-adaptation", "qualifier": "Mountain"},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Delivered downhill wherever possible."
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 3,
+        "wanderingWeight": 4
+      },
+      "description": "An ill-tempered mountain goat the size of a pony, standing on ledges that have no business holding it. Hill folk keep them for milk and haulage and accept the bruises. In the wild they defend a slope by ramming, and a hit on bad footing is less dangerous than the fall that follows it.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "giant-hyena",
+      "name": "Giant Hyena",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "scavenger", "pack", "plains", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Hyena"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A den under a thorn thicket or ruin, floored with splintered bone.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 8},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 4},
+        {"trait": "sharp-teeth"},
+        {"trait": "bloodlust"},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Jaws built to crack marrow bone; armour straps and shield rims fare no better."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 4
+      },
+      "description": "Shoulder-high, sloped from front to back, and loud in the dark. Giant hyenas run in clans and are as happy taking a kill off something else as making their own. They follow a caravan for days without closing, waiting for someone to fall behind, and their jaws go through bone as a matter of routine."
+    },
+    {
+      "slug": "giant-weasel",
+      "name": "Giant Weasel",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "underground", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Giant Weasel"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A stolen burrow or root cavity, taken from whatever dug it and ate first.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "dx", "levels": 4},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 1},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "combat-reflexes"},
+        {"trait": "fangs"},
+        {"trait": "flexibility"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 9},
+        {"trait": "silence", "levels": 1},
+        {"trait": "short-lifespan", "levels": 1}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Long canines, aimed at the neck and held on."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 4
+      },
+      "description": "A weasel grown to the length of a man, all spine and appetite, pouring through gaps too small to crawl through and seeing perfectly in a lightless tunnel. It is not strong. It does not need to be: it gets to the throat first and does not let go."
+    },
+    {
+      "slug": "goat",
+      "name": "Goat",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "livestock", "mountain"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Goat"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A byre, a hillside pen, or wherever the rope broke.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 3},
+        {"trait": "perfect-balance"},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 1},
+        {"trait": "striker-ram"},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 5
+      },
+      "description": "Livestock, sacrifice, and the single most escape-prone animal any village owns. A goat eats what is left, climbs what it should not, and butts anyone who bends over near it. As an encounter it is scenery; as a plot device it is whatever the party tied it to and forgot.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "heavy-horse",
+      "name": "Horse, Heavy",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "mount", "beast-of-burden", "draft"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Draft Horse"},
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Horse, Heavy",
+          "alsoPrintedAs": ["Draft Horse"]
+        }
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A stable or picket line; a heavy horse is property, not wildlife.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 3},
+        {"trait": "chummy"},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "increased-consumption", "levels": 1},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 18},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Shod rear hooves; a connecting kick breaks what it lands on."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "The plough and wagon horse: heavy through the chest, slow to startle, and strong enough to drag a loaded cart out of a flooded ford. It is not a fighting animal and will not carry anyone into one, but it hauls what an expedition cannot and eats accordingly.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "light-horse",
+      "name": "Horse, Light",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "mount", "riding"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Riding Horse"},
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Horse, Light",
+          "alsoPrintedAs": ["Riding Horse"]
+        }
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A stable, a paddock, or a picket line outside an inn.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 3},
+        {"trait": "chummy"},
+        {"trait": "cowardice"},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 12},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 3,
+        "wanderingWeight": 4
+      },
+      "description": "The ordinary riding horse: fast over roads, willing under a light load, and entirely unwilling to stand its ground when something roars. Untrained for war, it shies, bolts, or throws its rider, which is worth remembering before a party gallops into anything.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "lion",
+      "name": "Lion",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "pride", "plains", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Lion"},
+        {"sourceSystem": "srd_3_5", "heading": "Lion"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A shaded kopje or thicket the pride returns to between hunts.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 9},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "silence", "levels": 1},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Closes on the throat and holds."
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 3
+      },
+      "description": "A pride hunts in daylight when it feels like it and at night when it does not. The lionesses do the work, spread wide through grass that hides them completely until the last twenty yards; the male arrives afterwards and takes what he wants. A single lion is manageable. A pride is a flanking manoeuvre."
+    },
+    {
+      "slug": "mammoth",
+      "name": "Mammoth",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["herd", "arctic", "war-beast", "prehistoric"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Mammoth"}
+      ],
+      "sizeModifier": 4,
+      "hexes": "10 hexes",
+      "lair": "None; the herd follows forage across tundra and cold steppe.",
+      "traitSets": ["quadruped-beast", "keen-nose", "herbivore"],
+      "omitTraits": ["no-fine-manipulators"],
+      "traits": [
+        {"trait": "st", "levels": 45},
+        {"trait": "dx-", "levels": 2},
+        {"trait": "iq-", "levels": 5},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 5},
+        {"trait": "per", "levels": 5},
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "damage-resistance-tough-skin", "levels": 4},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "extra-arm-trunk"},
+        {"trait": "fur"},
+        {"trait": "striker-tusks"},
+        {"trait": "temperature-tolerance", "levels": 4, "qualifier": "Cold"},
+        {"trait": "bad-temper"},
+        {"trait": "gregarious"},
+        {"trait": "increased-consumption", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Tusks",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,2",
+          "notes": "Curved tusks longer than a spear."
+        },
+        {
+          "name": "Trample",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Against a target already down."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 1
+      },
+      "description": "An elephant rebuilt for a country that freezes solid: shag-haired, high-shouldered, and carrying tusks that sweep forward and cross. Cold does nothing to it. Herds are dangerous by accident and lethal on purpose, and the tribes that hunt them do it from a distance with everyone they have."
+    },
+    {
+      "slug": "mule",
+      "name": "Mule",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "beast-of-burden", "mount"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Mule"},
+        {"sourceSystem": "srd_3_5", "heading": "Mule"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "None; a mule belongs to a pack train.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 3},
+        {"trait": "perfect-balance"},
+        {"trait": "peripheral-vision"},
+        {"trait": "reduced-consumption", "levels": 2},
+        {"trait": "st", "levels": 10},
+        {"trait": "stubbornness"},
+        {"trait": "terrain-adaptation", "qualifier": "Bad Footing"},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Kick",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "A mule kicks sideways and backwards, and its aim is better than anyone expects."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "The pack animal of choice for anywhere a cart cannot go: stronger than a donkey, tougher than a horse, and immune to being talked into a bad idea. It carries an expedition's load up switchbacks all day, refuses one step onto rotten ground, and kicks anyone who insists.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "panther",
+      "name": "Panther",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "jungle", "ambusher", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Panther"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A fork in a heavy branch above a game trail, with a kill stored in it.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 4},
+        {"trait": "dx", "levels": 4},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 6},
+        {"trait": "brachiator"},
+        {"trait": "catfall"},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 6},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "silence", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 4
+      },
+      "description": "A black leopard that hunts from above and is never seen beforehand. It works the canopy over a trail, drops onto whoever is walking last, and is gone up the trunk again with the body before the front of the column has turned round. Silence is most of what makes it dangerous."
+    },
+    {
+      "slug": "pony",
+      "name": "Pony",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "mount", "beast-of-burden"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Pony"},
+        {"sourceSystem": "srd_3_5", "heading": "Pony"}
+      ],
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "lair": "A byre or hill pasture.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 3},
+        {"trait": "chummy"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 7},
+        {"trait": "will", "levels": 4}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "A small, shaggy, hard-wearing horse that carries a halfling or a child comfortably and a full-grown adventurer badly. It lives outdoors year-round on poor grazing, keeps its footing on hill tracks, and is the mount most parties can actually afford.",
+      "notes": [
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "saber-toothed-tiger",
+      "name": "Saber-Toothed Tiger",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "arctic", "prehistoric", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Saber-Toothed Tiger"}
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A rock shelter above a herd trail, floored with the ribs of things much larger than a person.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 14},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fangs", "qualifier": "Sabre Teeth"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "sharp-claws"},
+        {"trait": "silence", "levels": 1},
+        {"trait": "bloodlust"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Sabre Teeth",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Two blades of tooth, driven down into the neck once the target is pinned."
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Used to hold the target still. Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 2
+      },
+      "description": "Heavier and slower than a tiger, and built for one thing: putting something enormous on the ground and opening its throat with a pair of teeth as long as daggers. It cannot chase. It does not have to, because it has already spent an hour getting close enough not to."
+    },
+    {
+      "slug": "tiger",
+      "name": "Tiger",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "jungle", "ambusher", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Tiger"},
+        {"sourceSystem": "srd_3_5", "heading": "Tiger"}
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A den in dense cover near water, at the centre of a territory it patrols alone.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 12},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 5},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 6},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "silence", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Solitary, striped into invisibility against broken shade, and willing to swim a river to reach something worth eating. A tiger stalks to a distance it can cross in one rush and does not commit until it can. The first anyone knows of it is usually the person beside them being gone."
+    },
+    {
+      "slug": "heavy-warhorse",
+      "name": "Warhorse, Heavy",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["domestic", "mount", "war-beast", "trained"],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Warhorse",
+          "alsoPrintedAs": ["Warhorse"]
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Warhorse, Heavy",
+          "alsoPrintedAs": ["Warhorse, Light", "Warhorse"]
+        }
+      ],
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "lair": "A stable, and a groom who knows better than to walk behind it.",
+      "traitSets": ["quadruped-beast", "herbivore"],
+      "traits": [
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "bad-temper"},
+        {"trait": "chummy"},
+        {"trait": "combat-reflexes"},
+        {"trait": "dx", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "fearlessness", "levels": 3},
+        {"trait": "fur"},
+        {"trait": "hooves"},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "per", "levels": 4},
+        {"trait": "peripheral-vision"},
+        {"trait": "st", "levels": 16},
+        {"trait": "will", "levels": 6}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Running", "attribute": "ht", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Trained to strike forward on command rather than only to kick out behind."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-2",
+          "type": "crushing",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 2
+      },
+      "description": "A destrier: bred heavy, trained not to shy from fire, steel or screaming, and taught to fight from under a rider. It costs more than most people's houses and is worth it, because it will carry a charge home into a line that is trying very hard to stop it. It is also foul-tempered on the ground.",
+      "notes": [
+        "The light warhorse the 3.5 corpus prints separately is this record ridden lighter; use the same statistics and drop the barding.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "wolf",
+      "name": "Wolf",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "pack", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Wolf"},
+        {"sourceSystem": "srd_3_5", "heading": "Wolf"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A dug den under a bank or root ball, used only while there are pups.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "dx", "levels": 3},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 2},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 6},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fur"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "sharp-teeth"},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Wolves bite and pull backwards, working to drag a target off its feet."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 8
+      },
+      "description": "Alone, a wolf is a nervous dog with better teeth. In a pack it is a hunting method: they test a party for a mile, find who tires, and then commit all at once from three sides. Winter packs are larger, hungrier and far less careful about what counts as prey."
+    },
+    {
+      "slug": "wolverine",
+      "name": "Wolverine",
+      "class": "Animal",
+      "classTags": ["animal", "mammal"],
+      "tags": ["predator", "arctic", "forest", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Wolverine"}
+      ],
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "lair": "A snow tunnel or rock crevice, marked and reeking.",
+      "traitSets": ["quadruped-beast", "keen-nose", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 6},
+        {"trait": "ht", "levels": 4},
+        {"trait": "will", "levels": 5},
+        {"trait": "per", "levels": 5},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "fur"},
+        {"trait": "hard-to-kill", "levels": 2},
+        {"trait": "high-pain-threshold"},
+        {"trait": "night-vision", "levels": 4},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "temperature-tolerance", "levels": 2, "qualifier": "Cold"},
+        {"trait": "tunneling"},
+        {"trait": "bad-temper"},
+        {"trait": "berserk"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Cannot parry."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Thirty pounds of animal that drives bears off kills, and does it by being completely unwilling to stop. A wolverine that has committed keeps clawing through wounds that should have ended it, and the only reliable way to end the fight is to kill it outright."
+    }
+  ]
+}

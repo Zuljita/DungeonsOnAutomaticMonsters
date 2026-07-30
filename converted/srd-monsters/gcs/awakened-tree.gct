@@ -1,0 +1,297 @@
+{
+	"version": 5,
+	"id": "TNLUta7mk2ysEWQQX",
+	"traits": [
+		{
+			"id": "tCF8FoSVXMJi5hyib",
+			"name": "Awakened Tree",
+			"reference": "Monsters on Automatic, SRD coverage: constructs, animated objects and awakened plants: Awakened Tree",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Awakened Tree (SRD 5.1). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 255 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tY5_kM903c3Id3gG_",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 25,
+					"modifiers": [
+						{
+							"id": "maBgp2kZruu_NVREM",
+							"name": "Size",
+							"reference": "B19",
+							"cost_adj": "-30%",
+							"local_notes": "Strength costs less for a creature this large."
+						}
+					],
+					"calc": {
+						"points": 175,
+						"current_level": 25
+					}
+				},
+				{
+					"id": "tOK1JiISo4qKTFCyk",
+					"name": "Decreased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": -80,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "txup_9P9rOla9Zzwe",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t5wrgqDAC3QLLSnME",
+					"name": "Increased Hit Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 10,
+					"calc": {
+						"points": 20,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tbmlp2uWvZ9RUtZwG",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 20,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tagidFoDRJ8FPikff",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t7c5VvNbeOC9a1IHf",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tXsW5uPSdLjYFXSkZ",
+					"name": "Damage Resistance",
+					"reference": "B46,B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 5,
+					"modifiers": [
+						{
+							"id": "mPDg5CVqvsVhxwRP4",
+							"name": "Tough Skin",
+							"reference": "B47",
+							"cost_adj": "-40%",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR"
+						}
+					],
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"calc": {
+						"points": 15,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tFiHhkzE3XCZJB70W",
+					"name": "Doesn't Sleep",
+					"reference": "B50",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tjG8YDXqcS8jyxfLz",
+					"name": "Extra Legs (Many Legs) (Root Cluster)",
+					"reference": "B54",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tD_d0QK7omvzTATk3",
+					"name": "High Pain Threshold",
+					"reference": "B59",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tKPJDt2URrLLITDoq",
+					"name": "Immunity to Metabolic Hazards",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "t1qSsiX8IjxO5Dtsm",
+					"name": "Injury Tolerance (No Blood)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tcCKPRMK2mH3nd6ZC",
+					"name": "Injury Tolerance (No Brain)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tdPwowhUz78rVVMzY",
+					"name": "Injury Tolerance (No Vitals)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				}
+			],
+			"calc": {
+				"points": 255
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "s4mvqJ7FOwI066W09",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 8."
+		}
+	]
+}

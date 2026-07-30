@@ -1,0 +1,424 @@
+{
+  "version": 1,
+  "batch": "dinosaurs",
+  "issue": 41,
+  "title": "SRD coverage: dinosaurs and prehistoric beasts",
+  "summary": "Independently authored GURPS builds for the 6 prehistoric identities issue #41 enumerates. Size Modifier comes from the published table keyed to longest dimension, which for these animals is nose-to-tail and puts three of them past the point where the Strength discount for size bottoms out. ST comes from Basic Lift and from what the animal demonstrably shifts — a carcass carried, a rival shoved, a body torn free — rather than from raw tonnage, which would produce numbers no table could use. The two marine reptiles declare water as their primary medium; the four land animals do not, and their sprint is stated in the notes rather than folded into the published Move.",
+  "traitSets": {
+    "saurian-body": [
+      {
+        "trait": "cannot-speak"
+      },
+      {
+        "trait": "bestial"
+      },
+      {
+        "trait": "horizontal"
+      },
+      {
+        "trait": "no-fine-manipulators"
+      }
+    ],
+    "carnivore": [
+      {
+        "trait": "restricted-diet-carnivore"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "deinonychus",
+      "name": "Deinonychus",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["predator", "pack", "prehistoric", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Deinonychus"}
+      ],
+      "massKg": 70,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A scrape in dense scrub, shared by the pack and stinking of old kills.",
+      "traitSets": ["saurian-body", "carnivore"],
+      "traits": [
+        {"trait": "bloodlust"},
+        {"trait": "combat-reflexes"},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "discriminatory-smell"},
+        {"trait": "dx", "levels": 4},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "gregarious"},
+        {"trait": "ht", "levels": 2},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 7},
+        {"trait": "sharp-teeth"},
+        {"trait": "st", "levels": 3},
+        {"trait": "talons", "qualifier": "Sickle Claws"},
+        {"trait": "will", "levels": 5}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Jumping", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Sickle Claw",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "The inner toe claw, brought down while the animal holds on with its hands and jaws. Cannot parry."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 4
+      },
+      "description": "Man-high, feathered, and far too interested. Deinonychus hunt in company and are the only animal in this batch that will try to work out where a party is going. They come in from more than one side, and the one making noise is not the one that matters.",
+      "notes": [
+        "About three metres nose to tail, which is the SM +1 row; most of that is tail.",
+        "ST from Basic Lift: it holds down and tears apart something its own size.",
+        "The pack is the threat. Run these as a coordinated group.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "elasmosaurus",
+      "name": "Elasmosaurus",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["aquatic", "predator", "prehistoric", "open-water"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Elasmosaurus"}
+      ],
+      "massKg": 2000,
+      "sizeModifier": 5,
+      "hexes": "12 hexes",
+      "movement": {
+        "primary": "water"
+      },
+      "lair": "None; open water, and whatever shoal it is following.",
+      "traitSets": ["saurian-body", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 35},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 6},
+        {"trait": "per", "levels": 7},
+        {"trait": "amphibious"},
+        {"trait": "breath-holding", "levels": 3},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "enhanced-move-water", "levels": 0.5, "qualifier": "Water"},
+        {"trait": "nictitating-membrane", "levels": 2},
+        {"trait": "pressure-support", "levels": 1},
+        {"trait": "sharp-teeth"},
+        {"trait": "cold-blooded"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C,4",
+          "notes": "Delivered at the end of a neck longer than the rest of the animal. It can take someone off a deck without the body ever entering the water."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "Fourteen metres, and eight of them are neck. It swims under a boat and comes up alongside, and the head arrives from a direction nobody was watching. The body is barely a threat; the reach is the entire animal, and there is no useful distance from it short of shore.",
+      "notes": [
+        "Fourteen metres, which is the SM +5 row — the top of the published table's practical range for a creature at a table.",
+        "Reach is the point of the build. The bite is stated at reach C,4 because the neck, not the jaws, is what makes this dangerous."
+      ]
+    },
+    {
+      "slug": "megaraptor",
+      "name": "Megaraptor",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["predator", "pack", "prehistoric", "wandering-encounter"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Megaraptor"}
+      ],
+      "massKg": 500,
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A trampled clearing at the centre of a range it has cleared of everything else.",
+      "traitSets": ["saurian-body", "carnivore"],
+      "traits": [
+        {"trait": "bloodlust"},
+        {"trait": "combat-reflexes"},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "discriminatory-smell"},
+        {"trait": "dx", "levels": 3},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "gregarious"},
+        {"trait": "ht", "levels": 3},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "per", "levels": 7},
+        {"trait": "sharp-teeth"},
+        {"trait": "st", "levels": 14},
+        {"trait": "talons", "qualifier": "Sickle Claws"},
+        {"trait": "will", "levels": 6}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Sickle Claw",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "A claw the length of a shortsword on each foot. Cannot parry."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C,1"
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 2
+      },
+      "description": "The deinonychus problem at five times the mass: five metres of hunting animal that still moves in company and still thinks about angles. Where a tyrannosaur is a catastrophe you survive by not being there, a pair of megaraptors is a fight, and that is considerably worse.",
+      "notes": [
+        "Five metres nose to tail, which is the SM +2 row.",
+        "ST from Basic Lift: it tears a limb off something the weight of a horse.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "plesiosaurus",
+      "name": "Plesiosaurus",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["aquatic", "predator", "prehistoric", "coastal"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Plesiosaurus"}
+      ],
+      "massKg": 500,
+      "sizeModifier": 2,
+      "hexes": "3 hexes",
+      "movement": {
+        "primary": "water"
+      },
+      "lair": "A deep coastal bay it works from end to end.",
+      "traitSets": ["saurian-body", "carnivore"],
+      "traits": [
+        {"trait": "st", "levels": 14},
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "ht", "levels": 3},
+        {"trait": "will", "levels": 6},
+        {"trait": "per", "levels": 7},
+        {"trait": "amphibious"},
+        {"trait": "breath-holding", "levels": 3},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "enhanced-move-water", "levels": 0.5, "qualifier": "Water"},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "nictitating-membrane", "levels": 2},
+        {"trait": "pressure-support", "levels": 1},
+        {"trait": "sharp-teeth"},
+        {"trait": "cold-blooded"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Swimming", "attribute": "ht", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C,2",
+          "notes": "A mouth full of interlocking needles, delivered on a neck that reaches over a gunwale."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Four and a half metres of barrel body rowing itself along on four flippers, with a neck that arrives before the rest of it. It hunts fish and has no strong opinion about people, right up until a boat sits between it and the shoal.",
+      "notes": [
+        "Four and a half metres, which is the SM +2 row.",
+        "ST from Basic Lift: it carries off a 120 kg piece of whatever it took."
+      ]
+    },
+    {
+      "slug": "triceratops",
+      "name": "Triceratops",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["herd", "prehistoric", "plains", "war-beast"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Triceratops"},
+        {"sourceSystem": "srd_3_5", "heading": "Triceratops"}
+      ],
+      "massKg": 9000,
+      "sizeModifier": 4,
+      "hexes": "7 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "None; the herd walks a circuit between water and browse.",
+      "traitSets": ["saurian-body"],
+      "traits": [
+        {"trait": "bad-temper"},
+        {"trait": "damage-resistance-tough-skin", "levels": 4},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "extra-legs-four"},
+        {"trait": "gregarious"},
+        {"trait": "high-pain-threshold"},
+        {"trait": "ht", "levels": 4},
+        {"trait": "increased-consumption", "levels": 2},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "per", "levels": 7},
+        {"trait": "peripheral-vision"},
+        {"trait": "restricted-diet-herbivore"},
+        {"trait": "st", "levels": 45},
+        {"trait": "striker-horns"},
+        {"trait": "will", "levels": 7}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "Two brow horns a metre long, driven by nine tonnes at a run."
+        },
+        {
+          "name": "Trample",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Against a target already down."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 2
+      },
+      "description": "Nine tonnes of armoured herbivore with a bone shield over the neck and two horns it has used on worse than you. It does not hunt and does not need to be provoked cleverly — walking between a cow and a calf is sufficient, and the charge crosses the intervening ground faster than seems reasonable.",
+      "notes": [
+        "Nine metres nose to tail, which is the SM +4 row.",
+        "ST from Basic Lift: it shoves aside a rival of its own species, which is the heaviest thing it ever does on purpose.",
+        "The frill is bone but the build carries it as Tough Skin rather than as armour, because it protects the neck only and DR here is a whole-body figure. A GM wanting the frill to matter should treat it as cover for the neck rather than raising DR.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
+      ]
+    },
+    {
+      "slug": "tyrannosaurus",
+      "name": "Tyrannosaurus",
+      "class": "Animal",
+      "classTags": ["animal", "reptile", "dinosaur"],
+      "tags": ["predator", "prehistoric", "apex", "wandering-encounter"],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Tyrannosaurus Rex",
+          "alsoPrintedAs": ["Tyrannosaurus Rex"]
+        },
+        {"sourceSystem": "srd_3_5", "heading": "Tyrannosaurus"}
+      ],
+      "massKg": 7000,
+      "sizeModifier": 5,
+      "hexes": "12 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "None. Its range is whatever it is currently standing in.",
+      "traitSets": ["saurian-body", "carnivore"],
+      "traits": [
+        {"trait": "bloodlust"},
+        {"trait": "damage-resistance-tough-skin", "levels": 4},
+        {"trait": "discriminatory-smell"},
+        {"trait": "dx", "levels": 1},
+        {"trait": "enhanced-move-ground", "levels": 0.5, "qualifier": "Ground"},
+        {"trait": "fangs", "qualifier": "Bone-Cracking Teeth"},
+        {"trait": "fearlessness", "levels": 3},
+        {"trait": "high-pain-threshold"},
+        {"trait": "ht", "levels": 4},
+        {"trait": "iq-", "levels": 7},
+        {"trait": "night-vision", "levels": 3},
+        {"trait": "per", "levels": 8},
+        {"trait": "st", "levels": 40},
+        {"trait": "will", "levels": 7}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C,2",
+          "notes": "Takes a whole person, or a whole horse, and does not need a second attempt. Jaws that crack bone as a matter of routine."
+        },
+        {
+          "name": "Trample",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Against a target already down."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "Twelve metres of animal whose only real predator is another one of itself. It smells a party long before it sees them, it does not stalk, and it does not test — it walks straight in, because in its entire experience nothing has ever been worth caution. The correct response is distance and terrain, not a plan.",
+      "notes": [
+        "Twelve metres nose to tail, which is the SM +5 row.",
+        "ST from Basic Lift: it lifts and shakes a carcass the weight of a horse, which is the heaviest thing it demonstrably does. Tonnage would give a larger figure that no encounter could use.",
+        "At this Size Modifier the published Strength discount for size has bottomed out, so the racial template prices ST at the floor of its cost rather than lower.",
+        "The bite is impaling rather than cutting. A tyrannosaur's teeth are thick conical pegs built to punch through bone and hold, not serrated blades — which is what separates it from the dromaeosaurs in this batch, whose teeth genuinely are knives.",
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Night Vision; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
+      ]
+    }
+  ]
+}

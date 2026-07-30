@@ -1,0 +1,396 @@
+{
+	"version": 5,
+	"id": "Tc_UH-g10Nf_qz94s",
+	"traits": [
+		{
+			"id": "tvs10dUPoJAF8ww23",
+			"name": "Rug of Smothering",
+			"reference": "Monsters on Automatic, SRD coverage: constructs, animated objects and awakened plants: Rug of Smothering",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Rug of Smothering (SRD 5.1). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 154 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tw4u938E0x5LvvG5I",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 4,
+					"modifiers": [
+						{
+							"id": "mAjUjyfAr9htmKoSZ",
+							"name": "Size",
+							"reference": "B19",
+							"cost_adj": "-10%",
+							"local_notes": "Strength costs less for a creature this large."
+						}
+					],
+					"calc": {
+						"points": 36,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tGDuNkM7TuCp-VZzR",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "thO8IgKbNXHagPmQK",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 9,
+					"calc": {
+						"points": -180,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "t_vGIx7OnNsL-GcSI",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tpkgX3LCO_h-CwHFp",
+					"name": "Increased Hit Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 12,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "t_j79svRC9n05fymG",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 9,
+					"calc": {
+						"points": 45,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "trHJ3DNFkweuNuF68",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 9,
+					"calc": {
+						"points": 45,
+						"current_level": 9
+					}
+				},
+				{
+					"id": "tfbR1lJGINTFRCQ06",
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 6,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tWi8CfELZtuU6E2ab",
+					"name": "Constriction Attack",
+					"reference": "B43",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "trmaltFuouzsBkcoe",
+					"name": "Doesn't Breathe",
+					"reference": "B49",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tDo5w09VoxuXUaZqH",
+					"name": "Doesn't Eat or Drink",
+					"reference": "B50",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tPgDGOcSB591SXJCk",
+					"name": "Doesn't Sleep",
+					"reference": "B50",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tV2JfbBPXfkmpLzFP",
+					"name": "Double-Jointed",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tMzKjHIBTN2n3ArZF",
+					"name": "Flexibility",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Climbing"
+							},
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "t2wrsqhHixdKoVZmI",
+					"name": "Immunity to Metabolic Hazards",
+					"reference": "B80",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tcjraTvCuX7s8j0Qj",
+					"name": "Injury Tolerance (Homogenous)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 40,
+					"calc": {
+						"points": 40
+					}
+				},
+				{
+					"id": "tnIjUL54RUi3s531-",
+					"name": "Injury Tolerance (No Blood)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tN78a-lS61zNL-ru5",
+					"name": "Injury Tolerance (No Brain)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "th1yNdvzg0a2_S2AY",
+					"name": "Injury Tolerance (No Vitals)",
+					"reference": "B60",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 5,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tCdZkxsZSlKeupoRI",
+					"name": "Unfazeable",
+					"reference": "B95",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"base_points": 15,
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "t8lNMMxHnxo-Qcn7B",
+					"name": "Vibration Sense (Air)",
+					"reference": "B96",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "ttsTBicGCT5D8Uf7b",
+					"name": "Blindness",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -50,
+					"calc": {
+						"points": -50
+					}
+				},
+				{
+					"id": "teRSq3FM_QkgLfI8f",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				}
+			],
+			"calc": {
+				"points": 154
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sAoZgG_HO4SE33OQz",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 14."
+		},
+		{
+			"id": "sTXpVCVW1B-tsAv7g",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 16,
+			"local_notes": "Racial skill at DX+4, level 16."
+		}
+	]
+}

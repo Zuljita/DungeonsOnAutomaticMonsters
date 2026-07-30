@@ -1,0 +1,312 @@
+{
+	"version": 5,
+	"id": "TrskWtXgZEKo1MxdJ",
+	"traits": [
+		{
+			"id": "t8FvreL2xtPwVCnIT",
+			"name": "Quipper",
+			"reference": "Monsters on Automatic, SRD coverage: mundane birds, fish and aquatic animals: Quipper",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Quipper (SRD 5.1). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -141 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t8YmvMAKdcxgFFk5c",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 8,
+					"modifiers": [
+						{
+							"id": "mCfmaDRdaBI8o0CCn",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": -48,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "thWvgZMljhGwZqNpW",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 5,
+					"modifiers": [
+						{
+							"id": "mr9QlaIJtDEbbmFnI",
+							"name": "No Fine Manipulators",
+							"reference": "B145",
+							"cost_adj": "-40%"
+						}
+					],
+					"calc": {
+						"points": 60,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tPsqBgRzyd4xj-0jW",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 7,
+					"calc": {
+						"points": -140,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tcjONSLuctkNYfcKt",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 25,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t5AVMwhra-VBVh1al",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 30,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "t8jBq6grkZnPRZL3s",
+					"name": "Doesn't Breathe (Gills)",
+					"reference": "B49",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"modifiers": [
+						{
+							"id": "mHWU5EbVm551Fvefq",
+							"name": "Gills",
+							"reference": "B49",
+							"cost_adj": "-50%",
+							"local_notes": "Breathes water, not air; suffocates out of it."
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tQ35pAo18xd6dkbt1",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 6,
+					"calc": {
+						"points": 6,
+						"current_level": 6
+					}
+				},
+				{
+					"id": "tW2ecqUEj0IFkPy89",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "w4qwpRCCWUjKp3WWN",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tu0dlEYScJsO4GNVp",
+					"name": "Bestial",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tpX49_wOMWZ39pFoZ",
+					"name": "Bloodlust (12)",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "t1wv5mgOpifmCoe7J",
+					"name": "Cannot Speak",
+					"reference": "B125",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -15,
+					"calc": {
+						"points": -15
+					}
+				},
+				{
+					"id": "tE_xL-R5yNr_ve4jm",
+					"name": "Gregarious",
+					"reference": "B126",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tB-3snEErB9Mx0iUF",
+					"name": "No Fine Manipulators",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -30,
+					"features": [
+						{
+							"type": "cost_reduction",
+							"attribute": "st",
+							"percentage": 40
+						},
+						{
+							"type": "cost_reduction",
+							"attribute": "dx",
+							"percentage": 40
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "tat-40wu1mNlgu-K6",
+					"name": "No Legs (Aquatic)",
+					"reference": "B145",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 0,
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "txYth6HyFqD16oMji",
+					"name": "Restricted Diet (Carnivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -141
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sgmECnMSXuToqseMp",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 2,
+			"local_notes": "Racial skill at DX+1, level 16."
+		}
+	]
+}

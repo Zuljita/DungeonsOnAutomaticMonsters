@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "batch": "constructs-and-plants",
+  "issue": 42,
+  "title": "SRD coverage: constructs, animated objects and awakened plants",
+  "summary": "Independently authored GURPS builds for the 6 identities issue #42 enumerates. These are the first records in the coverage programme with no metabolism, which is exactly the case issue #17 flagged: the rating path reads FP and DR, and a thing that has neither is easy to under-rate. Every construct here therefore states FP explicitly rather than leaving it to fall out of HT, and every one buys its Injury Tolerance from the published parts — Homogenous for an object that is the same all the way through, Unliving for a golem that is at least shaped like a body. Animated objects are built as blind: they have no eyes at all, and the awareness that replaces sight is bought as Vibration Sense, which is a much better description of what a walking suit of armour actually does. Size Modifier is read off the published table keyed to longest dimension; ST comes from Basic Lift and from what the thing demonstrably shifts.",
+  "traitSets": {
+    "construct-body": [
+      {"trait": "cannot-speak"},
+      {"trait": "doesnt-breathe"},
+      {"trait": "doesnt-eat-or-drink"},
+      {"trait": "doesnt-sleep"},
+      {"trait": "immunity-metabolic-hazards"},
+      {"trait": "injury-tolerance-no-blood"},
+      {"trait": "injury-tolerance-no-brain"},
+      {"trait": "injury-tolerance-no-vitals"},
+      {"trait": "unfazeable"}
+    ],
+    "eyeless": [
+      {"trait": "blindness"},
+      {"trait": "vibration-sense-air"}
+    ],
+    "awakened-plant-body": [
+      {"trait": "doesnt-sleep"},
+      {"trait": "immunity-metabolic-hazards"},
+      {"trait": "injury-tolerance-no-blood"},
+      {"trait": "injury-tolerance-no-brain"},
+      {"trait": "injury-tolerance-no-vitals"}
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "animated-armor",
+      "name": "Animated Armor",
+      "class": "Construct",
+      "classTags": ["construct", "animated-object"],
+      "tags": ["guardian", "dungeon", "eyeless"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Animated Armor"}
+      ],
+      "massKg": 25,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "The hall it was set to watch, standing where a suit of armour would be expected to stand.",
+      "traitSets": ["construct-body", "eyeless"],
+      "traits": [
+        {"trait": "st", "levels": 2},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq-", "levels": 9},
+        {"trait": "ht", "levels": 2},
+        {"trait": "hp", "levels": 8},
+        {"trait": "will", "levels": 9},
+        {"trait": "per", "levels": 9},
+        {"trait": "fp", "levels": 2},
+        {"trait": "damage-resistance-carapace", "levels": 5},
+        {"trait": "injury-tolerance-homogenous"},
+        {"trait": "high-pain-threshold"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Gauntlet",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "A steel fist swung with the whole weight of the harness behind it."
+        },
+        {
+          "name": "Slam",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "It walks into a target and keeps walking."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 2, "wanderingWeight": 3},
+      "description": "An empty harness that turns its helm towards a sound and then comes down the hall at you. There is nothing inside it, which means nothing to cut, nothing to frighten and nothing to reason with — only steel that has been told to keep people out of a room.",
+      "notes": [
+        "A suit of plate standing 1.8 m, which is the SM 0 row.",
+        "Blind, and deliberately so. It has no eyes; what it has is an awareness of movement in the space around it, bought as Vibration Sense. Beyond that radius it genuinely cannot find anyone.",
+        "HP is bought above ST because an object's durability is a property of its mass and construction, not of how hard it can push. FP is stated rather than derived for the same reason issue #17 raises: a thing with no metabolism would otherwise be rated as if it tired."
+      ]
+    },
+    {
+      "slug": "awakened-shrub",
+      "name": "Awakened Shrub",
+      "class": "Plant",
+      "classTags": ["plant", "awakened"],
+      "tags": ["forest", "talker", "harmless"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Awakened Shrub"}
+      ],
+      "massKg": 20,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "Wherever it was rooted when the spell found it, and a slow shuffling radius around that.",
+      "traitSets": ["awakened-plant-body"],
+      "traits": [
+        {"trait": "st-", "levels": 5},
+        {"trait": "dx-", "levels": 2},
+        {"trait": "will", "levels": 2},
+        {"trait": "per", "levels": 1},
+        {"trait": "basic-move-", "levels": 2},
+        {"trait": "sharp-claws", "qualifier": "Thorny Branches"},
+        {"trait": "extra-legs-many", "qualifier": "Root Cluster"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Rake",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Thorns dragged across whatever is in reach. Cannot parry."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 3},
+      "description": "A waist-high bush that has been given a mind and, unfortunately for it, a full understanding of its situation. It talks, it remembers who planted it, and it is entirely unable to defend itself against anything with an axe. Most awakened shrubs are somebody's informant.",
+      "notes": [
+        "About a metre across, which is the SM -2 row.",
+        "IQ 10 and no Cannot Speak: an awakened plant is awake in the full sense and holds a conversation, which is the whole reason a GM puts one in a scene.",
+        "Fire is the obvious answer to it and the build does not pretend otherwise. Vulnerability is not modelled as a trait here because the package has no vulnerability contract yet; a GM should simply rule it."
+      ]
+    },
+    {
+      "slug": "awakened-tree",
+      "name": "Awakened Tree",
+      "class": "Plant",
+      "classTags": ["plant", "awakened"],
+      "tags": ["forest", "talker", "guardian"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Awakened Tree"}
+      ],
+      "massKg": 3000,
+      "sizeModifier": 3,
+      "hexes": "5 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "The stand of wood it grew in, which it now considers its responsibility.",
+      "traitSets": ["awakened-plant-body"],
+      "traits": [
+        {"trait": "st", "levels": 25},
+        {"trait": "dx-", "levels": 4},
+        {"trait": "ht", "levels": 2},
+        {"trait": "hp", "levels": 10},
+        {"trait": "will", "levels": 4},
+        {"trait": "per", "levels": 1},
+        {"trait": "basic-move-", "levels": 2},
+        {"trait": "damage-resistance-tough-skin", "levels": 5},
+        {"trait": "extra-legs-many", "qualifier": "Root Cluster"},
+        {"trait": "high-pain-threshold"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Branch",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C,2",
+          "notes": "A limb the thickness of a man's waist, swung on a slow arc that is very hard to be somewhere else for."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
+      "description": "Six metres of oak that has opinions. An awakened tree moves at a walking pace it can sustain for days and hits like a falling beam, and it is generally not hostile — but it has watched the wood for a long time and it knows exactly who has been cutting.",
+      "notes": [
+        "About six metres, which is the SM +3 row.",
+        "ST from Basic Lift: it lifts and moves timber, which is the heaviest thing it does.",
+        "DX 6 is the point of the creature. It hits enormously hard and is trivially easy to avoid, and a party that stands still is making a choice."
+      ]
+    },
+    {
+      "slug": "clay-golem",
+      "name": "Clay Golem",
+      "class": "Construct",
+      "classTags": ["construct", "golem"],
+      "tags": ["guardian", "dungeon", "berserk"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Clay Golem"},
+        {"sourceSystem": "srd_3_5", "heading": "Clay Golem"}
+      ],
+      "massKg": 600,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "The vault, tomb or laboratory it was fired in and has not left since.",
+      "traitSets": ["construct-body"],
+      "traits": [
+        {"trait": "st", "levels": 20},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "iq-", "levels": 9},
+        {"trait": "ht", "levels": 4},
+        {"trait": "hp", "levels": 10},
+        {"trait": "will", "levels": 9},
+        {"trait": "per", "levels": 8},
+        {"trait": "fp", "levels": 2},
+        {"trait": "damage-resistance-carapace", "levels": 6},
+        {"trait": "high-pain-threshold"},
+        {"trait": "injury-tolerance-unliving"},
+        {"trait": "berserk"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "A fist of fired clay the size of a helmet. It does not wind up and it does not stop."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
+      "description": "Two and a half metres of baked earth in a rough human shape, standing in front of the thing it was made to guard. It is slow, it is not clever, and it does not tire or flinch or die of anything a blade does. Damage makes it worse rather than better: past a certain point it stops guarding and simply attacks, and it will not stop again.",
+      "notes": [
+        "Two and a half metres, which is the SM +1 row.",
+        "Unliving rather than Homogenous: a golem is at least built like a body, with limbs that can be broken off, which a rug or a sword is not.",
+        "Berserk is the creature's defining behaviour and is bought as the published disadvantage rather than written only into the prose."
+      ]
+    },
+    {
+      "slug": "flying-sword",
+      "name": "Flying Sword",
+      "class": "Construct",
+      "classTags": ["construct", "animated-object"],
+      "tags": ["guardian", "dungeon", "flier", "eyeless"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Flying Sword"}
+      ],
+      "massKg": 1.5,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {"primary": "air"},
+      "lair": "A rack, a stone hand, or the middle of the air above a doorway.",
+      "traitSets": ["construct-body", "eyeless"],
+      "traits": [
+        {"trait": "st-", "levels": 4},
+        {"trait": "dx", "levels": 4},
+        {"trait": "iq-", "levels": 9},
+        {"trait": "ht", "levels": 1},
+        {"trait": "hp", "levels": 6},
+        {"trait": "will", "levels": 9},
+        {"trait": "per", "levels": 9},
+        {"trait": "fp", "levels": 1},
+        {"trait": "damage-resistance-carapace", "levels": 4},
+        {"trait": "flight-hovering"},
+        {"trait": "injury-tolerance-homogenous"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Blade",
+          "basis": "1d+2",
+          "type": "cutting",
+          "skill": "Brawling",
+          "reach": "C,1",
+          "notes": "A longsword swung by nothing. The damage is the blade's, not any muscle behind it."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 3},
+      "description": "A sword hanging point-down at chest height, turning slowly to face whoever came in. It fights like a duellist with no body to threaten and no face to read, and the only reliable way to end it is to break the blade.",
+      "notes": [
+        "A longsword is about 1.1 m, which is the SM -1 row.",
+        "Damage is stated as literal dice rather than derived from ST: the injury comes from the edge and the enchantment, not from a Strength that does not exist. The builder takes literal dice only where a spec states them.",
+        "Flight is bought at full price with no Winged limitation — the thing simply hangs in the air, and nothing about it can be grounded by clipping a wing."
+      ]
+    },
+    {
+      "slug": "rug-of-smothering",
+      "name": "Rug of Smothering",
+      "class": "Construct",
+      "classTags": ["construct", "animated-object"],
+      "tags": ["ambusher", "dungeon", "eyeless"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Rug of Smothering"}
+      ],
+      "massKg": 15,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "A floor, indistinguishable from every other rug in the building until somebody stands on it.",
+      "traitSets": ["construct-body", "eyeless"],
+      "traits": [
+        {"trait": "st", "levels": 4},
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 9},
+        {"trait": "ht", "levels": 2},
+        {"trait": "hp", "levels": 6},
+        {"trait": "will", "levels": 9},
+        {"trait": "per", "levels": 9},
+        {"trait": "fp", "levels": 2},
+        {"trait": "constriction-attack"},
+        {"trait": "double-jointed"},
+        {"trait": "flexibility"},
+        {"trait": "injury-tolerance-homogenous"}
+      ],
+      "skills": [
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 4}
+      ],
+      "attacks": [
+        {
+          "name": "Smother",
+          "basis": null,
+          "type": "crushing",
+          "reach": "C",
+          "bindingSt": 14,
+          "afflictionPoints": 25,
+          "notes": "It comes up off the floor and wraps. No damage at all: the victim is blinded, held, and suffocating, and everyone else in the room has to decide whether they can cut a rug without cutting the person inside it."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 3},
+      "description": "It is a rug. It is a rug right up until it is around your head, and then it is a rug that weighs as much as a man and has folded itself twice. It does no damage whatsoever, which is the horrible part — the person inside is suffocating while their friends work out how to help without stabbing them.",
+      "notes": [
+        "Three metres on the long side, which is the SM +1 row.",
+        "It has no damaging attack at all, and the whole record rests on binding ST and a suffocation ability. That is the correct shape and it is also a good check on the rating path, which would score a creature that deals no damage at zero if the disabling ability were not priced.",
+        "Stealth is bought high on purpose. Its entire advantage is being furniture until it is not."
+      ]
+    }
+  ]
+}

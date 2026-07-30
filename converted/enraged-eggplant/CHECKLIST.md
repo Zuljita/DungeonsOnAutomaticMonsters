@@ -56,7 +56,7 @@ Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); ada
 | [x] | Allip | srd-3-5 | 124 | 124 | 0 | `gcs/allip.gct` | 10/12 | 4 | 0 | 1 | 11 | 4 | 4 | partial_stats special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Ankheg | srd-3-5, srd-5-1 | -24 | -24 | 0 | `gcs/ankheg.gct` | 12/12 | 3 | 0 | 39 | 39 | 2 | 3 | special_mechanics | automated-mechanical-review | approved |
 | [x] | Aranea | srd-3-5 | 182 | 182 | 0 | `gcs/aranea.gct` | 12/12 | 4 | +6 | 10 | 14 | 6 | 4 | reconciliation special_mechanics cer_drift | automated-mechanical-review | approved |
-| [x] | Arrowhawk | srd-3-5 | 256 | 256 | 0 | `gcs/arrowhawk.gct` | 12/12 | 2 | 0 | 27 | 38 | 2 | 3 | special_mechanics cer_drift | automated-mechanical-review | approved |
+| [x] | Arrowhawk | srd-3-5 | 256 | 256 | 0 | `gcs/arrowhawk.gct` | 12/12 | 2 | 0 | 27 | 31 | 2 | 3 | special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Lantern Archon | srd-3-5 | 217 | 217 | 0 | `gcs/lantern-archon.gct` | 12/12 | 4 | +15 | 17 | 26 | 2 | 3 | reconciliation special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Hound Archon | srd-3-5 | 286 | 286 | 0 | `gcs/hound-archon.gct` | 12/12 | 5 | 0 | 32 | 40 | 2 | 3 | special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Trumpet Archon | srd-3-5 | 414 | 414 | 0 | `gcs/trumpet-archon.gct` | 12/12 | 4 | 0 | 39 | 47 | 2 | 3 | special_mechanics cer_drift | automated-mechanical-review | approved |
@@ -259,7 +259,7 @@ Original GURPS conversion by Enraged Eggplant, from Monsters (May 11, 2024); ada
 | [x] | Rat Swarm | srd-3-5 | 46 | 46 | 0 | `gcs/rat-swarm.gct` | 12/12 | 1 | 0 | 4 | 24 | 1 | 4 | special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Air Mephit | srd-3-5 | 122 | 122 | 0 | `gcs/air-mephit.gct` | 12/12 | 2 | 0 | 15 | 14 | 4 | 4 | special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Dust Mephit | srd-3-5, srd-5-1 | 83 | 83 | 0 | `gcs/dust-mephit.gct` | 12/12 | 2 | 0 | 4 | 3 | 4 | 4 | special_mechanics cer_drift | automated-mechanical-review | approved |
-| [x] | Earth Mephit | srd-3-5 | 110 | 110 | 0 | `gcs/earth-mephit.gct` | 12/12 | 2 | -30 | 7 | 12 | 4 | 4 | reconciliation special_mechanics cer_drift | automated-mechanical-review | approved |
+| [x] | Earth Mephit | srd-3-5 | 110 | 110 | 0 | `gcs/earth-mephit.gct` | 12/12 | 2 | -30 | 7 | 10 | 4 | 4 | reconciliation special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Fire Mephit | srd-3-5 | 42 | 42 | 0 | `gcs/fire-mephit.gct` | 12/12 | 3 | 0 | 20 | 20 | 4 | 4 | special_mechanics | automated-mechanical-review | approved |
 | [x] | Ice Mephit | srd-3-5, srd-5-1 | 103 | 103 | 0 | `gcs/ice-mephit.gct` | 12/12 | 3 | +22 | 20 | 21 | 4 | 4 | reconciliation special_mechanics cer_drift | automated-mechanical-review | approved |
 | [x] | Magma Mephit | srd-3-5, srd-5-1 | 54 | 54 | 0 | `gcs/magma-mephit.gct` | 12/12 | 2 | 0 | 22 | 22 | 4 | 4 | special_mechanics | automated-mechanical-review | approved |

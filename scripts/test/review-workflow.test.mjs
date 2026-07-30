@@ -54,6 +54,46 @@ test("CER: an entry with no skill, no damage and no auto-hit contributes nothing
   assert.equal(effectivenessFromStats(stats, "test").offenseRating, 0);
 });
 
+test("CER: an attack that costs fatigue contributes half its damage", () => {
+  // The flag is documented in review/README.md as a rating input an attack may
+  // carry, and damageContribution has always implemented the halving — but the
+  // profile builder did not forward it, so the handling was dead code and a
+  // breath weapon rated as though it were used every second.
+  const base = { attributes: { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 }, traits: [] };
+  const free = effectivenessFromStats({ ...base, attacks: [{ name: "Breath", skill: 12, damage: "6d burning", reach: "C" }] });
+  const costly = effectivenessFromStats({
+    ...base,
+    attacks: [{ name: "Breath", skill: 12, damage: "6d burning", reach: "C", usesFatigueOrSpell: true }],
+  });
+  // 6d burning scores 21; the fatigue cost halves the damage term to 11 and
+  // touches nothing else, so the two offense ratings differ by 10.
+  assert.equal(free.breakdown.offense.find(part => part.id === "damage").value, 21);
+  assert.equal(costly.breakdown.offense.find(part => part.id === "damage").value, 11);
+  assert.equal(free.offenseRating - costly.offenseRating, 10);
+});
+
+test("CER: every rating input damageContribution reads is forwarded by the profile builder", () => {
+  // A regression guard for the whole class rather than the one field: if a new
+  // input is read downstream and not forwarded, this fails instead of silently
+  // doing nothing.
+  const attack = {
+    name: "Everything",
+    skill: 12,
+    damage: "2d cutting",
+    reach: "C",
+    autoHit: true,
+    cyclesWithin15Seconds: 3,
+    usesFatigueOrSpell: true,
+  };
+  const profile = combatProfileFromStats(
+    { attributes: { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 }, attacks: [attack], traits: [] },
+    "guard",
+  );
+  for (const field of ["autoHit", "cyclesWithin15Seconds", "usesFatigueOrSpell"]) {
+    assert.equal(profile.attack[field], attack[field], `${field} must reach the profile`);
+  }
+});
+
 test("CER: ranged reach earns the accuracy credit", () => {
   const base = { attributes: { ht: 10, hp: 10, will: 10, fp: 10, move: 6, dodge: 8, dr: 0 }, traits: [] };
   const melee = effectivenessFromStats({ ...base, attacks: [{ name: "Ray", skill: 12, damage: "1d burning", reach: "C" }] });

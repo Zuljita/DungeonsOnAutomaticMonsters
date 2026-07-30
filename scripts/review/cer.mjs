@@ -150,9 +150,12 @@ export function combatProfileFromStats(stats, label) {
           skill: numberOrNull(bestAttack.skill),
           ...parseDamageExpression(bestAttack.damage),
           ranged: isRangedReach(bestAttack.reach),
-          // Structured hazard mechanics declare their own rating inputs.
+          // Structured hazard mechanics declare their own rating inputs. Every
+          // field `damageContribution` reads has to be forwarded here, or the
+          // handling for it downstream is dead code that nothing announces.
           autoHit: bestAttack.autoHit === true,
           cyclesWithin15Seconds: numberOrNull(bestAttack.cyclesWithin15Seconds) ?? undefined,
+          usesFatigueOrSpell: bestAttack.usesFatigueOrSpell === true,
         }
       : null,
     fatiguePoints: numberOrNull(attributes.fp),

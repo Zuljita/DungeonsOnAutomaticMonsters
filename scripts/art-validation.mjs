@@ -7,6 +7,13 @@ const STATUS_VALUES = new Set(["pending", "generated"]);
 
 export function readPngMetadata(filePath) {
   const bytes = readFileSync(filePath);
+  if (bytes.subarray(0, 12).toString("ascii").startsWith("version http")) {
+    // "version https://git-lfs.github.com/spec/v1" — a skip-smudge checkout.
+    const dir = path.relative(process.cwd(), path.dirname(filePath)).replace(/\\/g, "/") || ".";
+    throw new Error(
+      `${filePath} is a Git LFS pointer, not image bytes. Run: git lfs pull --include="${dir}/*"`,
+    );
+  }
   if (bytes.length < 33 || !bytes.subarray(0, 8).equals(PNG_SIGNATURE)) {
     throw new Error(`${filePath} is not a PNG file.`);
   }

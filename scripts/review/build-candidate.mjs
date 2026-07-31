@@ -9,7 +9,7 @@
 // produced against what the package ships, and the whole reviewed package can be
 // thrown away and rebuilt from tracked inputs at any time.
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { effectivenessFromStats } from "./cer.mjs";
 import { applyRepairs, loadRepairFiles, repairsByRecord } from "./repairs.mjs";
 import {
@@ -33,6 +33,18 @@ export const CONTENT_LICENSE_URL =
 export const REVIEWED_CONVERSION_VERSION = "0.2.0-reviewed";
 
 export function loadInputs(root = ".") {
+  // Both untracked inputs come from `npm run convert:enraged-eggplant`; a fresh
+  // checkout has neither. Name everything missing at once instead of stack-
+  // tracing on the first open (#50).
+  const missing = [BASE_PATH, MANIFEST_PATH].filter(path => !existsSync(`${root}/${path}`));
+  if (missing.length > 0) {
+    console.error(
+      "Missing untracked review input(s):\n"
+        + missing.map(path => `  - ${path}`).join("\n")
+        + "\nBoth are outputs of `npm run convert:enraged-eggplant` and stay local until records are reviewed. See review/README.md.",
+    );
+    process.exit(1);
+  }
   const base = JSON.parse(readFileSync(`${root}/${BASE_PATH}`, "utf8"));
   const conversionManifest = JSON.parse(readFileSync(`${root}/${MANIFEST_PATH}`, "utf8"));
   const manifestByName = new Map(conversionManifest.records.map(entry => [entry.name, entry]));

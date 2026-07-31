@@ -33,6 +33,7 @@ jobs:
         run: |
           pip install pillow
           python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
+          python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs
       - run: npm run validate:gcs-sheets
       - name: Build approval-gated library package
         run: npm run promote:library -- --version "$VERSION"

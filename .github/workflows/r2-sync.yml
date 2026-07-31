@@ -44,6 +44,14 @@ jobs:
       - name: Apply CORS policy
         if: ${{ inputs.set_cors }}
         run: npx --yes wrangler@4 r2 bucket cors set doa-assets --file scripts/r2-cors.json --force
+      # The bestiary gallery loads thumbs/<id>.webp for every card; the thumbs
+      # are derived from the portraits rather than tracked, so build them here
+      # or the sync can never upload them.
+      - name: Build web thumbnails
+        run: |
+          pip install pillow
+          python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
+          python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs
       - name: Upload art
         # Without --force the script skips objects whose size already matches,
         # so a routine run costs one HEAD per file and uploads only what moved.

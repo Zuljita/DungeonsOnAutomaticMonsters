@@ -1,10 +1,10 @@
-name: Publish Enraged Eggplant Monster Package
+name: Publish Monster Library Package
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: SemVer package version, for example 0.2.0
+        description: SemVer package version, for example 0.5.0
         required: true
         type: string
 
@@ -34,8 +34,8 @@ jobs:
           pip install pillow
           python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
       - run: npm run validate:gcs-sheets
-      - name: Build approval-gated package
-        run: npm run promote:enraged-eggplant -- --version "$VERSION"
+      - name: Build approval-gated library package
+        run: npm run promote:library -- --version "$VERSION"
       - name: Build Foundry VTT module
         run: |
           node scripts/build-foundry-module.mjs --pack --zip --update-latest-manifest
@@ -50,6 +50,8 @@ jobs:
         run: |
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs --prefix monsters/enraged-eggplant/gct --flat --attachment --force
           node scripts/upload-art-to-r2.mjs --art-dir converted/enraged-eggplant/gcs-sheets --prefix monsters/enraged-eggplant/gcs --flat --attachment --force
+          node scripts/upload-art-to-r2.mjs --art-dir converted/srd-monsters/gcs --prefix monsters/srd-monsters/gct --flat --attachment --force
+          node scripts/upload-art-to-r2.mjs --art-dir converted/srd-monsters/gcs-sheets --prefix monsters/srd-monsters/gcs --flat --attachment --force
       - name: Upload Foundry module manifest and download to public R2 bucket
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -61,23 +63,35 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        run: node scripts/upload-art-to-r2.mjs --attachment --force --concurrency 4
+        run: |
+          node scripts/upload-art-to-r2.mjs --attachment --force --concurrency 4
+          node scripts/upload-art-to-r2.mjs --art-dir art/srd-monsters --prefix monsters/srd-monsters --attachment --force --concurrency 4
+      - name: Upload library image manifest to public R2 bucket
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        # Inline, not an attachment: consumers fetch it from the stable
+        # manifest URL the package's manifest.art.manifestUrl states.
+        run: |
+          mkdir -p dist/library-manifest
+          cp converted/library-image-manifest.json dist/library-manifest/image-manifest.json
+          node scripts/upload-art-to-r2.mjs --art-dir dist/library-manifest --prefix monsters --flat --force
       - name: Advance the stable package pointer
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add converted/doa-monsters.json packages/latest/manifest.json
-          git commit -m "Publish Enraged Eggplant monster package ${VERSION}"
+          git add converted/doa-monsters.json converted/library-image-manifest.json packages/latest/manifest.json
+          git commit -m "Publish monster library package ${VERSION}"
           git push
       - name: Create source release
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
           gh release create "$RELEASE_TAG"
-          "converted/doa-monsters.json#Enraged Eggplant Monster Library ${VERSION}"
+          "converted/doa-monsters.json#Dungeons on Automatic Monster Library ${VERSION}"
           "dist/foundry/release/dungeons-on-automatic-monsters-${VERSION}.zip#Foundry VTT module ${VERSION} (GURPS Game Aid)"
           "dist/foundry/release/module.json#Foundry VTT module manifest ${VERSION}"
-          --title "Enraged Eggplant Monster Library ${VERSION}"
+          --title "Dungeons on Automatic Monster Library ${VERSION}"
           --notes "Approval-gated source artifact for mirroring to the public site. Art is published to the assets.dungeonsonautomatic.com R2 bucket."
       # Fast path only. The site also polls this repo's latest release hourly and
       # mirrors what it finds, so a publish reaches the site with or without this

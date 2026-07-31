@@ -12,6 +12,10 @@ import { createHash } from "node:crypto";
 import { join } from "node:path";
 
 export const LEDGER_PATH = "review/decisions.jsonl";
+// The independently authored SRD-coverage batch keeps its own ledger: its base
+// records are tracked and regenerable from specs, so decisions verify against
+// the committed build rather than a base-lock of an untracked queue.
+export const SRD_LEDGER_PATH = "review/srd-decisions.jsonl";
 export const DECISIONS = new Set(["approved", "rejected", "review_required"]);
 
 /**
@@ -40,15 +44,19 @@ export const REQUIRED_CHECKS = ["gcsFidelity", "doaPlayability"];
  *   the right number of hexes. The field mapping is checked against the
  *   system's template.json and the pack round-trips through LevelDB unchanged,
  *   but neither is the same as looking at a sheet.
+ * - encounterFieldsPass: the encounter fields were checked against the
+ *   creature's role — a wandering encounter, a mount or livestock. The SRD
+ *   batch's checklist requires this check for approval; its decide script
+ *   enforces that, the ledger only records it.
  */
-export const OPTIONAL_CHECKS = ["gcsVisualPass", "foundryRenderPass"];
+export const OPTIONAL_CHECKS = ["gcsVisualPass", "foundryRenderPass", "encounterFieldsPass"];
 
-export function ledgerFile(root = ".") {
-  return join(root, LEDGER_PATH);
+export function ledgerFile(root = ".", path = LEDGER_PATH) {
+  return join(root, path);
 }
 
-export function readLedger(root = ".") {
-  const file = ledgerFile(root);
+export function readLedger(root = ".", path = LEDGER_PATH) {
+  const file = ledgerFile(root, path);
   if (!existsSync(file)) return [];
   const entries = [];
   const lines = readFileSync(file, "utf8").split("\n");
@@ -59,10 +67,10 @@ export function readLedger(root = ".") {
     try {
       entry = JSON.parse(text);
     } catch (error) {
-      throw new Error(`${LEDGER_PATH}:${index + 1} is not valid JSON: ${error.message}`);
+      throw new Error(`${path}:${index + 1} is not valid JSON: ${error.message}`);
     }
     const errors = validateEntry(entry);
-    if (errors.length > 0) throw new Error(`${LEDGER_PATH}:${index + 1} is invalid:\n${errors.join("\n")}`);
+    if (errors.length > 0) throw new Error(`${path}:${index + 1} is invalid:\n${errors.join("\n")}`);
     entries.push({ ...entry, line: index + 1 });
   }
   return entries;
@@ -75,13 +83,13 @@ export function effectiveDecisions(entries) {
   return byRecord;
 }
 
-export function appendDecisions(entries, root = ".") {
+export function appendDecisions(entries, root = ".", path = LEDGER_PATH) {
   for (const entry of entries) {
     const errors = validateEntry(entry);
     if (errors.length > 0) throw new Error(`Refusing to append an invalid decision:\n${errors.join("\n")}`);
   }
   const payload = entries.map(entry => JSON.stringify(entry, orderedKeys)).join("\n");
-  appendFileSync(ledgerFile(root), `${payload}\n`, "utf8");
+  appendFileSync(ledgerFile(root, path), `${payload}\n`, "utf8");
   return entries.length;
 }
 

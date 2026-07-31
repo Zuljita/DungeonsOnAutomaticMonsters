@@ -17,6 +17,18 @@ review/reports/*.md text eol=lf
 # CRLF checkout would report every sheet stale while git sees no change.
 converted/enraged-eggplant/gcs-sheets/*.gcs text eol=lf
 
+# Same reasoning for every other generated tracked output a --check or verify
+# gate byte-compares against a fresh LF render (#49): on a core.autocrlf=true
+# checkout the gates would report drift that git itself cannot see.
+converted/enraged-eggplant/doa-monsters.reviewed.json text eol=lf
+converted/enraged-eggplant/CHECKLIST.md text eol=lf
+converted/enraged-eggplant/gcs/*.gct text eol=lf
+converted/srd-monsters/doa-monsters.review-required.json text eol=lf
+converted/srd-monsters/doa-monsters.reviewed.json text eol=lf
+converted/srd-monsters/CHECKLIST.md text eol=lf
+converted/srd-monsters/gcs/*.gct text eol=lf
+converted/srd-monsters/gcs-sheets/*.gcs text eol=lf
+
 # And for the SRD-coverage specs and everything generated from them, which
 # build-srd-monsters.mjs --check compares the same way.
 content/srd-monsters/** text eol=lf

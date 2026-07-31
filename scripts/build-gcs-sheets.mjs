@@ -362,6 +362,14 @@ if (!existsSync(BASELINE_PATH)) {
   console.error(`Missing ${BASELINE_PATH}. Regenerate it with: node scripts/build-gcs-sheets.mjs --baseline`);
   process.exit(1);
 }
+
+// The sheets embed each record's web thumbnail, and the thumbnails are derived
+// from the tracked portraits rather than committed, so a fresh checkout has
+// none (#57). Say so plainly instead of stack-tracing on the first record.
+if (!existsSync(THUMB_DIR) || readdirSync(THUMB_DIR).every(name => !name.endsWith(".webp"))) {
+  console.error(`Missing portrait thumbnails under ${THUMB_DIR} (derived, not tracked). Run: npm run art:thumbnails`);
+  process.exit(1);
+}
 const baselines = JSON.parse(readFileSync(BASELINE_PATH, "utf8")).records;
 
 mkdirSync(OUT_DIR, { recursive: true });

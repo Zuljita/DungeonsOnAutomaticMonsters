@@ -6,6 +6,21 @@ GCS v5 compatibility is a first-class output target: approved concrete monsters 
 
 This repository owns the publishable monster-data contract, conversion tools, validation scripts, generated JSON packages, and license/provenance documentation. Raw source material and parsed working corpora stay under the ignored `data/` directory. The app consumes released package JSON from this repository or a mirrored public-site URL; the public site documents and links to the packages rather than becoming the canonical data store.
 
+## Cloning
+
+The art directories (`art/enraged-eggplant/`, `art/srd-monsters/`) are Git LFS-backed — roughly 2 GB of
+portraits and tokens. Most data, review, schema, and validation work never reads those binaries, and this
+repository's GitHub LFS bandwidth is a finite free-tier quota, so default to a clone that keeps them as
+pointer files:
+
+```
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Zuljita/DungeonsOnAutomaticMonsters.git
+```
+
+When a task genuinely needs art locally (thumbnail builds, art validation against real pixels), fetch just
+the subset: `git lfs pull --include="art/enraged-eggplant/portraits/*"`. The published art is also served
+from `https://assets.dungeonsonautomatic.com/` if you only need to look at it.
+
 ## Repository Layout
 
 - `schema/monster.schema.json` - JSON Schema for a released DOA public monster package.

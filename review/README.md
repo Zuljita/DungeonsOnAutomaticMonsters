@@ -5,8 +5,8 @@ JSON file, and without any way for the decisions and the package to drift apart.
 tracked source of truth for that; everything under `converted/enraged-eggplant/` is generated from it.
 
 ```
-base conversion output  +  review/repairs/  +  review/decisions.jsonl
-        (untracked)              (tracked)          (tracked, append-only)
+base conversion output + conversion manifest  +  review/repairs/  +  review/decisions.jsonl
+             (both untracked)                        (tracked)          (tracked, append-only)
                                      |
                             npm run review:apply
                                      |
@@ -20,7 +20,15 @@ base conversion output  +  review/repairs/  +  review/decisions.jsonl
 
 ## Why the base file is untracked and the lock is not
 
-The conversion queue stays local until records are reviewed (see `.gitignore`). That is deliberate, but it
+The conversion queue stays local until records are reviewed (see `.gitignore`). A review-capable checkout
+therefore needs two untracked files, both written by `npm run convert:enraged-eggplant`:
+
+- `converted/enraged-eggplant/doa-monsters.review-required.json` — the base conversion output every review
+  command reads.
+- `converted/enraged-eggplant/conversion-manifest.json` — the per-record conversion metadata
+  `review:apply`/`review:queue` join against.
+
+Without either, review commands stop with a message naming what is missing. That is deliberate, but it
 means the repository cannot see the records a decision was made about. `review/base-lock.json` closes the
 gap: it stores the sha256 of every base record, and every ledger entry stores the same hash for the record it
 decided. If someone re-runs the conversion and a record changes, `npm run review:verify` names the decisions

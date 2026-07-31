@@ -109,6 +109,21 @@ an `approved` decision that does not assert both is rejected by the ledger valid
 - **Promotion still refuses unapproved records**, and `npm test` covers that gate on a clean checkout using
   fixtures rather than the untracked queue.
 
+## The SRD-coverage batch
+
+The independently authored records under `converted/srd-monsters/` follow the same shape with one
+difference: their base package is tracked and regenerable from `content/srd-monsters/`, so there is no
+base-lock. Decisions live in their own append-only ledger, `srd-decisions.jsonl`, and every entry stores the
+sha256 of the built record the reviewer saw; `npm run build:srd-monsters` applies the ledger, fails on any
+decision whose record has since been rebuilt differently, and regenerates
+`converted/srd-monsters/doa-monsters.reviewed.json` and that batch's `CHECKLIST.md` from specs plus ledger.
+
+Record decisions with `npm run review:srd-decide -- --batch <spec batch id | all> ...`, which takes the same
+flags as `review:decide` plus `--encounter-fields pass|fail`. The two required gates are unchanged; approval
+on this batch additionally requires the encounter-fields check, because the specs author appearing numbers
+per creature instead of deriving them, and approving a record asserts someone judged them against the
+creature's role as a wandering encounter, a mount or livestock.
+
 ## Repairs
 
 A repair is a tracked statement of "this field changes, for this reason". Files apply in filename order.

@@ -30,7 +30,13 @@ export function readPngMetadata(filePath) {
   return { width, height, colorType, hasTransparency };
 }
 
-export function validateImageManifest({ manifest, candidate, repoRoot, requireComplete = false }) {
+export function validateImageManifest({
+  manifest,
+  candidate,
+  repoRoot,
+  requireComplete = false,
+  artPackage = "enraged-eggplant",
+}) {
   const errors = [];
   if (manifest?.schemaVersion !== 2) errors.push("image manifest must use schemaVersion 2");
   if (!Array.isArray(manifest?.records)) errors.push("image manifest records must be an array");
@@ -86,13 +92,13 @@ export function validateImageManifest({ manifest, candidate, repoRoot, requireCo
 
       const expectedPath = path.posix.join(
         "art",
-        "enraged-eggplant",
+        artPackage,
         assetType === "portrait" ? "portraits" : assetType === "token" ? "tokens" : "hex-tokens",
         `${record.monsterId}.png`,
       );
       if (asset.assetPath !== expectedPath) errors.push(`${assetPath}.assetPath must be ${expectedPath}`);
       const absolutePath = path.resolve(repoRoot, asset.assetPath);
-      const artRoot = `${path.resolve(repoRoot, "art", "enraged-eggplant")}${path.sep}`;
+      const artRoot = `${path.resolve(repoRoot, "art", artPackage)}${path.sep}`;
       if (!absolutePath.startsWith(artRoot)) {
         errors.push(`${assetPath}.assetPath escapes the art root`);
         continue;

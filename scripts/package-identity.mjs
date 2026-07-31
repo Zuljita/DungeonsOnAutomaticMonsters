@@ -33,7 +33,8 @@ export const PUBLIC_LIBRARY_NAME = "Dungeons on Automatic Monster Library";
 export const PUBLIC_BESTIARY_URL = "https://dungeonsonautomatic.com/monsters";
 
 export const PUBLIC_LICENSE_SUMMARY =
-  "Fan-authored GURPS monster statistics adapted and republished with unrestricted author permission; attribution retained.";
+  "Fan-authored GURPS monster statistics adapted and republished with unrestricted author permission, plus "
+  + "project-authored records released under CC BY 4.0; attribution retained per source.";
 
 /**
  * Apply the published identity to a reviewed candidate's manifest fields.

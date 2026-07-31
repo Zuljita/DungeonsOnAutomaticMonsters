@@ -1,20 +1,31 @@
 {
   "id": "latest",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "status": "approved",
   "package": {
     "path": "../../converted/doa-monsters.json",
-    "publicUrl": "https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-0.4.0.json"
+    "publicUrl": "https://dungeonsonautomatic.com/data/monsters/packages/enraged-eggplant-0.5.0.json"
   },
   "schema": {
     "path": "../../schema/monster.schema.json"
   },
   "art": {
-    "path": "../../art/enraged-eggplant/image-manifest.json",
-    "publicUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/image-manifest.json"
+    "path": "../../converted/library-image-manifest.json",
+    "publicUrl": "https://assets.dungeonsonautomatic.com/monsters/image-manifest.json",
+    "sources": [
+      {
+        "path": "../../art/enraged-eggplant/image-manifest.json",
+        "publicUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/image-manifest.json"
+      },
+      {
+        "path": "../../art/srd-monsters/image-manifest.json",
+        "publicUrl": "https://assets.dungeonsonautomatic.com/monsters/srd-monsters/image-manifest.json"
+      }
+    ]
   },
   "sources": [
-    "../../sources/enraged-eggplant/manifest.json"
+    "../../sources/enraged-eggplant/manifest.json",
+    "../../sources/monsters-on-automatic/manifest.json"
   ],
   "foundryModule": {
     "id": "dungeons-on-automatic-monsters",
@@ -24,10 +35,10 @@
       "minimum": "13",
       "verified": "13"
     },
-    "version": "0.4.0",
+    "version": "0.5.0",
     "manifestUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry/module.json",
-    "downloadUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry/dungeons-on-automatic-monsters-0.4.0.zip",
-    "sha256": "32b8690f5134e86784b56db457400d1bf13297aadee478dc5355411743014d22",
+    "downloadUrl": "https://assets.dungeonsonautomatic.com/monsters/enraged-eggplant/foundry/dungeons-on-automatic-monsters-0.5.0.zip",
+    "sha256": "4589b32150319a9e0de93725021b133b59cb37792388fa4ed018097c761ce9ca",
     "provenance": "Built from converted/doa-monsters.json by scripts/build-foundry-module.mjs; approved records only."
   }
 }

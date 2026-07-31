@@ -1,8 +1,8 @@
 # Policy: how SRD-coverage records are built, credited and licensed
 
 Decided for issue #37 (mundane land animals) and applied since to #38 (birds, fish and aquatic animals),
-#39 (vermin), #40 (snakes), #41 (dinosaurs), #36 (swarms), #42 (constructs and awakened plants) and #35
-(dragons) — the batches of the SRD coverage programme (#33) authored so far. It applies to every later batch built the same way.
+#39 (vermin), #40 (snakes), #41 (dinosaurs), #36 (swarms), #42 (constructs and awakened plants), #35
+(dragons) and #34 (humanoid folk) — the batches of the SRD coverage programme (#33) authored so far. It applies to every later batch built the same way.
 
 ## The problem
 
@@ -186,10 +186,50 @@ grappling values would be invented rather than derived.
 `lair` is the exception and carries a short habitat note. Where a wandering animal dens is an encounter fact,
 which is precisely what `OML-022` asks this batch to get right, and it is not a claim about loot.
 
-Art is out of scope for this batch. The records carry no `art` block, which the package contract permits,
+Art is out of scope for these batches. The records carry no `art` block, which the package contract permits,
 and the portrait/token/hex-token requirement in #37's acceptance criteria remains open.
 
-## What this batch does not settle
+### 11. A record's DR is the creature's own hide, and equipment is not bought
+
+Decided for #34, the first batch of folk who wear things. A racial template states what a creature is. A
+hobgoblin's mail is not what it is: it is what it was issued, and a GM who takes it away should be left with
+a hobgoblin rather than with a record that still claims DR 4 for a shirt nobody is wearing. So armour is
+never bought, and `stats.attributes.dr` carries natural protection only — the lizardfolk's scale, the ogre's
+hide, the bugbear's thick skin — with the typical worn kit named in the record's `notes` for a GM to add.
+
+This has a cost and the cost is stated rather than compensated for. The rating path reads
+`stats.attributes.dr` straight into protection, so every armoured folk in the batch rates below how it
+plays; the hobgoblin is the sharpest case, since being hard to hurt in a shield wall is most of what it is
+for. That is the same shape of problem as decision 6: what the package's `dr` field *means* — the creature,
+or the creature as encountered — is a contract question the application owns, and a builder should not settle
+it by quietly pricing a mail shirt into an ancestry template. If the contract decides `dr` means "as
+encountered", these specs gain DR entries and nothing else changes.
+
+Weapons are treated differently and deliberately so. An armed creature's typical attack is a fact about the
+encounter and belongs on the stat block, so the records state one; the weapon still never enters the `.gct`,
+because the ancestry template lists only traits, and the point total therefore prices no equipment either.
+
+### 12. Melee damage is the wielder's, missile damage is the weapon's
+
+Also decided for #34. A sword's damage is stated in the GURPS shorthand relative to the wielder's thrust or
+swing, exactly as a natural weapon is, so a stronger creature hits harder with the same blade. A bow's is
+not: a bow has its own draw weight, and an arrow does what the arrow does whoever looses it. Missile weapons
+therefore state literal dice, the way the flying sword's blade already did in #42, and slings stay
+ST-derived because a sling really is powered by the arm swinging it.
+
+The batch would otherwise have produced a gray elf whose longbow was feebler than a halfling's sling, which
+is not a fact about archery.
+
+### 13. Sub-races are records, not variants
+
+The #34 list is mostly sub-races — deep and mountain dwarves, gray, wild and wood elves, tallfellow and deep
+halflings. There is no base record for them to be variants of: `Dwarf`, `Elf`, `Gnome` and `Halfling` are
+family index headings in #46, dispositioned by naming the records that cover their members. Each sub-race
+therefore ships as its own record, and what a family shares is stated once in a `traitSet` while what a
+sub-race differs on is restated in its own list. That is the same mechanism decision 9 uses for dragons at
+one axis instead of two: one description of the shared body, and no near-copies to drift apart.
+
+## What these batches do not settle
 
 - **Promotion.** These records are not in `converted/doa-monsters.json` and the promotion path for a second
   package source is not built. That is deliberate: promotion should follow review, not precede it.

@@ -1,0 +1,1790 @@
+{
+  "version": 1,
+  "batch": "humanoid-folk",
+  "issue": 34,
+  "title": "SRD coverage: humanoid folk and their sub-races",
+  "summary": "The 29 identities issue #34 enumerates, as 28 records: Ogre Mage (3.5) and Oni (5.1) are one creature under two headings and answer as one record, the way Tyrannosaurus already does. These are the first coverage records for people rather than animals, and three things follow from that. Sub-races ship as their own records rather than as variants of a base, because the base headings — Dwarf, Elf, Gnome, Halfling — are family index pages in issue #46 and there is no base record for a variant to hang from; what a sub-race shares is stated once in a traitSet and what differs is restated in its own list, so a deep dwarf and a mountain dwarf cannot silently drift apart. Nothing here takes Bestial, Cannot Speak or No Fine Manipulators: these are folk who talk, plan and hold tools, and their Strength therefore carries only the published size discount. Melee damage is derived from the wielder's ST through the usual GURPS shorthand, but a bow's damage is the bow's, so missile weapons state literal dice — an elven longbow does not get weaker because the archer is slight. Armour is deliberately not bought: see decision 11 in review/policy/srd-independent-build-policy.md, and the `dr` a record publishes is its own hide and nothing else.",
+  "traitSets": {
+    "dwarf-stock": [
+      {"trait": "st", "levels": 1},
+      {"trait": "ht", "levels": 2},
+      {"trait": "will", "levels": 1},
+      {"trait": "basic-move-", "levels": 1},
+      {"trait": "extended-lifespan", "levels": 2},
+      {"trait": "resistant-to-poison"},
+      {"trait": "stubbornness"}
+    ],
+    "elf-stock": [
+      {"trait": "dx", "levels": 1},
+      {"trait": "ht-", "levels": 1},
+      {"trait": "acute-hearing", "levels": 2},
+      {"trait": "acute-vision", "levels": 2},
+      {"trait": "appearance-attractive"},
+      {"trait": "doesnt-sleep"},
+      {"trait": "extended-lifespan", "levels": 4},
+      {"trait": "night-vision", "levels": 5}
+    ],
+    "halfling-stock": [
+      {"trait": "st-", "levels": 2},
+      {"trait": "dx", "levels": 1},
+      {"trait": "will", "levels": 2},
+      {"trait": "basic-move-", "levels": 1},
+      {"trait": "flexibility"},
+      {"trait": "silence", "levels": 1}
+    ],
+    "gnome-stock": [
+      {"trait": "st-", "levels": 2},
+      {"trait": "dx", "levels": 1},
+      {"trait": "will", "levels": 1},
+      {"trait": "basic-move-", "levels": 1},
+      {"trait": "acute-hearing", "levels": 2},
+      {"trait": "extended-lifespan", "levels": 2},
+      {"trait": "silence", "levels": 1}
+    ],
+    "goblinoid-stock": [
+      {"trait": "dark-vision"},
+      {"trait": "bloodlust"},
+      {"trait": "social-stigma-savage"}
+    ],
+    "ogre-kin": [
+      {"trait": "ht", "levels": 2},
+      {"trait": "appearance-ugly"},
+      {"trait": "bad-smell"},
+      {"trait": "gluttony"},
+      {"trait": "high-pain-threshold"},
+      {"trait": "social-stigma-monster"}
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "aasimar",
+      "name": "Aasimar",
+      "class": "Humanoid (Planetouched)",
+      "classTags": ["humanoid", "planetouched"],
+      "tags": ["celestial", "town", "talker"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Aasimar"}
+      ],
+      "massKg": 70,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A temple guest-cell, a border chapterhouse, or wherever the thing it came to stop is.",
+      "traits": [
+        {"trait": "iq", "levels": 1},
+        {"trait": "will", "levels": 2},
+        {"trait": "charisma", "levels": 2},
+        {"trait": "appearance-attractive"},
+        {"trait": "dark-vision"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Acid"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Cold"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Lightning"},
+        {"trait": "extended-lifespan", "levels": 1}
+      ],
+      "skills": [
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Shield", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Diplomacy", "attribute": "iq", "difficulty": "h", "relative": 0},
+        {"name": "Detect Lies", "attribute": "per", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Carried openly and drawn late. An aasimar would generally rather be talked out of using it."
+        },
+        {
+          "name": "Shield Bash",
+          "skill": "Shield",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "1",
+          "notes": "Used to move somebody out of a doorway rather than to hurt them."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
+      "description": "Somebody with a celestial somewhere back up the family line, and the descent shows: the eyes are wrong in a way nobody can place, and the hair holds light it was not given. Aasimar tend to end up doing the errand nobody else would take, partly out of conviction and partly because everyone assumes they will. Acid, cold and lightning all find them harder going than they should.",
+      "notes": [
+        "1.8 m standing, which is the SM 0 row.",
+        "ST 10: an aasimar is a person, and nothing about the descent makes one stronger than the human it mostly is.",
+        "The inherited resistances are built as heavily Limited Damage Resistance, one damage type each, which is why they price into the template but do not raise the record's published DR. An aasimar is not armoured against a sword.",
+        "The daylight it can call once a day is not built as an attack: it lights a room, it does not injure anyone, and the rating path has no term for it. A GM should simply rule it."
+      ]
+    },
+    {
+      "slug": "bugbear",
+      "name": "Bugbear",
+      "class": "Humanoid (Goblinoid)",
+      "classTags": ["humanoid", "goblinoid"],
+      "tags": ["ambusher", "dungeon", "forest"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Bugbear"},
+        {"sourceSystem": "srd_3_5", "heading": "Bugbear"}
+      ],
+      "massKg": 115,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A cave mouth or ruined gatehouse a day's walk from whatever it has been robbing.",
+      "traitSets": ["goblinoid-stock"],
+      "traits": [
+        {"trait": "st", "levels": 4},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "damage-resistance-tough-skin", "levels": 1},
+        {"trait": "silence", "levels": 2},
+        {"trait": "bad-smell"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Thrown Weapon", "specialization": "Javelin", "attribute": "dx", "difficulty": "e", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Morningstar",
+          "skill": "Axe/Mace",
+          "basis": "sw+3",
+          "type": "crushing",
+          "reach": "1",
+          "notes": "Swung from behind, ideally at somebody who has not turned round yet."
+        },
+        {
+          "name": "Javelin",
+          "skill": "Thrown Weapon",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "Ranged, 15",
+          "notes": "Thrown to open an ambush, from the dark, at the person carrying the light."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 4},
+      "description": "Two metres of goblin-kin with a hunter's patience and a bully's instincts. The remarkable thing about a bugbear is how quietly something that size moves: parties usually meet one at the moment it decides to be met, which is a moment it chose some time ago. It smells appalling, and somehow that is never the warning it should be.",
+      "notes": [
+        "About 2.1 m standing, which reads on the published table as the SM 0 row rather than the +1 row at 2.7 m.",
+        "ST 14 from Basic Lift: it carries a body over one shoulder without slowing to a walk.",
+        "Silence 2 is the whole creature. It is bought as the published advantage rather than left to the Stealth skill, because the skill is what it does with the quiet and the quiet is what it is.",
+        "DR 1 is hide, not armour: bugbears mostly wear leather, and that DR is not in this record. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "centaur",
+      "name": "Centaur",
+      "class": "Monstrous Humanoid",
+      "classTags": ["monstrous-humanoid", "centaur"],
+      "tags": ["plains", "forest", "archer"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Centaur"},
+        {"sourceSystem": "srd_3_5", "heading": "Centaur"}
+      ],
+      "massKg": 600,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "Open grassland with wood at its edge, and no permanent structure worth the name.",
+      "traits": [
+        {"trait": "st", "levels": 10},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 1},
+        {"trait": "per", "levels": 2},
+        {"trait": "basic-move", "levels": 2},
+        {"trait": "combat-reflexes"},
+        {"trait": "enhanced-move-ground", "levels": 1, "qualifier": "Ground"},
+        {"trait": "extra-legs-four"},
+        {"trait": "hooves"},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Survival", "specialization": "Plains", "attribute": "per", "difficulty": "a", "relative": 1},
+        {"name": "Naturalist", "attribute": "iq", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Heavy Bow",
+          "skill": "Bow",
+          "basis": "2d",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "A bow no walking archer could draw, shot at a canter. The damage is the bow's, not the archer's arm."
+        },
+        {
+          "name": "Lance",
+          "skill": "Spear",
+          "basis": "thr+2",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Couched and delivered at speed, which is the only way a centaur ever wants to fight."
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "perDie": 1,
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Reared and brought down. Cannot parry."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 4, "wanderingWeight": 3},
+      "description": "Horse from the withers back and person from the withers up, and entirely one animal about it — a centaur does not ride, it runs. They are proud, easily offended and better archers than anyone on foot has a right to expect, since they can shoot at a gallop and outrun anything that answers. Most trouble with centaurs begins with somebody crossing their grazing without asking.",
+      "notes": [
+        "About 2.4 m nose to tail, which reads nearer the SM +1 row than the SM 0 one.",
+        "ST 20 from Basic Lift and from what it demonstrably shifts: a centaur carries an armoured rider's worth of gear at a trot all day and drags a felled tree clear of a track.",
+        "No No Fine Manipulators and no Horizontal. A centaur has hands and uses them, and the torso it aims and fights from stands upright however the barrel behind it is arranged.",
+        "Basic Move 7 rather than the 5 Basic Speed alone would give, plus Enhanced Move 1. A creature built on a horse's legs does not travel at a walking man's pace, and the point of a centaur is that nothing on foot gets away from it.",
+        "Enhanced Move is stated as a sprint in the movement note rather than folded into the published figure, so `move` stays the speed it fights at."
+      ]
+    },
+    {
+      "slug": "deep-dwarf",
+      "name": "Deep Dwarf",
+      "class": "Humanoid (Dwarf)",
+      "classTags": ["humanoid", "dwarf"],
+      "tags": ["underground", "miner", "wary"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Deep Dwarf"}
+      ],
+      "massKg": 70,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A worked gallery far below the deepest shaft anyone on the surface has a name for.",
+      "traitSets": ["dwarf-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "hard-to-kill", "levels": 1},
+        {"trait": "temperature-tolerance", "levels": 2, "qualifier": "Heat"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Shield", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Prospecting", "attribute": "iq", "difficulty": "a", "relative": 1},
+        {"name": "Survival", "specialization": "Underground", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Dwarven Axe",
+          "skill": "Axe/Mace",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Short-hafted for a gallery ceiling and heavy enough that the shortness costs nothing."
+        },
+        {
+          "name": "War Pick",
+          "skill": "Axe/Mace",
+          "basis": "sw+1",
+          "type": "impaling",
+          "reach": "1",
+          "notes": "A mining tool that was never redesigned for the other use it gets."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 4, "wanderingWeight": 3, "lightSensitive": true},
+      "description": "Dwarves who went down and kept going, until the sun stopped being a thing they had an opinion about. Deep dwarves see in the dark better than anything with eyes has any business doing and are correspondingly miserable in daylight. They are hard to kill in the specific, literal way a person becomes when everything around them has been trying for four hundred years.",
+      "notes": [
+        "About 1.4 m standing, which is the SM -1 row.",
+        "ST 11: broad through the shoulder and short in the arm, which is more lift than height suggests and less reach than a human's.",
+        "Dark Vision rather than Infravision. A deep dwarf works a face with no lamp at all, which Infravision would not allow.",
+        "Light sensitivity is recorded on the encounter block rather than as a trait: the penalty is to acting in daylight, not damage taken from it, and the vocabulary has no published trait that says only that.",
+        "Mail and a shield are the usual kit and are not in this record's DR. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "deep-halfling",
+      "name": "Deep Halfling",
+      "class": "Humanoid (Halfling)",
+      "classTags": ["humanoid", "halfling"],
+      "tags": ["underground", "miner", "stealthy"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Deep Halfling"}
+      ],
+      "massKg": 30,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A burrow cut into rock rather than earth, sharing a wall with somebody else's mine.",
+      "traitSets": ["halfling-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "temperature-tolerance", "levels": 1, "qualifier": "Heat"}
+      ],
+      "skills": [
+        {"name": "Sling", "attribute": "dx", "difficulty": "h", "relative": 1},
+        {"name": "Knife", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Prospecting", "attribute": "iq", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Sling",
+          "skill": "Sling",
+          "basis": "sw-1",
+          "type": "crushing",
+          "reach": "Ranged, 60",
+          "notes": "A stone off a leather cord, thrown further and harder than the arm behind it should manage."
+        },
+        {
+          "name": "Small Knife",
+          "skill": "Knife",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "Really a tool. It becomes a weapon at about knee height on anybody standing."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 3},
+      "description": "Halflings who took to stone instead of hedgerow, and who mine and trade with dwarves on terms the dwarves quietly consider generous. They see perfectly well underground, they move without disturbing gravel, and their reputation for cheerful harmlessness survives an astonishing amount of contrary evidence. The sling is the national weapon and they are frightening with it.",
+      "notes": [
+        "About 0.9 m standing, which is the SM -2 row.",
+        "ST 8: a person who can carry a full ore basket at that mass and no more.",
+        "The sling is derived from ST rather than stated as literal dice, unlike this batch's bows: a sling's damage really does come from the arm swinging it."
+      ]
+    },
+    {
+      "slug": "drow",
+      "name": "Drow",
+      "class": "Humanoid (Elf)",
+      "classTags": ["humanoid", "elf", "drow"],
+      "tags": ["underground", "ambusher", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Drow"},
+        {"sourceSystem": "srd_3_5", "heading": "Drow", "alsoPrintedAs": ["Elf, Drow"]}
+      ],
+      "massKg": 55,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A city carved into a cavern wall, reached by a road nobody surface-born has walked and returned from.",
+      "traitSets": ["elf-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "magic-resistance", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Shortsword", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Crossbow", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Poisons", "attribute": "iq", "difficulty": "h", "relative": 0},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Hand Crossbow",
+          "skill": "Crossbow",
+          "basis": "1d-1",
+          "type": "impaling",
+          "reach": "Ranged, 100",
+          "afflictionPoints": 25,
+          "notes": "The bolt barely matters. What matters is what is on it: a target who takes any wound at all rolls against the poison or goes down asleep where they stand."
+        },
+        {
+          "name": "Shortsword",
+          "skill": "Shortsword",
+          "basis": "sw",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Used to finish, in the dark, on somebody who is already having a bad time."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 4, "wanderingWeight": 3, "lightSensitive": true},
+      "description": "Elves of the deep places, and every bit as quick, long-lived and beautiful as the ones above — which is exactly what makes them hard to deal with. Drow fight from darkness with poisoned bolts and finish what the poison started. They resist magic thrown at them, they see with no light whatever, and full daylight leaves them squinting and furious.",
+      "notes": [
+        "About 1.65 m standing, which is the SM 0 row.",
+        "ST 9: light-framed even by elven standards, and the build does not pretend the fight is decided by it.",
+        "The crossbow states literal dice, like every manufactured missile weapon in this batch. A hand crossbow's bolt does what the bolt does whoever pulls the lever.",
+        "The sleep poison is priced through the affliction lever rather than the damage lever, which is the point of the creature: the bolt is a delivery system and the rating path should read it that way.",
+        "Light sensitivity is on the encounter block, not bought as a trait. See the deep dwarf's note for why."
+      ]
+    },
+    {
+      "slug": "duergar",
+      "name": "Duergar",
+      "class": "Humanoid (Dwarf)",
+      "classTags": ["humanoid", "dwarf", "duergar"],
+      "tags": ["underground", "slaver", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Duergar"},
+        {"sourceSystem": "srd_3_5", "heading": "Duergar"}
+      ],
+      "massKg": 70,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A fortified working built by people who were taken there to build it.",
+      "traitSets": ["dwarf-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "invisibility-switchable"},
+        {"trait": "magic-resistance", "levels": 2},
+        {"trait": "bad-temper"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Shield", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "War Pick",
+          "skill": "Axe/Mace",
+          "basis": "sw+1",
+          "type": "impaling",
+          "reach": "1",
+          "notes": "Punched through mail. Duergar generally open the fight already invisible and standing closer than anyone believed possible."
+        },
+        {
+          "name": "Shield Bash",
+          "skill": "Shield",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "1",
+          "notes": "Used to pin somebody against the gallery wall while the pick works."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 4, "wanderingWeight": 3, "lightSensitive": true},
+      "description": "Grey, hairless dwarves who kept the craft and lost everything else. Duergar work mines with slave labour, resent every hour of it, and are joyless in a way that reads as menace long before anyone draws. They can simply stop being visible, which they do without ceremony and usually about four seconds before it matters.",
+      "notes": [
+        "About 1.3 m standing, which is the SM -1 row.",
+        "ST 11 from the dwarf stock: the frame is the same, and nothing about the grey did anything to it.",
+        "Invisibility is bought Switchable at the published +10%. Always-on invisibility would describe a creature its own war band could not see, which is not this one.",
+        "The enlargement duergar can call on is not built: it changes Size Modifier, ST and reach for a few minutes, and the package has no contract for a record whose statistics move during an encounter. It belongs in the prose and in a GM's hands until there is one.",
+        "Mail and a heavy shield are the usual kit and are not in this record's DR. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "forest-gnome",
+      "name": "Forest Gnome",
+      "class": "Humanoid (Gnome)",
+      "classTags": ["humanoid", "gnome"],
+      "tags": ["forest", "stealthy", "illusionist"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Forest Gnome"}
+      ],
+      "massKg": 25,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A hollow under a root ball, with a door nobody who was not shown it has ever found.",
+      "traitSets": ["gnome-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "silence", "levels": 3},
+        {"trait": "chummy"}
+      ],
+      "skills": [
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 4},
+        {"name": "Camouflage", "attribute": "iq", "difficulty": "e", "relative": 2},
+        {"name": "Naturalist", "attribute": "iq", "difficulty": "h", "relative": 0},
+        {"name": "Knife", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Sling", "attribute": "dx", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Sling",
+          "skill": "Sling",
+          "basis": "sw-1",
+          "type": "crushing",
+          "reach": "Ranged, 60",
+          "notes": "Loosed from cover, at range, by somebody who has already worked out where to be next."
+        },
+        {
+          "name": "Small Knife",
+          "skill": "Knife",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "A last resort, and the forest gnome knows it."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 3},
+      "description": "The smallest of the gnomes and the least interested in being found. A forest gnome can stand three paces from a hunting party and be taken for undergrowth for as long as it cares to be, and it talks to the animals that then decline to point anyone in the right direction. They are friendly enough once met, which is a decision they make rather than one made for them.",
+      "notes": [
+        "About 0.9 m standing, which is the SM -2 row.",
+        "ST 8: less than a halfling of the same height carries, which is the frame rather than the will.",
+        "Silence 3 is the defining trait and is priced as the published advantage, on top of a very high Stealth. The advantage is what a hunting dog fails to hear; the skill is what a tracker fails to see.",
+        "The illusions a forest gnome can call are not built as attacks. Nothing about them injures anybody, and a rating path that scored them would be scoring the wrong thing."
+      ]
+    },
+    {
+      "slug": "gnoll",
+      "name": "Gnoll",
+      "class": "Humanoid (Gnoll)",
+      "classTags": ["humanoid", "gnoll"],
+      "tags": ["raider", "plains", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Gnoll"},
+        {"sourceSystem": "srd_3_5", "heading": "Gnoll"}
+      ],
+      "massKg": 110,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "Whatever was standing there before the pack arrived, now roofless and stinking.",
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 1},
+        {"trait": "per", "levels": 2},
+        {"trait": "acute-hearing", "levels": 2},
+        {"trait": "dark-vision"},
+        {"trait": "discriminatory-smell"},
+        {"trait": "sharp-teeth"},
+        {"trait": "bad-smell"},
+        {"trait": "bloodlust"},
+        {"trait": "gluttony"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 0},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 2},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Battleaxe",
+          "skill": "Axe/Mace",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Taken off somebody, kept badly, and still perfectly effective."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Used the moment the target is down, and often instead of finishing the fight."
+        },
+        {
+          "name": "Shortbow",
+          "skill": "Bow",
+          "basis": "1d+1",
+          "type": "impaling",
+          "reach": "Ranged, 100",
+          "notes": "Loosed at anything running away. The damage is the bow's."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 4},
+      "description": "Hyena-headed raiders who hunt in packs and take the long way round to get behind you. Gnolls follow a scent for days, are audibly delighted by a fight going their way, and stop to eat before the fight is properly over — which is the only mercy anyone gets from them. A camp they have passed through is recognisable from a distance by the smell.",
+      "notes": [
+        "About 2.1 m standing, which reads on the SM 0 row rather than the +1 row at 2.7 m.",
+        "ST 13 from Basic Lift: a gnoll carries a laden pack and a stolen goat across a day's open ground.",
+        "Discriminatory Smell with Tracking bought on top of it. The trait is the nose; the skill is what it does with a two-day-old trail, and a gnoll that had one without the other would not be the thing that follows a caravan for a week."
+      ]
+    },
+    {
+      "slug": "goblin",
+      "name": "Goblin",
+      "class": "Humanoid (Goblinoid)",
+      "classTags": ["humanoid", "goblinoid"],
+      "tags": ["dungeon", "raider", "cowardly"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Goblin"},
+        {"sourceSystem": "srd_3_5", "heading": "Goblin"}
+      ],
+      "massKg": 30,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A warren behind somebody else's ruin, entered through a hole cut too small for a man in mail.",
+      "traitSets": ["goblinoid-stock"],
+      "omitTraits": ["bloodlust"],
+      "traits": [
+        {"trait": "st-", "levels": 1},
+        {"trait": "dx", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "cowardice"},
+        {"trait": "gregarious"}
+      ],
+      "skills": [
+        {"name": "Shortsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 0},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Shortsword",
+          "skill": "Shortsword",
+          "basis": "sw",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Notched, too big for the hand holding it, and swung anyway."
+        },
+        {
+          "name": "Spear",
+          "skill": "Spear",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "The one goblin weapon that works, because it lets them fight three deep from behind each other."
+        },
+        {
+          "name": "Shortbow",
+          "skill": "Bow",
+          "basis": "1d+1",
+          "type": "impaling",
+          "reach": "Ranged, 100",
+          "notes": "Loosed in volleys from a gallery nobody looked up at. The damage is the bow's."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 8, "wanderingWeight": 5},
+      "description": "Small, sour and numerous. One goblin is a nuisance and runs at the first real hit; twelve of them in a tunnel they dug, with spears and a hole in the ceiling, are a serious afternoon. They are not brave and they know it, which is precisely why they never fight anywhere they have not arranged first.",
+      "notes": [
+        "About 1.1 m standing, which reads on the SM -2 row.",
+        "ST 9: weak for the fight it picks, which is the reason it picks it that way.",
+        "Bloodlust is dropped from the goblinoid stock by name. Hobgoblins and bugbears finish what they start; a goblin's first instinct on a fight turning is to be elsewhere, and Cowardice replaces it.",
+        "Gregarious is not decoration. The encounter figure of eight is the creature: a goblin alone behaves like a different monster and should be run as one."
+      ]
+    },
+    {
+      "slug": "gray-elf",
+      "name": "Gray Elf",
+      "class": "Humanoid (Elf)",
+      "classTags": ["humanoid", "elf"],
+      "tags": ["highland", "scholar", "arcane"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Gray Elf"}
+      ],
+      "massKg": 50,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A hall on a high valley shoulder, older than the road up to it and harder to find than either.",
+      "traitSets": ["elf-stock"],
+      "traits": [
+        {"trait": "st-", "levels": 2},
+        {"trait": "iq", "levels": 2},
+        {"trait": "per", "levels": 1},
+        {"trait": "magic-resistance", "levels": 2},
+        {"trait": "stubbornness"}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Research", "attribute": "iq", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Longbow",
+          "skill": "Bow",
+          "basis": "1d+2",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "A tall bow drawn to the ear. The damage is the bow's, which is why a slight archer is not a weak one."
+        },
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Worn as a matter of form for a century at a time, and still perfectly well handled."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 2},
+      "description": "The high, thin, silver-haired kind of elf, and the most insufferable. Gray elves live in mountain valleys reading things nobody else can, decline to explain themselves, and are genuinely as clever as they behave. They are also physically slight and quite aware that this is why they learned magic. Spells cast at one tend to slide off.",
+      "notes": [
+        "About 1.7 m standing, which is the SM 0 row.",
+        "ST 8: the frailest folk in this batch, and it is the point of the record. A gray elf that could win a wrestling match would not need the rest of what it is.",
+        "IQ 12 and Magic Resistance 2 together are the creature; the spells themselves are a GM's to assign, because a spell list is a character build rather than a racial template.",
+        "The longbow states literal dice, which is why a ST 8 archer is still worth avoiding."
+      ]
+    },
+    {
+      "slug": "half-elf",
+      "name": "Half-Elf",
+      "class": "Humanoid (Elf)",
+      "classTags": ["humanoid", "elf", "human"],
+      "tags": ["town", "scout", "talker"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Half-Elf"}
+      ],
+      "massKg": 65,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A room over a taproom in whichever town has not yet decided what to make of them.",
+      "traits": [
+        {"trait": "dx", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "acute-hearing", "levels": 1},
+        {"trait": "appearance-attractive"},
+        {"trait": "charisma", "levels": 1},
+        {"trait": "extended-lifespan", "levels": 1},
+        {"trait": "night-vision", "levels": 3}
+      ],
+      "skills": [
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Diplomacy", "attribute": "iq", "difficulty": "h", "relative": 0},
+        {"name": "Detect Lies", "attribute": "per", "difficulty": "h", "relative": 0},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Taught by one side of the family and practised out of stubbornness."
+        },
+        {
+          "name": "Longbow",
+          "skill": "Bow",
+          "basis": "1d+2",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "The damage is the bow's."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 2, "wanderingWeight": 3},
+      "description": "Human enough to live in a human town and elven enough that nobody there forgets it. Half-elves get a century and a half rather than a millennium, see well by starlight, hear the conversation at the next table, and are very hard to lie to. Most of them end up as the person two communities send to talk to each other.",
+      "notes": [
+        "About 1.75 m standing, which is the SM 0 row.",
+        "ST 10: human, and the build says so.",
+        "Deliberately not built on the elf stock. A half-elf sleeps, ages in centuries rather than millennia, and hears and sees only partway towards what the elf traits buy — restating the partial inheritance is honest where inheriting the full set and subtracting would not be."
+      ]
+    },
+    {
+      "slug": "half-orc",
+      "name": "Half-Orc",
+      "class": "Humanoid (Orc)",
+      "classTags": ["humanoid", "orc", "human"],
+      "tags": ["town", "mercenary", "outcast"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Half-Orc"}
+      ],
+      "massKg": 90,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A barracks, a caravan guard's tent, or the far end of whichever bar will serve them.",
+      "traits": [
+        {"trait": "st", "levels": 2},
+        {"trait": "ht", "levels": 1},
+        {"trait": "iq-", "levels": 1},
+        {"trait": "night-vision", "levels": 4},
+        {"trait": "appearance-ugly"},
+        {"trait": "bad-temper"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Battleaxe",
+          "skill": "Axe/Mace",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Bought with the first month's wages and never replaced."
+        },
+        {
+          "name": "Punch",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Thrown far more often than the axe, and usually in a room where the axe would be unwelcome."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 3},
+      "description": "Stronger than a man, tougher than a man, and treated worse than either parent's people would treat a stranger. Half-orcs make excellent soldiers and are hired as such by everyone who then declines to drink with them. The temper is real and mostly earned, and it is the reason the arrangement rarely lasts a full season.",
+      "notes": [
+        "About 1.9 m standing, which is the SM 0 row.",
+        "ST 12 from Basic Lift: heavier through the shoulder than a human of the same height and correspondingly stronger.",
+        "Social Stigma is bought at published cost rather than written only into the prose. It is the mechanical fact of the creature's life and it belongs in the point total.",
+        "IQ 9 is inherited frame, not judgement about the person. A half-orc with a scholar's IQ is an ordinary character build on top of this template."
+      ]
+    },
+    {
+      "slug": "hobgoblin",
+      "name": "Hobgoblin",
+      "class": "Humanoid (Goblinoid)",
+      "classTags": ["humanoid", "goblinoid"],
+      "tags": ["soldier", "dungeon", "disciplined"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Hobgoblin"},
+        {"sourceSystem": "srd_3_5", "heading": "Hobgoblin"}
+      ],
+      "massKg": 90,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A fort with cleared ground in front of it, a watch roster, and a gate that is actually shut.",
+      "traitSets": ["goblinoid-stock"],
+      "traits": [
+        {"trait": "st", "levels": 2},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 1},
+        {"trait": "will", "levels": 1},
+        {"trait": "combat-reflexes"},
+        {"trait": "fearlessness", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Shield", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Tactics", "attribute": "iq", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Drilled with, maintained, and used in a line with somebody else's shield on the flank."
+        },
+        {
+          "name": "Shield Bash",
+          "skill": "Shield",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "1",
+          "notes": "The line steps forward together. This is what steps forward first."
+        },
+        {
+          "name": "Longbow",
+          "skill": "Bow",
+          "basis": "1d+2",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "Volleyed on command from the rank behind. The damage is the bow's."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 4},
+      "description": "The goblinoid that got organised. Hobgoblins drill, post sentries, hold a line when it is losing and rotate the front rank while doing it — which makes six of them a harder problem than twenty goblins and a considerably worse surprise. They are not frightened of adventurers. They have a standing plan for adventurers.",
+      "notes": [
+        "About 1.9 m standing, which is the SM 0 row.",
+        "ST 12 from Basic Lift: a soldier's frame carrying a soldier's load all day.",
+        "Combat Reflexes and Fearlessness are the record. A hobgoblin without them is an orc in better kit, and the whole reason the creature exists is that it does not break.",
+        "Mail and a shield are standard issue and are not in this record's DR. This is the record in the batch where that decision costs the most, and it is stated rather than quietly compensated for. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "kobold",
+      "name": "Kobold",
+      "class": "Humanoid (Reptilian)",
+      "classTags": ["humanoid", "kobold", "reptile"],
+      "tags": ["dungeon", "trapper", "cowardly"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Kobold"},
+        {"sourceSystem": "srd_3_5", "heading": "Kobold"}
+      ],
+      "massKg": 20,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A mine they dug themselves, in which every third corridor is a mistake to walk down.",
+      "traits": [
+        {"trait": "st-", "levels": 3},
+        {"trait": "dx", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "sharp-teeth"},
+        {"trait": "cold-blooded"},
+        {"trait": "cowardice"},
+        {"trait": "gregarious"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Sling", "attribute": "dx", "difficulty": "h", "relative": 0},
+        {"name": "Traps", "attribute": "iq", "difficulty": "a", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Spear",
+          "skill": "Spear",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Held at the far end and used from behind whatever is in the way."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "What is left when the spear has been dropped and the corridor is full."
+        },
+        {
+          "name": "Sling",
+          "skill": "Sling",
+          "basis": "sw-1",
+          "type": "crushing",
+          "reach": "Ranged, 60",
+          "notes": "From a ledge, in the dark, at a party already dealing with something else."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 10, "wanderingWeight": 5, "lightSensitive": true},
+      "description": "Knee-high scaled things with dog-like snouts, and by some distance the best military engineers in any dungeon. A kobold in a fair fight is nothing at all. Kobolds do not have fair fights: they have pits, deadfalls, thirty of themselves and a corridor they know the safe route through. Cold makes them slow and daylight makes them wretched.",
+      "notes": [
+        "About 0.9 m standing, which is the SM -2 row.",
+        "ST 7: the weakest folk in this batch. Everything dangerous about a kobold happens before the fight starts.",
+        "Cold-Blooded is bought at published cost. Kobolds are reptiles and a cold gallery genuinely slows them down, which is worth a GM knowing.",
+        "The traps are not built as attacks on this record. A pit is terrain the kobold made, not a thing the kobold does in a turn, and putting it on the stat block would rate every individual kobold as though it carried the whole mine around."
+      ]
+    },
+    {
+      "slug": "lizardfolk",
+      "name": "Lizardfolk",
+      "class": "Humanoid (Reptilian)",
+      "classTags": ["humanoid", "reptile"],
+      "tags": ["swamp", "ambusher", "hunter"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Lizardfolk"},
+        {"sourceSystem": "srd_3_5", "heading": "Lizardfolk"}
+      ],
+      "massKg": 90,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A village of stilt huts over black water, reached by a channel only a flat boat clears.",
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "ht", "levels": 1},
+        {"trait": "iq-", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "amphibious"},
+        {"trait": "breath-holding", "levels": 3},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "nictitating-membrane", "levels": 1},
+        {"trait": "sharp-claws"},
+        {"trait": "sharp-teeth"},
+        {"trait": "striker-tail"},
+        {"trait": "cold-blooded"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Survival", "specialization": "Swampland", "attribute": "per", "difficulty": "a", "relative": 2},
+        {"name": "Thrown Weapon", "specialization": "Spear", "attribute": "dx", "difficulty": "e", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Barbed Spear",
+          "skill": "Spear",
+          "basis": "thr+2",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Fire-hardened, barbed for fish and entirely adequate for the other thing."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Delivered in the water, on something already being held under."
+        },
+        {
+          "name": "Tail",
+          "skill": "Brawling",
+          "skillModifier": -2,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C,2",
+          "notes": "Swept through the rear arc at knee height. Cannot parry."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 4},
+      "description": "Scaled, tailed and entirely at home in water a person would drown in. Lizardfolk hunt from below, hold their breath for minutes at a stretch, and come up under a boat rather than alongside it. They are not cruel and not much interested in anyone's business, which lasts exactly as long as nobody hunts their stretch of the marsh.",
+      "notes": [
+        "About 1.9 m standing, which is the SM 0 row; the tail behind that is reach rather than height.",
+        "ST 13 from Basic Lift: it poles a laden boat and drags a deer-sized kill through mud.",
+        "DR 2 is genuine scale and is bought as Tough Skin, so a scratch that only needs skin contact gets through it. That is the right shape for hide rather than for armour, and it is the only DR in this record.",
+        "Amphibious grants the water Move stated in the movement note; Breath-Holding 3 is what makes the ambush work, and both are published traits rather than a special rule."
+      ]
+    },
+    {
+      "slug": "merfolk",
+      "name": "Merfolk",
+      "class": "Humanoid (Aquatic)",
+      "classTags": ["humanoid", "aquatic", "merfolk"],
+      "tags": ["ocean", "reef", "talker"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Merfolk"},
+        {"sourceSystem": "srd_3_5", "heading": "Merfolk"}
+      ],
+      "massKg": 90,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "water"},
+      "lair": "A reef terrace or a drowned harbour wall, built on rather than into.",
+      "traits": [
+        {"trait": "st", "levels": 1},
+        {"trait": "dx", "levels": 1},
+        {"trait": "ht", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "acute-vision", "levels": 2},
+        {"trait": "appearance-attractive"},
+        {"trait": "oxygen-absorption"},
+        {"trait": "pressure-support", "levels": 1},
+        {"trait": "no-legs-aquatic"}
+      ],
+      "skills": [
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Thrown Weapon", "specialization": "Spear", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Survival", "specialization": "Open Ocean", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Trident",
+          "skill": "Spear",
+          "basis": "thr+3",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Held two-handed and driven upward, which is the direction merfolk fight from."
+        },
+        {
+          "name": "Thrown Spear",
+          "skill": "Thrown Weapon",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "Ranged, 15",
+          "notes": "Thrown through water at short range, where a bow would be useless."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 3},
+      "description": "People from the waist up and something with a tail below it, living on reefs and in drowned places and perfectly willing to talk to a ship that behaves itself. Merfolk breathe air and water equally, which is why negotiations happen at the rail rather than underwater. On land they can drag themselves about, and they hate every moment of it.",
+      "notes": [
+        "About 2.1 m nose to tail-tip, which reads on the SM 0 row.",
+        "ST 11: a swimmer's build, strong through the back and shoulders and no use at all for carrying anything up a beach.",
+        "Breathing is built as Doesn't Breathe with the published Oxygen Absorption limitation rather than as Gills. Gills would say a merfolk suffocates in air, and the whole encounter value of the creature is that it does not.",
+        "No Legs (Aquatic) prices at zero, as it does for the fish in the aquatic batch. The ground Move the movement note reports is the builder's floor, not a walk: out of water a merfolk hauls itself along at a fraction of it and should be run that way."
+      ]
+    },
+    {
+      "slug": "merrow",
+      "name": "Merrow",
+      "class": "Giant (Aquatic)",
+      "classTags": ["giant", "aquatic", "ogre"],
+      "tags": ["ocean", "raider", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Merrow"},
+        {"sourceSystem": "srd_3_5", "heading": "Merrow"}
+      ],
+      "massKg": 300,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "water"},
+      "lair": "A flooded sea cave with a shingle shelf at the back, and bones on the shelf.",
+      "traitSets": ["ogre-kin"],
+      "traits": [
+        {"trait": "st", "levels": 10},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "iq-", "levels": 2},
+        {"trait": "per", "levels": 1},
+        {"trait": "amphibious"},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "dark-vision"},
+        {"trait": "oxygen-absorption"},
+        {"trait": "sharp-teeth"}
+      ],
+      "skills": [
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Harpoon",
+          "skill": "Spear",
+          "basis": "thr+3",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Barbed and roped. Being hit by it is the smaller half of the problem."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Taken while the harpoon rope is still being hauled."
+        },
+        {
+          "name": "Slam",
+          "skill": "Brawling",
+          "skillModifier": -1,
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Delivered from below with the whole mass behind it, in water, where nobody has footing."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 3},
+      "description": "Ogres that went into the sea and got worse. A merrow is three metres of green-grey muscle with a harpoon and a rope, and its whole method is to put the barb into somebody at the rail and pull. They are not clever, they are patient in the way an ambush predator is patient, and a shipwrecked party is exactly the situation they wait for.",
+      "notes": [
+        "About 2.7 m, which is the SM +1 row; the published Strength discount for size applies at -10%.",
+        "ST 20 from Basic Lift and from the job: it hauls an armoured man off a deck and under.",
+        "Amphibious and Oxygen Absorption together, like the merfolk: it fights in the water, drags prey into the water, and can follow onto a beach without inconvenience.",
+        "DR 2 is hide. A merrow wears nothing, so this is the one record among the armed folk here where the published DR is the whole story."
+      ]
+    },
+    {
+      "slug": "mountain-dwarf",
+      "name": "Mountain Dwarf",
+      "class": "Humanoid (Dwarf)",
+      "classTags": ["humanoid", "dwarf"],
+      "tags": ["mountain", "miner", "soldier"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Mountain Dwarf"}
+      ],
+      "massKg": 75,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A hold cut into a valley wall, with the forge at the front and the mine behind it.",
+      "traitSets": ["dwarf-stock"],
+      "traits": [
+        {"trait": "per", "levels": 1},
+        {"trait": "hard-to-kill", "levels": 1},
+        {"trait": "infravision"},
+        {"trait": "temperature-tolerance", "levels": 1, "qualifier": "Cold"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Shield", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Prospecting", "attribute": "iq", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Warhammer",
+          "skill": "Axe/Mace",
+          "basis": "sw+3",
+          "type": "crushing",
+          "reach": "1",
+          "notes": "Made at the forge it was carried out of, and heavier than it looks in that hand."
+        },
+        {
+          "name": "Dwarven Axe",
+          "skill": "Axe/Mace",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "The other half of the same argument."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 3},
+      "description": "The dwarves who stayed where the sun still reaches: hold-builders, smiths and by inclination soldiers. A mountain dwarf sees warm bodies in an unlit gallery, walks all day under a load that would fell a taller man, and holds a grudge with the same steady competence it brings to everything else. They fight in ranks and they do not give ground.",
+      "notes": [
+        "About 1.4 m standing, which is the SM -1 row.",
+        "ST 11 from the dwarf stock, which is Basic Lift for a heavy, short-limbed frame at 75 kg.",
+        "Infravision rather than Dark Vision, and the difference is the creature. A mountain dwarf finds a warm body in an unlit gallery; a deep dwarf reads the rock face itself, which is why that record buys the more expensive sense.",
+        "Mail and a shield are the usual kit and are not in this record's DR. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "ogre",
+      "name": "Ogre",
+      "class": "Giant",
+      "classTags": ["giant", "ogre"],
+      "tags": ["hills", "raider", "brute"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Ogre"},
+        {"sourceSystem": "srd_3_5", "heading": "Ogre"}
+      ],
+      "massKg": 300,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "A cave with a fire outside it and the remains of several carts scattered downhill.",
+      "traitSets": ["ogre-kin"],
+      "traits": [
+        {"trait": "st", "levels": 10},
+        {"trait": "dx-", "levels": 1},
+        {"trait": "iq-", "levels": 2},
+        {"trait": "per", "levels": 1},
+        {"trait": "damage-resistance-tough-skin", "levels": 2},
+        {"trait": "dark-vision"},
+        {"trait": "bad-temper"}
+      ],
+      "skills": [
+        {"name": "Two-Handed Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Thrown Weapon", "specialization": "Spear", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "Greatclub",
+          "skill": "Two-Handed Axe/Mace",
+          "basis": "sw+3",
+          "type": "crushing",
+          "reach": "1,2",
+          "notes": "A tree limb with a stone lashed into the end. It arrives slowly and it does not matter."
+        },
+        {
+          "name": "Javelin",
+          "skill": "Thrown Weapon",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "Ranged, 20",
+          "notes": "A sharpened fence rail, thrown downhill at whoever is fastest."
+        },
+        {
+          "name": "Fist",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "What happens when the club is on the wrong side of the fight."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 3},
+      "description": "Three metres of appetite with a club. Ogres are slow, stupid, foul-tempered and enormously strong, and the arithmetic of a fight with one is simple: it will hit somebody eventually, and when it does that person stops being a combatant. They take toll on roads, eat what they take, and are not open to a second offer.",
+      "notes": [
+        "About 2.9 m standing, which is the SM +1 row; Strength carries the published -10% size discount.",
+        "ST 20 from Basic Lift: it picks a man up one-handed and throws him, which is the ogre encounter in one sentence.",
+        "DX 9 is deliberate and is half the creature. It hits like a falling wall and it is genuinely easy to not be there, and a party that stands still is choosing to be hit.",
+        "DR 2 is hide. Ogres wear hides rather than armour, so this record's published DR is what it actually has."
+      ]
+    },
+    {
+      "slug": "oni",
+      "name": "Oni",
+      "class": "Giant",
+      "classTags": ["giant", "ogre", "oni"],
+      "tags": ["mountain", "spellcaster", "shapeshifter", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Oni"},
+        {"sourceSystem": "srd_3_5", "heading": "Ogre Mage"}
+      ],
+      "massKg": 320,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {"primary": "ground"},
+      "lair": "A house in a mountain village where the previous family is not discussed.",
+      "traitSets": ["ogre-kin"],
+      "omitTraits": ["bad-smell", "gluttony"],
+      "traits": [
+        {"trait": "st", "levels": 12},
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq", "levels": 3},
+        {"trait": "will", "levels": 2},
+        {"trait": "per", "levels": 1},
+        {"trait": "combat-reflexes"},
+        {"trait": "damage-resistance-tough-skin", "levels": 3},
+        {"trait": "dark-vision"},
+        {"trait": "flight-hovering"},
+        {"trait": "invisibility-switchable"},
+        {"trait": "magic-resistance", "levels": 2},
+        {"trait": "regeneration-slow"},
+        {
+          "trait": "morph",
+          "modifiers": [
+            {
+              "name": "Limited (humanoid forms)",
+              "reference": "B111",
+              "cost_adj": "-20%",
+              "local_notes": "Only takes the shape of a person; cannot become an animal or an object."
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {"name": "Two-Handed Sword", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Innate Attack", "specialization": "Breath", "attribute": "dx", "difficulty": "e", "relative": 3},
+        {"name": "Acting", "attribute": "iq", "difficulty": "a", "relative": 2},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Glaive",
+          "skill": "Two-Handed Sword",
+          "basis": "sw+3",
+          "type": "cutting",
+          "reach": "1,2",
+          "notes": "Kept on the wall of the house it took, and reached for without changing shape first."
+        },
+        {
+          "name": "Cone of Cold",
+          "skill": "Innate Attack",
+          "basis": "6d",
+          "type": "burning",
+          "reach": "Ranged, cone",
+          "usesFatigueOrSpell": true,
+          "notes": "A breath of killing cold across the front arc. It costs the oni to use and cannot be repeated every second."
+        },
+        {
+          "name": "Charm",
+          "basis": null,
+          "type": "crushing",
+          "reach": "Ranged, 10",
+          "afflictionPoints": 30,
+          "notes": "One person is told to stop, and rolls against Will to not. The oni much prefers this to the glaive, because a charmed guard opens the door."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
+      "description": "An ogre with a sorcerer's education and centuries of practice at pretending to be somebody's neighbour. In its own shape it is a horned, blue-skinned giant with a glaive; in the shape it usually wears it is a well-liked man in a mountain village. It flies, it vanishes, it heals what you do to it, and it would rather charm the guard than fight the party.",
+      "notes": [
+        "Answers two headings that are one creature: Oni in SRD 5.1 and Ogre Mage in SRD 3.5. The flight comes from the older heading and is kept, because a record that answers both should be able to do what either can.",
+        "About 3 m standing, which is the SM +1 row; Strength carries the published -10% size discount.",
+        "ST 22 from Basic Lift, a step above the common ogre, which is the difference the older and better-fed creature earns.",
+        "Morph is bought at published cost with a -20% limitation to humanoid forms, which is what the creature actually does. The alternative was a special rule, and a special rule is a claim rather than a build.",
+        "The breath is marked as costing fatigue, which is meant to halve its contribution to the rating. Issue #55 records that the shared rating path drops that flag on the damage term; the flag is stated correctly here and the fix belongs in cer.mjs.",
+        "Bad Smell and Gluttony are dropped from the ogre stock by name. An oni that could not sit at a table without being noticed could not do the only thing that makes it different from an ogre."
+      ]
+    },
+    {
+      "slug": "orc",
+      "name": "Orc",
+      "class": "Humanoid (Orc)",
+      "classTags": ["humanoid", "orc"],
+      "tags": ["raider", "dungeon", "evil"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Orc"},
+        {"sourceSystem": "srd_3_5", "heading": "Orc"}
+      ],
+      "massKg": 95,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A stockade round a stolen village, or a gallery in somebody else's mine.",
+      "traits": [
+        {"trait": "st", "levels": 3},
+        {"trait": "ht", "levels": 1},
+        {"trait": "iq-", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "appearance-ugly"},
+        {"trait": "bad-temper"},
+        {"trait": "bloodlust"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Brawling", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Thrown Weapon", "specialization": "Spear", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Intimidation", "attribute": "will", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Falchion",
+          "skill": "Axe/Mace",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Heavy, badly balanced and swung by an arm that does not care."
+        },
+        {
+          "name": "Javelin",
+          "skill": "Thrown Weapon",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "Ranged, 20",
+          "notes": "Thrown once at the charge, then forgotten about."
+        },
+        {
+          "name": "Fist",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Used on other orcs about as often as on anyone else."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 8, "wanderingWeight": 5},
+      "description": "Broad, grey-skinned and permanently furious, orcs raid because raiding is the shape their society has settled into and because they enjoy it. They come in numbers, they close immediately, and they keep coming after the point where a sensible band would have withdrawn. Daylight leaves them squinting, which is why the attack is nearly always at dusk.",
+      "notes": [
+        "About 1.85 m standing, which is the SM 0 row.",
+        "ST 13 from Basic Lift: heavier and broader than a man of the same height, carrying loot out at a jog.",
+        "Bloodlust and Bad Temper together are why the fight does not end when it should, and both are published disadvantages rather than prose.",
+        "Light sensitivity is on the encounter block. See the deep dwarf's note for why it is not a trait.",
+        "Mail scraps and a shield are common and are not in this record's DR. See decision 11 in the build policy."
+      ]
+    },
+    {
+      "slug": "sprite",
+      "name": "Sprite",
+      "class": "Fey",
+      "classTags": ["fey", "sprite"],
+      "tags": ["forest", "flier", "scout"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Sprite"},
+        {"sourceSystem": "srd_3_5", "heading": "Sprite"}
+      ],
+      "massKg": 1,
+      "sizeModifier": -4,
+      "hexes": "1 hex",
+      "movement": {"primary": "air"},
+      "lair": "A clearing nobody finds twice, somewhere in old wood.",
+      "traits": [
+        {"trait": "st-", "levels": 8},
+        {"trait": "dx", "levels": 4},
+        {"trait": "ht-", "levels": 1},
+        {"trait": "per", "levels": 2},
+        {"trait": "acute-vision", "levels": 3},
+        {"trait": "appearance-attractive"},
+        {"trait": "basic-move-", "levels": 3},
+        {"trait": "flight-winged"},
+        {"trait": "invisibility-switchable"},
+        {"trait": "night-vision", "levels": 5},
+        {"trait": "silence", "levels": 2}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Knife", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 4},
+        {"name": "Naturalist", "attribute": "iq", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Sprite Bow",
+          "skill": "Bow",
+          "basis": "1d-4",
+          "type": "impaling",
+          "reach": "Ranged, 40",
+          "afflictionPoints": 25,
+          "notes": "The arrow is the size of a pin and the wound is nothing. What is on the point puts a grown soldier to sleep for an hour."
+        },
+        {
+          "name": "Needle Sword",
+          "skill": "Knife",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Genuinely a threat only to something the sprite's own size, and drawn with complete confidence regardless."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 3},
+      "description": "A hand-span of winged fey with a bow and no fear whatsoever. A sprite can simply stop being visible, hovers where nothing can reach it, and knows the wood better than anything walking through it. Its arrows do no damage worth the name and put people to sleep where they stand, which is a far worse outcome than being shot.",
+      "notes": [
+        "About 0.45 m tall, which is the SM -4 row.",
+        "ST 2: it lifts its own bow and very little else. A sprite that could hurt anybody with muscle would be a different creature.",
+        "The bow states literal dice and carries the whole encounter on the affliction lever rather than the damage lever. That is the honest shape: nobody has ever been killed by the arrow.",
+        "Ground Move is bought down to 2. A sprite on its feet is a hand-span thing walking, and the air Move flight grants is the figure that matters; the published Move is the air one because the movement block says so.",
+        "Invisibility is bought Switchable, because a sprite that could not be seen by other sprites is not what the heading describes."
+      ]
+    },
+    {
+      "slug": "svirfneblin",
+      "name": "Svirfneblin",
+      "class": "Humanoid (Gnome)",
+      "classTags": ["humanoid", "gnome", "svirfneblin"],
+      "tags": ["underground", "stealthy", "wary"],
+      "covers": [
+        {"sourceSystem": "srd_5_1", "heading": "Svirfneblin"},
+        {"sourceSystem": "srd_3_5", "heading": "Svirfneblin", "alsoPrintedAs": ["Gnome, Deep (Svirfneblin)"]}
+      ],
+      "massKg": 25,
+      "sizeModifier": -2,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A warren of low galleries with three ways out of every room, and gemstones in the walls.",
+      "traitSets": ["gnome-stock"],
+      "traits": [
+        {"trait": "ht", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "magic-resistance", "levels": 3},
+        {"trait": "silence", "levels": 3},
+        {"trait": "stubbornness"}
+      ],
+      "skills": [
+        {"name": "Axe/Mace", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Crossbow", "attribute": "dx", "difficulty": "e", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 4},
+        {"name": "Camouflage", "attribute": "iq", "difficulty": "e", "relative": 2},
+        {"name": "Prospecting", "attribute": "iq", "difficulty": "a", "relative": 2}
+      ],
+      "attacks": [
+        {
+          "name": "War Pick",
+          "skill": "Axe/Mace",
+          "basis": "sw+1",
+          "type": "impaling",
+          "reach": "1",
+          "notes": "A mining tool held close to the head, used at a height nobody in mail is guarding."
+        },
+        {
+          "name": "Hand Crossbow",
+          "skill": "Crossbow",
+          "basis": "1d-1",
+          "type": "impaling",
+          "reach": "Ranged, 100",
+          "notes": "Loosed once from cover and not reloaded. The damage is the weapon's."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 3, "lightSensitive": true},
+      "description": "Deep gnomes: grey, wiry, and the most cautious folk under any mountain. Svirfneblin live between the dwarven holds and worse neighbours, and have survived it by never once being where anyone expected. Magic thrown at one tends to fail outright, and against stone at three paces they are effectively not there.",
+      "notes": [
+        "About 0.9 m standing, which is the SM -2 row.",
+        "ST 8 from the gnome stock: a small frame that has spent its life underground and is wiry rather than strong.",
+        "Magic Resistance 3 is the highest in this batch and is the reason the creature has survived where it lives.",
+        "Silence 3 on top of a very high Stealth, and the same distinction as the forest gnome: the advantage is what nothing hears, the skill is what nothing sees.",
+        "The camouflage and non-detection a svirfneblin can call are not built as traits. Both come and go rather than being what it is, and the vocabulary prices what a creature is."
+      ]
+    },
+    {
+      "slug": "tallfellow-halfling",
+      "name": "Tallfellow Halfling",
+      "class": "Humanoid (Halfling)",
+      "classTags": ["humanoid", "halfling"],
+      "tags": ["plains", "scout", "stealthy"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Tallfellow Halfling"}
+      ],
+      "massKg": 45,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A farm on good ground, with elves for neighbours and a hedge nobody sees over.",
+      "traitSets": ["halfling-stock"],
+      "traits": [
+        {"trait": "st-", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "acute-vision", "levels": 2},
+        {"trait": "night-vision", "levels": 3}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Knife", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Climbing", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Survival", "specialization": "Plains", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Shortbow",
+          "skill": "Bow",
+          "basis": "1d+1",
+          "type": "impaling",
+          "reach": "Ranged, 100",
+          "notes": "Kept behind the door for crows and used, once or twice a generation, for something else. The damage is the bow's."
+        },
+        {
+          "name": "Large Knife",
+          "skill": "Knife",
+          "basis": "sw-2",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "A hedging tool with a very good edge."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 5, "wanderingWeight": 3},
+      "description": "The tall halflings — a head above their cousins, which still leaves them looking up at everybody else. Tallfellows farm good open ground, get on unusually well with elves, and are better archers and better sneaks than their reputation for pastoral harmlessness suggests. They see a long way and they say very little about what they have seen.",
+      "notes": [
+        "About 1.2 m standing, which reads nearer the SM -1 row than the -2 row a deep halfling sits on. The difference from its cousins is the whole heading.",
+        "ST 9, one step above the halfling stock, for the same reason: there is simply more of it.",
+        "Acute Vision and Night Vision are what a tallfellow brings that a deep halfling does not. The underground branch buys Dark Vision instead, and neither is a better sense — they are different jobs."
+      ]
+    },
+    {
+      "slug": "tiefling",
+      "name": "Tiefling",
+      "class": "Humanoid (Planetouched)",
+      "classTags": ["humanoid", "planetouched", "tiefling"],
+      "tags": ["town", "infernal", "trickster"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Tiefling"}
+      ],
+      "massKg": 70,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "Two streets away from wherever the last misunderstanding happened.",
+      "traits": [
+        {"trait": "dx", "levels": 1},
+        {"trait": "iq", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "dark-vision"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Fire"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Cold"},
+        {"trait": "damage-resistance-element", "levels": 3, "qualifier": "Lightning"},
+        {"trait": "appearance-ugly"},
+        {"trait": "stubbornness"}
+      ],
+      "skills": [
+        {"name": "Shortsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Knife", "attribute": "dx", "difficulty": "e", "relative": 2},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Fast-Talk", "attribute": "iq", "difficulty": "a", "relative": 1},
+        {"name": "Pickpocket", "attribute": "dx", "difficulty": "h", "relative": 0}
+      ],
+      "attacks": [
+        {
+          "name": "Shortsword",
+          "skill": "Shortsword",
+          "basis": "sw",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Drawn in an alley, generally in the second half of a conversation that started politely."
+        },
+        {
+          "name": "Knife",
+          "skill": "Knife",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "The one that was already in the hand."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 2, "wanderingWeight": 3},
+      "description": "Somebody with a fiend somewhere in the family, and everybody can tell. Tieflings run to horns, unsettling eyes and a tail they keep under a coat, and they spend their lives being blamed first. Most respond by becoming very good at leaving, at talking, and at taking what they were going to be accused of taking anyway. Fire, cold and lightning trouble them less than they should.",
+      "notes": [
+        "About 1.8 m standing, which is the SM 0 row.",
+        "ST 10: human, like the aasimar this heading is printed beside, and for the same reason.",
+        "The infernal resistances are heavily Limited Damage Resistance, one damage type each, so they price into the template without raising the record's published DR.",
+        "Appearance (Ugly) rather than a Social Stigma. The reaction a tiefling gets is to the horns rather than to a settled legal status, and Appearance is the trait that says that."
+      ]
+    },
+    {
+      "slug": "wild-elf",
+      "name": "Wild Elf",
+      "class": "Humanoid (Elf)",
+      "classTags": ["humanoid", "elf"],
+      "tags": ["forest", "primitive", "ambusher"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Wild Elf"}
+      ],
+      "massKg": 55,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "No settlement at all: a range of deep forest and a set of camps used in rotation.",
+      "traitSets": ["elf-stock"],
+      "omitTraits": ["ht-"],
+      "traits": [
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 1},
+        {"trait": "per", "levels": 2},
+        {"trait": "silence", "levels": 2},
+        {"trait": "temperature-tolerance", "levels": 1, "qualifier": "Cold"},
+        {"trait": "social-stigma-savage"}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Spear", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Survival", "specialization": "Woodlands", "attribute": "per", "difficulty": "a", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Longbow",
+          "skill": "Bow",
+          "basis": "1d+2",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "The first anyone knows about a wild elf. The damage is the bow's."
+        },
+        {
+          "name": "Spear",
+          "skill": "Spear",
+          "basis": "thr+2",
+          "type": "impaling",
+          "reach": "1,2",
+          "notes": "Stone-headed, and quite good enough for anything that got this close."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 3},
+      "description": "Elves who never built anything and see no reason to start. Wild elves range deep forest in bands, hunt with stone-headed spears and bows nobody hears drawn, and regard every other elf as a disappointment. They are hardier than their cousins and far less interested in explaining themselves, and the first negotiation usually happens with arrows already nocked.",
+      "notes": [
+        "About 1.7 m standing, which is the SM 0 row.",
+        "ST 10 and DX 12: the elf stock's frailty is dropped by name because a wild elf lives outdoors year-round, and its Health is a human's rather than a hall-dweller's.",
+        "Bow at DX+3 is the highest weapon skill in this batch and is the creature. Everything else on the record exists to get it into a position to shoot.",
+        "Social Stigma (Savage) is how the rest of the setting treats them rather than a claim about them, which is exactly what the published trait prices."
+      ]
+    },
+    {
+      "slug": "wood-elf",
+      "name": "Wood Elf",
+      "class": "Humanoid (Elf)",
+      "classTags": ["humanoid", "elf"],
+      "tags": ["forest", "archer", "ranger"],
+      "covers": [
+        {"sourceSystem": "srd_3_5", "heading": "Wood Elf"}
+      ],
+      "massKg": 60,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {"primary": "ground"},
+      "lair": "A settlement built into standing timber, invisible from the ground and permanent for centuries.",
+      "traitSets": ["elf-stock"],
+      "traits": [
+        {"trait": "st", "levels": 1},
+        {"trait": "dx", "levels": 2},
+        {"trait": "iq-", "levels": 1},
+        {"trait": "per", "levels": 1},
+        {"trait": "silence", "levels": 1}
+      ],
+      "skills": [
+        {"name": "Bow", "attribute": "dx", "difficulty": "a", "relative": 3},
+        {"name": "Broadsword", "attribute": "dx", "difficulty": "a", "relative": 1},
+        {"name": "Stealth", "attribute": "dx", "difficulty": "a", "relative": 2},
+        {"name": "Survival", "specialization": "Woodlands", "attribute": "per", "difficulty": "a", "relative": 2},
+        {"name": "Tracking", "attribute": "per", "difficulty": "a", "relative": 1}
+      ],
+      "attacks": [
+        {
+          "name": "Longbow",
+          "skill": "Bow",
+          "basis": "1d+3",
+          "type": "impaling",
+          "reach": "Ranged, 200",
+          "notes": "A heavy war bow, drawn by somebody strong enough for it. The damage is the bow's."
+        },
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Worn for the part of the fight that reaches the trees."
+        }
+      ],
+      "encounter": {"averageNumberAppearing": 6, "wanderingWeight": 3},
+      "description": "The elves of standing forest: stronger and plainer than their highland cousins, and the best war archers of any of them. A wood elf settlement is invisible from the ground and has been there four hundred years. They are courteous, unhurried, and entirely willing to shoot a logging party at two hundred yards without a word first.",
+      "notes": [
+        "About 1.75 m standing, which is the SM 0 row.",
+        "ST 11: the sturdiest of the elves in this batch and the only one above human Strength, which is why it draws the heaviest bow here.",
+        "The elf stock's Health penalty is kept, unlike the wild elf's. A wood elf lives in a built settlement with a roof on it, and the frailty its cousins share is not something forest life removes.",
+        "The bow's literal dice are a step above the gray elf's for the same weapon class, because it is a heavier bow. That is the whole reason missile damage in this batch is stated rather than derived."
+      ]
+    }
+  ]
+}

@@ -50,3 +50,10 @@ jobs:
         run: >-
           node scripts/upload-art-to-r2.mjs --attachment --concurrency 4
           ${{ inputs.force && '--force' || '' }}
+      - name: Upload SRD draft art
+        run: >-
+          node scripts/upload-art-to-r2.mjs
+          --art-dir art/srd-monsters
+          --prefix monsters/srd-monsters
+          --attachment --concurrency 4
+          ${{ inputs.force && '--force' || '' }}

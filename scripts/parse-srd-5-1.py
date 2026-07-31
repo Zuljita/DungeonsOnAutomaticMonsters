@@ -19,6 +19,7 @@ PDF_PATH = ROOT / "data" / "srd-5-1" / "raw" / "SRD_CC_v5.1.pdf"
 OUTPUT_PATH = ROOT / "data" / "srd-5-1" / "parsed" / "monsters.json"
 FIRST_MONSTER_PAGE = 261
 
+SOFT_HYPHEN_CLUSTER_RE = re.compile("[­‐‑‒–—−-]*­[­‐‑‒–—−-]*")
 SIZE_TYPE_RE = re.compile(
     r"^(Tiny|Small|Medium|Large|Huge|Gargantuan)\s+([^,]+),\s+(.+)$"
 )
@@ -59,9 +60,22 @@ def slugify(value):
     return value.strip("_")
 
 
+def collapse_soft_hyphens(match):
+    # A soft hyphen beside a visible hyphen is that one hyphen written twice;
+    # a soft hyphen on its own is only a line-breaking opportunity and means
+    # nothing once the text is off the page.
+    return "-" if match.group(0).strip("\u00ad") else ""
+
+
 def normalize_text(value):
+    # The PDF writes a hyphenated word as VISIBLE HYPHEN + SOFT HYPHEN + HYPHEN,
+    # so "Saber-Toothed Tiger" extracts as "Saber-\u00ad\u2010Toothed Tiger". Collapse
+    # each such cluster before folding the remaining Unicode dashes onto ASCII.
+    value = SOFT_HYPHEN_CLUSTER_RE.sub(collapse_soft_hyphens, value)
     return (
-        value.replace("\u2212", "-")
+        value.replace("\u2010", "-")
+        .replace("\u2011", "-")
+        .replace("\u2212", "-")
         .replace("\u2013", "-")
         .replace("\u2014", "-")
         .replace("\u2019", "'")

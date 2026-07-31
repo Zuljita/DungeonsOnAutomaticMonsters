@@ -1,0 +1,340 @@
+{
+  "note": "Hand-curated judgement layer for scripts/build-srd-coverage.mjs. The matcher normalizes names mechanically; everything here is a decision a normalizer cannot make and a reviewer must own. OML-010 requires manual review for fuzzy or semantic matches, so they live in tracked data rather than in the script.",
+  "aliases": {
+    "note": "Source heading -> the name it is the same creature as. Both directions are searched, so one entry covers a cross-edition pair.",
+    "map": {
+      "Axe Beak": "Axebeak",
+      "Janni": "Jann",
+      "Specter": "Spectre",
+      "Dog, Riding": "Riding Dog",
+      "Pony, War": "War Pony",
+      "Lizard, Monitor": "Monitor Lizard",
+      "Crocodile, Giant": "Giant Crocodile",
+      "Octopus, Giant": "Giant Octopus",
+      "Squid, Giant": "Giant Squid",
+      "Owl, Giant": "Giant Owl",
+      "Eagle, Giant": "Giant Eagle",
+      "Noble Djinn": "Noble Djinni",
+      "Sahuagin Mutants": "Sahuagin Mutant",
+      "Succubus/Incubus": "Succubus",
+      "Deva": "Astral Deva",
+      "Killer Whale": "Orca",
+      "Elf, Drow": "Drow",
+      "Gnome, Deep (Svirfneblin)": "Svirfneblin",
+      "Bear, Black": "Black Bear",
+      "Bear, Brown": "Brown Bear",
+      "Bear, Polar": "Polar Bear",
+      "Tyrannosaurus Rex": "Tyrannosaurus",
+      "Warhorse, Heavy": "Warhorse",
+      "Warhorse, Light": "Warhorse",
+      "Viper Snake": "Poisonous Snake",
+      "Angel, Astral Deva": "Astral Deva",
+      "Angel, Planetar": "Planetar",
+      "Angel, Solar": "Solar",
+      "Horse, Heavy": "Draft Horse",
+      "Horse, Light": "Riding Horse",
+      "Half-Orcs": "Half-Orc",
+      "Tallfellow": "Tallfellow Halfling"
+    }
+  },
+  "resolutions": {
+    "note": "Verified resolutions for every parsed heading no record answers to. familyIndex members and sampleVariants bases are checked against the covered records on every build; excluded and deferred rows carry their reason and owner.",
+    "familyIndex": {
+      "note": "Family index page -> the member headings it lists; every member must be covered.",
+      "members": {
+        "Angel": [
+          "Astral Deva",
+          "Planetar",
+          "Solar"
+        ],
+        "Archon": [
+          "Hound Archon",
+          "Lantern Archon",
+          "Trumpet Archon"
+        ],
+        "Chromatic Dragons": [
+          "Black Dragon",
+          "Blue Dragon",
+          "Green Dragon",
+          "Red Dragon",
+          "White Dragon"
+        ],
+        "Demon": [
+          "Babau",
+          "Balor",
+          "Bebilith",
+          "Dretch",
+          "Glabrezu",
+          "Hezrou",
+          "Marilith",
+          "Nalfeshnee",
+          "Quasit",
+          "Retriever",
+          "Succubus",
+          "Vrock"
+        ],
+        "Devil": [
+          "Barbed Devil (Hamatula)",
+          "Bearded Devil (Barbazu)",
+          "Bone Devil (Osyluth)",
+          "Chain Devil (Kyton)",
+          "Erinyes",
+          "Hellcat (Bezekira)",
+          "Horned Devil (Cornugon)",
+          "Ice Devil (Gelugon)",
+          "Imp",
+          "Lemure",
+          "Pit Fiend"
+        ],
+        "Dinosaur": [
+          "Deinonychus",
+          "Elasmosaurus",
+          "Megaraptor",
+          "Triceratops",
+          "Tyrannosaurus"
+        ],
+        "Dire Animal": [
+          "Dire Ape",
+          "Dire Badger",
+          "Dire Bat",
+          "Dire Bear",
+          "Dire Boar",
+          "Dire Lion",
+          "Dire Rat",
+          "Dire Shark",
+          "Dire Tiger",
+          "Dire Weasel",
+          "Dire Wolf",
+          "Dire Wolverine"
+        ],
+        "Dragon, True": [
+          "Black Dragon",
+          "Blue Dragon",
+          "Brass Dragon",
+          "Bronze Dragon",
+          "Copper Dragon",
+          "Gold Dragon",
+          "Green Dragon",
+          "Red Dragon",
+          "Silver Dragon",
+          "White Dragon"
+        ],
+        "Dwarf": [
+          "Deep Dwarf",
+          "Duergar",
+          "Mountain Dwarf"
+        ],
+        "Elemental": [
+          "Air Elemental",
+          "Earth Elemental",
+          "Fire Elemental",
+          "Water Elemental"
+        ],
+        "Elf": [
+          "Aquatic Elf",
+          "Drow",
+          "Gray Elf",
+          "Half-Elf",
+          "Wild Elf",
+          "Wood Elf"
+        ],
+        "Fungus": [
+          "Shrieker",
+          "Violet Fungus"
+        ],
+        "Genie": [
+          "Djinni",
+          "Efreeti",
+          "Janni",
+          "Noble Djinn"
+        ],
+        "Giant": [
+          "Cloud Giant",
+          "Fire Giant",
+          "Frost Giant",
+          "Hill Giant",
+          "Stone Giant",
+          "Storm Giant"
+        ],
+        "Gnome": [
+          "Forest Gnome",
+          "Svirfneblin"
+        ],
+        "Golem": [
+          "Clay Golem",
+          "Flesh Golem",
+          "Iron Golem",
+          "Stone Golem"
+        ],
+        "Hag": [
+          "Annis",
+          "Green Hag",
+          "Sea Hag"
+        ],
+        "Halfling": [
+          "Deep Halfling",
+          "Tallfellow Halfling"
+        ],
+        "Horse": [
+          "Horse, Heavy",
+          "Horse, Light",
+          "Warhorse, Heavy",
+          "Warhorse, Light"
+        ],
+        "Inevitable": [
+          "Kolyarut",
+          "Marut",
+          "Zelekhut"
+        ],
+        "Mephit": [
+          "Air Mephit",
+          "Dust Mephit",
+          "Earth Mephit",
+          "Fire Mephit",
+          "Ice Mephit",
+          "Magma Mephit",
+          "Ooze Mephit",
+          "Salt Mephit",
+          "Steam Mephit",
+          "Water Mephit"
+        ],
+        "Metallic Dragons": [
+          "Brass Dragon",
+          "Bronze Dragon",
+          "Copper Dragon",
+          "Gold Dragon",
+          "Silver Dragon"
+        ],
+        "Naga": [
+          "Dark Naga",
+          "Guardian Naga",
+          "Spirit Naga",
+          "Water Naga"
+        ],
+        "Nightshade": [
+          "Nightcrawler",
+          "Nightwalker",
+          "Nightwing"
+        ],
+        "Ooze": [
+          "Black Pudding",
+          "Gelatinous Cube",
+          "Gray Ooze",
+          "Ochre Jelly"
+        ],
+        "Planetouched": [
+          "Aasimar",
+          "Tiefling"
+        ],
+        "Snake": [
+          "Constrictor Snake",
+          "Viper Snake"
+        ],
+        "Sphinx": [
+          "Androsphinx",
+          "Criosphinx",
+          "Gynosphinx",
+          "Hieracosphinx"
+        ],
+        "Swarm": [
+          "Bat Swarm",
+          "Centipede Swarm",
+          "Hellwasp Swarm",
+          "Locust Swarm",
+          "Rat Swarm",
+          "Spider Swarm"
+        ],
+        "Whale": [
+          "Baleen Whale",
+          "Cachalot Whale",
+          "Orca"
+        ]
+      }
+    },
+    "sampleVariants": {
+      "note": "Variant or sample stat block -> the covered base creature it is printed beside.",
+      "variantOf": {
+        "Aboleth Mage": "Aboleth",
+        "Celestial Charger": "Unicorn",
+        "Elder Black Pudding": "Black Pudding",
+        "Frost Giant Jarl": "Frost Giant",
+        "Golden Protector": "Lammasu",
+        "Greater Barghest": "Barghest",
+        "Greater Shadow": "Shadow",
+        "Harpy Archer": "Harpy",
+        "Hound Archon Hero": "Hound Archon",
+        "Ogre Barbarian": "Ogre",
+        "Stone Giant Elders": "Stone Giant",
+        "Troll Hunter": "Troll"
+      }
+    },
+    "excluded": {
+      "reason": "SRD 5.1 NPC stat blocks are humans with class levels, not monsters; they belong to the application's NPC generation scope, not the monster library.",
+      "headings": [
+        "Acolyte",
+        "Archmage",
+        "Assassin",
+        "Bandit",
+        "Bandit Captain",
+        "Berserker",
+        "Commoner",
+        "Cult Fanatic",
+        "Cultist",
+        "Druid",
+        "Gladiator",
+        "Guard",
+        "Knight",
+        "Mage",
+        "Noble",
+        "Priest",
+        "Scout",
+        "Spy",
+        "Thug",
+        "Tribal Warrior",
+        "Veteran"
+      ]
+    },
+    "deferred": [
+      {
+        "owner": "Templates apply to a base creature; whether they ship as generators, pre-materialized variants, or both is the open decision in issue #43. The Lycanthrope family page and the sample blocks of a template applied to a creature are owned by the same decision.",
+        "headings": [
+          "Animated Object",
+          "Celestial Creature",
+          "Fiendish Creature",
+          "Ghost",
+          "Half-Celestial",
+          "Half-Dragon",
+          "Half-Fiend",
+          "Lich",
+          "Mummy Lord",
+          "Skeleton",
+          "Vampire",
+          "Werebear",
+          "Wereboar",
+          "Wererat",
+          "Weretiger",
+          "Werewolf",
+          "Zombie",
+          "Lycanthrope",
+          "Half-Red Dragon Veteran",
+          "Hill Giant Dire Wereboar",
+          "Minotaur Skeleton",
+          "Ogre Zombie",
+          "Warhorse Skeleton",
+          "Werewolf Lord"
+        ]
+      },
+      {
+        "owner": "The five formian castes are concrete creatures the original curation misfiled as sample blocks; authoring them is issue #68, and the Formian family heading resolves with them.",
+        "headings": [
+          "Formian",
+          "Worker",
+          "Warrior",
+          "Taskmaster",
+          "Myrmarch",
+          "Queen"
+        ]
+      }
+    ]
+  }
+}

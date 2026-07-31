@@ -1,0 +1,155 @@
+{
+	"version": 5,
+	"id": "Tks4b7YARrzH7owjB",
+	"traits": [
+		{
+			"id": "tFJoWLmd0DRbb1G3t",
+			"name": "Half-Orc",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Half-Orc",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Half-Orc (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -14 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tSmoVcjhwmLsGaRak",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tHOIuzQkia2-DFb1d",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tvFMSAHaoPyZ2aOtu",
+					"name": "Increased Health",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tcoJuZt2_mELOUQQw",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 4,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "tPgWAuAwWKK34NY4S",
+					"name": "Appearance (Ugly)",
+					"reference": "B21",
+					"tags": [
+						"Disadvantage",
+						"Mental",
+						"Physical"
+					],
+					"base_points": -8,
+					"calc": {
+						"points": -8
+					}
+				},
+				{
+					"id": "tl2bcxIM2bDW-QCcb",
+					"name": "Bad Temper (12)",
+					"reference": "B124",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tMVZ_A8wWxesLdiMJ",
+					"name": "Social Stigma (Savage)",
+					"reference": "B155",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -14
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sWmqSv43rD_HzZfyW",
+			"name": "Axe/Mace",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 11."
+		},
+		{
+			"id": "sVqhMUy_LHPiAt6g_",
+			"name": "Broadsword",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 11."
+		},
+		{
+			"id": "sYjZKhTY3E8HkFVke",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 12."
+		},
+		{
+			"id": "sBPUIT63RuLggGbvh",
+			"name": "Intimidation",
+			"difficulty": "will/a",
+			"points": 8,
+			"local_notes": "Racial skill at Will+2, level 11."
+		}
+	]
+}

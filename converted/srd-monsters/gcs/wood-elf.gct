@@ -1,0 +1,252 @@
+{
+	"version": 5,
+	"id": "TkDQsUflNY4LklqS1",
+	"traits": [
+		{
+			"id": "t_hQ0z2GzFJ9kyFzN",
+			"name": "Wood Elf",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Wood Elf",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Wood Elf (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 75 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tYHmsePAE6GLtOACm",
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tEdH14tNeIRKMlZTB",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 40,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tNNv2ueGElYkY1mBr",
+					"name": "Decreased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Mental"
+					],
+					"points_per_level": -20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t8Tl2v6wjWVU-QjbL",
+					"name": "Decreased Health",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t2J8shEjqrQpqBsnv",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t21RmvX2_ZJJyOOLL",
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tXLbnEI9zwak1QOkX",
+					"name": "Acute Vision",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tY2i_04tDgNdGGLQD",
+					"name": "Appearance (Attractive)",
+					"reference": "B21",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Physical"
+					],
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tgV2vj6NI-sWjbOEA",
+					"name": "Doesn't Sleep",
+					"reference": "B50",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 20,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tjjPoNk7QEu2QzuBO",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 8,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "ttmgr974jmcEIlAvO",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tfRMF_4z1g_7xBCDk",
+					"name": "Silence",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 75
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sQUigyijrygIJTsuS",
+			"name": "Bow",
+			"difficulty": "dx/a",
+			"points": 12,
+			"local_notes": "Racial skill at DX+3, level 15."
+		},
+		{
+			"id": "sJIhIrbqrP7WAIstG",
+			"name": "Broadsword",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 13."
+		},
+		{
+			"id": "sGFVgBmOO2XI5i6TT",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 8,
+			"local_notes": "Racial skill at DX+2, level 14."
+		},
+		{
+			"id": "sO-GYEj3TLHR_ESSH",
+			"name": "Survival",
+			"difficulty": "per/a",
+			"points": 8,
+			"local_notes": "Racial skill at Per+2, level 12.",
+			"specialization": "Woodlands"
+		},
+		{
+			"id": "sD22ODFH920uA60W4",
+			"name": "Tracking",
+			"difficulty": "per/a",
+			"points": 4,
+			"local_notes": "Racial skill at Per+1, level 11."
+		}
+	]
+}

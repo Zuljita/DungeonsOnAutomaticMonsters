@@ -1,0 +1,226 @@
+{
+	"version": 5,
+	"id": "TR_hQjRKWEVRAaZOi",
+	"traits": [
+		{
+			"id": "tVGSBeRKCtVZMfco9",
+			"name": "Tiefling",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Tiefling",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Tiefling (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 84 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tHF2dBWiGR3g14N7k",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tCx9XWopQ-NTyZRg8",
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "too2tCqBVQiuhhp0c",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tz1NXuGiI6dHKzHZY",
+					"name": "Damage Resistance (Fire)",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "md846kL9ir77ET2JW",
+							"name": "Limited (one damage type)",
+							"reference": "B46",
+							"cost_adj": "-40%",
+							"local_notes": "Protects against a single damage type and nothing else."
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "to1bpKTsjftk_Be7f",
+					"name": "Damage Resistance (Cold)",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "m2xJDgM7IyusqTDsC",
+							"name": "Limited (one damage type)",
+							"reference": "B46",
+							"cost_adj": "-40%",
+							"local_notes": "Protects against a single damage type and nothing else."
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tD5v180gQMuJOIRQH",
+					"name": "Damage Resistance (Lightning)",
+					"reference": "B46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"modifiers": [
+						{
+							"id": "m5lj7KnW1A2Sb_u8V",
+							"name": "Limited (one damage type)",
+							"reference": "B46",
+							"cost_adj": "-40%",
+							"local_notes": "Protects against a single damage type and nothing else."
+						}
+					],
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tPnjw8ZsqyH73rJkD",
+					"name": "Dark Vision",
+					"reference": "B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "txsScGYy5-N-8o-wo",
+					"name": "Appearance (Ugly)",
+					"reference": "B21",
+					"tags": [
+						"Disadvantage",
+						"Mental",
+						"Physical"
+					],
+					"base_points": -8,
+					"calc": {
+						"points": -8
+					}
+				},
+				{
+					"id": "t1t4WbUAtsg5zA3yr",
+					"name": "Stubbornness",
+					"reference": "B157",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				}
+			],
+			"calc": {
+				"points": 84
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sjXIYALRPG0srJ3yb",
+			"name": "Shortsword",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 12."
+		},
+		{
+			"id": "sYIQ0jqUMuoASn_d4",
+			"name": "Knife",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 13."
+		},
+		{
+			"id": "sGlqPRIFnzuKvL3k1",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 8,
+			"local_notes": "Racial skill at DX+2, level 13."
+		},
+		{
+			"id": "s_RPab0zDCNrzm9HM",
+			"name": "Fast-Talk",
+			"difficulty": "iq/a",
+			"points": 4,
+			"local_notes": "Racial skill at IQ+1, level 12."
+		},
+		{
+			"id": "sOpm8JctGWf9W2XoU",
+			"name": "Pickpocket",
+			"difficulty": "dx/h",
+			"points": 4,
+			"local_notes": "Racial skill at DX+0, level 11."
+		}
+	]
+}

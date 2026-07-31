@@ -1,0 +1,213 @@
+{
+	"version": 5,
+	"id": "T5JFZe3GMqZdr5zXM",
+	"traits": [
+		{
+			"id": "taH0gHn0ouZCq8y7t",
+			"name": "Deep Halfling",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Deep Halfling",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Deep Halfling (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 46 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tF8wXoCp6noXcodoq",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tZDItmzwAUAuEDBik",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tt2BgUbRDM0f3ezkV",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tRLVs97vcPYp2YrHh",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tRXikWW9wN6Hk8Si9",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t4OoIwtx5JOAGHuBt",
+					"name": "Dark Vision",
+					"reference": "B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tKd91LrsNQCUTTMtI",
+					"name": "Flexibility",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Climbing"
+							},
+							"amount": 3
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tjFBgMxgpM7YxlGpL",
+					"name": "Silence",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tpZjLk1CKx_Rhb9MR",
+					"name": "Temperature Tolerance (Heat)",
+					"reference": "B93",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 1,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 46
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "smU6plDpbuSYv5T_d",
+			"name": "Sling",
+			"difficulty": "dx/h",
+			"points": 8,
+			"local_notes": "Racial skill at DX+1, level 12."
+		},
+		{
+			"id": "snudz7O2cW5KKQiFk",
+			"name": "Knife",
+			"difficulty": "dx/e",
+			"points": 4,
+			"local_notes": "Racial skill at DX+2, level 13."
+		},
+		{
+			"id": "sUiQ3DoGDDddpVmVS",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 12,
+			"local_notes": "Racial skill at DX+3, level 14."
+		},
+		{
+			"id": "sDWTj-YNiQPk6umHs",
+			"name": "Climbing",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 12."
+		},
+		{
+			"id": "sc5Fj-kS0BIWEalFL",
+			"name": "Prospecting",
+			"difficulty": "iq/a",
+			"points": 2,
+			"local_notes": "Racial skill at IQ+0, level 10."
+		}
+	]
+}

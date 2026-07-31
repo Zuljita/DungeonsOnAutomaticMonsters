@@ -1,0 +1,213 @@
+{
+	"version": 5,
+	"id": "ThIC8BUxLyneFB2Az",
+	"traits": [
+		{
+			"id": "teIOcQL3YsLpajlyD",
+			"name": "Kobold",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Kobold",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Kobold (SRD 5.1); Kobold (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: -14 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tMNTQ52vbbGSxotYD",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": -30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "t8707E_5Gr9Jwwujm",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tWGWzFxB9nRkh9n8D",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t19eCzNoYmNqHbTZN",
+					"name": "Dark Vision",
+					"reference": "B47",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "tdfY4V04_tWdgsAfc",
+					"name": "Sharp Teeth",
+					"reference": "B91",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"weapons": [
+						{
+							"id": "wl0hbRO2WhONLFpAm",
+							"sv": 1,
+							"usage": "Bite",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"reach": "C",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tKdBvZJPDceXjR_cv",
+					"name": "Cold-Blooded",
+					"reference": "B127",
+					"tags": [
+						"Disadvantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tZ-YbJFdaDy4-JLAO",
+					"name": "Cowardice (12)",
+					"reference": "B129",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tKZQH5JWhuOsnFceT",
+					"name": "Gregarious",
+					"reference": "B126",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tB-mRTd8EqEpvuFZV",
+					"name": "Social Stigma (Savage)",
+					"reference": "B155",
+					"tags": [
+						"Disadvantage",
+						"Social"
+					],
+					"base_points": -10,
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": -14
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "s_dDPE0X2ehJZZFcE",
+			"name": "Spear",
+			"difficulty": "dx/a",
+			"points": 4,
+			"local_notes": "Racial skill at DX+1, level 12."
+		},
+		{
+			"id": "sxNYQYhZU7zJdofIj",
+			"name": "Sling",
+			"difficulty": "dx/h",
+			"points": 4,
+			"local_notes": "Racial skill at DX+0, level 11."
+		},
+		{
+			"id": "shosKOH9qrsEglJrL",
+			"name": "Traps",
+			"difficulty": "iq/a",
+			"points": 8,
+			"local_notes": "Racial skill at IQ+2, level 12."
+		},
+		{
+			"id": "svW8yIScb2vCWdgGV",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 8,
+			"local_notes": "Racial skill at DX+2, level 13."
+		},
+		{
+			"id": "sUT7SQ0iWfZsP6vnh",
+			"name": "Brawling",
+			"difficulty": "dx/e",
+			"points": 2,
+			"local_notes": "Racial skill at DX+1, level 12."
+		}
+	]
+}

@@ -2,7 +2,7 @@
 
 # SRD coverage monster checklist
 
-125 independently authored record(s), version 0.1.0-srd-land-animals-draft.
+153 independently authored record(s), version 0.1.0-srd-land-animals-draft.
 
 Every record is `review_required`. Approval needs the two gates the review workflow defines — GCS
 arithmetic and library fidelity, and DOA playability — plus a check that the encounter fields suit the
@@ -82,6 +82,34 @@ creature's role as a wandering encounter, a mount or livestock.
 | Young White Dragon | Young White Dragon (5.1) | 35 | 80 | major | 1 | review_required |
 | Adult White Dragon | Adult White Dragon (5.1) | 55 | 127 | severe | 1 | review_required |
 | Ancient White Dragon | Ancient White Dragon (5.1) | 70 | 174 | severe | 1 | review_required |
+| Aasimar | Aasimar (3.5) | 10 | 10 | minor | 1 | review_required |
+| Bugbear | Bugbear (5.1), Bugbear (3.5) | 14 | 18 | minor | 3 | review_required |
+| Centaur | Centaur (5.1), Centaur (3.5) | 20 | 32 | standard | 4 | review_required |
+| Deep Dwarf | Deep Dwarf (3.5) | 11 | 16 | minor | 4 | review_required |
+| Deep Halfling | Deep Halfling (3.5) | 8 | 3 | minor | 5 | review_required |
+| Drow | Drow (5.1), Drow (3.5) | 10 | 12 | minor | 4 | review_required |
+| Duergar | Duergar (5.1), Duergar (3.5) | 11 | 17 | minor | 4 | review_required |
+| Forest Gnome | Forest Gnome (3.5) | 8 | 1 | minor | 5 | review_required |
+| Gnoll | Gnoll (5.1), Gnoll (3.5) | 13 | 18 | minor | 6 | review_required |
+| Goblin | Goblin (5.1), Goblin (3.5) | 9 | 10 | minor | 8 | review_required |
+| Gray Elf | Gray Elf (3.5) | 8 | 13 | minor | 3 | review_required |
+| Half-Elf | Half-Elf (3.5) | 10 | 14 | minor | 2 | review_required |
+| Half-Orc | Half-Orc (3.5) | 12 | 14 | minor | 3 | review_required |
+| Hobgoblin | Hobgoblin (5.1), Hobgoblin (3.5) | 12 | 18 | minor | 6 | review_required |
+| Kobold | Kobold (5.1), Kobold (3.5) | 7 | 1 | minor | 10 | review_required |
+| Lizardfolk | Lizardfolk (5.1), Lizardfolk (3.5) | 13 | 17 | minor | 5 | review_required |
+| Merfolk | Merfolk (5.1), Merfolk (3.5) | 11 | 15 | minor | 6 | review_required |
+| Merrow | Merrow (5.1), Merrow (3.5) | 20 | 33 | standard | 3 | review_required |
+| Mountain Dwarf | Mountain Dwarf (3.5) | 11 | 16 | minor | 5 | review_required |
+| Ogre | Ogre (5.1), Ogre (3.5) | 20 | 31 | standard | 3 | review_required |
+| Oni | Oni (5.1), Ogre Mage (3.5) | 22 | 61 | major | 1 | review_required |
+| Orc | Orc (5.1), Orc (3.5) | 13 | 17 | minor | 8 | review_required |
+| Sprite | Sprite (5.1), Sprite (3.5) | 2 | 7 | minor | 6 | review_required |
+| Svirfneblin | Svirfneblin (5.1), Svirfneblin (3.5) | 8 | 6 | minor | 5 | review_required |
+| Tallfellow Halfling | Tallfellow Halfling (3.5) | 9 | 13 | minor | 5 | review_required |
+| Tiefling | Tiefling (3.5) | 10 | 7 | minor | 2 | review_required |
+| Wild Elf | Wild Elf (3.5) | 10 | 16 | minor | 6 | review_required |
+| Wood Elf | Wood Elf (3.5) | 11 | 17 | minor | 6 | review_required |
 | Bear, Black | Black Bear (5.1), Bear, Black (3.5) | 20 | 27 | standard | 1 | review_required |
 | Bear, Brown | Brown Bear (5.1), Bear, Brown (3.5) | 27 | 46 | standard | 1 | review_required |
 | Bear, Polar | Polar Bear (5.1), Bear, Polar (3.5) | 29 | 49 | standard | 1 | review_required |

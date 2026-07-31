@@ -1,0 +1,220 @@
+{
+	"version": 5,
+	"id": "T_LG0D6pQQYcFu-NY",
+	"traits": [
+		{
+			"id": "tipEYWCMZW6oD7jJ7",
+			"name": "Forest Gnome",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Forest Gnome",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Forest Gnome (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 28 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tJjRnYsyA4iLkpmq7",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": -20,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t9jg7B558fH2g9MGb",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tP2sZFAuN7PhCdYtw",
+					"name": "Increased Will",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "ttFkjZAbQF6h1wkCN",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tb_v4-gyZUHHSGRgL",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tcdJWQnxTtkbrL1fp",
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "t4Mt73LZE92HN_qQz",
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tS3spJjoBcD1Oeiy-",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tfKueOiJoDgqmDg6J",
+					"name": "Silence",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "teQu83kGhXwnyio9P",
+					"name": "Chummy",
+					"reference": "B126",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				}
+			],
+			"calc": {
+				"points": 28
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sMCS8soMjDv1ULjnm",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 16,
+			"local_notes": "Racial skill at DX+4, level 15."
+		},
+		{
+			"id": "sbPMZNzAFLESHkfwy",
+			"name": "Camouflage",
+			"difficulty": "iq/e",
+			"points": 4,
+			"local_notes": "Racial skill at IQ+2, level 12."
+		},
+		{
+			"id": "sczhMZqW6sxTkxOXk",
+			"name": "Naturalist",
+			"difficulty": "iq/h",
+			"points": 4,
+			"local_notes": "Racial skill at IQ+0, level 10."
+		},
+		{
+			"id": "sH8vAIUElvMBJQnKo",
+			"name": "Knife",
+			"difficulty": "dx/e",
+			"points": 2,
+			"local_notes": "Racial skill at DX+1, level 12."
+		},
+		{
+			"id": "svpxv3j3SVDNOtDJZ",
+			"name": "Sling",
+			"difficulty": "dx/h",
+			"points": 4,
+			"local_notes": "Racial skill at DX+0, level 11."
+		}
+	]
+}

@@ -374,6 +374,12 @@ export const TRAITS = {
     tags: ["Advantage", "Exotic", "Physical"],
     basePoints: 3,
   },
+  "resistant-to-poison": {
+    name: "Resistant to Poison (+3)",
+    reference: "B80",
+    tags: ["Advantage", "Exotic", "Physical"],
+    basePoints: 5,
+  },
   flexibility: {
     name: "Flexibility",
     reference: "B56",
@@ -427,6 +433,46 @@ export const TRAITS = {
     tags: ["Advantage", "Exotic", "Physical"],
     // Extra Arm 10, +50% for Extra-Flexible.
     basePoints: 15,
+  },
+  "oxygen-absorption": {
+    name: "Doesn't Breathe (Oxygen Absorption)",
+    reference: "B49",
+    tags: ["Advantage", "Exotic", "Physical"],
+    // Doesn't Breathe [20] at -25%. This is the one that matters for the folk who
+    // live in the sea and still hold a conversation on a beach: Gills would say
+    // they suffocate out of the water, which merfolk demonstrably do not.
+    basePoints: 20,
+    modifiers: [
+      {
+        name: "Oxygen Absorption",
+        reference: "B49",
+        cost_adj: "-25%",
+        local_notes: "Breathes air and water equally; needs one or the other.",
+      },
+    ],
+    grantsMovement: "water",
+  },
+  "invisibility-switchable": {
+    name: "Invisibility",
+    reference: "B62",
+    tags: ["Advantage", "Exotic", "Physical"],
+    // Invisibility [40] with Switchable (+10%). Always-on invisibility is a
+    // different creature: a duergar that could not turn it off could not be
+    // seen by its own war band.
+    basePoints: 40,
+    modifiers: [{ name: "Switchable", reference: "B110", cost_adj: "+10%" }],
+  },
+  morph: {
+    name: "Morph",
+    reference: "B84",
+    tags: ["Advantage", "Exotic", "Physical"],
+    basePoints: 100,
+  },
+  "regeneration-slow": {
+    name: "Regeneration (Slow)",
+    reference: "B80",
+    tags: ["Advantage", "Exotic", "Physical"],
+    basePoints: 10,
   },
 
   // --- Natural weapons ------------------------------------------------------
@@ -800,6 +846,30 @@ export const TRAITS = {
     pointsPerLevel: 25,
   },
 
+  // --- Bearing and standing --------------------------------------------------
+  // The folk batches need traits the animal batches never did. A wolf has no
+  // reputation and nothing resists a spell cast at it; a drow has both, and
+  // leaving them out would make the record a description of a body rather than
+  // of a people.
+  "magic-resistance": {
+    name: "Magic Resistance",
+    reference: "B67",
+    tags: ["Advantage", "Exotic", "Mental"],
+    pointsPerLevel: 2,
+  },
+  charisma: {
+    name: "Charisma",
+    reference: "B41",
+    tags: ["Advantage", "Mental"],
+    pointsPerLevel: 5,
+  },
+  "appearance-attractive": {
+    name: "Appearance (Attractive)",
+    reference: "B21",
+    tags: ["Advantage", "Mental", "Physical"],
+    basePoints: 4,
+  },
+
   // --- Disadvantages --------------------------------------------------------
   // Animal mindlessness is built from its named component disadvantages rather
   // than from a meta-trait, so every point of it cites a page a reviewer can
@@ -935,6 +1005,27 @@ export const TRAITS = {
     reference: "B139",
     tags: ["Disadvantage", "Exotic", "Physical"],
     pointsPerLevel: -10,
+  },
+  "appearance-ugly": {
+    name: "Appearance (Ugly)",
+    reference: "B21",
+    tags: ["Disadvantage", "Mental", "Physical"],
+    basePoints: -8,
+  },
+  // Social Stigma prices how the rest of the setting treats a people. It is the
+  // difference between an orc and a very strong man, and it is a disadvantage
+  // the creature carries whether or not it agrees with the assessment.
+  "social-stigma-savage": {
+    name: "Social Stigma (Savage)",
+    reference: "B155",
+    tags: ["Disadvantage", "Social"],
+    basePoints: -10,
+  },
+  "social-stigma-monster": {
+    name: "Social Stigma (Monster)",
+    reference: "B155",
+    tags: ["Disadvantage", "Social"],
+    basePoints: -15,
   },
 };
 

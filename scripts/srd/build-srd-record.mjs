@@ -249,16 +249,23 @@ function gctChild(slug, entry, context) {
     child.can_level = true;
     child.levels = entry.levels;
   }
+  // A trait can appear more than once in a build when the qualifier is what
+  // distinguishes the copies — an aasimar buys element-limited DR three times,
+  // once each for acid, cold and lightning. The child id already carries the
+  // qualifier; its modifiers and weapons have to as well, or the three copies
+  // hand GCS the same modifier id three times. The qualifier is appended only
+  // when there is one, so ids for the unqualified traits do not move.
+  const qualified = entry.qualifier ? [entry.qualifier] : [];
   if (modifiers.length > 0) {
     child.modifiers = modifiers.map(modifier => ({
-      id: stableId("m", slug, entry.trait, modifier.name),
+      id: stableId("m", slug, entry.trait, modifier.name, ...qualified),
       ...modifier,
     }));
   }
   if (definition.features) child.features = definition.features;
   if (definition.weapons) {
     child.weapons = definition.weapons.map(weapon => ({
-      id: stableId("w", slug, entry.trait, weapon.usage),
+      id: stableId("w", slug, entry.trait, weapon.usage, ...qualified),
       sv: 1,
       ...weapon,
     }));

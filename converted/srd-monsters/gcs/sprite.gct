@@ -1,0 +1,242 @@
+{
+	"version": 5,
+	"id": "T5cnpTtxYdw09pDX3",
+	"traits": [
+		{
+			"id": "tWbmp3dQmCjEOUnOi",
+			"name": "Sprite",
+			"reference": "Monsters on Automatic, SRD coverage: humanoid folk and their sub-races: Sprite",
+			"local_notes": "Independent Monsters on Automatic build; AI-generated first draft authorized for publication under CC BY 4.0. Originator credit: Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0. Answers the SRD heading(s): Sprite (SRD 5.1); Sprite (SRD 3.5). Only the creature identity comes from the SRD; these GURPS mechanics are this project's own work and reproduce no SRD text. Review status: draft, review required. Template total: 84 points.",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t4Is_PpdQE9N7Litw",
+					"name": "Decreased Strength",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 8,
+					"calc": {
+						"points": -80,
+						"current_level": 8
+					}
+				},
+				{
+					"id": "tkuVaqakcrbHU7xY7",
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 20,
+					"can_level": true,
+					"levels": 4,
+					"calc": {
+						"points": 80,
+						"current_level": 4
+					}
+				},
+				{
+					"id": "t3kQRQA1Tpw7Urdiu",
+					"name": "Decreased Health",
+					"reference": "B14",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tgwT9fy2B3I0GG9Yt",
+					"name": "Increased Perception",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tLLWNRCnfy5M5WeRI",
+					"name": "Decreased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -5,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": -15,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tsfFcggNc6lyTQb1p",
+					"name": "Acute Vision",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 6,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "tPBlvHp-K1KJ1McWz",
+					"name": "Appearance (Attractive)",
+					"reference": "B21",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Physical"
+					],
+					"base_points": 4,
+					"calc": {
+						"points": 4
+					}
+				},
+				{
+					"id": "tKogU_J4W1NZgaLHW",
+					"name": "Flight",
+					"reference": "B56",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mBCMmbiyq3RyM2jYF",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%",
+							"local_notes": "Requires room to spread and beat wings; a grounded or bound flier cannot use it."
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tsMd-90f4-YhHttHF",
+					"name": "Invisibility",
+					"reference": "B62",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"base_points": 40,
+					"modifiers": [
+						{
+							"id": "mM2b7XYj2Wn8oO-kd",
+							"name": "Switchable",
+							"reference": "B110",
+							"cost_adj": "+10%"
+						}
+					],
+					"calc": {
+						"points": 44
+					}
+				},
+				{
+					"id": "tRv3NtodpJb2m5sLj",
+					"name": "Night Vision",
+					"reference": "B71",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 5,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "tJp8owH6sL-MrdXR_",
+					"name": "Silence",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				}
+			],
+			"calc": {
+				"points": 84
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "slRPm8Ooa4GV3ufam",
+			"name": "Bow",
+			"difficulty": "dx/a",
+			"points": 8,
+			"local_notes": "Racial skill at DX+2, level 16."
+		},
+		{
+			"id": "sQEeLfjo7n9OFb7ue",
+			"name": "Knife",
+			"difficulty": "dx/e",
+			"points": 2,
+			"local_notes": "Racial skill at DX+1, level 15."
+		},
+		{
+			"id": "sm2Lz_bRFTT5RjFkE",
+			"name": "Stealth",
+			"difficulty": "dx/a",
+			"points": 16,
+			"local_notes": "Racial skill at DX+4, level 18."
+		},
+		{
+			"id": "sKvNWu6naHbqNYDXf",
+			"name": "Naturalist",
+			"difficulty": "iq/h",
+			"points": 4,
+			"local_notes": "Racial skill at IQ+0, level 10."
+		}
+	]
+}

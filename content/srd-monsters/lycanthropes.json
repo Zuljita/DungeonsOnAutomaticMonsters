@@ -1,0 +1,562 @@
+{
+  "version": 1,
+  "batch": "lycanthropes",
+  "issue": 43,
+  "title": "SRD coverage: lycanthropes, pre-materialized in their hybrid forms",
+  "summary": "The five lycanthrope identities, built per issue #43's decision as concrete creatures rather than an applied template. Each record is the hybrid combat form — the shape a GM actually runs a fight against — with the human life bought as an Alternate Form, so the two-shaped identity is priced instead of narrated. The curse itself is not a point value: a bite that breaks the skin may pass it on, and that is an affliction the campaign adjudicates, not the creature's character sheet. Silver is handled the same way the swarms handle what the rating cannot see — regeneration is priced from the published table, and the stat notes state plainly that wounds dealt by silver do not close.",
+  "traitSets": {
+    "lycanthrope": [
+      {
+        "trait": "alternate-form-human"
+      },
+      {
+        "trait": "night-vision",
+        "levels": 5
+      },
+      {
+        "trait": "discriminatory-smell"
+      },
+      {
+        "trait": "regeneration-slow"
+      },
+      {
+        "trait": "high-pain-threshold"
+      },
+      {
+        "trait": "fur"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "werebear",
+      "name": "Werebear",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "wilderness",
+        "talker"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Werebear"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Werebear"
+        }
+      ],
+      "massKg": 220,
+      "sizeModifier": 1,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A cabin or cave a long way from a road, kept by someone who moved out there for everyone else's sake.",
+      "traitSets": [
+        "lycanthrope"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 14
+        },
+        {
+          "trait": "dx",
+          "levels": 1
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 3
+        },
+        {
+          "trait": "will",
+          "levels": 2
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "sharp-claws"
+        },
+        {
+          "trait": "sharp-teeth"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Survival (Woodlands)",
+          "attribute": "per",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "Bear-sized, on a reasoning creature's aim."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "A bite that breaks the skin can pass the curse; werebears know it, and bite only what they mean to kill or keep."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "The one lycanthrope that mostly chose this. Werebears keep the shape on purpose and keep away from people on purpose, and the hybrid you meet on a forest track is usually deciding whether you are a problem for the valley it protects. If you are, it is a head taller than you, four times your weight, and still smarter than the bear it resembles.",
+      "notes": [
+        "Hybrid form throughout; the human life is the Alternate Form. The animal form's numbers sit between the two and are left to prose.",
+        "Wounds dealt by silver do not regenerate; the note carries what no published trait prices cleanly."
+      ]
+    },
+    {
+      "slug": "wereboar",
+      "name": "Wereboar",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "wilderness"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Wereboar"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Wereboar"
+        }
+      ],
+      "massKg": 140,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Rough farmland or scrub hills, at the end of the lane the neighbours stopped using.",
+      "traitSets": [
+        "lycanthrope"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 5
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 2
+        },
+        {
+          "trait": "will",
+          "levels": 1
+        },
+        {
+          "trait": "striker-tusks"
+        },
+        {
+          "trait": "berserk"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Tusk Gore",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "Delivered on a charge when it can get one; the second gore is aimed at whoever helped you up."
+        },
+        {
+          "name": "Fists",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "A bite that breaks the skin can pass the curse."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "Belligerence given tusks. Wereboars do not stalk and do not scheme; they take offence, charge, and keep charging until something stops being upright. The ones with families pass the curse along like a surname, and a pair met on their own ground fight like they have nothing to lose, because they long since stopped counting wounds.",
+      "notes": [
+        "Berserk is the identity: hurt one and it stops defending. The rating sees the frenzy's offense; the note reminds the GM it also stops retreating.",
+        "Wounds dealt by silver do not regenerate."
+      ]
+    },
+    {
+      "slug": "wererat",
+      "name": "Wererat",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "urban",
+        "talker",
+        "night"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Wererat"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Wererat"
+        }
+      ],
+      "massKg": 60,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Cellars, sewers and warehouse lofts in any city big enough to lose things in.",
+      "traitSets": [
+        "lycanthrope"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 1
+        },
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "hp",
+          "levels": 1
+        },
+        {
+          "trait": "sharp-teeth"
+        },
+        {
+          "trait": "flexibility"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Shortsword",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 1
+        },
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Streetwise",
+          "attribute": "iq",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shortsword",
+          "skill": "Shortsword",
+          "basis": "sw",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Wererats fight with tools, in numbers, from behind."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Filthy, and it knows it: the wound sickens, and a bite that breaks the skin can pass the curse. Wererats bite people they want in the family."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "wanderingWeight": 4
+      },
+      "description": "The curse as a criminal enterprise. Wererats recruit, and a nest is a gang: pickets, escape holes, a ledger, and a rule about not killing anyone the city would miss. You meet four, and the four you meet are the ones they could afford to show you.",
+      "notes": [
+        "The smallest and most organized of the line; the appearing number is a patrol from a larger nest.",
+        "Wounds dealt by silver do not regenerate."
+      ]
+    },
+    {
+      "slug": "weretiger",
+      "name": "Weretiger",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "wilderness",
+        "apex",
+        "night"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Weretiger"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Weretiger"
+        }
+      ],
+      "massKg": 160,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A solitary hunting range with one comfortable den, kept the way a fastidious person keeps a house.",
+      "traitSets": [
+        "lycanthrope"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 8
+        },
+        {
+          "trait": "dx",
+          "levels": 3
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "hp",
+          "levels": 2
+        },
+        {
+          "trait": "sharp-claws"
+        },
+        {
+          "trait": "sharp-teeth"
+        },
+        {
+          "trait": "combat-reflexes"
+        },
+        {
+          "trait": "catfall"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Tracking",
+          "attribute": "per",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "Both hands, faster than a fencer."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "Aimed at the neck of whatever the claws opened. A bite that breaks the skin can pass the curse; weretigers consider that carelessness."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "A hunter who is exactly as calm as the tiger it becomes. Weretigers hunt alone, choose their prey days ahead, and treat the curse as an inheritance to be lived up to. The fight happens where the weretiger wanted it, which you learn at the same moment you learn there is a fight.",
+      "notes": [
+        "Wounds dealt by silver do not regenerate."
+      ]
+    },
+    {
+      "slug": "werewolf",
+      "name": "Werewolf",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "wilderness",
+        "night",
+        "wandering-encounter"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Werewolf"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Werewolf"
+        }
+      ],
+      "massKg": 90,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A den within a night's run of a village, and a bed in that village the rest of the month.",
+      "traitSets": [
+        "lycanthrope"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 4
+        },
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 1
+        },
+        {
+          "trait": "will",
+          "levels": 1
+        },
+        {
+          "trait": "sharp-teeth"
+        },
+        {
+          "trait": "combat-reflexes"
+        },
+        {
+          "trait": "bestial"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 1
+        },
+        {
+          "name": "Tracking",
+          "attribute": "per",
+          "difficulty": "a",
+          "relative": 2
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "cutting",
+          "reach": "C",
+          "notes": "The famous one. A bite that breaks the skin can pass the curse, and the werewolf in the grip of the moon is not choosing carefully."
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": ""
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 3,
+        "wanderingWeight": 4
+      },
+      "description": "The classic curse: an ordinary person most of the month, and this the rest of it. A werewolf pack is part family and part affliction support group, and it runs the hills around a settlement that has started counting its dogs. Silver is not a rumor. Bring it or bring rope.",
+      "notes": [
+        "Bestial carries the moon-driven judgment: in hybrid form its problem-solving is a wolf's, whatever it remembers being on Tuesday.",
+        "Wounds dealt by silver do not regenerate."
+      ]
+    }
+  ]
+}

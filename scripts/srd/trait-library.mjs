@@ -1027,6 +1027,77 @@ export const TRAITS = {
     tags: ["Disadvantage", "Social"],
     basePoints: -15,
   },
+
+  // Undead and template constructions (issue #43). These entries exist so the
+  // pre-materialized template creatures can buy their identities from published
+  // costs instead of prose. Edge mechanics no published trait prices — a wound
+  // silver would not close, a rot that outruns healing — stay in stat notes,
+  // per the same policy the swarms use for what the rating cannot see.
+  unaging: {
+    name: "Unaging",
+    reference: "B95",
+    tags: ["Advantage", "Exotic", "Physical"],
+    basePoints: 15,
+  },
+  "fragile-brittle": {
+    name: "Fragile (Brittle)",
+    reference: "B136",
+    tags: ["Disadvantage", "Exotic", "Physical"],
+    // Dry bone shatters: any major wound also breaks something structural.
+    basePoints: -15,
+  },
+  "immunity-mind-control": {
+    name: "Resistant to Mind Control (Immunity)",
+    reference: "B81",
+    tags: ["Advantage", "Exotic", "Mental"],
+    // There is no mind in there to seize, or the will that remains answers
+    // only to whatever raised it.
+    basePoints: 30,
+  },
+  "alternate-form-human": {
+    name: "Alternate Form (Human)",
+    reference: "B83",
+    tags: ["Advantage", "Exotic", "Physical"],
+    // The lycanthrope's other life. The form itself is an ordinary person and
+    // prices at zero; these points buy the ability to switch.
+    basePoints: 15,
+  },
+  insubstantiality: {
+    name: "Insubstantiality (Affect Substantial)",
+    reference: "B62",
+    tags: ["Advantage", "Exotic", "Physical"],
+    // Insubstantiality [80] with Affect Substantial (+100%): a ghost that could
+    // not touch the living would be scenery, not a monster.
+    basePoints: 80,
+    modifiers: [{ name: "Affect Substantial", reference: "B62", cost_adj: "+100%" }],
+  },
+  "weakness-sunlight": {
+    name: "Weakness (Sunlight; 1d per minute)",
+    reference: "B161",
+    tags: ["Disadvantage", "Exotic", "Physical"],
+    basePoints: -60,
+  },
+  "restricted-diet-fresh-blood": {
+    name: "Restricted Diet (Fresh Blood)",
+    reference: "B151",
+    tags: ["Disadvantage", "Physical"],
+    // Occasional availability: blood walks past every day, but taking it is
+    // never simple.
+    basePoints: -30,
+  },
+  "magery-0": {
+    name: "Magery 0",
+    reference: "B66",
+    tags: ["Advantage", "Mental", "Supernatural"],
+    basePoints: 5,
+  },
+  magery: {
+    name: "Magery",
+    reference: "B66",
+    tags: ["Advantage", "Mental", "Supernatural"],
+    // Levels above Magery 0, which is bought separately as its own entry.
+    pointsPerLevel: 10,
+  },
 };
 
 export function traitDefinition(id) {

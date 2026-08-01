@@ -56,7 +56,7 @@
         ]
       }
     ],
-    "monsterCount": 153
+    "monsterCount": 172
   },
   "monsters": [
     {
@@ -29629,6 +29629,2051 @@
       }
     },
     {
+      "id": "doa_werebear",
+      "name": "Werebear",
+      "pageRef": "Werebear [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms; answers Werebear (SRD 5.1); Werebear (SRD 3.5)]",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "shapechanger",
+        "lycanthrope",
+        "wilderness",
+        "talker"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "A cabin or cave a long way from a road, kept by someone who moved out there for everyone else's sake.",
+      "description": {
+        "text": "The one lycanthrope that mostly chose this. Werebears keep the shape on purpose and keep away from people on purpose, and the hybrid you meet on a forest track is usually deciding whether you are a problem for the valley it protects. If you are, it is a head taller than you, four times your weight, and still smarter than the bear it resembles.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "1 hex",
+        "massKg": 220,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 18,
+        "protectionRating": 23,
+        "combatEffectivenessRating": 41,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 24,
+          "dx": 11,
+          "iq": 10,
+          "ht": 12,
+          "hp": 27,
+          "will": 12,
+          "per": 10,
+          "fp": 12,
+          "speed": 5.75,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Claws",
+            "skill": 13,
+            "damage": "2d+2 cutting",
+            "reach": "C,1",
+            "notes": "Claws (13): 2d+2 cutting, Reach C,1. Bear-sized, on a reasoning creature's aim."
+          },
+          {
+            "name": "Bite",
+            "skill": 13,
+            "damage": "2d+1 cutting",
+            "reach": "C",
+            "notes": "Bite (13): 2d+1 cutting, Reach C. A bite that breaks the skin can pass the curse; werebears know it, and bite only what they mean to kill or keep."
+          }
+        ],
+        "traits": [
+          "Alternate Form (Human)",
+          "Discriminatory Smell",
+          "Fur",
+          "High Pain Threshold",
+          "Night Vision 5",
+          "Regeneration (Slow)",
+          "Sharp Claws",
+          "Sharp Teeth"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 13
+          },
+          {
+            "name": "Survival (Woodlands)",
+            "level": 11
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/werebear.gct",
+          "Independent build total: 244 points of racial traits plus 8 points of racial skills.",
+          "Answers the SRD heading(s): Werebear (SRD 5.1); Werebear (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 220 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Hybrid form throughout; the human life is the Alternate Form. The animal form's numbers sit between the two and are left to prose.",
+          "Wounds dealt by silver do not regenerate; the note carries what no published trait prices cleanly."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "werebear",
+        "sourceName": "Werebear [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Werebear (SRD 5.1); Werebear (SRD 3.5).",
+          "Racial template: 244 points across 14 traits, plus 2 racial skill(s) worth 8 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "werebear",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Werebear",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Werebear",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "lycanthropes",
+        "issue": 43,
+        "spec": "content/srd-monsters/lycanthropes.json",
+        "slug": "werebear"
+      }
+    },
+    {
+      "id": "doa_wereboar",
+      "name": "Wereboar",
+      "pageRef": "Wereboar [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms; answers Wereboar (SRD 5.1); Wereboar (SRD 3.5)]",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "shapechanger",
+        "lycanthrope",
+        "wilderness"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "Rough farmland or scrub hills, at the end of the lane the neighbours stopped using.",
+      "description": {
+        "text": "Belligerence given tusks. Wereboars do not stalk and do not scheme; they take offence, charge, and keep charging until something stops being upright. The ones with families pass the curse along like a surname, and a pair met on their own ground fight like they have nothing to lose, because they long since stopped counting wounds.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 140,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 14,
+        "protectionRating": 12,
+        "combatEffectivenessRating": 26,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 15,
+          "dx": 10,
+          "iq": 10,
+          "ht": 12,
+          "hp": 17,
+          "will": 11,
+          "per": 10,
+          "fp": 12,
+          "speed": 5.5,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Tusk Gore",
+            "skill": 12,
+            "damage": "1d+2 impaling",
+            "reach": "C,1",
+            "notes": "Tusk Gore (12): 1d+2 impaling, Reach C,1. Delivered on a charge when it can get one; the second gore is aimed at whoever helped you up."
+          },
+          {
+            "name": "Fists",
+            "skill": 12,
+            "damage": "1d+1 crushing",
+            "reach": "C",
+            "notes": "Fists (12): 1d+1 crushing, Reach C. A bite that breaks the skin can pass the curse."
+          }
+        ],
+        "traits": [
+          "Alternate Form (Human)",
+          "Berserk (12)",
+          "Discriminatory Smell",
+          "Fur",
+          "High Pain Threshold",
+          "Night Vision 5",
+          "Regeneration (Slow)",
+          "Striker (Tusks; Impaling)"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 12
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/wereboar.gct",
+          "Independent build total: 133 points of racial traits plus 4 points of racial skills.",
+          "Answers the SRD heading(s): Wereboar (SRD 5.1); Wereboar (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 140 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Berserk is the identity: hurt one and it stops defending. The rating sees the frenzy's offense; the note reminds the GM it also stops retreating.",
+          "Wounds dealt by silver do not regenerate."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "wereboar",
+        "sourceName": "Wereboar [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Wereboar (SRD 5.1); Wereboar (SRD 3.5).",
+          "Racial template: 133 points across 12 traits, plus 1 racial skill(s) worth 4 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "wereboar",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Wereboar",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Wereboar",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "lycanthropes",
+        "issue": 43,
+        "spec": "content/srd-monsters/lycanthropes.json",
+        "slug": "wereboar"
+      }
+    },
+    {
+      "id": "doa_wererat",
+      "name": "Wererat",
+      "pageRef": "Wererat [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms; answers Wererat (SRD 5.1); Wererat (SRD 3.5)]",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "shapechanger",
+        "lycanthrope",
+        "urban",
+        "talker",
+        "night"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "Cellars, sewers and warehouse lofts in any city big enough to lose things in.",
+      "description": {
+        "text": "The curse as a criminal enterprise. Wererats recruit, and a nest is a gang: pickets, escape holes, a ledger, and a rule about not killing anyone the city would miss. You meet four, and the four you meet are the ones they could afford to show you.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 60,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 10,
+        "protectionRating": 5,
+        "combatEffectivenessRating": 15,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "minor"
+      },
+      "encounter": {
+        "averageNumberAppearing": 4,
+        "treasureMultiplier": null,
+        "wanderingWeight": 4,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 11,
+          "dx": 12,
+          "iq": 10,
+          "ht": 11,
+          "hp": 12,
+          "will": 10,
+          "per": 10,
+          "fp": 11,
+          "speed": 5.75,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Shortsword",
+            "skill": 13,
+            "damage": "1d+1 cutting",
+            "reach": "1",
+            "notes": "Shortsword (13): 1d+1 cutting, Reach 1. Wererats fight with tools, in numbers, from behind."
+          },
+          {
+            "name": "Bite",
+            "skill": 13,
+            "damage": "1d-2 impaling",
+            "reach": "C",
+            "notes": "Bite (13): 1d-2 impaling, Reach C. Filthy, and it knows it: the wound sickens, and a bite that breaks the skin can pass the curse. Wererats bite people they want in the family."
+          }
+        ],
+        "traits": [
+          "Alternate Form (Human)",
+          "Discriminatory Smell",
+          "Flexibility",
+          "Fur",
+          "High Pain Threshold",
+          "Night Vision 5",
+          "Regeneration (Slow)",
+          "Sharp Teeth"
+        ],
+        "skills": [
+          {
+            "name": "Shortsword",
+            "level": 13
+          },
+          {
+            "name": "Brawling",
+            "level": 13
+          },
+          {
+            "name": "Stealth",
+            "level": 14
+          },
+          {
+            "name": "Streetwise",
+            "level": 11
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/wererat.gct",
+          "Independent build total: 124 points of racial traits plus 18 points of racial skills.",
+          "Answers the SRD heading(s): Wererat (SRD 5.1); Wererat (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 60 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The smallest and most organized of the line; the appearing number is a patrol from a larger nest.",
+          "Wounds dealt by silver do not regenerate."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "wererat",
+        "sourceName": "Wererat [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Wererat (SRD 5.1); Wererat (SRD 3.5).",
+          "Racial template: 124 points across 12 traits, plus 4 racial skill(s) worth 18 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "wererat",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Wererat",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Wererat",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "lycanthropes",
+        "issue": 43,
+        "spec": "content/srd-monsters/lycanthropes.json",
+        "slug": "wererat"
+      }
+    },
+    {
+      "id": "doa_weretiger",
+      "name": "Weretiger",
+      "pageRef": "Weretiger [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms; answers Weretiger (SRD 5.1); Weretiger (SRD 3.5)]",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "shapechanger",
+        "lycanthrope",
+        "wilderness",
+        "apex",
+        "night"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "A solitary hunting range with one comfortable den, kept the way a fastidious person keeps a house.",
+      "description": {
+        "text": "A hunter who is exactly as calm as the tiger it becomes. Weretigers hunt alone, choose their prey days ahead, and treat the curse as an inheritance to be lived up to. The fight happens where the weretiger wanted it, which you learn at the same moment you learn there is a fight.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 160,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 16,
+        "protectionRating": 16,
+        "combatEffectivenessRating": 32,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 18,
+          "dx": 13,
+          "iq": 10,
+          "ht": 11,
+          "hp": 20,
+          "will": 10,
+          "per": 10,
+          "fp": 11,
+          "speed": 6,
+          "move": 6,
+          "dodge": 9,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Claws",
+            "skill": 15,
+            "damage": "1d+3 cutting",
+            "reach": "C,1",
+            "notes": "Claws (15): 1d+3 cutting, Reach C,1. Both hands, faster than a fencer."
+          },
+          {
+            "name": "Bite",
+            "skill": 15,
+            "damage": "1d+2 cutting",
+            "reach": "C",
+            "notes": "Bite (15): 1d+2 cutting, Reach C. Aimed at the neck of whatever the claws opened. A bite that breaks the skin can pass the curse; weretigers consider that carelessness."
+          }
+        ],
+        "traits": [
+          "Alternate Form (Human)",
+          "Catfall",
+          "Combat Reflexes",
+          "Discriminatory Smell",
+          "Fur",
+          "High Pain Threshold",
+          "Night Vision 5",
+          "Regeneration (Slow)",
+          "Sharp Claws",
+          "Sharp Teeth"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 15
+          },
+          {
+            "name": "Stealth",
+            "level": 15
+          },
+          {
+            "name": "Tracking",
+            "level": 11
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/weretiger.gct",
+          "Independent build total: 241 points of racial traits plus 16 points of racial skills.",
+          "Answers the SRD heading(s): Weretiger (SRD 5.1); Weretiger (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 160 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Wounds dealt by silver do not regenerate."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "weretiger",
+        "sourceName": "Weretiger [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Weretiger (SRD 5.1); Weretiger (SRD 3.5).",
+          "Racial template: 241 points across 14 traits, plus 3 racial skill(s) worth 16 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "weretiger",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Weretiger",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Weretiger",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "lycanthropes",
+        "issue": 43,
+        "spec": "content/srd-monsters/lycanthropes.json",
+        "slug": "weretiger"
+      }
+    },
+    {
+      "id": "doa_werewolf",
+      "name": "Werewolf",
+      "pageRef": "Werewolf [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms; answers Werewolf (SRD 5.1); Werewolf (SRD 3.5)]",
+      "class": "Humanoid (Shapechanger)",
+      "classTags": [
+        "shapechanger",
+        "lycanthrope"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "shapechanger",
+        "lycanthrope",
+        "wilderness",
+        "night",
+        "wandering-encounter"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "A den within a night's run of a village, and a bed in that village the rest of the month.",
+      "description": {
+        "text": "The classic curse: an ordinary person most of the month, and this the rest of it. A werewolf pack is part family and part affliction support group, and it runs the hills around a settlement that has started counting its dogs. Silver is not a rumor. Bring it or bring rope.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 90,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 11,
+        "protectionRating": 13,
+        "combatEffectivenessRating": 24,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "minor"
+      },
+      "encounter": {
+        "averageNumberAppearing": 3,
+        "treasureMultiplier": null,
+        "wanderingWeight": 4,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 14,
+          "dx": 12,
+          "iq": 10,
+          "ht": 12,
+          "hp": 15,
+          "will": 11,
+          "per": 10,
+          "fp": 12,
+          "speed": 6,
+          "move": 6,
+          "dodge": 9,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Bite",
+            "skill": 14,
+            "damage": "1d cutting",
+            "reach": "C",
+            "notes": "Bite (14): 1d cutting, Reach C. The famous one. A bite that breaks the skin can pass the curse, and the werewolf in the grip of the moon is not choosing carefully."
+          },
+          {
+            "name": "Claws",
+            "skill": 14,
+            "damage": "1d cutting",
+            "reach": "C,1",
+            "notes": "Claws (14): 1d cutting, Reach C,1."
+          }
+        ],
+        "traits": [
+          "Alternate Form (Human)",
+          "Bestial",
+          "Combat Reflexes",
+          "Discriminatory Smell",
+          "Fur",
+          "High Pain Threshold",
+          "Night Vision 5",
+          "Regeneration (Slow)",
+          "Sharp Teeth"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 14
+          },
+          {
+            "name": "Stealth",
+            "level": 13
+          },
+          {
+            "name": "Tracking",
+            "level": 12
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/werewolf.gct",
+          "Independent build total: 169 points of racial traits plus 16 points of racial skills.",
+          "Answers the SRD heading(s): Werewolf (SRD 5.1); Werewolf (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 90 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Bestial carries the moon-driven judgment: in hybrid form its problem-solving is a wolf's, whatever it remembers being on Tuesday.",
+          "Wounds dealt by silver do not regenerate."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "werewolf",
+        "sourceName": "Werewolf [Monsters on Automatic, SRD coverage: lycanthropes, pre-materialized in their hybrid forms]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Werewolf (SRD 5.1); Werewolf (SRD 3.5).",
+          "Racial template: 169 points across 14 traits, plus 3 racial skill(s) worth 16 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "werewolf",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Werewolf",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Werewolf",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "lycanthropes",
+        "issue": 43,
+        "spec": "content/srd-monsters/lycanthropes.json",
+        "slug": "werewolf"
+      }
+    },
+    {
+      "id": "doa_celestial_lion",
+      "name": "Celestial Lion",
+      "pageRef": "Celestial Lion [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized; answers Celestial Creature (SRD 3.5)]",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "celestial",
+        "good"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-3-5",
+        "magical-beast",
+        "celestial",
+        "good",
+        "summoned",
+        "guardian"
+      ],
+      "iq": 5,
+      "appearance": null,
+      "lair": "None of its own: it is sent, and it goes home when the work is done.",
+      "description": {
+        "text": "A lion from a better country. The coat throws light back like beaten gold, the eyes track you with more patience than any animal owes you, and it is only ever met where something upstream decided a lion should be: guarding a shrine, walking beside a summoner, standing over the thing you were about to do. Fight it and it fights like a lion that cannot be poisoned, cursed or frightened.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "2 hexes",
+        "massKg": 200,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 18,
+        "protectionRating": 18,
+        "combatEffectivenessRating": 36,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 2,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 19,
+          "dx": 13,
+          "iq": 5,
+          "ht": 11,
+          "hp": 22,
+          "will": 11,
+          "per": 12,
+          "fp": 11,
+          "speed": 6,
+          "move": 6,
+          "dodge": 9,
+          "dr": 1
+        },
+        "attacks": [
+          {
+            "name": "Claws",
+            "skill": 15,
+            "damage": "2d cutting",
+            "reach": "C,1",
+            "notes": "Claws (15): 2d cutting, Reach C,1. Against a creature of real evil it strikes as though guided, and the wounds burn; give the smite its due as a damage bonus when the target has earned it."
+          },
+          {
+            "name": "Bite",
+            "skill": 15,
+            "damage": "2d-1 impaling",
+            "reach": "C",
+            "notes": "Bite (15): 2d-1 impaling, Reach C. The pounce ends here, at the throat."
+          }
+        ],
+        "traits": [
+          "Acute Vision 2",
+          "Combat Reflexes",
+          "Damage Resistance 1 (Tough Skin)",
+          "Dark Vision",
+          "Extra Legs (Four Legs)",
+          "Fur",
+          "Horizontal",
+          "Magic Resistance 2",
+          "Resistant to Disease (+3)",
+          "Resistant to Poison (+3)",
+          "Sharp Claws",
+          "Sharp Teeth"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 15
+          },
+          {
+            "name": "Stealth",
+            "level": 14
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/celestial-lion.gct",
+          "Independent build total: 183 points of racial traits plus 8 points of racial skills.",
+          "Answers the SRD heading(s): Celestial Creature (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 200 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The base animal is the library's Lion; the celestial touch adds dark vision, resistance to magic, poison and disease, and the smite carried as an attack note.",
+          "It answers the SRD's Celestial Creature template heading as that page's own printed exemplar."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "celestial-lion",
+        "sourceName": "Celestial Lion [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Celestial Creature (SRD 3.5).",
+          "Racial template: 183 points across 20 traits, plus 2 racial skill(s) worth 8 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "celestial-lion",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Celestial Creature",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "planar-touched",
+        "issue": 43,
+        "spec": "content/srd-monsters/planar-touched.json",
+        "slug": "celestial-lion"
+      }
+    },
+    {
+      "id": "doa_fiendish_dire_rat",
+      "name": "Fiendish Dire Rat",
+      "pageRef": "Fiendish Dire Rat [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized; answers Fiendish Creature (SRD 3.5)]",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "fiendish",
+        "evil"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-3-5",
+        "magical-beast",
+        "fiendish",
+        "evil",
+        "summoned",
+        "vermin",
+        "night"
+      ],
+      "iq": 3,
+      "appearance": null,
+      "lair": "Wherever it was called to: a summoning circle's spillover, a cult cellar, the walls of a cursed house.",
+      "description": {
+        "text": "A dog-sized rat with something wrong behind the eyes. Fiendish vermin arrive in numbers, sent rather than strayed, and they do not scatter when the first one dies — whatever holds their leash spends them like copper coins. The fire in the cellar does not bother them. That is your first clue about where they are from.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "-1",
+        "heightSizeModifier": -1,
+        "hexes": "1 hex",
+        "massKg": 25,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 11,
+        "protectionRating": 4,
+        "combatEffectivenessRating": 15,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "minor"
+      },
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "treasureMultiplier": null,
+        "wanderingWeight": 4,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 10,
+          "dx": 12,
+          "iq": 3,
+          "ht": 14,
+          "hp": 14,
+          "will": 3,
+          "per": 11,
+          "fp": 14,
+          "speed": 6.5,
+          "move": 6,
+          "dodge": 9,
+          "dr": 1
+        },
+        "attacks": [
+          {
+            "name": "Bite",
+            "skill": 13,
+            "damage": "1d-3 impaling",
+            "reach": "C",
+            "afflictionPoints": 15,
+            "notes": "Bite (13): 1d-3 impaling, Reach C. Filth given intent: the wound sickens, and against the blessed the teeth find their mark as though guided."
+          }
+        ],
+        "traits": [
+          "Damage Resistance 1 (Tough Skin)",
+          "Damage Resistance 2 (Cold; Limited (one damage type))",
+          "Damage Resistance 2 (Fire; Limited (one damage type))",
+          "Dark Vision",
+          "Extra Legs (Four Legs)",
+          "Horizontal",
+          "Magic Resistance 1",
+          "Night Vision 5",
+          "Sharp Teeth",
+          "Terrain Adaptation"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 13
+          },
+          {
+            "name": "Stealth",
+            "level": 14
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/fiendish-dire-rat.gct",
+          "Independent build total: 36 points of racial traits plus 10 points of racial skills.",
+          "Answers the SRD heading(s): Fiendish Creature (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 25 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The base animal is the library's Dire Rat; the fiendish touch adds dark vision, a little resistance to magic, and fire and cold resistance bought as limited Damage Resistance.",
+          "It answers the SRD's Fiendish Creature template heading as that page's own printed exemplar."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "fiendish-dire-rat",
+        "sourceName": "Fiendish Dire Rat [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Fiendish Creature (SRD 3.5).",
+          "Racial template: 36 points across 16 traits, plus 2 racial skill(s) worth 10 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "fiendish-dire-rat",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Fiendish Creature",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "planar-touched",
+        "issue": 43,
+        "spec": "content/srd-monsters/planar-touched.json",
+        "slug": "fiendish-dire-rat"
+      }
+    },
+    {
+      "id": "doa_half_celestial_unicorn",
+      "name": "Half-Celestial Unicorn",
+      "pageRef": "Half-Celestial Unicorn [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized; answers Half-Celestial (SRD 3.5)]",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "celestial",
+        "good"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-3-5",
+        "magical-beast",
+        "celestial",
+        "good",
+        "wilderness",
+        "healer",
+        "flier"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "The heart of a guarded forest, under a sky it can leave by.",
+      "description": {
+        "text": "A unicorn whose other parent was an angel, and it shows: swan wings, a warmth in the air around it, and a gaze that catalogues your sins without commenting. It heals with a touch of the horn, carries the pure-hearted over battlefields, and kills exactly as gracefully as it does everything else when its forest or its charges are threatened.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "2 hexes",
+        "massKg": 500,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 29,
+        "protectionRating": 25,
+        "combatEffectivenessRating": 54,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 1,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 23,
+          "dx": 14,
+          "iq": 10,
+          "ht": 12,
+          "hp": 27,
+          "will": 14,
+          "per": 13,
+          "fp": 12,
+          "speed": 6.5,
+          "move": 6,
+          "dodge": 9,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Horn",
+            "skill": 17,
+            "damage": "2d+3 impaling",
+            "reach": "C,1",
+            "notes": "Horn (17): 2d+3 impaling, Reach C,1. The alicorn strikes like a lance the animal aims itself; against real evil it hits as though guided."
+          },
+          {
+            "name": "Hooves",
+            "skill": 17,
+            "damage": "2d+2 crushing",
+            "reach": "C,1",
+            "notes": "Hooves (17): 2d+2 crushing, Reach C,1."
+          }
+        ],
+        "traits": [
+          "Dark Vision",
+          "Enhanced Move 1",
+          "Extra Legs (Four Legs)",
+          "Flight (Winged)",
+          "Hooves",
+          "Horizontal",
+          "Magic Resistance 2",
+          "Resistant to Disease (+3)",
+          "Resistant to Poison (+3)",
+          "Striker (Horns; Impaling)"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 17
+          },
+          {
+            "name": "Detect Lies",
+            "level": 13
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/half-celestial-unicorn.gct",
+          "Independent build total: 353 points of racial traits plus 12 points of racial skills.",
+          "Answers the SRD heading(s): Half-Celestial (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 500 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6, 12 at a sprint (primary); air Move 13. The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The base creature is the library's Unicorn; the celestial half adds wings that genuinely fly, the celestial resistances, and the healing touch, which is carried in prose because a beneficial art has no place in an offense rating.",
+          "It answers the SRD's Half-Celestial template heading as the sample that page prints."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "half-celestial-unicorn",
+        "sourceName": "Half-Celestial Unicorn [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Half-Celestial (SRD 3.5).",
+          "Racial template: 353 points across 17 traits, plus 2 racial skill(s) worth 12 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "half-celestial-unicorn",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Half-Celestial",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "planar-touched",
+        "issue": 43,
+        "spec": "content/srd-monsters/planar-touched.json",
+        "slug": "half-celestial-unicorn"
+      }
+    },
+    {
+      "id": "doa_half_fiend_medusa",
+      "name": "Half-Fiend Medusa",
+      "pageRef": "Half-Fiend Medusa [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized; answers Half-Fiend (SRD 3.5)]",
+      "class": "Monstrous Humanoid",
+      "classTags": [
+        "monstrous-humanoid",
+        "fiendish",
+        "evil"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-3-5",
+        "monstrous-humanoid",
+        "fiendish",
+        "evil",
+        "talker",
+        "night",
+        "flier"
+      ],
+      "iq": 11,
+      "appearance": null,
+      "lair": "A statuary garden that keeps acquiring new pieces, in a ruin with a commanding view.",
+      "description": {
+        "text": "A medusa with an infernal parent, which mostly means ambition. The gaze still turns flesh to stone; the wings mean the statue garden has pieces the ground could never have delivered, and the conversation before the gaze is longer, warmer, and much better rehearsed. It wants something from you first. Petrification is what closing the deal looks like.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 70,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 17,
+        "protectionRating": 12,
+        "combatEffectivenessRating": 29,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 1,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 13,
+          "dx": 14,
+          "iq": 11,
+          "ht": 11,
+          "hp": 15,
+          "will": 13,
+          "per": 12,
+          "fp": 11,
+          "speed": 6.25,
+          "move": 6,
+          "dodge": 9,
+          "dr": 1
+        },
+        "attacks": [
+          {
+            "name": "Petrifying Gaze",
+            "skill": 15,
+            "damage": "1d-4 toxic",
+            "reach": "Ranged, gaze",
+            "autoHit": true,
+            "afflictionPoints": 60,
+            "usesFatigueOrSpell": true,
+            "notes": "Petrifying Gaze (15): 1d-4 toxic, Reach Ranged, gaze. Meet the eyes and resist with HT, or stiffen by degrees into stone. The fiendish blood has not changed the family gift, only the patience with which it is used."
+          },
+          {
+            "name": "Serpent Bite",
+            "skill": 15,
+            "damage": "1d-1 impaling",
+            "reach": "C",
+            "afflictionPoints": 20,
+            "notes": "Serpent Bite (15): 1d-1 impaling, Reach C. The hair strikes on its own. Resist the venom with HT or the wound spreads a numbing poison."
+          },
+          {
+            "name": "Claws",
+            "skill": 15,
+            "damage": "1d cutting",
+            "reach": "C",
+            "notes": "Claws (15): 1d cutting, Reach C."
+          }
+        ],
+        "traits": [
+          "Appearance (Attractive)",
+          "Damage Resistance 1 (Tough Skin)",
+          "Damage Resistance 2 (Fire; Limited (one damage type))",
+          "Dark Vision",
+          "Flight (Winged)",
+          "Magic Resistance 1",
+          "Sharp Claws"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 15
+          },
+          {
+            "name": "Bow",
+            "level": 15
+          },
+          {
+            "name": "Fast-Talk",
+            "level": 13
+          },
+          {
+            "name": "Stealth",
+            "level": 15
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/half-fiend-medusa.gct",
+          "Independent build total: 234 points of racial traits plus 18 points of racial skills.",
+          "Answers the SRD heading(s): Half-Fiend (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 70 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary); air Move 12. The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The base creature is the library's Medusa; the fiendish half adds wings, fire resistance, claws, and intent. The gaze is priced through the affliction term exactly as the base medusa's is.",
+          "It answers the SRD's Half-Fiend template heading as the sample that page prints."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "half-fiend-medusa",
+        "sourceName": "Half-Fiend Medusa [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Half-Fiend (SRD 3.5).",
+          "Racial template: 234 points across 14 traits, plus 4 racial skill(s) worth 18 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "half-fiend-medusa",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Half-Fiend",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "planar-touched",
+        "issue": 43,
+        "spec": "content/srd-monsters/planar-touched.json",
+        "slug": "half-fiend-medusa"
+      }
+    },
+    {
+      "id": "doa_half_red_dragon_veteran",
+      "name": "Half-Red Dragon Veteran",
+      "pageRef": "Half-Red Dragon Veteran [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized; answers Half-Red Dragon Veteran (SRD 5.1); Half-Dragon (SRD 3.5)]",
+      "class": "Humanoid (Dragonblood)",
+      "classTags": [
+        "humanoid",
+        "dragonblood"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "humanoid",
+        "dragonblood",
+        "talker",
+        "mercenary"
+      ],
+      "iq": 10,
+      "appearance": null,
+      "lair": "A rented room over an armory, between contracts that keep getting stranger.",
+      "description": {
+        "text": "A career soldier whose mother's side shows in the scales, the slit pupils, and the smell of smoke when the temper goes. Employers pay for the résumé and rediscover the bloodline mid-contract: swords skid on the hide, the fire does not take, and at the worst possible moment the veteran exhales and the front rank is burning.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 100,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 17,
+        "protectionRating": 15,
+        "combatEffectivenessRating": 32,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 2,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 13,
+          "dx": 12,
+          "iq": 10,
+          "ht": 12,
+          "hp": 14,
+          "will": 11,
+          "per": 10,
+          "fp": 12,
+          "speed": 6,
+          "move": 6,
+          "dodge": 9,
+          "dr": 3
+        },
+        "attacks": [
+          {
+            "name": "Longsword",
+            "skill": 14,
+            "damage": "2d cutting",
+            "reach": "1",
+            "notes": "Longsword (14): 2d cutting, Reach 1. Twenty years of drill under scales."
+          },
+          {
+            "name": "Fire Breath",
+            "skill": 13,
+            "damage": "2d burning",
+            "reach": "Ranged, cone",
+            "usesFatigueOrSpell": true,
+            "notes": "Fire Breath (13): 2d burning, Reach Ranged, cone. The inheritance. A short cone, stated as literal dice because it is a property of the blood, not the arm; it costs the veteran to use and is saved for the moment a shield wall thinks it has won."
+          }
+        ],
+        "traits": [
+          "Combat Reflexes",
+          "Damage Resistance 3 (Tough Skin)",
+          "Damage Resistance 6 (Fire; Limited (one damage type))",
+          "Dark Vision",
+          "High Pain Threshold"
+        ],
+        "skills": [
+          {
+            "name": "Broadsword",
+            "level": 14
+          },
+          {
+            "name": "Innate Attack (Breath)",
+            "level": 13
+          },
+          {
+            "name": "Shield",
+            "level": 14
+          },
+          {
+            "name": "Tactics",
+            "level": 10
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/half-red-dragon-veteran.gct",
+          "Independent build total: 174 points of racial traits plus 18 points of racial skills.",
+          "Answers the SRD heading(s): Half-Red Dragon Veteran (SRD 5.1); Half-Dragon (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 100 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Answers both the 5.1 printed sample and the 3.5 Half-Dragon template heading, as one record: the veteran is what the template's niche looks like on a person.",
+          "Scales are DR as Tough Skin; the dragon-fire immunity of the full-blood is scaled to strong resistance bought as limited DR."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "half-red-dragon-veteran",
+        "sourceName": "Half-Red Dragon Veteran [Monsters on Automatic, SRD coverage: planar and dragon-touched template samples, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Half-Red Dragon Veteran (SRD 5.1); Half-Dragon (SRD 3.5).",
+          "Racial template: 174 points across 10 traits, plus 4 racial skill(s) worth 18 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "half-red-dragon-veteran",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Half-Red Dragon Veteran",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Half-Dragon",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "planar-touched",
+        "issue": 43,
+        "spec": "content/srd-monsters/planar-touched.json",
+        "slug": "half-red-dragon-veteran"
+      }
+    },
+    {
       "id": "doa_constrictor_snake",
       "name": "Constrictor Snake",
       "pageRef": "Constrictor Snake [Monsters on Automatic, SRD coverage: snakes; answers Constrictor Snake (SRD 5.1); Constrictor Snake (SRD 3.5)]",
@@ -32148,6 +34193,1909 @@
         "issue": 36,
         "spec": "content/srd-monsters/swarms.json",
         "slug": "swarm-of-ravens"
+      }
+    },
+    {
+      "id": "doa_skeleton",
+      "name": "Skeleton",
+      "pageRef": "Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Skeleton (SRD 5.1); Skeleton (SRD 3.5)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "skeleton",
+        "animated-dead",
+        "dungeon",
+        "guardian"
+      ],
+      "iq": 8,
+      "appearance": null,
+      "lair": "Wherever it fell or was posted: a barrow passage, a crypt door, the bottom rank of somebody's cheap army.",
+      "description": {
+        "text": "Bones with the orders still in them. It does not tire, does not flinch, and does not stop when a blade goes between its ribs, because there is nothing between its ribs. Crushing weapons end it fastest; dry bone breaks in a way flesh does not.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 10,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 9,
+        "protectionRating": 12,
+        "combatEffectivenessRating": 21,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "minor"
+      },
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "treasureMultiplier": null,
+        "wanderingWeight": 5,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 11,
+          "dx": 12,
+          "iq": 8,
+          "ht": 11,
+          "hp": 11,
+          "will": 10,
+          "per": 8,
+          "fp": 11,
+          "speed": 5.75,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Notched Blade",
+            "skill": 12,
+            "damage": "1d+1 cutting",
+            "reach": "1",
+            "notes": "Notched Blade (12): 1d+1 cutting, Reach 1. Whatever weapon it was buried or posted with, swung with no fear of the answer."
+          },
+          {
+            "name": "Claw",
+            "skill": 13,
+            "damage": "1d-2 crushing",
+            "reach": "C",
+            "notes": "Claw (13): 1d-2 crushing, Reach C. Finger bones driven like a handful of pegs."
+          }
+        ],
+        "traits": [
+          "Appearance (Ugly)",
+          "Cannot Speak",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Fragile (Brittle)",
+          "High Pain Threshold",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Brain)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Broadsword",
+            "level": 12
+          },
+          {
+            "name": "Brawling",
+            "level": 13
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/skeleton.gct",
+          "Independent build total: 202 points of racial traits plus 4 points of racial skills.",
+          "Answers the SRD heading(s): Skeleton (SRD 5.1); Skeleton (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 10 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "A human frame stripped to bone, which is the SM 0 row at about 10 kg.",
+          "Brittle: any major wound shatters structure, and the stat notes trade flesh's forgiveness for that. Impaling and piercing weapons find nothing worth finding; treat the injury tolerance literally.",
+          "FP is stated rather than derived because nothing here has a metabolism to tire (issue #17)."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "skeleton",
+        "sourceName": "Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Skeleton (SRD 5.1); Skeleton (SRD 3.5).",
+          "Racial template: 202 points across 21 traits, plus 2 racial skill(s) worth 4 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "skeleton",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Skeleton",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Skeleton",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "skeleton"
+      }
+    },
+    {
+      "id": "doa_minotaur_skeleton",
+      "name": "Minotaur Skeleton",
+      "pageRef": "Minotaur Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Minotaur Skeleton (SRD 5.1)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "undead",
+        "skeleton",
+        "animated-dead",
+        "dungeon",
+        "guardian"
+      ],
+      "iq": 6,
+      "appearance": null,
+      "lair": "A maze it no longer needs to understand to patrol.",
+      "description": {
+        "text": "A bull-horned frame two heads taller than a man, still walking its maze. The charge is what kills people: it does not slow into the turn, because nothing in it can pull a muscle.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "1 hex",
+        "massKg": 90,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 24,
+        "protectionRating": 24,
+        "combatEffectivenessRating": 48,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 21,
+          "dx": 10,
+          "iq": 6,
+          "ht": 11,
+          "hp": 23,
+          "will": 10,
+          "per": 6,
+          "fp": 11,
+          "speed": 5.25,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Gore",
+            "skill": 11,
+            "damage": "2d+2 impaling",
+            "reach": "C,1",
+            "notes": "Gore (11): 2d+2 impaling, Reach C,1. The horns kept their points when everything else went."
+          },
+          {
+            "name": "Greataxe",
+            "skill": 11,
+            "damage": "4d+1 cutting",
+            "reach": "1,2",
+            "notes": "Greataxe (11): 4d+1 cutting, Reach 1,2. Swung from the shoulder joints with no muscle to slow it down between blows."
+          }
+        ],
+        "traits": [
+          "Appearance (Ugly)",
+          "Cannot Speak",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Fragile (Brittle)",
+          "High Pain Threshold",
+          "Hooves",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Brain)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Resistant to Mind Control (Immunity)",
+          "Striker (Horns; Impaling)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 11
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/minotaur-skeleton.gct",
+          "Independent build total: 236 points of racial traits plus 2 points of racial skills.",
+          "Answers the SRD heading(s): Minotaur Skeleton (SRD 5.1). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 90 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The living creature's mass drops to bone; SM +1 for the frame's height.",
+          "Brittle, like every dry-bone construction in this batch."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "minotaur-skeleton",
+        "sourceName": "Minotaur Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Minotaur Skeleton (SRD 5.1).",
+          "Racial template: 236 points across 24 traits, plus 1 racial skill(s) worth 2 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "minotaur-skeleton",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Minotaur Skeleton",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "minotaur-skeleton"
+      }
+    },
+    {
+      "id": "doa_warhorse_skeleton",
+      "name": "Warhorse Skeleton",
+      "pageRef": "Warhorse Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Warhorse Skeleton (SRD 5.1)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "undead",
+        "skeleton",
+        "animated-dead",
+        "mount"
+      ],
+      "iq": 4,
+      "appearance": null,
+      "lair": "A stable nobody mucks out, or the barrow of whoever it was buried to carry.",
+      "description": {
+        "text": "A rider's mount reduced to its running gear. It carries whatever it is told to carry at a gallop it never breaks, and it does not shy, because fear needed parts it no longer has.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "2 hexes",
+        "massKg": 60,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 8,
+        "protectionRating": 23,
+        "combatEffectivenessRating": 31,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "treasureMultiplier": null,
+        "wanderingWeight": 2,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 20,
+          "dx": 11,
+          "iq": 4,
+          "ht": 11,
+          "hp": 22,
+          "will": 10,
+          "per": 4,
+          "fp": 11,
+          "speed": 5.5,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Hooves",
+            "skill": 11,
+            "damage": "2d crushing",
+            "reach": "C,1",
+            "notes": "Hooves (11): 2d crushing, Reach C,1. A kick with the full frame behind it and no instinct for self-preservation holding it back."
+          }
+        ],
+        "traits": [
+          "Appearance (Ugly)",
+          "Cannot Speak",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Enhanced Move 1",
+          "Extra Legs (Four Legs)",
+          "Fragile (Brittle)",
+          "High Pain Threshold",
+          "Hooves",
+          "Horizontal",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Brain)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 11
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/warhorse-skeleton.gct",
+          "Independent build total: 224 points of racial traits plus 1 points of racial skills.",
+          "Answers the SRD heading(s): Warhorse Skeleton (SRD 5.1). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 60 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5, 10 at a sprint (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Still a two-hex quadruped; the ground speed of the living animal is kept with a level of Enhanced Move.",
+          "It accepts any rider and no rider; a skeleton mount is tack, not a companion animal."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "warhorse-skeleton",
+        "sourceName": "Warhorse Skeleton [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Warhorse Skeleton (SRD 5.1).",
+          "Racial template: 224 points across 27 traits, plus 1 racial skill(s) worth 1 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "warhorse-skeleton",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Warhorse Skeleton",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "warhorse-skeleton"
+      }
+    },
+    {
+      "id": "doa_zombie",
+      "name": "Zombie",
+      "pageRef": "Zombie [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Zombie (SRD 5.1); Zombie (SRD 3.5)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "zombie"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "zombie",
+        "animated-dead",
+        "dungeon",
+        "horde"
+      ],
+      "iq": 6,
+      "appearance": null,
+      "lair": "Graveyard mud, plague pits, the shallow end of a necromancer's budget.",
+      "description": {
+        "text": "The recently dead put back to work. One zombie is a chore for anyone with a weapon and room to move. The problem is that there is never one: they come in the numbers they were buried in, they do not stop for wounds that should drop them, and the doorway you are holding is the only direction they need.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 70,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 5,
+        "protectionRating": 18,
+        "combatEffectivenessRating": 23,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "minor"
+      },
+      "encounter": {
+        "averageNumberAppearing": 8,
+        "treasureMultiplier": null,
+        "wanderingWeight": 6,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 13,
+          "dx": 8,
+          "iq": 6,
+          "ht": 12,
+          "hp": 16,
+          "will": 10,
+          "per": 6,
+          "fp": 12,
+          "speed": 5,
+          "move": 5,
+          "dodge": 8,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Slam",
+            "skill": 9,
+            "damage": "1d+1 crushing",
+            "reach": "C",
+            "notes": "Slam (9): 1d+1 crushing, Reach C. A dead weight of an arm brought down like a falling beam, and then the grip that follows it."
+          }
+        ],
+        "traits": [
+          "Appearance (Ugly)",
+          "Bad Smell",
+          "Cannot Speak",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Hard to Kill 3",
+          "High Pain Threshold",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Brain)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 9
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/zombie.gct",
+          "Independent build total: 139 points of racial traits plus 2 points of racial skills.",
+          "Answers the SRD heading(s): Zombie (SRD 5.1); Zombie (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 70 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Hard to Kill 3 carries the source identity's refusal to fall to what ought to be a finishing blow; a zombie that checks out at 0 HP frequently gets back up.",
+          "Slow on purpose: DX below human and no move advantages. Its threat is arithmetic, not skill, and the appearing number is the real stat line."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "zombie",
+        "sourceName": "Zombie [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Zombie (SRD 5.1); Zombie (SRD 3.5).",
+          "Racial template: 139 points across 23 traits, plus 1 racial skill(s) worth 2 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "zombie",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Zombie",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Zombie",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "zombie"
+      }
+    },
+    {
+      "id": "doa_ogre_zombie",
+      "name": "Ogre Zombie",
+      "pageRef": "Ogre Zombie [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Ogre Zombie (SRD 5.1)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "zombie"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "undead",
+        "zombie",
+        "animated-dead",
+        "dungeon"
+      ],
+      "iq": 4,
+      "appearance": null,
+      "lair": "Wherever its maker needed a door held or a gate broken.",
+      "description": {
+        "text": "An ogre's frame with an ogre's reach and none of the ogre's interest in its own survival. It is a siege tool that walks: pointed at a shield wall or a door, it keeps hitting until the thing it was pointed at is gone or it is.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+1",
+        "heightSizeModifier": 1,
+        "hexes": "1 hex",
+        "massKg": 200,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 14,
+        "protectionRating": 26,
+        "combatEffectivenessRating": 40,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 22,
+          "dx": 7,
+          "iq": 4,
+          "ht": 12,
+          "hp": 26,
+          "will": 10,
+          "per": 4,
+          "fp": 12,
+          "speed": 4.75,
+          "move": 4,
+          "dodge": 7,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Club",
+            "skill": 8,
+            "damage": "4d+2 crushing",
+            "reach": "1,2",
+            "notes": "Club (8): 4d+2 crushing, Reach 1,2. A tree trunk swung on a dead shoulder; the follow-through does not care what it hits."
+          },
+          {
+            "name": "Fist",
+            "skill": 8,
+            "damage": "2d+1 crushing",
+            "reach": "C,1",
+            "notes": "Fist (8): 2d+1 crushing, Reach C,1."
+          }
+        ],
+        "traits": [
+          "Appearance (Ugly)",
+          "Bad Smell",
+          "Cannot Speak",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Hard to Kill 3",
+          "High Pain Threshold",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Brain)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 8
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/ogre-zombie.gct",
+          "Independent build total: 169 points of racial traits plus 2 points of racial skills.",
+          "Answers the SRD heading(s): Ogre Zombie (SRD 5.1). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 200 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 4 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The living ogre's ST is kept; the sluggishness of the corpse shows up as reduced DX instead, which is what the source identity describes."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "ogre-zombie",
+        "sourceName": "Ogre Zombie [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Ogre Zombie (SRD 5.1).",
+          "Racial template: 169 points across 24 traits, plus 1 racial skill(s) worth 2 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "ogre-zombie",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Ogre Zombie",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "ogre-zombie"
+      }
+    },
+    {
+      "id": "doa_ghost",
+      "name": "Ghost",
+      "pageRef": "Ghost [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Ghost (SRD 5.1); Ghost (SRD 3.5)]",
+      "class": "Undead (Incorporeal)",
+      "classTags": [
+        "undead",
+        "incorporeal"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "incorporeal",
+        "spirit",
+        "haunt"
+      ],
+      "iq": 11,
+      "appearance": null,
+      "lair": "The place it cannot leave: the room it died in, the road it died on, the person it died for.",
+      "description": {
+        "text": "Someone still here. It drifts through the walls of the place that holds it, and the cold spot in the room is the only warning before a hand comes out of the stonework. Killing it again solves nothing for long unless whatever holds it here is dealt with.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": null,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 21,
+        "protectionRating": 9,
+        "combatEffectivenessRating": 30,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 3,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 10,
+          "dx": 12,
+          "iq": 11,
+          "ht": 12,
+          "hp": 10,
+          "will": 15,
+          "per": 13,
+          "fp": 14,
+          "speed": 6,
+          "move": 12,
+          "dodge": 9,
+          "dr": 0
+        },
+        "attacks": [
+          {
+            "name": "Withering Touch",
+            "skill": 14,
+            "damage": "1d toxic",
+            "reach": "C",
+            "afflictionPoints": 20,
+            "notes": "Withering Touch (14): 1d toxic, Reach C. A hand through the chest, and the years it takes with it. Resist with HT or age visibly around the wound; armor is no answer to something that ignores the body's outside."
+          },
+          {
+            "name": "Horrifying Visage",
+            "skill": 14,
+            "damage": "1d-4 toxic",
+            "reach": "Ranged, gaze",
+            "autoHit": true,
+            "afflictionPoints": 30,
+            "usesFatigueOrSpell": true,
+            "notes": "Horrifying Visage (14): 1d-4 toxic, Reach Ranged, gaze. The face it wears when it stops pretending to be what it was. A Fright Check at penalty; those who fail are staggered by terror, and the young can be aged by it."
+          }
+        ],
+        "traits": [
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Flight",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (Diffuse)",
+          "Insubstantiality (Affect Substantial) (Affect Substantial)",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 14
+          },
+          {
+            "name": "Stealth",
+            "level": 14
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/ghost.gct",
+          "Independent build total: 566 points of racial traits plus 12 points of racial skills.",
+          "Answers the SRD heading(s): Ghost (SRD 5.1); Ghost (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: null kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6; air Move 12 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Insubstantiality is bought with Affect Substantial: the touch works on the living, and walls, armor and grapples do not work on it. Weapons need magic or the spirit's own terms to bite; Diffuse injury tolerance carries that.",
+          "Massless and hovering; movement is flight at a walking pace.",
+          "What binds it to the site is story, not points, and the record deliberately does not price an unfinished purpose."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "ghost",
+        "sourceName": "Ghost [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Ghost (SRD 5.1); Ghost (SRD 3.5).",
+          "Racial template: 566 points across 16 traits, plus 2 racial skill(s) worth 12 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "ghost",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Ghost",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Ghost",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "ghost"
+      }
+    },
+    {
+      "id": "doa_vampire",
+      "name": "Vampire",
+      "pageRef": "Vampire [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Vampire (SRD 5.1); Vampire (SRD 3.5)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "vampire"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "vampire",
+        "predator",
+        "talker",
+        "night"
+      ],
+      "iq": 12,
+      "appearance": null,
+      "lair": "A defended household with money, staff who do not ask, and a windowless room nobody mentions.",
+      "description": {
+        "text": "A predator that owns property. It passes for a living aristocrat as long as it feeds carefully, and the household around it exists to make the feeding careful. Sunlight burns it and it knows every hour of the almanac; the fight you get is the one it prepared, at night, indoors, on its ground.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 75,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 25,
+        "protectionRating": 24,
+        "combatEffectivenessRating": 49,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "standard"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 2,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 17,
+          "dx": 14,
+          "iq": 12,
+          "ht": 12,
+          "hp": 21,
+          "will": 14,
+          "per": 13,
+          "fp": 14,
+          "speed": 6.5,
+          "move": 6,
+          "dodge": 9,
+          "dr": 2
+        },
+        "attacks": [
+          {
+            "name": "Bite",
+            "skill": 16,
+            "damage": "1d+1 impaling",
+            "reach": "C",
+            "afflictionPoints": 30,
+            "notes": "Bite (16): 1d+1 impaling, Reach C. Delivered to a grappled or willing victim. The wound is small; the draining is not, and a victim held through it loses blood by the round."
+          },
+          {
+            "name": "Slam",
+            "skill": 16,
+            "damage": "1d+3 crushing",
+            "reach": "C,1",
+            "notes": "Slam (16): 1d+3 crushing, Reach C,1. Strength far past what the frame suggests."
+          },
+          {
+            "name": "Dominating Gaze",
+            "skill": 16,
+            "damage": "1d-4 toxic",
+            "reach": "Ranged, gaze",
+            "autoHit": true,
+            "afflictionPoints": 60,
+            "usesFatigueOrSpell": true,
+            "notes": "Dominating Gaze (16): 1d-4 toxic, Reach Ranged, gaze. Meet its eyes and resist with Will or do as you are told and remember agreeing to it. It prefers this to violence; violence is noisy."
+          }
+        ],
+        "traits": [
+          "Appearance (Attractive)",
+          "Clinging",
+          "Combat Reflexes",
+          "Damage Resistance 2 (Tough Skin)",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Sleep",
+          "High Pain Threshold",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (Unliving)",
+          "Regeneration (Slow)",
+          "Resistant to Mind Control (Immunity)",
+          "Restricted Diet (Fresh Blood)",
+          "Unaging",
+          "Weakness (Sunlight; 1d per minute)"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 16
+          },
+          {
+            "name": "Stealth",
+            "level": 16
+          },
+          {
+            "name": "Intimidation",
+            "level": 15
+          },
+          {
+            "name": "Savoir-Faire",
+            "level": 14
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/vampire.gct",
+          "Independent build total: 374 points of racial traits plus 20 points of racial skills.",
+          "Answers the SRD heading(s): Vampire (SRD 5.1); Vampire (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 75 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "Sunlight is priced as a Weakness doing 1d per minute of exposure; folklore's other bans — thresholds, running water, the stake — vary by telling and stay in the GM's hands rather than the point total.",
+          "Wounds close on their own (Regeneration) but the record does not make it unkillable: fire, beheading, and daylight are the traditional ends, and the stat notes leave them available.",
+          "Fresh blood is a Restricted Diet, not an option: a vampire that will not feed weakens until it must."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "vampire",
+        "sourceName": "Vampire [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Vampire (SRD 5.1); Vampire (SRD 3.5).",
+          "Racial template: 374 points across 23 traits, plus 4 racial skill(s) worth 20 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "vampire",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Vampire",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Vampire",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "vampire"
+      }
+    },
+    {
+      "id": "doa_lich",
+      "name": "Lich",
+      "pageRef": "Lich [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Lich (SRD 5.1); Lich (SRD 3.5)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "lich"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "lich",
+        "caster",
+        "talker",
+        "apex"
+      ],
+      "iq": 15,
+      "appearance": null,
+      "lair": "A tower, tomb or buried library arranged for the convenience of one scholar and the death of visitors, with its true treasure hidden somewhere else entirely.",
+      "description": {
+        "text": "A wizard who solved dying and kept working. Everything about the encounter was decided before you arrived: the approach, the ambush, which of you it wants alive to question. Destroying the body inconveniences it; the vessel that holds its life is elsewhere, and finding that is the real adventure.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 50,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 32,
+        "protectionRating": 28,
+        "combatEffectivenessRating": 60,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "major"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 1,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 10,
+          "dx": 13,
+          "iq": 15,
+          "ht": 13,
+          "hp": 15,
+          "will": 17,
+          "per": 14,
+          "fp": 17,
+          "speed": 6.5,
+          "move": 6,
+          "dodge": 9,
+          "dr": 3
+        },
+        "attacks": [
+          {
+            "name": "Paralyzing Touch",
+            "skill": 15,
+            "damage": "1d toxic",
+            "reach": "C",
+            "afflictionPoints": 60,
+            "usesFatigueOrSpell": true,
+            "notes": "Paralyzing Touch (15): 1d toxic, Reach C. A hand like winter through the armor's gaps. Resist with HT or the body simply stops answering, and the lich walks past you to the one it actually came for."
+          },
+          {
+            "name": "Deathly Bolt",
+            "skill": 16,
+            "damage": "6d burning",
+            "reach": "Ranged",
+            "usesFatigueOrSpell": true,
+            "notes": "Deathly Bolt (16): 6d burning, Reach Ranged. Stated as literal dice: the bolt is a property of the lich's art, not its arm. It costs the creature to cast, and a lich in its own lair has cheaper ways to spend you first."
+          },
+          {
+            "name": "Frightening Gaze",
+            "skill": 15,
+            "damage": "1d-4 toxic",
+            "reach": "Ranged, gaze",
+            "autoHit": true,
+            "afflictionPoints": 40,
+            "usesFatigueOrSpell": true,
+            "notes": "Frightening Gaze (15): 1d-4 toxic, Reach Ranged, gaze. The attention of something that has already outlived your grandchildren. Fright Check at penalty; it uses this on the brave first."
+          }
+        ],
+        "traits": [
+          "Damage Resistance 3 (Tough Skin)",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (Unliving)",
+          "Magery 0",
+          "Magery 3",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 15
+          },
+          {
+            "name": "Innate Attack (Projectile)",
+            "level": 16
+          },
+          {
+            "name": "Thaumatology",
+            "level": 15
+          },
+          {
+            "name": "Occultism",
+            "level": 17
+          },
+          {
+            "name": "Tactics",
+            "level": 15
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/lich.gct",
+          "Independent build total: 451 points of racial traits plus 32 points of racial skills.",
+          "Answers the SRD heading(s): Lich (SRD 5.1); Lich (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 50 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 6 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The casting identity is carried by Magery 3 and the fatigue-costed attacks; a full spell list belongs to a character sheet, not a bestiary record, and the three attacks price what the rating can see of it.",
+          "The phylactery is story armor, not points: the record prices the body you can fight, and the notes leave its return in the GM's hands.",
+          "Perception runs a point behind its towering IQ — centuries of reading by candlelight."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "lich",
+        "sourceName": "Lich [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Lich (SRD 5.1); Lich (SRD 3.5).",
+          "Racial template: 451 points across 20 traits, plus 5 racial skill(s) worth 32 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "lich",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Lich",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Lich",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "lich"
+      }
+    },
+    {
+      "id": "doa_mummy_lord",
+      "name": "Mummy Lord",
+      "pageRef": "Mummy Lord [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized; answers Mummy Lord (SRD 5.1); Mummy Lord (SRD 3.5)]",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "mummy"
+      ],
+      "tags": [
+        "monsters-on-automatic",
+        "ai-generated",
+        "doa-authored",
+        "srd-5-1",
+        "srd-3-5",
+        "undead",
+        "mummy",
+        "caster",
+        "guardian",
+        "tomb"
+      ],
+      "iq": 13,
+      "appearance": null,
+      "lair": "The tomb complex it was interred to rule, with its organs in jars in a chamber it defends above its own body.",
+      "description": {
+        "text": "The buried king still holding court. Wrapped, preserved and furious, it commands its tomb like a garrison: it knows every trap and every shortcut, its priest-craft is intact, and its fist carries a rot that turns a survivable wound into a slow sentence. It does not pursue past its borders. It does not need to.",
+        "authorship": "doa_authored",
+        "basis": [
+          "record.stats.traits",
+          "record.stats.attacks",
+          "record.size",
+          "record.class"
+        ],
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt"
+      },
+      "treasure": {
+        "money": null,
+        "items": null,
+        "strategy": null,
+        "change": null,
+        "estimatedMoneyAverage": null,
+        "estimatedItemAverage": null,
+        "estimatedMoneyPerAppearance": null
+      },
+      "size": {
+        "modifier": "+0",
+        "heightSizeModifier": 0,
+        "hexes": "1 hex",
+        "massKg": 60,
+        "heightHexes": null,
+        "lengthHexes": null,
+        "widthHexes": null
+      },
+      "grappling": {
+        "skill": null,
+        "damage": null,
+        "controlMaximum": null
+      },
+      "effectiveness": {
+        "offenseRating": 24,
+        "protectionRating": 36,
+        "combatEffectivenessRating": 60,
+        "treasureAdjustedCombatEffectiveness": null,
+        "wanderingCombatEffectiveness": null,
+        "threatTier": "major"
+      },
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "treasureMultiplier": null,
+        "wanderingWeight": 1,
+        "lightSensitive": null
+      },
+      "stats": {
+        "attributes": {
+          "st": 20,
+          "dx": 10,
+          "iq": 13,
+          "ht": 13,
+          "hp": 25,
+          "will": 16,
+          "per": 13,
+          "fp": 16,
+          "speed": 5.75,
+          "move": 5,
+          "dodge": 8,
+          "dr": 2
+        },
+        "attacks": [
+          {
+            "name": "Rotting Fist",
+            "skill": 12,
+            "damage": "2d crushing",
+            "reach": "C,1",
+            "afflictionPoints": 50,
+            "notes": "Rotting Fist (12): 2d crushing, Reach C,1. The blow lands like a club, and what it leaves behind is worse: resist with HT or take the rot, a curse under the skin. Wounds will not close and healing arts fail until the curse itself is lifted."
+          },
+          {
+            "name": "Dreadful Glare",
+            "skill": 12,
+            "damage": "1d-4 toxic",
+            "reach": "Ranged, gaze",
+            "autoHit": true,
+            "afflictionPoints": 40,
+            "usesFatigueOrSpell": true,
+            "notes": "Dreadful Glare (12): 1d-4 toxic, Reach Ranged, gaze. The tomb's own verdict on trespass. Fright Check at penalty; a badly failed roll leaves the victim paralyzed by dread as it closes."
+          }
+        ],
+        "traits": [
+          "Bad Temper (12)",
+          "Damage Resistance 2 (Tough Skin)",
+          "Dark Vision",
+          "Doesn't Breathe",
+          "Doesn't Eat or Drink",
+          "Doesn't Sleep",
+          "High Pain Threshold",
+          "Immunity to Metabolic Hazards",
+          "Injury Tolerance (No Blood)",
+          "Injury Tolerance (No Vitals)",
+          "Injury Tolerance (Unliving)",
+          "Magery 0",
+          "Magery 2",
+          "Resistant to Mind Control (Immunity)",
+          "Unaging",
+          "Unfazeable"
+        ],
+        "skills": [
+          {
+            "name": "Brawling",
+            "level": 12
+          },
+          {
+            "name": "Occultism",
+            "level": 15
+          },
+          {
+            "name": "Hidden Lore (Tomb)",
+            "level": 14
+          }
+        ],
+        "notes": [
+          "GCS ancestry draft: gcs/mummy-lord.gct",
+          "Independent build total: 450 points of racial traits plus 16 points of racial skills.",
+          "Answers the SRD heading(s): Mummy Lord (SRD 5.1); Mummy Lord (SRD 3.5). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text.",
+          "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree.",
+          "Body mass used to scale this build: 60 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands.",
+          "Movement: ground Move 5 (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.",
+          "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
+          "The rot is the identity and it is deliberately not survivable by attrition: the affliction points price a curse whose wounds cannot be healed until it is lifted, and the stat note says so in the GM's terms.",
+          "Priestly magic is carried the same way the lich's wizardry is: Magery plus fatigue-costed attacks, with the full liturgy left to prose.",
+          "Burning was the old answer and remains a good one; nothing here prices it away."
+        ]
+      },
+      "provenance": {
+        "kind": "doa_authored",
+        "sourceSystem": "doa_fixture",
+        "sourceLicense": "doa_authored",
+        "contentLicense": "cc_by_4_0",
+        "contentLicenseUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters/blob/main/licenses/CC-BY-4.0.txt",
+        "sourceMonsterId": "mummy-lord",
+        "sourceName": "Mummy Lord [Monsters on Automatic, SRD coverage: undead template constructions, pre-materialized]",
+        "sourceUrl": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "sourceCopyrightNotice": "Copyright 2026 Monsters on Automatic. GURPS-compatible monster statistics, ratings and prose authored for this package as an AI-generated first draft under project review. No SRD text, and no third-party GURPS conversion, is reproduced.",
+        "conversionVersion": "0.1.0-srd-independent-build",
+        "conversionNotes": [
+          "Independently authored GURPS build. The SRD supplies the creature identity this record answers to and nothing else: no SRD statistics, wording or presentation is reproduced, and no third-party GURPS conversion was used as an input.",
+          "Answers the SRD heading(s): Mummy Lord (SRD 5.1); Mummy Lord (SRD 3.5).",
+          "Racial template: 450 points across 22 traits, plus 3 racial skill(s) worth 16 points.",
+          "Every trait is drawn from the project's controlled GURPS vocabulary in scripts/srd/trait-library.mjs, which carries the page reference and published cost for each entry.",
+          "sourceSystem is recorded as doa_fixture because that is the package contract's value for project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
+          "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a stale rating behind."
+        ],
+        "manualReviewStatus": "review_required",
+        "packageSourceId": "monsters_on_automatic_authored",
+        "license": "Project-authored monster mechanics and prose released under CC BY 4.0 with originator credit.",
+        "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters",
+        "originalId": "mummy-lord",
+        "publicStats": true,
+        "notes": "AI-generated first draft authored by Monsters on Automatic. Mechanical and playability review is required before approval; no generated record is approved automatically.",
+        "credits": [
+          {
+            "name": "Monsters on Automatic",
+            "role": "originator",
+            "scope": [
+              "gurps_statistics",
+              "monster_mechanics",
+              "combat_effectiveness_rating",
+              "description_prose"
+            ],
+            "sourceTitle": "Monsters on Automatic SRD coverage builds",
+            "creditLine": "Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
+            "url": "https://github.com/Zuljita/DungeonsOnAutomaticMonsters"
+          }
+        ],
+        "coversSourceIdentities": [
+          {
+            "sourceSystem": "srd_5_1",
+            "heading": "Mummy Lord",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          },
+          {
+            "sourceSystem": "srd_3_5",
+            "heading": "Mummy Lord",
+            "relationship": "published",
+            "alsoPrintedAs": []
+          }
+        ]
+      },
+      "sourceBook": "monsters_on_automatic_srd_coverage",
+      "sourceBooks": [
+        "monsters_on_automatic_srd_coverage"
+      ],
+      "source": {
+        "batch": "undead-constructions",
+        "issue": 43,
+        "spec": "content/srd-monsters/undead-constructions.json",
+        "slug": "mummy-lord"
       }
     },
     {

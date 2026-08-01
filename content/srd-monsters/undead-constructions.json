@@ -1,0 +1,1206 @@
+{
+  "version": 1,
+  "batch": "undead-constructions",
+  "issue": 43,
+  "title": "SRD coverage: undead template constructions, pre-materialized",
+  "summary": "Issue #43's decision is to ship the D&D templates as concrete creatures filling the same niche the templates serve, so a GM reaches for a Skeleton or a Lich the way the source books intend, without applying anything. These nine are the undead half of that: the animated dead built from the Skeleton and Zombie identities including the specific constructions the SRD prints beside them, and the four named undead the templates culminate in. Every one buys its unlife from published parts — Unliving or Diffuse injury tolerance, Unaging, immunity to metabolic hazards, and a mind either too empty to seize or too willful — and, as with the constructs, FP is stated explicitly because nothing here has a metabolism to tire. Edge mechanics no published trait prices, like a rot that outruns healing or a curse that travels in a wound, are carried in stat notes and priced through the affliction terms on the attacks that deliver them.",
+  "traitSets": {
+    "undead-body": [
+      {
+        "trait": "doesnt-breathe"
+      },
+      {
+        "trait": "doesnt-eat-or-drink"
+      },
+      {
+        "trait": "doesnt-sleep"
+      },
+      {
+        "trait": "immunity-metabolic-hazards"
+      },
+      {
+        "trait": "immunity-mind-control"
+      },
+      {
+        "trait": "injury-tolerance-unliving"
+      },
+      {
+        "trait": "injury-tolerance-no-blood"
+      },
+      {
+        "trait": "unaging"
+      },
+      {
+        "trait": "unfazeable"
+      },
+      {
+        "trait": "dark-vision"
+      }
+    ],
+    "animated-corpse": [
+      {
+        "trait": "cannot-speak"
+      },
+      {
+        "trait": "injury-tolerance-no-vitals"
+      },
+      {
+        "trait": "injury-tolerance-no-brain"
+      },
+      {
+        "trait": "high-pain-threshold"
+      },
+      {
+        "trait": "appearance-ugly"
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "skeleton",
+      "name": "Skeleton",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "animated-dead",
+        "dungeon",
+        "guardian"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Skeleton"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Skeleton"
+        }
+      ],
+      "massKg": 10,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Wherever it fell or was posted: a barrow passage, a crypt door, the bottom rank of somebody's cheap army.",
+      "traitSets": [
+        "undead-body",
+        "animated-corpse"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 1
+        },
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "iq-",
+          "levels": 2
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "will",
+          "levels": 2
+        },
+        {
+          "trait": "fragile-brittle"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Broadsword",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 0
+        },
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Notched Blade",
+          "skill": "Broadsword",
+          "basis": "sw",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Whatever weapon it was buried or posted with, swung with no fear of the answer."
+        },
+        {
+          "name": "Claw",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "Finger bones driven like a handful of pegs."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 5
+      },
+      "description": "Bones with the orders still in them. It does not tire, does not flinch, and does not stop when a blade goes between its ribs, because there is nothing between its ribs. Crushing weapons end it fastest; dry bone breaks in a way flesh does not.",
+      "notes": [
+        "A human frame stripped to bone, which is the SM 0 row at about 10 kg.",
+        "Brittle: any major wound shatters structure, and the stat notes trade flesh's forgiveness for that. Impaling and piercing weapons find nothing worth finding; treat the injury tolerance literally.",
+        "FP is stated rather than derived because nothing here has a metabolism to tire (issue #17)."
+      ]
+    },
+    {
+      "slug": "minotaur-skeleton",
+      "name": "Minotaur Skeleton",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "animated-dead",
+        "dungeon",
+        "guardian"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Minotaur Skeleton"
+        }
+      ],
+      "massKg": 90,
+      "sizeModifier": 1,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A maze it no longer needs to understand to patrol.",
+      "traitSets": [
+        "undead-body",
+        "animated-corpse"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 11
+        },
+        {
+          "trait": "iq-",
+          "levels": 4
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "hp",
+          "levels": 2
+        },
+        {
+          "trait": "will",
+          "levels": 4
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "striker-horns"
+        },
+        {
+          "trait": "hooves"
+        },
+        {
+          "trait": "fragile-brittle"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Gore",
+          "skill": "Brawling",
+          "basis": "thr+2",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "The horns kept their points when everything else went."
+        },
+        {
+          "name": "Greataxe",
+          "skill": "Brawling",
+          "basis": "sw+2",
+          "type": "cutting",
+          "reach": "1,2",
+          "notes": "Swung from the shoulder joints with no muscle to slow it down between blows."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "A bull-horned frame two heads taller than a man, still walking its maze. The charge is what kills people: it does not slow into the turn, because nothing in it can pull a muscle.",
+      "notes": [
+        "The living creature's mass drops to bone; SM +1 for the frame's height.",
+        "Brittle, like every dry-bone construction in this batch."
+      ]
+    },
+    {
+      "slug": "warhorse-skeleton",
+      "name": "Warhorse Skeleton",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "skeleton"
+      ],
+      "tags": [
+        "animated-dead",
+        "mount"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Warhorse Skeleton"
+        }
+      ],
+      "massKg": 60,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A stable nobody mucks out, or the barrow of whoever it was buried to carry.",
+      "traitSets": [
+        "undead-body",
+        "animated-corpse"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 10
+        },
+        {
+          "trait": "dx",
+          "levels": 1
+        },
+        {
+          "trait": "iq-",
+          "levels": 6
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "hp",
+          "levels": 2
+        },
+        {
+          "trait": "will",
+          "levels": 6
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "extra-legs-four"
+        },
+        {
+          "trait": "horizontal"
+        },
+        {
+          "trait": "hooves"
+        },
+        {
+          "trait": "enhanced-move-ground",
+          "levels": 1
+        },
+        {
+          "trait": "fragile-brittle"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 0
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "A kick with the full frame behind it and no instinct for self-preservation holding it back."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 2
+      },
+      "description": "A rider's mount reduced to its running gear. It carries whatever it is told to carry at a gallop it never breaks, and it does not shy, because fear needed parts it no longer has.",
+      "notes": [
+        "Still a two-hex quadruped; the ground speed of the living animal is kept with a level of Enhanced Move.",
+        "It accepts any rider and no rider; a skeleton mount is tack, not a companion animal."
+      ]
+    },
+    {
+      "slug": "zombie",
+      "name": "Zombie",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "zombie"
+      ],
+      "tags": [
+        "animated-dead",
+        "dungeon",
+        "horde"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Zombie"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Zombie"
+        }
+      ],
+      "massKg": 70,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Graveyard mud, plague pits, the shallow end of a necromancer's budget.",
+      "traitSets": [
+        "undead-body",
+        "animated-corpse"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 3
+        },
+        {
+          "trait": "dx-",
+          "levels": 2
+        },
+        {
+          "trait": "iq-",
+          "levels": 4
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 3
+        },
+        {
+          "trait": "will",
+          "levels": 4
+        },
+        {
+          "trait": "hard-to-kill",
+          "levels": 3
+        },
+        {
+          "trait": "bad-smell"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C",
+          "notes": "A dead weight of an arm brought down like a falling beam, and then the grip that follows it."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 8,
+        "wanderingWeight": 6
+      },
+      "description": "The recently dead put back to work. One zombie is a chore for anyone with a weapon and room to move. The problem is that there is never one: they come in the numbers they were buried in, they do not stop for wounds that should drop them, and the doorway you are holding is the only direction they need.",
+      "notes": [
+        "Hard to Kill 3 carries the source identity's refusal to fall to what ought to be a finishing blow; a zombie that checks out at 0 HP frequently gets back up.",
+        "Slow on purpose: DX below human and no move advantages. Its threat is arithmetic, not skill, and the appearing number is the real stat line."
+      ]
+    },
+    {
+      "slug": "ogre-zombie",
+      "name": "Ogre Zombie",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "zombie"
+      ],
+      "tags": [
+        "animated-dead",
+        "dungeon"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Ogre Zombie"
+        }
+      ],
+      "massKg": 200,
+      "sizeModifier": 1,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Wherever its maker needed a door held or a gate broken.",
+      "traitSets": [
+        "undead-body",
+        "animated-corpse"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 12
+        },
+        {
+          "trait": "dx-",
+          "levels": 3
+        },
+        {
+          "trait": "iq-",
+          "levels": 6
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 4
+        },
+        {
+          "trait": "will",
+          "levels": 6
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "hard-to-kill",
+          "levels": 3
+        },
+        {
+          "trait": "bad-smell"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Club",
+          "skill": "Brawling",
+          "basis": "sw+2",
+          "type": "crushing",
+          "reach": "1,2",
+          "notes": "A tree trunk swung on a dead shoulder; the follow-through does not care what it hits."
+        },
+        {
+          "name": "Fist",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": ""
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 2,
+        "wanderingWeight": 3
+      },
+      "description": "An ogre's frame with an ogre's reach and none of the ogre's interest in its own survival. It is a siege tool that walks: pointed at a shield wall or a door, it keeps hitting until the thing it was pointed at is gone or it is.",
+      "notes": [
+        "The living ogre's ST is kept; the sluggishness of the corpse shows up as reduced DX instead, which is what the source identity describes."
+      ]
+    },
+    {
+      "slug": "ghost",
+      "name": "Ghost",
+      "class": "Undead (Incorporeal)",
+      "classTags": [
+        "undead",
+        "incorporeal"
+      ],
+      "tags": [
+        "spirit",
+        "haunt"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Ghost"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Ghost"
+        }
+      ],
+      "massKg": null,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "air"
+      },
+      "lair": "The place it cannot leave: the room it died in, the road it died on, the person it died for.",
+      "traits": [
+        {
+          "trait": "doesnt-breathe"
+        },
+        {
+          "trait": "doesnt-eat-or-drink"
+        },
+        {
+          "trait": "doesnt-sleep"
+        },
+        {
+          "trait": "immunity-metabolic-hazards"
+        },
+        {
+          "trait": "immunity-mind-control"
+        },
+        {
+          "trait": "unaging"
+        },
+        {
+          "trait": "dark-vision"
+        },
+        {
+          "trait": "insubstantiality"
+        },
+        {
+          "trait": "injury-tolerance-diffuse"
+        },
+        {
+          "trait": "flight-hovering"
+        },
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "iq",
+          "levels": 1
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "will",
+          "levels": 4
+        },
+        {
+          "trait": "per",
+          "levels": 2
+        },
+        {
+          "trait": "fp",
+          "levels": 2
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Withering Touch",
+          "skill": "Brawling",
+          "basis": "1d",
+          "type": "toxic",
+          "reach": "C",
+          "afflictionPoints": 20,
+          "notes": "A hand through the chest, and the years it takes with it. Resist with HT or age visibly around the wound; armor is no answer to something that ignores the body's outside."
+        },
+        {
+          "name": "Horrifying Visage",
+          "skill": "Brawling",
+          "basis": "1d-4",
+          "type": "toxic",
+          "reach": "Ranged, gaze",
+          "autoHit": true,
+          "afflictionPoints": 30,
+          "usesFatigueOrSpell": true,
+          "notes": "The face it wears when it stops pretending to be what it was. A Fright Check at penalty; those who fail are staggered by terror, and the young can be aged by it."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 3
+      },
+      "description": "Someone still here. It drifts through the walls of the place that holds it, and the cold spot in the room is the only warning before a hand comes out of the stonework. Killing it again solves nothing for long unless whatever holds it here is dealt with.",
+      "notes": [
+        "Insubstantiality is bought with Affect Substantial: the touch works on the living, and walls, armor and grapples do not work on it. Weapons need magic or the spirit's own terms to bite; Diffuse injury tolerance carries that.",
+        "Massless and hovering; movement is flight at a walking pace.",
+        "What binds it to the site is story, not points, and the record deliberately does not price an unfinished purpose."
+      ]
+    },
+    {
+      "slug": "vampire",
+      "name": "Vampire",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "vampire"
+      ],
+      "tags": [
+        "predator",
+        "talker",
+        "night"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Vampire"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Vampire"
+        }
+      ],
+      "massKg": 75,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A defended household with money, staff who do not ask, and a windowless room nobody mentions.",
+      "traits": [
+        {
+          "trait": "doesnt-breathe"
+        },
+        {
+          "trait": "doesnt-sleep"
+        },
+        {
+          "trait": "immunity-metabolic-hazards"
+        },
+        {
+          "trait": "immunity-mind-control"
+        },
+        {
+          "trait": "injury-tolerance-unliving"
+        },
+        {
+          "trait": "unaging"
+        },
+        {
+          "trait": "dark-vision"
+        },
+        {
+          "trait": "appearance-attractive"
+        },
+        {
+          "trait": "clinging"
+        },
+        {
+          "trait": "regeneration-slow"
+        },
+        {
+          "trait": "high-pain-threshold"
+        },
+        {
+          "trait": "combat-reflexes"
+        },
+        {
+          "trait": "weakness-sunlight"
+        },
+        {
+          "trait": "restricted-diet-fresh-blood"
+        },
+        {
+          "trait": "st",
+          "levels": 7
+        },
+        {
+          "trait": "dx",
+          "levels": 4
+        },
+        {
+          "trait": "iq",
+          "levels": 2
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 4
+        },
+        {
+          "trait": "will",
+          "levels": 2
+        },
+        {
+          "trait": "per",
+          "levels": 1
+        },
+        {
+          "trait": "fp",
+          "levels": 2
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 2
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Intimidation",
+          "attribute": "will",
+          "difficulty": "a",
+          "relative": 1
+        },
+        {
+          "name": "Savoir-Faire",
+          "attribute": "iq",
+          "difficulty": "e",
+          "relative": 2
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "afflictionPoints": 30,
+          "notes": "Delivered to a grappled or willing victim. The wound is small; the draining is not, and a victim held through it loses blood by the round."
+        },
+        {
+          "name": "Slam",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": "Strength far past what the frame suggests."
+        },
+        {
+          "name": "Dominating Gaze",
+          "skill": "Brawling",
+          "basis": "1d-4",
+          "type": "toxic",
+          "reach": "Ranged, gaze",
+          "autoHit": true,
+          "afflictionPoints": 60,
+          "usesFatigueOrSpell": true,
+          "notes": "Meet its eyes and resist with Will or do as you are told and remember agreeing to it. It prefers this to violence; violence is noisy."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "A predator that owns property. It passes for a living aristocrat as long as it feeds carefully, and the household around it exists to make the feeding careful. Sunlight burns it and it knows every hour of the almanac; the fight you get is the one it prepared, at night, indoors, on its ground.",
+      "notes": [
+        "Sunlight is priced as a Weakness doing 1d per minute of exposure; folklore's other bans — thresholds, running water, the stake — vary by telling and stay in the GM's hands rather than the point total.",
+        "Wounds close on their own (Regeneration) but the record does not make it unkillable: fire, beheading, and daylight are the traditional ends, and the stat notes leave them available.",
+        "Fresh blood is a Restricted Diet, not an option: a vampire that will not feed weakens until it must."
+      ]
+    },
+    {
+      "slug": "lich",
+      "name": "Lich",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "lich"
+      ],
+      "tags": [
+        "caster",
+        "talker",
+        "apex"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Lich"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Lich"
+        }
+      ],
+      "massKg": 50,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A tower, tomb or buried library arranged for the convenience of one scholar and the death of visitors, with its true treasure hidden somewhere else entirely.",
+      "traits": [
+        {
+          "trait": "doesnt-breathe"
+        },
+        {
+          "trait": "doesnt-eat-or-drink"
+        },
+        {
+          "trait": "doesnt-sleep"
+        },
+        {
+          "trait": "immunity-metabolic-hazards"
+        },
+        {
+          "trait": "immunity-mind-control"
+        },
+        {
+          "trait": "injury-tolerance-unliving"
+        },
+        {
+          "trait": "injury-tolerance-no-blood"
+        },
+        {
+          "trait": "unaging"
+        },
+        {
+          "trait": "unfazeable"
+        },
+        {
+          "trait": "dark-vision"
+        },
+        {
+          "trait": "magery-0"
+        },
+        {
+          "trait": "magery",
+          "levels": 3
+        },
+        {
+          "trait": "iq",
+          "levels": 5
+        },
+        {
+          "trait": "dx",
+          "levels": 3
+        },
+        {
+          "trait": "ht",
+          "levels": 3
+        },
+        {
+          "trait": "will",
+          "levels": 2
+        },
+        {
+          "trait": "per-",
+          "levels": 1
+        },
+        {
+          "trait": "fp",
+          "levels": 4
+        },
+        {
+          "trait": "hp",
+          "levels": 5
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 3
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Innate Attack (Projectile)",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 3
+        },
+        {
+          "name": "Thaumatology",
+          "attribute": "iq",
+          "difficulty": "vh",
+          "relative": 0
+        },
+        {
+          "name": "Occultism",
+          "attribute": "iq",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Tactics",
+          "attribute": "iq",
+          "difficulty": "h",
+          "relative": 0
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Paralyzing Touch",
+          "skill": "Brawling",
+          "basis": "1d",
+          "type": "toxic",
+          "reach": "C",
+          "afflictionPoints": 60,
+          "usesFatigueOrSpell": true,
+          "notes": "A hand like winter through the armor's gaps. Resist with HT or the body simply stops answering, and the lich walks past you to the one it actually came for."
+        },
+        {
+          "name": "Deathly Bolt",
+          "skill": "Innate Attack (Projectile)",
+          "basis": "6d",
+          "type": "burning",
+          "reach": "Ranged",
+          "usesFatigueOrSpell": true,
+          "notes": "Stated as literal dice: the bolt is a property of the lich's art, not its arm. It costs the creature to cast, and a lich in its own lair has cheaper ways to spend you first."
+        },
+        {
+          "name": "Frightening Gaze",
+          "skill": "Brawling",
+          "basis": "1d-4",
+          "type": "toxic",
+          "reach": "Ranged, gaze",
+          "autoHit": true,
+          "afflictionPoints": 40,
+          "usesFatigueOrSpell": true,
+          "notes": "The attention of something that has already outlived your grandchildren. Fright Check at penalty; it uses this on the brave first."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "A wizard who solved dying and kept working. Everything about the encounter was decided before you arrived: the approach, the ambush, which of you it wants alive to question. Destroying the body inconveniences it; the vessel that holds its life is elsewhere, and finding that is the real adventure.",
+      "notes": [
+        "The casting identity is carried by Magery 3 and the fatigue-costed attacks; a full spell list belongs to a character sheet, not a bestiary record, and the three attacks price what the rating can see of it.",
+        "The phylactery is story armor, not points: the record prices the body you can fight, and the notes leave its return in the GM's hands.",
+        "Perception runs a point behind its towering IQ — centuries of reading by candlelight."
+      ]
+    },
+    {
+      "slug": "mummy-lord",
+      "name": "Mummy Lord",
+      "class": "Undead",
+      "classTags": [
+        "undead",
+        "mummy"
+      ],
+      "tags": [
+        "caster",
+        "guardian",
+        "tomb"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Mummy Lord"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Mummy Lord"
+        }
+      ],
+      "massKg": 60,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "The tomb complex it was interred to rule, with its organs in jars in a chamber it defends above its own body.",
+      "traits": [
+        {
+          "trait": "doesnt-breathe"
+        },
+        {
+          "trait": "doesnt-eat-or-drink"
+        },
+        {
+          "trait": "doesnt-sleep"
+        },
+        {
+          "trait": "immunity-metabolic-hazards"
+        },
+        {
+          "trait": "immunity-mind-control"
+        },
+        {
+          "trait": "injury-tolerance-unliving"
+        },
+        {
+          "trait": "injury-tolerance-no-blood"
+        },
+        {
+          "trait": "injury-tolerance-no-vitals"
+        },
+        {
+          "trait": "unaging"
+        },
+        {
+          "trait": "unfazeable"
+        },
+        {
+          "trait": "dark-vision"
+        },
+        {
+          "trait": "high-pain-threshold"
+        },
+        {
+          "trait": "bad-temper"
+        },
+        {
+          "trait": "magery-0"
+        },
+        {
+          "trait": "magery",
+          "levels": 2
+        },
+        {
+          "trait": "st",
+          "levels": 10
+        },
+        {
+          "trait": "iq",
+          "levels": 3
+        },
+        {
+          "trait": "ht",
+          "levels": 3
+        },
+        {
+          "trait": "hp",
+          "levels": 5
+        },
+        {
+          "trait": "will",
+          "levels": 3
+        },
+        {
+          "trait": "fp",
+          "levels": 3
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 2
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Occultism",
+          "attribute": "iq",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Hidden Lore (Tomb)",
+          "attribute": "iq",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Rotting Fist",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C,1",
+          "afflictionPoints": 50,
+          "notes": "The blow lands like a club, and what it leaves behind is worse: resist with HT or take the rot, a curse under the skin. Wounds will not close and healing arts fail until the curse itself is lifted."
+        },
+        {
+          "name": "Dreadful Glare",
+          "skill": "Brawling",
+          "basis": "1d-4",
+          "type": "toxic",
+          "reach": "Ranged, gaze",
+          "autoHit": true,
+          "afflictionPoints": 40,
+          "usesFatigueOrSpell": true,
+          "notes": "The tomb's own verdict on trespass. Fright Check at penalty; a badly failed roll leaves the victim paralyzed by dread as it closes."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "The buried king still holding court. Wrapped, preserved and furious, it commands its tomb like a garrison: it knows every trap and every shortcut, its priest-craft is intact, and its fist carries a rot that turns a survivable wound into a slow sentence. It does not pursue past its borders. It does not need to.",
+      "notes": [
+        "The rot is the identity and it is deliberately not survivable by attrition: the affliction points price a curse whose wounds cannot be healed until it is lifted, and the stat note says so in the GM's terms.",
+        "Priestly magic is carried the same way the lich's wizardry is: Magery plus fatigue-costed attacks, with the full liturgy left to prose.",
+        "Burning was the old answer and remains a good one; nothing here prices it away."
+      ]
+    }
+  ]
+}

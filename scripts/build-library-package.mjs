@@ -64,6 +64,10 @@ const SOURCES = [
     candidatePath: "converted/srd-monsters/doa-monsters.reviewed.json",
     artManifestPath: "art/srd-monsters/image-manifest.json",
     gcsDir: "converted/srd-monsters",
+    // This candidate grows in place: drafts sit beside approved records while
+    // they wait on review and art. Promote only the approved records — the
+    // roadmap's rule — so an in-progress batch never blocks a publish.
+    promoteApprovedOnly: true,
     artBaseUrl: `${ASSETS_ORIGIN}/monsters/srd-monsters`,
     creditUrl: publicCreditsUrl,
     sourceRewrites: {
@@ -156,18 +160,28 @@ function publicArt(monster, source, artManifest, artByMonsterId) {
 }
 
 const publishedSources = SOURCES.map(source => {
-  const candidate = JSON.parse(readFileSync(resolve(source.candidatePath), "utf8"));
-  const candidateErrors = validatePackage(candidate, { allowUnapproved: true });
+  const full = JSON.parse(readFileSync(resolve(source.candidatePath), "utf8"));
+  const candidateErrors = validatePackage(full, { allowUnapproved: true });
   if (candidateErrors.length > 0) {
     throw new Error(`${source.key} candidate package is invalid:\n${candidateErrors.join("\n")}`);
   }
-  const unapproved = candidate.monsters.filter(monster => monster.provenance?.manualReviewStatus !== "approved");
-  if (unapproved.length > 0) {
+  const unapproved = full.monsters.filter(monster => monster.provenance?.manualReviewStatus !== "approved");
+  let candidate = full;
+  if (unapproved.length > 0 && source.promoteApprovedOnly) {
+    candidate = { ...full, monsters: full.monsters.filter(m => m.provenance?.manualReviewStatus === "approved") };
+    console.log(
+      `${source.key}: promoting ${candidate.monsters.length} approved record(s); `
+      + `${unapproved.length} draft(s) held back pending review.`,
+    );
+  } else if (unapproved.length > 0) {
     const examples = unapproved.slice(0, 10).map(monster => monster.id).join(", ");
     throw new Error(
-      `Refusing to publish ${source.key}: ${unapproved.length} of ${candidate.monsters.length} records are `
+      `Refusing to publish ${source.key}: ${unapproved.length} of ${full.monsters.length} records are `
         + `not approved. Examples: ${examples}`,
     );
+  }
+  if (candidate.monsters.length === 0) {
+    throw new Error(`Refusing to publish ${source.key}: no approved records.`);
   }
 
   const artManifest = JSON.parse(readFileSync(resolve(source.artManifestPath), "utf8"));
@@ -177,6 +191,7 @@ const publishedSources = SOURCES.map(source => {
     repoRoot: resolve("."),
     requireComplete: true,
     artPackage: source.key,
+    subset: candidate !== full,
   });
   if (artErrors.length > 0) {
     throw new Error(`Refusing to publish incomplete or invalid ${source.key} art:\n${artErrors.join("\n")}`);

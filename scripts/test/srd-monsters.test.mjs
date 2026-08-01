@@ -170,10 +170,11 @@ test("every record names the SRD headings it answers, and none of them twice", (
   }
   // 33 land animals (#37), 20 birds/fish/aquatic (#38), 7 vermin (#39),
   // 4 snakes (#40), 6 dinosaurs (#41), 9 swarms (#36), 6 constructs and
-  // awakened plants (#42), 40 dragons (#35) as ten colours by four ages, and
+  // awakened plants (#42), 40 dragons (#35) as ten colours by four ages,
   // 28 humanoid folk (#34) answering 29 headings — Oni and Ogre Mage are one
-  // creature printed twice.
-  assert.equal(built.length, 153);
+  // creature printed twice — and 19 pre-materialized template constructions
+  // (#43): 9 undead, 5 lycanthropes, and 5 planar and dragon-touched samples.
+  assert.equal(built.length, 172);
 });
 
 test("a spec may only name traits the controlled vocabulary defines", () => {

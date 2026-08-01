@@ -1,0 +1,676 @@
+{
+  "version": 1,
+  "batch": "planar-touched",
+  "issue": 43,
+  "title": "SRD coverage: planar and dragon-touched template samples, pre-materialized",
+  "summary": "The remaining template identities from issue #43, shipped as the concrete creatures the source books use to demonstrate them. Celestial Creature and Fiendish Creature are answered by their printed exemplars — the celestial lion and the fiendish dire rat — and the three half-blood templates by the samples the SRDs print: the half-celestial unicorn, the half-fiend medusa, and the half-red dragon veteran. Each is a base creature the library already covers, re-authored whole with the template's niche bought from published parts, so a GM who wants the planar version of something reaches for a finished record and sees, by comparison with the base, exactly what the touch of another plane adds.",
+  "traitSets": {
+    "celestial-touched": [
+      {
+        "trait": "dark-vision"
+      },
+      {
+        "trait": "magic-resistance",
+        "levels": 2
+      },
+      {
+        "trait": "resistant-to-disease"
+      },
+      {
+        "trait": "resistant-to-poison"
+      }
+    ],
+    "fiendish-touched": [
+      {
+        "trait": "dark-vision"
+      },
+      {
+        "trait": "magic-resistance",
+        "levels": 1
+      }
+    ]
+  },
+  "monsters": [
+    {
+      "slug": "celestial-lion",
+      "name": "Celestial Lion",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "celestial",
+        "good"
+      ],
+      "tags": [
+        "summoned",
+        "guardian"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Celestial Creature"
+        }
+      ],
+      "massKg": 200,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "None of its own: it is sent, and it goes home when the work is done.",
+      "traitSets": [
+        "celestial-touched"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 9
+        },
+        {
+          "trait": "dx",
+          "levels": 3
+        },
+        {
+          "trait": "iq-",
+          "levels": 5
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "hp",
+          "levels": 3
+        },
+        {
+          "trait": "per",
+          "levels": 7
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "extra-legs-four"
+        },
+        {
+          "trait": "horizontal"
+        },
+        {
+          "trait": "sharp-claws"
+        },
+        {
+          "trait": "sharp-teeth"
+        },
+        {
+          "trait": "combat-reflexes"
+        },
+        {
+          "trait": "fur"
+        },
+        {
+          "trait": "will",
+          "levels": 6
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 1
+        },
+        {
+          "trait": "acute-vision",
+          "levels": 2
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "cutting",
+          "reach": "C,1",
+          "notes": "Against a creature of real evil it strikes as though guided, and the wounds burn; give the smite its due as a damage bonus when the target has earned it."
+        },
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "The pounce ends here, at the throat."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "A lion from a better country. The coat throws light back like beaten gold, the eyes track you with more patience than any animal owes you, and it is only ever met where something upstream decided a lion should be: guarding a shrine, walking beside a summoner, standing over the thing you were about to do. Fight it and it fights like a lion that cannot be poisoned, cursed or frightened.",
+      "notes": [
+        "The base animal is the library's Lion; the celestial touch adds dark vision, resistance to magic, poison and disease, and the smite carried as an attack note.",
+        "It answers the SRD's Celestial Creature template heading as that page's own printed exemplar."
+      ]
+    },
+    {
+      "slug": "fiendish-dire-rat",
+      "name": "Fiendish Dire Rat",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "fiendish",
+        "evil"
+      ],
+      "tags": [
+        "summoned",
+        "vermin",
+        "night"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Fiendish Creature"
+        }
+      ],
+      "massKg": 25,
+      "sizeModifier": -1,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "Wherever it was called to: a summoning circle's spillover, a cult cellar, the walls of a cursed house.",
+      "traitSets": [
+        "fiendish-touched"
+      ],
+      "traits": [
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "iq-",
+          "levels": 7
+        },
+        {
+          "trait": "ht",
+          "levels": 4
+        },
+        {
+          "trait": "hp",
+          "levels": 4
+        },
+        {
+          "trait": "per",
+          "levels": 8
+        },
+        {
+          "trait": "sm-",
+          "levels": 1
+        },
+        {
+          "trait": "extra-legs-four"
+        },
+        {
+          "trait": "horizontal"
+        },
+        {
+          "trait": "sharp-teeth"
+        },
+        {
+          "trait": "night-vision",
+          "levels": 5
+        },
+        {
+          "trait": "terrain-adaptation"
+        },
+        {
+          "trait": "damage-resistance-element",
+          "levels": 2,
+          "qualifier": "Fire"
+        },
+        {
+          "trait": "damage-resistance-element",
+          "levels": 2,
+          "qualifier": "Cold"
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 1
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "notes": "Filth given intent: the wound sickens, and against the blessed the teeth find their mark as though guided.",
+          "afflictionPoints": 15
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 6,
+        "wanderingWeight": 4
+      },
+      "description": "A dog-sized rat with something wrong behind the eyes. Fiendish vermin arrive in numbers, sent rather than strayed, and they do not scatter when the first one dies — whatever holds their leash spends them like copper coins. The fire in the cellar does not bother them. That is your first clue about where they are from.",
+      "notes": [
+        "The base animal is the library's Dire Rat; the fiendish touch adds dark vision, a little resistance to magic, and fire and cold resistance bought as limited Damage Resistance.",
+        "It answers the SRD's Fiendish Creature template heading as that page's own printed exemplar."
+      ]
+    },
+    {
+      "slug": "half-celestial-unicorn",
+      "name": "Half-Celestial Unicorn",
+      "class": "Magical Beast",
+      "classTags": [
+        "magical-beast",
+        "celestial",
+        "good"
+      ],
+      "tags": [
+        "wilderness",
+        "healer",
+        "flier"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Half-Celestial"
+        }
+      ],
+      "massKg": 500,
+      "sizeModifier": 1,
+      "hexes": "2 hexes",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "The heart of a guarded forest, under a sky it can leave by.",
+      "traitSets": [
+        "celestial-touched"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 13
+        },
+        {
+          "trait": "dx",
+          "levels": 4
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 4
+        },
+        {
+          "trait": "will",
+          "levels": 4
+        },
+        {
+          "trait": "per",
+          "levels": 3
+        },
+        {
+          "trait": "sm",
+          "levels": 1
+        },
+        {
+          "trait": "extra-legs-four"
+        },
+        {
+          "trait": "horizontal"
+        },
+        {
+          "trait": "hooves"
+        },
+        {
+          "trait": "striker-horns"
+        },
+        {
+          "trait": "flight-winged"
+        },
+        {
+          "trait": "enhanced-move-ground",
+          "levels": 1
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 3
+        },
+        {
+          "name": "Detect Lies",
+          "attribute": "per",
+          "difficulty": "h",
+          "relative": 0
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Horn",
+          "skill": "Brawling",
+          "basis": "thr+2",
+          "type": "impaling",
+          "reach": "C,1",
+          "notes": "The alicorn strikes like a lance the animal aims itself; against real evil it hits as though guided."
+        },
+        {
+          "name": "Hooves",
+          "skill": "Brawling",
+          "basis": "thr+1",
+          "type": "crushing",
+          "reach": "C,1",
+          "notes": ""
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "A unicorn whose other parent was an angel, and it shows: swan wings, a warmth in the air around it, and a gaze that catalogues your sins without commenting. It heals with a touch of the horn, carries the pure-hearted over battlefields, and kills exactly as gracefully as it does everything else when its forest or its charges are threatened.",
+      "notes": [
+        "The base creature is the library's Unicorn; the celestial half adds wings that genuinely fly, the celestial resistances, and the healing touch, which is carried in prose because a beneficial art has no place in an offense rating.",
+        "It answers the SRD's Half-Celestial template heading as the sample that page prints."
+      ]
+    },
+    {
+      "slug": "half-fiend-medusa",
+      "name": "Half-Fiend Medusa",
+      "class": "Monstrous Humanoid",
+      "classTags": [
+        "monstrous-humanoid",
+        "fiendish",
+        "evil"
+      ],
+      "tags": [
+        "talker",
+        "night",
+        "flier"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Half-Fiend"
+        }
+      ],
+      "massKg": 70,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A statuary garden that keeps acquiring new pieces, in a ruin with a commanding view.",
+      "traitSets": [
+        "fiendish-touched"
+      ],
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 3
+        },
+        {
+          "trait": "dx",
+          "levels": 4
+        },
+        {
+          "trait": "iq",
+          "levels": 1
+        },
+        {
+          "trait": "ht",
+          "levels": 1
+        },
+        {
+          "trait": "will",
+          "levels": 2
+        },
+        {
+          "trait": "per",
+          "levels": 1
+        },
+        {
+          "trait": "sharp-claws"
+        },
+        {
+          "trait": "flight-winged"
+        },
+        {
+          "trait": "damage-resistance-element",
+          "levels": 2,
+          "qualifier": "Fire"
+        },
+        {
+          "trait": "appearance-attractive"
+        },
+        {
+          "trait": "hp",
+          "levels": 2
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 1
+        }
+      ],
+      "skills": [
+        {
+          "name": "Brawling",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        },
+        {
+          "name": "Bow",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 1
+        },
+        {
+          "name": "Fast-Talk",
+          "attribute": "iq",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Stealth",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 1
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Petrifying Gaze",
+          "skill": "Brawling",
+          "basis": "1d-4",
+          "type": "toxic",
+          "reach": "Ranged, gaze",
+          "autoHit": true,
+          "afflictionPoints": 60,
+          "usesFatigueOrSpell": true,
+          "notes": "Meet the eyes and resist with HT, or stiffen by degrees into stone. The fiendish blood has not changed the family gift, only the patience with which it is used."
+        },
+        {
+          "name": "Serpent Bite",
+          "skill": "Brawling",
+          "basis": "thr-1",
+          "type": "impaling",
+          "reach": "C",
+          "afflictionPoints": 20,
+          "notes": "The hair strikes on its own. Resist the venom with HT or the wound spreads a numbing poison."
+        },
+        {
+          "name": "Claws",
+          "skill": "Brawling",
+          "basis": "thr",
+          "type": "cutting",
+          "reach": "C",
+          "notes": ""
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 1
+      },
+      "description": "A medusa with an infernal parent, which mostly means ambition. The gaze still turns flesh to stone; the wings mean the statue garden has pieces the ground could never have delivered, and the conversation before the gaze is longer, warmer, and much better rehearsed. It wants something from you first. Petrification is what closing the deal looks like.",
+      "notes": [
+        "The base creature is the library's Medusa; the fiendish half adds wings, fire resistance, claws, and intent. The gaze is priced through the affliction term exactly as the base medusa's is.",
+        "It answers the SRD's Half-Fiend template heading as the sample that page prints."
+      ]
+    },
+    {
+      "slug": "half-red-dragon-veteran",
+      "name": "Half-Red Dragon Veteran",
+      "class": "Humanoid (Dragonblood)",
+      "classTags": [
+        "humanoid",
+        "dragonblood"
+      ],
+      "tags": [
+        "talker",
+        "mercenary"
+      ],
+      "covers": [
+        {
+          "sourceSystem": "srd_5_1",
+          "heading": "Half-Red Dragon Veteran"
+        },
+        {
+          "sourceSystem": "srd_3_5",
+          "heading": "Half-Dragon"
+        }
+      ],
+      "massKg": 100,
+      "sizeModifier": 0,
+      "hexes": "1 hex",
+      "movement": {
+        "primary": "ground"
+      },
+      "lair": "A rented room over an armory, between contracts that keep getting stranger.",
+      "traits": [
+        {
+          "trait": "st",
+          "levels": 3
+        },
+        {
+          "trait": "dx",
+          "levels": 2
+        },
+        {
+          "trait": "ht",
+          "levels": 2
+        },
+        {
+          "trait": "hp",
+          "levels": 1
+        },
+        {
+          "trait": "will",
+          "levels": 1
+        },
+        {
+          "trait": "dark-vision"
+        },
+        {
+          "trait": "damage-resistance-tough-skin",
+          "levels": 3
+        },
+        {
+          "trait": "damage-resistance-element",
+          "levels": 6,
+          "qualifier": "Fire"
+        },
+        {
+          "trait": "combat-reflexes"
+        },
+        {
+          "trait": "high-pain-threshold"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Broadsword",
+          "attribute": "dx",
+          "difficulty": "a",
+          "relative": 2
+        },
+        {
+          "name": "Innate Attack (Breath)",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 1
+        },
+        {
+          "name": "Shield",
+          "attribute": "dx",
+          "difficulty": "e",
+          "relative": 2
+        },
+        {
+          "name": "Tactics",
+          "attribute": "iq",
+          "difficulty": "h",
+          "relative": 0
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Longsword",
+          "skill": "Broadsword",
+          "basis": "sw+1",
+          "type": "cutting",
+          "reach": "1",
+          "notes": "Twenty years of drill under scales."
+        },
+        {
+          "name": "Fire Breath",
+          "skill": "Innate Attack (Breath)",
+          "basis": "2d",
+          "type": "burning",
+          "reach": "Ranged, cone",
+          "usesFatigueOrSpell": true,
+          "notes": "The inheritance. A short cone, stated as literal dice because it is a property of the blood, not the arm; it costs the veteran to use and is saved for the moment a shield wall thinks it has won."
+        }
+      ],
+      "encounter": {
+        "averageNumberAppearing": 1,
+        "wanderingWeight": 2
+      },
+      "description": "A career soldier whose mother's side shows in the scales, the slit pupils, and the smell of smoke when the temper goes. Employers pay for the résumé and rediscover the bloodline mid-contract: swords skid on the hide, the fire does not take, and at the worst possible moment the veteran exhales and the front rank is burning.",
+      "notes": [
+        "Answers both the 5.1 printed sample and the 3.5 Half-Dragon template heading, as one record: the veteran is what the template's niche looks like on a person.",
+        "Scales are DR as Tough Skin; the dragon-fire immunity of the full-blood is scaled to strong resistance bought as limited DR."
+      ]
+    }
+  ]
+}

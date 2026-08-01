@@ -43,14 +43,21 @@ export function validateImageManifest({
   repoRoot,
   requireComplete = false,
   artPackage = "enraged-eggplant",
+  // The candidate is a promoted subset of the records the manifest covers:
+  // extra manifest rows are drafts held back from the package, not drift.
+  // requireComplete then means "every promoted record's art is generated"
+  // rather than "everything in the manifest is generated".
+  subset = false,
 }) {
   const errors = [];
   if (manifest?.schemaVersion !== 2) errors.push("image manifest must use schemaVersion 2");
   if (!Array.isArray(manifest?.records)) errors.push("image manifest records must be an array");
   const hasCandidate = Array.isArray(candidate?.monsters);
-  const expectedMonsterCount = hasCandidate
-    ? candidate.monsters.length
-    : manifest?.counts?.monsters;
+  const expectedMonsterCount = subset
+    ? manifest?.counts?.monsters
+    : hasCandidate
+      ? candidate.monsters.length
+      : manifest?.counts?.monsters;
   if (!Number.isInteger(expectedMonsterCount) || expectedMonsterCount < 1) {
     errors.push("candidate monsters or a positive manifest counts.monsters value is required");
   }
@@ -72,7 +79,7 @@ export function validateImageManifest({
     }
     if (recordIds.has(record.monsterId)) errors.push(`duplicate art monster id ${record.monsterId}`);
     recordIds.add(record.monsterId);
-    if (hasCandidate && !candidateById.has(record.monsterId)) {
+    if (hasCandidate && !subset && !candidateById.has(record.monsterId)) {
       errors.push(`${recordPath}.monsterId is not in the candidate package`);
     }
 
@@ -143,8 +150,23 @@ export function validateImageManifest({
     if (manifest.counts?.[assetType]?.pending !== expectedMonsterCount - generatedCounts[assetType]) {
       errors.push(`manifest counts.${assetType}.pending is stale`);
     }
-    if (requireComplete && generatedCounts[assetType] !== expectedMonsterCount) {
+    if (requireComplete && !subset && generatedCounts[assetType] !== expectedMonsterCount) {
       errors.push(`${assetType} art is incomplete: ${generatedCounts[assetType]}/${expectedMonsterCount}`);
+    }
+  }
+
+  // Subset completeness: every candidate record must have every asset
+  // generated, whatever the drafts beside them are still waiting on.
+  if (requireComplete && subset) {
+    const manifestById = new Map(manifest.records.map((record) => [record.monsterId, record]));
+    for (const monsterId of candidateById.keys()) {
+      const record = manifestById.get(monsterId);
+      if (!record) continue;
+      for (const assetType of ASSET_TYPES) {
+        if (record.assets?.[assetType]?.status !== "generated") {
+          errors.push(`${monsterId} is promoted but its ${assetType} art is not generated`);
+        }
+      }
     }
   }
 

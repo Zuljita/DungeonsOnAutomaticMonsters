@@ -3,7 +3,7 @@
 
 # SRD coverage monster checklist
 
-153 independently authored record(s), version 0.1.0-srd-land-animals-draft; 153 approved.
+172 independently authored record(s), version 0.1.0-srd-land-animals-draft; 153 approved.
 
 Statuses come from `review/srd-decisions.jsonl`. Approval needs the two gates the review workflow
 defines — GCS arithmetic and library fidelity, and DOA playability — plus a check that the encounter
@@ -145,6 +145,16 @@ fields suit the creature's role as a wandering encounter, a mount or livestock, 
 | Warhorse, Heavy | Warhorse (5.1), Warhorse, Heavy (3.5) | 26 | 44 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
 | Wolf | Wolf (5.1), Wolf (3.5) | 13 | 19 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
 | Wolverine | Wolverine (3.5) | 13 | 23 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
+| Werebear | Werebear (5.1), Werebear (3.5) | 24 | 41 | standard | 1 | review_required | — |
+| Wereboar | Wereboar (5.1), Wereboar (3.5) | 15 | 26 | standard | 2 | review_required | — |
+| Wererat | Wererat (5.1), Wererat (3.5) | 11 | 15 | minor | 4 | review_required | — |
+| Weretiger | Weretiger (5.1), Weretiger (3.5) | 18 | 32 | standard | 1 | review_required | — |
+| Werewolf | Werewolf (5.1), Werewolf (3.5) | 14 | 24 | minor | 3 | review_required | — |
+| Celestial Lion | Celestial Creature (3.5) | 19 | 36 | standard | 1 | review_required | — |
+| Fiendish Dire Rat | Fiendish Creature (3.5) | 10 | 15 | minor | 6 | review_required | — |
+| Half-Celestial Unicorn | Half-Celestial (3.5) | 23 | 54 | standard | 1 | review_required | — |
+| Half-Fiend Medusa | Half-Fiend (3.5) | 13 | 29 | standard | 1 | review_required | — |
+| Half-Red Dragon Veteran | Half-Red Dragon Veteran (5.1), Half-Dragon (3.5) | 13 | 32 | standard | 1 | review_required | — |
 | Constrictor Snake | Constrictor Snake (5.1), Constrictor Snake (3.5) | 12 | 24 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
 | Giant Constrictor Snake | Giant Constrictor Snake (5.1) | 27 | 68 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
 | Giant Poisonous Snake | Giant Poisonous Snake (5.1) | 7 | 14 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
@@ -158,6 +168,15 @@ fields suit the creature's role as a wandering encounter, a mount or livestock, 
 | Swarm of Quippers | Swarm of Quippers (5.1) | 10 | 22 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
 | Swarm of Rats | Swarm of Rats (5.1) | 9 | 18 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
 | Swarm of Ravens | Swarm of Ravens (5.1) | 10 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
+| Skeleton | Skeleton (5.1), Skeleton (3.5) | 11 | 21 | minor | 6 | review_required | — |
+| Minotaur Skeleton | Minotaur Skeleton (5.1) | 21 | 48 | standard | 2 | review_required | — |
+| Warhorse Skeleton | Warhorse Skeleton (5.1) | 20 | 31 | standard | 2 | review_required | — |
+| Zombie | Zombie (5.1), Zombie (3.5) | 13 | 23 | minor | 8 | review_required | — |
+| Ogre Zombie | Ogre Zombie (5.1) | 22 | 40 | standard | 2 | review_required | — |
+| Ghost | Ghost (5.1), Ghost (3.5) | 10 | 30 | standard | 1 | review_required | — |
+| Vampire | Vampire (5.1), Vampire (3.5) | 17 | 49 | standard | 1 | review_required | — |
+| Lich | Lich (5.1), Lich (3.5) | 10 | 60 | major | 1 | review_required | — |
+| Mummy Lord | Mummy Lord (5.1), Mummy Lord (3.5) | 20 | 60 | major | 1 | review_required | — |
 | Giant Ant | Giant Ant (3.5) | 14 | 19 | minor | 8 | approved | automated-mechanical-review, 2026-07-31 |
 | Giant Centipede | Giant Centipede (5.1) | 4 | 1 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
 | Giant Scorpion | Giant Scorpion (5.1) | 17 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |

@@ -27,11 +27,11 @@ come from — the published rules, the real animal, and the project's own prior 
 
 ## Step 1 — the record must state its mass
 
-`massKg` on the spec, `size.massKg` on the record. Every check below depends on it, and a record that does
+`massLb` on the spec, `size.massLb` on the record. Measurements are US customary throughout, which is also what GURPS Basic Lift reads in. Every check below depends on it, and a record that does
 not state one cannot be checked against anything.
 
 For a fantasy scale-up, the spec should name the mundane animal and the factor — "a badger at roughly eight
-times mass, ~120 kg" — so the build is reviewable rather than asserted.
+times mass, ~260 lb." — so the build is reviewable rather than asserted.
 
 ## Step 2 — check scale against the rules, not against a table here
 
@@ -88,7 +88,7 @@ blanket value inflates every record in the batch at once.
 - Does `encounter.averageNumberAppearing` match how the animal lives — pack, pride, herd, shoal, solitary?
 - Does the damage read plausibly for the creature's size?
 - Is the description consistent with the mechanics beside it?
-- Compare against the project's own earlier records. A new 200 kg predator should sit sensibly next to the
+- Compare against the project's own earlier records. A new 450 lb. predator should sit sensibly next to the
   lion we already published; that comparison is entirely ours and always available.
 
 ## Step 8 — only now, the outside comparison

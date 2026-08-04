@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "issue": 56,
+  "title": "Planar lineage tags the records imply but do not state",
+  "summary": "The library carried nine tanar'ri and eight baatezu and no demons or devils, ten celestials filed only as archons, angels, guardinals and eladrin, and twenty-odd fiends that never said `fiend`. None of that is wrong — it is what the source calls them — but a tag is a filter, and a filter nobody knows to type is not one. scripts/srd/tag-taxonomy.mjs states the entailments (`baatezu` -> `devil` -> `fiend`, `tanar-ri` -> `demon` -> `fiend`, `archon`/`angel`/`guardinal`/`eladrin` -> `celestial`, `chromatic` -> `dragon` + `evil`) and this repair writes them onto the records that already state the specific half. The specific tags stay: a consumer that wants baatezu only can still have them. One record also drops `true`, which meant 'a true dragon' beside a `dragon` tag that already said it. Every repair here sets `tags` and nothing else, so no rating, encounter field or mechanic moves and no approved decision is invalidated — the ledger hashes the base record, which this does not touch.",
+  "repairs": [
+    {
+      "recordId": "enraged_eggplant_lantern_archon",
+      "monster": "Lantern Archon",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "archon",
+          "good",
+          "lawful",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_hound_archon",
+      "monster": "Hound Archon",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "archon",
+          "good",
+          "lawful",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_trumpet_archon",
+      "monster": "Trumpet Archon",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "archon",
+          "good",
+          "lawful",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_astral_deva",
+      "monster": "Astral Deva",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "angel",
+          "good",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_planetar",
+      "monster": "Planetar",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "angel",
+          "good",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_solar",
+      "monster": "Solar",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "angel",
+          "good",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_babau",
+      "monster": "Babau",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_bearded_devil_barbazu",
+      "monster": "Bearded Devil (Barbazu)",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "baatezu",
+          "devil",
+          "evil",
+          "lawful",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_balor",
+      "monster": "Balor",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_dretch",
+      "monster": "Dretch",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_glabrezu",
+      "monster": "Glabrezu",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_hezrou",
+      "monster": "Hezrou",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_marilith",
+      "monster": "Marilith",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_nalfeshnee",
+      "monster": "Nalfeshnee",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_succubus",
+      "monster": "Succubus",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_vrock",
+      "monster": "Vrock",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `demon` because the source's `tanar-ri` is the demons' own name for themselves, and a consumer searching for a demon does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "chaotic",
+          "evil",
+          "tanar-ri",
+          "demon",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_lemure",
+      "monster": "Lemure",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_bone_devil_osyluth",
+      "monster": "Bone Devil (Osyluth)",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_barbed_devil_hamatula",
+      "monster": "Barbed Devil (Hamatula)",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_erinyes",
+      "monster": "Erinyes",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_horned_devil_cornugon",
+      "monster": "Horned Devil (Cornugon)",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_ice_devil_gelugon",
+      "monster": "Ice Devil (Gelugon)",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_pit_fiend",
+      "monster": "Pit Fiend",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `devil` because the source's `baatezu` is the devils' own name for themselves, and a consumer searching for a devil does not know to type it; `fiend` because the record names its half of the lower planes without naming the lower planes. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "srd-5-1",
+          "outsider",
+          "baatezu",
+          "evil",
+          "lawful",
+          "devil",
+          "fiend"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_red_dragon",
+      "monster": "Red Dragon",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `evil` because the chromatic dragon line is evil by definition and the record did not say so; `true` is retired: Meant 'a true dragon' on a record that already said `dragon`.. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "dragon",
+          "chromatic",
+          "fire",
+          "evil"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_bralani",
+      "monster": "Bralani",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "chaotic",
+          "eladrin",
+          "good",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_ghaele",
+      "monster": "Ghaele",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "chaotic",
+          "eladrin",
+          "good",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_avoral",
+      "monster": "Avoral",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "good",
+          "guardinal",
+          "celestial"
+        ]
+      }
+    },
+    {
+      "recordId": "enraged_eggplant_leonal",
+      "monster": "Leonal",
+      "rationale": "Tags only. The controlled vocabulary in scripts/srd/tag-taxonomy.mjs entails broader lineage tags from the specific ones this record already states, and the record shipped the specific tag without the umbrella: `celestial` because the source names the order — archon, angel, guardinal, eladrin — and never the family they all belong to. Nothing mechanical changes.",
+      "set": {
+        "tags": [
+          "fan-authorized",
+          "enraged-eggplant",
+          "srd-3-5",
+          "outsider",
+          "good",
+          "guardinal",
+          "celestial"
+        ]
+      }
+    }
+  ]
+}

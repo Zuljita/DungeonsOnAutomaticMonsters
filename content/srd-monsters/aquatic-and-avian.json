@@ -3,7 +3,7 @@
   "batch": "aquatic-and-avian",
   "issue": 38,
   "title": "SRD coverage: mundane birds, fish and aquatic animals",
-  "summary": "Independently authored GURPS builds for the 20 bird, fish and aquatic identities issue #38 enumerates. Re-drafted from the rules alone after an earlier draft was written with fitted bands from an outside reference in hand; see decision 7 of review/policy/srd-independent-build-policy.md. Size Modifier is read off the published table keyed to the creature's longest dimension, which is why several records here are smaller than their mass alone would suggest — a pond frog is 13 cm long whatever it weighs. ST is derived from Basic Lift and from what the animal actually shifts: prey carried, a rider borne, a carcass dragged. Perception and Will are reasoned per creature from the sense it hunts or evades by, rather than applied as one figure across the batch, which is why a hawk and a sea horse are eight points apart. Movement carries most of the mechanical weight here, so every spec declares a `movement` block: the published Move is the primary medium's cruising Move, and Enhanced Move is reported as a sprint figure in the notes rather than folded into it. Every spec records `massKg` and states its length in `notes`, so both derivations are checkable.",
+  "summary": "Independently authored GURPS builds for the 20 bird, fish and aquatic identities issue #38 enumerates. Re-drafted from the rules alone after an earlier draft was written with fitted bands from an outside reference in hand; see decision 7 of review/policy/srd-independent-build-policy.md. Size Modifier is read off the published table keyed to the creature's longest dimension, which is why several records here are smaller than their mass alone would suggest — a pond frog is 5 inches long whatever it weighs. ST is derived from Basic Lift and from what the animal actually shifts: prey carried, a rider borne, a carcass dragged. Perception and Will are reasoned per creature from the sense it hunts or evades by, rather than applied as one figure across the batch, which is why a hawk and a sea horse are eight points apart. Movement carries most of the mechanical weight here, so every spec declares a `movement` block: the published Move is the primary medium's cruising Move, and Enhanced Move is reported as a sprint figure in the notes rather than folded into it. Every spec records `massLb` and states its length in `notes`, so both derivations are checkable.",
   "traitSets": {
     "creature-mind": [
       {
@@ -44,12 +44,12 @@
       "name": "Bat",
       "class": "Animal",
       "classTags": ["animal", "mammal"],
-      "tags": ["flier", "cave", "nocturnal", "wandering-encounter"],
+      "tags": ["underground", "swarm-forming", "familiar", "flier", "nocturnal"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Bat"},
         {"sourceSystem": "srd_3_5", "heading": "Bat"}
       ],
-      "massKg": 0.03,
+      "massLb": 0.05,
       "sizeModifier": -5,
       "hexes": "1 hex",
       "movement": {
@@ -90,12 +90,14 @@
         "averageNumberAppearing": 8,
         "wanderingWeight": 7
       },
-      "description": "A hand-sized insect hunter that navigates a pitch-dark cavern by sound alone and never touches a wall doing it. One is harmless. A roost disturbed at dusk is a wall of them coming out at once, which is worth a Fright Check and nothing else.",
+      "description": "A small brown insect-eater, common wherever there is a cave roof, a belfry or a hollow tree to hang from. Bats hunt on the wing in complete darkness, steering by sound, and one of them can do nothing whatever to a person. A whole roost coming out of a shaft at dusk is loud and unnerving, and that is the extent of it.",
       "notes": [
-        "Longest dimension about 25 cm with the wings out, which is the published table's SM -5 row.",
-        "ST is the floor: 30 g of animal carrying nothing but itself.",
-        "Perception is only moderately raised. The bat's edge is not general alertness but one extraordinary sense, and Scanning Sense, Ultrahearing and Acute Hearing 4 are where that is paid for.",
-        "Ground Move is deliberately crippled: a bat on the floor drags itself."
+        "A bat on the floor drags itself. The ground Move is not a misprint."
+      ],
+      "provenanceNotes": [
+        "Longest dimension about 10 inches with the wings out, which is the published table's SM -5 row.",
+        "ST is the floor: an ounce of animal carrying nothing but itself.",
+        "Perception is only moderately raised. The bat's edge is not general alertness but one extraordinary sense, and Scanning Sense, Ultrahearing and Acute Hearing 4 are where that is paid for."
       ]
     },
     {
@@ -103,11 +105,11 @@
       "name": "Blood Hawk",
       "class": "Animal",
       "classTags": ["animal", "bird"],
-      "tags": ["flier", "predator", "flock", "mountain", "wandering-encounter"],
+      "tags": ["mountain", "predator", "flock", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Blood Hawk"}
       ],
-      "massKg": 1.5,
+      "massLb": 3.5,
       "sizeModifier": -3,
       "hexes": "1 hex",
       "movement": {
@@ -155,10 +157,10 @@
         "averageNumberAppearing": 5,
         "wanderingWeight": 4
       },
-      "description": "A red-eyed raptor with none of a hawk's caution, hunting in flocks that mob anything warm-blooded crossing open ground. Individually one is a bird. Five arriving out of the sun, all going for the same face, is how travellers lose an eye.",
-      "notes": [
-        "Body about 60 cm; Size Modifier follows body length, not the wingspan, because the wings fold.",
-        "ST from Basic Lift: it can carry roughly its own 1.5 kg for a short flight.",
+      "description": "Red-eyed raptors with none of a hawk's caution. They hunt in flocks over open ground and will mob anything warm-blooded that crosses it, five or six arriving together and all going for the same face. Travelers who meet a flock in the open tend to lose an eye rather than a life.",
+      "provenanceNotes": [
+        "Body about 2 feet; Size Modifier follows body length, not the wingspan, because the wings fold.",
+        "ST from Basic Lift: it can carry roughly its own weight for a short flight.",
         "Will is high for a bird of this size and that is the point of the creature — it commits to a target that could kill it."
       ]
     },
@@ -167,11 +169,11 @@
       "name": "Crab",
       "class": "Animal",
       "classTags": ["animal", "crustacean"],
-      "tags": ["aquatic", "coastal", "scavenger"],
+      "tags": ["aquatic", "coastal", "ocean", "scavenger"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Crab"}
       ],
-      "massKg": 0.4,
+      "massLb": 0.9,
       "sizeModifier": -4,
       "hexes": "1 hex",
       "movement": {
@@ -211,10 +213,12 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 5
       },
-      "description": "Shore vermin in a shell three sizes too good for it, sidling out of the rocks to strip anything the tide leaves. The pincers hurt and the shell is genuinely hard for something this small, which is the whole of its defence and most of its personality.",
+      "description": "A shore crab the size of a dinner plate, sidling out of the rocks to strip whatever the tide left behind. The shell is genuinely hard for something this small and the pincers hurt, but neither adds up to a fight. Fishermen boil them.",
       "notes": [
-        "About 40 cm across with the legs spread, which is the SM -4 row.",
-        "DR is full armour, not Tough Skin: a carapace is shell, and a scratch that would slip past thick hide does not slip past this."
+        "A carapace is shell rather than hide. A scratch that would slip past thick skin does not slip past this."
+      ],
+      "provenanceNotes": [
+        "About 16 inches across with the legs spread, which is the SM -4 row."
       ]
     },
     {
@@ -222,12 +226,12 @@
       "name": "Crocodile",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["aquatic", "ambusher", "predator", "swamp", "wandering-encounter"],
+      "tags": ["aquatic", "swamp", "ambusher", "predator"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Crocodile"},
         {"sourceSystem": "srd_3_5", "heading": "Crocodile"}
       ],
-      "massKg": 350,
+      "massLb": 750,
       "sizeModifier": 2,
       "hexes": "3 hexes",
       "movement": {
@@ -284,11 +288,11 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 4
       },
-      "description": "Four metres of armoured patience lying as a log until the moment it is not. It takes prey at the water's edge, drags it in, and drowns it, and its hide turns a spear that would go through anything else this side of a dragon. Out of the water it is slow. In the water nothing is winning.",
-      "notes": [
-        "Four metres nose to tail puts it on the SM +2 row. Length, not mass, is what the published table reads.",
-        "ST from Basic Lift: it drags an 80 kg carcass into the water, which is the job its strength has to do.",
-        "DR is full armour rather than Tough Skin: osteoderms are bone plates, not thick hide.",
+      "description": "Thirteen feet of armored reptile lying in the shallows, looking exactly like a waterlogged log. It takes prey at the water's edge, drags it under and drowns it, and its hide turns a spear that would go through anything short of a dragon. On land it is slow enough to outrun. In the water it is not losing.",
+      "provenanceNotes": [
+        "Thirteen feet nose to tail puts it on the SM +2 row. Length, not mass, is what the published table reads.",
+        "ST from Basic Lift: it drags an 175 lb. carcass into the water, which is the job its strength has to do.",
+        "DR is full armor rather than Tough Skin: osteoderms are bone plates, not thick hide.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision; Rapid Healing; Resistant To Disease; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -297,11 +301,11 @@
       "name": "Frog",
       "class": "Animal",
       "classTags": ["animal", "amphibian"],
-      "tags": ["aquatic", "swamp", "prey"],
+      "tags": ["aquatic", "freshwater", "swamp", "prey", "harmless"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Frog"}
       ],
-      "massKg": 0.05,
+      "massLb": 0.1,
       "sizeModifier": -7,
       "hexes": "1 hex",
       "movement": {
@@ -344,9 +348,9 @@
         "averageNumberAppearing": 10,
         "wanderingWeight": 8
       },
-      "description": "A pond frog, present in any wetland by the hundred and dangerous to nothing larger than a moth. It matters at the table as a familiar, a component, an alchemical ingredient and a sound that stops when something else arrives.",
-      "notes": [
-        "About 13 cm nose to vent with the legs gathered, which is the SM -7 row. An earlier draft had it three steps larger because it was sized from a mass band rather than from the published length table.",
+      "description": "An ordinary pond frog, present by the hundred in any wetland and no danger to anything larger than a moth. Frogs matter at the table as familiars, as spell components, and as background — a marsh that suddenly goes quiet has told the party something.",
+      "provenanceNotes": [
+        "About 5 inches nose to vent with the legs gathered, which is the SM -7 row. An earlier draft had it three steps larger because it was sized from a mass band rather than from the published length table.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -355,11 +359,11 @@
       "name": "Giant Crab",
       "class": "Animal",
       "classTags": ["animal", "crustacean"],
-      "tags": ["aquatic", "coastal", "underground", "wandering-encounter"],
+      "tags": ["aquatic", "coastal", "ocean", "underground"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Crab"}
       ],
-      "massKg": 120,
+      "massLb": 250,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -401,11 +405,11 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 4
       },
-      "description": "A crab the size of a war shield, sidling out of the surf on legs that clatter on stone. The shell shrugs off a sword cut and the claws close hard enough to take a hand off at the wrist. It is slow, stupid and almost impossible to hurt from the front.",
-      "notes": [
-        "About two metres across the leg span, which is the SM 0 row.",
+      "description": "A crab the size of a war shield, clattering out of the surf onto stone. The shell shrugs off a sword cut and the claws will take a hand off at the wrist. It is slow and stupid, and coming at it from the front is still a poor idea.",
+      "provenanceNotes": [
+        "About seven feet across the leg span, which is the SM 0 row.",
         "ST raised from an earlier draft: Basic Lift has to cover dragging a body back to the water, which is the thing the creature is for.",
-        "DR is full armour: a carapace is shell, not hide."
+        "DR is full armor: a carapace is shell, not hide."
       ]
     },
     {
@@ -413,11 +417,11 @@
       "name": "Giant Lizard",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["predator", "underground", "warm", "wandering-encounter", "mount"],
+      "tags": ["jungle", "underground", "predator", "mount"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Lizard"}
       ],
-      "massKg": 150,
+      "massLb": 350,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -470,10 +474,10 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 5
       },
-      "description": "A monitor grown to the length of a horse, tasting the air with a forked tongue and climbing a cave wall as easily as it crosses the floor. Deep folk keep them as mounts and pack beasts; left wild they are unhurried, unfrightened, and entirely willing to eat a person.",
-      "notes": [
-        "Three metres nose to tail, which is the SM +1 row.",
-        "ST from Basic Lift: it carries a 40 kg carcass up a rock face.",
+      "description": "A monitor grown to the length of a horse, tasting the air with a forked tongue and climbing a cave wall as readily as it crosses the floor. Deep folk keep them as mounts and pack animals. Wild ones are unhurried and unfrightened, and they will eat a person if the opportunity is convenient.",
+      "provenanceNotes": [
+        "Ten feet nose to tail, which is the SM +1 row.",
+        "ST from Basic Lift: it carries a 90 lb. carcass up a rock face.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -482,11 +486,11 @@
       "name": "Giant Sea Horse",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "mount", "reef", "domestic"],
+      "tags": ["aquatic", "ocean", "reef", "domestic", "mount"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Sea Horse"}
       ],
-      "massKg": 180,
+      "massLb": 400,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -517,18 +521,18 @@
           "basis": "thr",
           "type": "crushing",
           "reach": "C",
-          "notes": "Driven with the whole body; the armoured snout is the only part of it built to hit anything."
+          "notes": "Driven with the whole body; the armored snout is the only part of it built to hit anything."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 2,
         "wanderingWeight": 3
       },
-      "description": "Ridden by sea elves and sahuagin alike, and worth more than a good horse. It is armoured in bony rings, placid to the point of stubbornness, and slower than anything that wants to eat it — which is why it is a mount and not a hunter.",
-      "notes": [
-        "Three metres from crown to curled tail, which is the SM +1 row.",
+      "description": "Sea elves and sahuagin both ride these, and a good one costs more than a good horse. It is armored in bony rings, placid to the point of stubbornness, and slower than most things that would like to eat it. Handled well it will carry a rider all day. Handled badly it simply stops.",
+      "provenanceNotes": [
+        "Ten feet from crown to curled tail, which is the SM +1 row.",
         "ST is set by what a mount has to do: Basic Lift must carry an armed rider. That raised it from an earlier draft, where it had been scaled from mass and could not have borne one.",
-        "Deliberately slow: Basic Move is bought down, because a sea horse's whole body plan trades speed for armour and station-keeping.",
+        "Deliberately slow: Basic Move is bought down, because a sea horse's whole body plan trades speed for armor and station-keeping.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -537,11 +541,11 @@
       "name": "Giant Shark",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "predator", "deep-water", "wandering-encounter"],
+      "tags": ["aquatic", "ocean", "open-water", "apex", "predator"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Shark"}
       ],
-      "massKg": 1800,
+      "massLb": 4000,
       "sizeModifier": 3,
       "hexes": "5 hexes",
       "movement": {
@@ -583,10 +587,10 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "Six metres of shark that has stopped treating boats as too large. It arrives from below and behind, takes one bite, and circles while whatever is left of the target bleeds. Skin like coarse rasp, no expression, and no reason at all to stop.",
-      "notes": [
-        "Six metres, which is the SM +3 row.",
-        "ST from Basic Lift: it carries off a 250 kg piece of whatever it bit.",
+      "description": "Twenty feet of shark that has stopped regarding boats as too large to try. It comes up from below and behind, takes one bite, then circles while the target bleeds. The skin is rough enough to take the hide off a hand that grabs it.",
+      "provenanceNotes": [
+        "Twenty feet, which is the SM +3 row.",
+        "ST from Basic Lift: it carries off a 550 lb. piece of whatever it bit.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -595,11 +599,11 @@
       "name": "Giant Toad",
       "class": "Animal",
       "classTags": ["animal", "amphibian"],
-      "tags": ["aquatic", "swamp", "ambusher", "wandering-encounter", "poisonous"],
+      "tags": ["aquatic", "freshwater", "swamp", "poison", "ambusher"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Toad"}
       ],
-      "massKg": 100,
+      "massLb": 200,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -659,9 +663,9 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 4
       },
-      "description": "A toad the size of a hound, sitting so still in the reeds that it reads as a stone until the tongue comes out. It eats anything it can get into its mouth, which at this size includes a halfling, and its skin sweats a poison that punishes anyone who grabs it.",
-      "notes": [
-        "About 1.5 m gathered, which is the SM 0 row. An earlier draft had it a step larger, sized from mass rather than from the published length table.",
+      "description": "A toad the size of a hound, sitting so still among the reeds that it reads as a stone until the tongue comes out. It swallows anything it can fit, which at this size includes a halfling. The skin sweats a poison that punishes anyone who grabs it barehanded, though it is a bad hour rather than a death.",
+      "provenanceNotes": [
+        "About 5 feet gathered, which is the SM 0 row. An earlier draft had it a step larger, sized from mass rather than from the published length table.",
         "ST from Basic Lift: it swallows something the weight of a halfling.",
         "DR 0 is deliberate. An amphibian's skin is thin, wet and permeable — which is also what makes the toxin work. The toughness is in HT and HP, not hide.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
@@ -672,11 +676,11 @@
       "name": "Giant Vulture",
       "class": "Animal",
       "classTags": ["animal", "bird"],
-      "tags": ["flier", "scavenger", "desert", "wandering-encounter"],
+      "tags": ["desert", "scavenger", "flock", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Vulture"}
       ],
-      "massKg": 40,
+      "massLb": 90,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -728,9 +732,9 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 4
       },
-      "description": "A carrion bird with a three-metre span and enough intelligence to work out that a struggling party will be dead soon. They circle for a day, drop to the ground as a group, and start on whoever stopped moving first — and they are not always careful about confirming it.",
-      "notes": [
-        "Body about 1.5 m, which is the SM 0 row; the three-metre span is wingspan and the wings fold. An earlier draft sized it from the span.",
+      "description": "A carrion bird with a ten-foot wingspan and enough sense to recognize a party that is losing. Giant vultures will circle a struggling group for a day, then come down together and start on whoever stopped moving. They are not always careful about checking first.",
+      "provenanceNotes": [
+        "Body about 5 feet, which is the SM 0 row; the ten-foot span is wingspan and the wings fold. An earlier draft sized it from the span.",
         "IQ 5 is deliberate. The SRD presents these as calculating rather than merely hungry, and Will and Per follow from it.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
@@ -740,12 +744,12 @@
       "name": "Hawk",
       "class": "Animal",
       "classTags": ["animal", "bird"],
-      "tags": ["flier", "predator", "trained", "wandering-encounter"],
+      "tags": ["forest", "plains", "predator", "familiar", "trained", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Hawk"},
         {"sourceSystem": "srd_3_5", "heading": "Hawk"}
       ],
-      "massKg": 1,
+      "massLb": 2,
       "sizeModifier": -4,
       "hexes": "1 hex",
       "movement": {
@@ -790,10 +794,10 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 6
       },
-      "description": "Eyes that resolve a mouse from the top of a tower, and a dive that arrives before the sound does. As an encounter a hawk is scenery. As a trained bird it is a scout, a messenger and the reason a hunting party eats, and a falconer's hawk is worth more than his horse.",
-      "notes": [
-        "Body about 50 cm, which is the SM -4 row.",
-        "Perception is the highest in this batch, and deliberately so: eyesight is the one thing a hawk is unarguably exceptional at, and Acute Vision and Telescopic Vision sit on top of it."
+      "description": "A hawk picks a mouse out of grass from the top of a tower, and its dive arrives ahead of the sound of it. As a wandering encounter it is scenery. As a trained bird it is a scout, a messenger and the reason a hunting party eats, and a falconer's hawk is worth more than his horse.",
+      "provenanceNotes": [
+        "Body about 20 inches, which is the SM -4 row.",
+        "Perception is deliberately exceptional: eyesight is the one thing a hawk is unarguably exceptional at, and Acute Vision and Telescopic Vision sit on top of it."
       ]
     },
     {
@@ -801,11 +805,11 @@
       "name": "Hunter Shark",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "predator", "coastal", "wandering-encounter"],
+      "tags": ["aquatic", "coastal", "ocean", "predator"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Hunter Shark"}
       ],
-      "massKg": 400,
+      "massLb": 900,
       "sizeModifier": 2,
       "hexes": "3 hexes",
       "movement": {
@@ -846,10 +850,10 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 3
       },
-      "description": "The shark that has decided a swimmer is food rather than a question. Three and a half metres of it, tracking blood across half a mile of water and closing from whichever side has no eyes on it. Not malicious — simply extremely good at one thing.",
-      "notes": [
-        "Three and a half metres, which is the SM +2 row.",
-        "ST from Basic Lift: it takes a 120 kg piece away with it.",
+      "description": "Twelve feet of shark that has decided a swimmer is food. It tracks blood across half a mile of open water and closes from whichever side has no eyes on it. There is nothing malicious in this. Sharks are simply very good at one thing.",
+      "provenanceNotes": [
+        "Twelve feet, which is the SM +2 row.",
+        "ST from Basic Lift: it takes a 265 lb. piece away with it.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -858,12 +862,12 @@
       "name": "Owl",
       "class": "Animal",
       "classTags": ["animal", "bird"],
-      "tags": ["flier", "predator", "nocturnal", "trained", "forest"],
+      "tags": ["forest", "predator", "familiar", "trained", "flier", "nocturnal", "stealthy"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Owl"},
         {"sourceSystem": "srd_3_5", "heading": "Owl"}
       ],
-      "massKg": 1,
+      "massLb": 2,
       "sizeModifier": -4,
       "hexes": "1 hex",
       "movement": {
@@ -902,9 +906,9 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 5
       },
-      "description": "It hunts by hearing in total darkness and flies without making any sound at all — a wing edge combed into silence, so the mouse never learns anything is coming. Wizards keep them for the same reason poachers fear them: an owl sees a night camp perfectly and is never noticed watching it.",
-      "notes": [
-        "Body about 50 cm, which is the SM -4 row.",
+      "description": "An owl hunts by hearing in total darkness and flies without making any sound at all — the leading edge of the wing is combed into silence, so the mouse never learns anything is coming. Wizards keep them for the same reason poachers fear them. An owl watches a night camp from a branch and is never noticed doing it.",
+      "provenanceNotes": [
+        "Body about 20 inches, which is the SM -4 row.",
         "Perception is as high as the hawk's but paid for differently: an owl's exceptional sense is hearing, and Acute Hearing 5 and Night Vision 9 are where that lands."
       ]
     },
@@ -913,11 +917,11 @@
       "name": "Porpoise",
       "class": "Animal",
       "classTags": ["animal", "mammal"],
-      "tags": ["aquatic", "pod", "coastal", "friendly"],
+      "tags": ["aquatic", "coastal", "ocean", "pack"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Porpoise"}
       ],
-      "massKg": 70,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -969,10 +973,10 @@
         "averageNumberAppearing": 6,
         "wanderingWeight": 5
       },
-      "description": "Bright, sociable and genuinely curious about boats, travelling in pods that will escort a hull for miles. Sailors count them lucky and are not entirely wrong: a pod harrying a shark has saved swimmers, and their squealing carries far enough underwater to be a warning if anyone can read it.",
-      "notes": [
-        "About 1.8 m, which is the SM 0 row.",
-        "IQ 6 is deliberate and the highest in this batch: a porpoise is genuinely clever, and Will follows from it.",
+      "description": "Bright, sociable animals that travel in pods and will follow a hull for miles out of what looks a great deal like curiosity. Sailors count them lucky and are not far wrong: a pod harrying a shark has saved swimmers before now. Their calls carry a long way underwater, which is useful to anyone who can read them.",
+      "provenanceNotes": [
+        "About 6 feet, which is the SM 0 row.",
+        "IQ 6 is deliberate: a porpoise is genuinely clever, and Will follows from it.",
         "DR 1 is blubber rather than hide, which is why it is Tough Skin."
       ]
     },
@@ -981,11 +985,11 @@
       "name": "Quipper",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "swarm-forming", "predator", "freshwater"],
+      "tags": ["aquatic", "freshwater", "predator", "swarm-forming"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Quipper"}
       ],
-      "massKg": 0.4,
+      "massLb": 0.9,
       "sizeModifier": -5,
       "hexes": "1 hex",
       "movement": {
@@ -1021,10 +1025,12 @@
         "averageNumberAppearing": 12,
         "wanderingWeight": 6
       },
-      "description": "A hand-length carnivorous fish with a bad temper and worse company. Alone it can barely break skin. In the numbers it actually appears in, a quipper shoal strips a fallen pack animal to bone in the time it takes to wade to the bank.",
+      "description": "A hand-length carnivorous fish with a bad temper. One can barely break skin. They do not come one at a time, and a shoal will strip a fallen pack animal to the bone in the time it takes to wade to the bank.",
       "notes": [
-        "About 25 cm, which is the SM -5 row.",
-        "Rated as a single fish. The shoal is the threat and belongs in the swarm batch, not here."
+        "This is one fish. The shoal is the threat; run a Swarm of Quippers for that."
+      ],
+      "provenanceNotes": [
+        "About 10 inches, which is the SM -5 row."
       ]
     },
     {
@@ -1032,11 +1038,11 @@
       "name": "Reef Shark",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "predator", "reef", "pack"],
+      "tags": ["aquatic", "ocean", "reef", "predator", "pack"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Reef Shark"}
       ],
-      "massKg": 60,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -1075,10 +1081,10 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 5
       },
-      "description": "Small as sharks go and rarely interested in anything person-sized, until several of them are and the water is already cloudy. Reef sharks hunt in loose company over coral, and what makes them dangerous is arithmetic rather than size.",
-      "notes": [
-        "About two metres, which is the SM 0 row.",
-        "ST from Basic Lift: 25 kg carried off, which is a bite's worth and no more.",
+      "description": "Small as sharks go, and rarely interested in anything person-sized. Reef sharks hunt in loose company over coral, and the danger is arithmetic rather than size: three or four of them, in water already cloudy, becoming interested at the same moment.",
+      "provenanceNotes": [
+        "About seven feet, which is the SM 0 row.",
+        "ST from Basic Lift: 55 lb. carried off, which is a bite's worth and no more.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -1087,11 +1093,11 @@
       "name": "Sea Horse",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "reef", "harmless"],
+      "tags": ["aquatic", "ocean", "reef", "harmless"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Sea Horse"}
       ],
-      "massKg": 0.02,
+      "massLb": 0.05,
       "sizeModifier": -7,
       "hexes": "1 hex",
       "movement": {
@@ -1128,9 +1134,9 @@
         "averageNumberAppearing": 6,
         "wanderingWeight": 4
       },
-      "description": "A thumb-length fish that swims upright, holds station by its tail, and is armoured in bony rings against absolutely nothing that matters. It is a component, a curiosity and a familiar, and it is the reason anyone believes the giant version could be ridden.",
-      "notes": [
-        "About 15 cm upright, which is the SM -7 row. An earlier draft had it two steps larger, sized from a mass band rather than from the published length table.",
+      "description": "A thumb-length fish that swims upright and holds station with its tail, armored in bony rings against nothing worth mentioning. Alchemists want them dried and wizards keep them in jars. The only reason anyone believes the giant version can be ridden is that this one looks like a very small horse.",
+      "provenanceNotes": [
+        "About 6 inches upright, which is the SM -7 row. An earlier draft had it two steps larger, sized from a mass band rather than from the published length table.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -1139,11 +1145,11 @@
       "name": "Shark",
       "class": "Animal",
       "classTags": ["animal", "fish"],
-      "tags": ["aquatic", "predator", "open-water", "wandering-encounter"],
+      "tags": ["aquatic", "ocean", "open-water", "predator"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Shark"}
       ],
-      "massKg": 150,
+      "massLb": 350,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -1183,10 +1189,10 @@
         "averageNumberAppearing": 3,
         "wanderingWeight": 4
       },
-      "description": "The ordinary shark of open water: two and a half metres, endlessly moving, and drawn to a wreck from further off than anyone in the water would like. It tests before it commits, which is the only reason survivors exist to describe it.",
-      "notes": [
-        "Two and a half metres, which is the SM +1 row.",
-        "ST from Basic Lift: 50 kg taken away.",
+      "description": "The ordinary shark of open water: eight feet, never still, and drawn to a wreck from further off than anyone in the water would like. It tests before it commits, and that habit is the reason there are survivors to describe it.",
+      "provenanceNotes": [
+        "Eight feet, which is the SM +1 row.",
+        "ST from Basic Lift: 110 lb. taken away.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -1195,11 +1201,11 @@
       "name": "Vulture",
       "class": "Animal",
       "classTags": ["animal", "bird"],
-      "tags": ["flier", "scavenger", "plains", "omen"],
+      "tags": ["plains", "scavenger", "flock", "omen", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Vulture"}
       ],
-      "massKg": 5,
+      "massLb": 10,
       "sizeModifier": -2,
       "hexes": "1 hex",
       "movement": {
@@ -1240,9 +1246,9 @@
         "averageNumberAppearing": 5,
         "wanderingWeight": 5
       },
-      "description": "No threat and a great deal of information. Vultures circling mean something died in that direction within the day, and a GM who describes them has told the party where to go without saying a word. On the ground they are ugly, unhurried and appalling to be downwind of.",
-      "notes": [
-        "Body about 80 cm, which is the SM -2 row.",
+      "description": "Vultures are no threat and a great deal of information. Birds circling mean something died in that direction within the day, and a GM who mentions them has pointed the party somewhere without saying a word. On the ground they are ugly, unhurried and appalling to stand downwind of.",
+      "provenanceNotes": [
+        "Body about 32 inches, which is the SM -2 row.",
         "IQ 5 for the same reason as the giant vulture: these are patient, calculating birds rather than merely hungry ones.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]

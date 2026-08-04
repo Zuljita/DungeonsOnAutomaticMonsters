@@ -18,6 +18,7 @@ import { applyReviewDecisions } from "./srd/apply-review.mjs";
 import { buildRecord } from "./srd/build-srd-record.mjs";
 import { batchMonsters } from "./srd/expand-matrix.mjs";
 import { PACKAGE_SOURCE, SOURCE_BOOK_ID, manifest } from "./srd/package-source.mjs";
+import { checkSpecTags } from "./srd/tag-taxonomy.mjs";
 import { SRD_LEDGER_PATH, readLedger } from "./review/ledger.mjs";
 import { validatePackage } from "./package-validation.mjs";
 
@@ -46,6 +47,9 @@ const artifacts = [];
 for (const { path, file } of batches) {
   const batch = { id: file.batch, issue: file.issue, title: file.title, specPath: path.replace(/\\/g, "/") };
   for (const spec of batchMonsters(file)) {
+    // Tags are a closed vocabulary for the same reason traits are: an invented
+    // one-off reads as a filter and matches nothing. See srd/tag-taxonomy.mjs.
+    problems.push(...checkSpecTags(spec).map(problem => `${spec.slug ?? "<unnamed spec>"}: ${problem}`));
     let built;
     try {
       built = buildRecord(spec, {

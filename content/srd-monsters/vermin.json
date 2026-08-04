@@ -3,7 +3,7 @@
   "batch": "vermin",
   "issue": 39,
   "title": "SRD coverage: vermin and monstrous arthropods",
-  "summary": "Independently authored GURPS builds for the 8 vermin identities issue #39 enumerates, in 7 records: the 3.5 'Monstrous Spider' heading is a size family rather than a distinct creature, and is dispositioned onto the Giant Spider record. Size Modifier comes from the published table keyed to longest dimension — for an arthropod that is leg span, which is why a house spider sits far below its body length. ST comes from Basic Lift and what the animal actually hauls: prey up a web line, a carcass into a burrow. Venom is priced as a disabling ability so the rating path can see it, because for most of this batch the venom is the creature and the bite itself is a scratch. Arthropod DR is full armour, not Tough Skin: chitin is a shell.",
+  "summary": "Independently authored GURPS builds for the 8 vermin identities issue #39 enumerates, in 7 records: the 3.5 'Monstrous Spider' heading is a size family rather than a distinct creature, and is dispositioned onto the Giant Spider record. Size Modifier comes from the published table keyed to longest dimension — for an arthropod that is leg span, which is why a house spider sits far below its body length. ST comes from Basic Lift and what the animal actually hauls: prey up a web line, a carcass into a burrow. Venom is priced as a disabling ability so the rating path can see it, because for most of this batch the venom is the creature and the bite itself is a scratch. Arthropod DR is full armor, not Tough Skin: chitin is a shell.",
   "traitSets": {
     "arthropod-body": [
       {
@@ -43,11 +43,11 @@
       "name": "Giant Ant",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["hive", "underground", "wandering-encounter"],
+      "tags": ["underground", "hive", "burrower"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Giant Ant"}
       ],
-      "massKg": 40,
+      "massLb": 90,
       "sizeModifier": -1,
       "hexes": "1 hex",
       "movement": {
@@ -87,11 +87,11 @@
         "averageNumberAppearing": 8,
         "wanderingWeight": 4
       },
-      "description": "Waist-high, armoured in chitin the colour of old blood, and never encountered alone. Giant ants work a territory the way a farm works a field, and what one finds the nest knows within the hour. They do not threaten and they do not retreat; they simply keep arriving.",
-      "notes": [
-        "About 1.5 m nose to abdomen, which is the SM -1 row.",
-        "ST looks high for 40 kg and is meant to: Basic Lift has to cover an ant carrying a load its own weight back to the nest, which is the one thing everybody knows ants do.",
-        "DR is full armour. Chitin is a shell, and a scratch that would bypass thick hide does not bypass it.",
+      "description": "Waist-high, armored in chitin the color of old blood, and never encountered alone. Giant ants work a territory the way a farm works a field, and what one finds the nest knows within the hour. They do not threaten and they do not retreat. They keep arriving.",
+      "provenanceNotes": [
+        "About 5 feet nose to abdomen, which is the SM -1 row.",
+        "ST looks high for 90 lb. and is meant to: Basic Lift has to cover an ant carrying a load its own weight back to the nest, which is the one thing everybody knows ants do.",
+        "DR is full armor. Chitin is a shell, and a scratch that would bypass thick hide does not bypass it.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -100,11 +100,11 @@
       "name": "Giant Centipede",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["underground", "venomous", "wandering-encounter"],
+      "tags": ["underground", "swarm-forming", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Centipede"}
       ],
-      "massKg": 5,
+      "massLb": 10,
       "sizeModifier": -2,
       "hexes": "1 hex",
       "movement": {
@@ -144,9 +144,9 @@
         "averageNumberAppearing": 3,
         "wanderingWeight": 5
       },
-      "description": "A metre of segmented armour on forty legs, moving along a wall faster than a person walks. It hunts in the dark by touch and vibration, kills with a pair of hooked poison claws under the head, and is almost impossible to corner because it goes wherever the wall goes.",
-      "notes": [
-        "About 90 cm, which is the SM -2 row.",
+      "description": "Three feet of segmented armor on forty legs, moving along a wall faster than a person walks. It hunts in the dark by touch and vibration and kills with a pair of hooked poison claws under the head. Cornering one is nearly impossible, since it simply goes wherever the wall goes.",
+      "provenanceNotes": [
+        "About 3 feet, which is the SM -2 row.",
         "IQ 1 — this is the floor, and correct. A centipede is a reflex arc with legs.",
         "The venom is priced as a 15-point disabling ability so the rating can see it; the puncture alone would rate near zero."
       ]
@@ -156,11 +156,11 @@
       "name": "Giant Scorpion",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["desert", "underground", "venomous", "wandering-encounter"],
+      "tags": ["desert", "underground", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Scorpion"}
       ],
-      "massKg": 120,
+      "massLb": 250,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -209,9 +209,9 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "Two and a half metres of black chitin that holds you with the claws and takes its time with the tail. The shell turns most weapons, the pincers do not let go, and the sting is what actually kills — everything before it is the scorpion arranging matters to its satisfaction.",
-      "notes": [
-        "About 2.5 m including the tail, which is the SM +1 row.",
+      "description": "Eight feet of black chitin that takes hold with the claws and takes its time with the tail. The shell turns most weapons and the pincers do not let go. The sting is what actually kills; everything before it is the scorpion arranging matters to suit itself.",
+      "provenanceNotes": [
+        "About 8 feet including the tail, which is the SM +1 row.",
         "ST from Basic Lift: it drags a human body into a burrow.",
         "Rating caveat for review: the giant spider out-rates this creature, which is not obviously right. The cause is in the rating path, not the build — a binding is scored at its raw ST while a disabling ability is scored at one point per five, so the spider's web (ST 16) contributes 16 while this scorpion's lethal venom (30 points) contributes 6. Only the better of the two is counted per creature, so the spider's own venom is also discarded. Recorded rather than tuned around; the fix belongs in the CER path.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
@@ -222,7 +222,7 @@
       "name": "Giant Spider",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["underground", "forest", "venomous", "ambusher", "wandering-encounter"],
+      "tags": ["forest", "underground", "ambusher", "trapper", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Spider"},
         {
@@ -232,7 +232,7 @@
           "alsoPrintedAs": ["Monstrous Spider, Large", "Monstrous Spider, Huge"]
         }
       ],
-      "massKg": 100,
+      "massLb": 200,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -282,14 +282,17 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 4
       },
-      "description": "A body the size of a large dog on a three-metre span of legs, sitting motionless at the edge of its web where the light does not reach. It reads the whole web as one sense. What it wants is for you to be held still, and it has already arranged most of that before anybody looks up.",
+      "description": "A body the size of a large dog on a ten-foot span of legs, sitting motionless at the edge of its web where the light does not reach. It reads the whole web as one sense. It wants somebody held still, and most of that was arranged before anyone thought to look up.",
       "notes": [
-        "Three metres across the leg span, which is the SM +1 row; the body is nearer a metre.",
+        "The 3.5 corpus prints 'Monstrous Spider' as a family of sizes rather than one creature; this record is the size that matches the 5.1 giant spider."
+      ],
+      "provenanceNotes": [
+        "Ten feet across the leg span, which is the SM +1 row; the body is nearer a foot across.",
         "ST from Basic Lift: it hauls a wrapped human up a web line.",
         "The web is priced by its binding ST rather than by damage, which is how the rating path sees an ability that does no injury at all.",
+        "The web can be attacked and it burns. A binding a party cannot attack is a different creature from one they can burn.",
         "The 3.5 'Monstrous Spider' heading is a size family, not a distinct creature. It is dispositioned onto this record; its other sizes belong to the variant batch, not here.",
-        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours.",
-        "Web durability and flammability added after a post-hoc comparison against independent GURPS fan conversions, which all state them and this build did not. A binding a party cannot attack is a different creature from one they can burn."
+        "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision, and the web's durability and flammability, which the outside conversions all state and this build did not. The comparison surfaced the gaps; the build is still ours."
       ]
     },
     {
@@ -297,11 +300,11 @@
       "name": "Giant Wolf Spider",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["underground", "forest", "venomous", "ambusher"],
+      "tags": ["forest", "underground", "ambusher", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Wolf Spider"}
       ],
-      "massKg": 30,
+      "massLb": 65,
       "sizeModifier": -1,
       "hexes": "1 hex",
       "movement": {
@@ -337,16 +340,16 @@
           "type": "impaling",
           "reach": "C",
           "afflictionPoints": 15,
-          "notes": "Roll HT or the bitten limb stiffens and the world goes grey at the edges for a few minutes."
+          "notes": "Roll HT or the bitten limb stiffens and the world goes gray at the edges for a few minutes."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 2,
         "wanderingWeight": 4
       },
-      "description": "It builds no web. It waits in a hole with the lid held shut by one leg, and the first anyone knows is a metre and a half of spider crossing open floor in two jumps. Faster than the web-builders, less armoured, and much harder to see coming.",
-      "notes": [
-        "About 1.5 m across the legs, which is the SM -1 row.",
+      "description": "It builds no web. It waits in a hole with the lid held shut by one leg, and the first anyone knows is five feet of spider crossing open floor in two jumps. Faster than the web-builders, less armored, and much harder to see coming.",
+      "provenanceNotes": [
+        "About 5 feet across the legs, which is the SM -1 row.",
         "Weaker than a spider of this size might suggest, deliberately: a hunting spider spends its build on speed, jump and stealth rather than on hauling prey.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
@@ -356,11 +359,11 @@
       "name": "Scorpion",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["desert", "venomous", "hazard"],
+      "tags": ["desert", "hazard", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Scorpion"}
       ],
-      "massKg": 0.02,
+      "massLb": 0.05,
       "sizeModifier": -8,
       "hexes": "1 hex",
       "movement": {
@@ -400,9 +403,9 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 5
       },
-      "description": "Eight centimetres of nothing much, and a genuine reason to shake out your bedroll. It cannot hurt anyone by force and does not need to. A scorpion in a camp is a hazard rather than a fight, and it is usually found by the wrong method.",
-      "notes": [
-        "About 8 cm, which is the SM -8 row.",
+      "description": "Three inches of nothing much, and a good reason to shake out a bedroll. It cannot hurt anybody by force and does not need to. A scorpion in camp is a hazard rather than a fight, and it is usually found by the wrong method.",
+      "provenanceNotes": [
+        "About 3 inches, which is the SM -8 row.",
         "ST is the floor. The rating comes almost entirely from the venom, which is correct: this creature's whole threat is chemical.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
@@ -412,11 +415,11 @@
       "name": "Spider",
       "class": "Animal",
       "classTags": ["animal", "arthropod", "vermin"],
-      "tags": ["urban", "harmless", "familiar-scale"],
+      "tags": ["urban", "swarm-forming", "familiar", "harmless"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Spider"}
       ],
-      "massKg": 0.001,
+      "massLb": 0.002,
       "sizeModifier": -9,
       "hexes": "1 hex",
       "movement": {
@@ -455,9 +458,9 @@
         "averageNumberAppearing": 3,
         "wanderingWeight": 6
       },
-      "description": "A common house spider, which is to say a component, a familiar, an omen and a thing found in a boot. It is entirely harmless and its web across a doorway is worth more at a table than its bite ever will be — nobody has walked through that web for a while.",
-      "notes": [
-        "About 7 cm across the legs, which is the SM -9 row.",
+      "description": "A common house spider: a component, a familiar, an omen, and a thing found in a boot. It is entirely harmless. Its web across a doorway is worth more at a table than its bite ever will be, because nobody has walked through that doorway for a while.",
+      "provenanceNotes": [
+        "About 3 inches across the legs, which is the SM -9 row.",
         "Rated at the floor and that is the honest answer. It is here for coverage and for scene-dressing, not as an opponent.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]

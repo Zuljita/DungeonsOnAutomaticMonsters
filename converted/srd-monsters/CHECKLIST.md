@@ -12,139 +12,139 @@ fields suit the creature's role as a wandering encounter, a mount or livestock, 
 
 | Monster | SRD headings answered | ST | CER | Threat | Appearing | Status | Reviewed by |
 | --- | --- | ---: | ---: | --- | ---: | --- | --- |
-| Bat | Bat (5.1), Bat (3.5) | 1 | 1 | minor | 8 | approved | automated-mechanical-review, 2026-07-31 |
-| Blood Hawk | Blood Hawk (5.1) | 3 | 7 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Crab | Crab (5.1) | 2 | 1 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Crocodile | Crocodile (5.1), Crocodile (3.5) | 20 | 30 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Frog | Frog (5.1) | 1 | 1 | minor | 10 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Crab | Giant Crab (5.1) | 15 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Lizard | Giant Lizard (5.1) | 14 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Sea Horse | Giant Sea Horse (5.1) | 18 | 19 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Shark | Giant Shark (5.1) | 35 | 60 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Toad | Giant Toad (5.1) | 12 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Vulture | Giant Vulture (5.1) | 7 | 10 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Hawk | Hawk (5.1), Hawk (3.5) | 2 | 4 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Hunter Shark | Hunter Shark (5.1) | 24 | 38 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Owl | Owl (5.1), Owl (3.5) | 2 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Porpoise | Porpoise (3.5) | 13 | 20 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Quipper | Quipper (5.1) | 2 | 1 | minor | 12 | approved | automated-mechanical-review, 2026-07-31 |
-| Reef Shark | Reef Shark (5.1) | 11 | 12 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Sea Horse | Sea Horse (5.1) | 1 | 1 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Shark | Shark (3.5) | 16 | 20 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Vulture | Vulture (5.1) | 3 | 1 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Animated Armor | Animated Armor (5.1) | 12 | 36 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Awakened Shrub | Awakened Shrub (5.1) | 5 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Awakened Tree | Awakened Tree (5.1) | 35 | 55 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Clay Golem | Clay Golem (5.1), Clay Golem (3.5) | 30 | 67 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Flying Sword | Flying Sword (5.1) | 6 | 39 | standard | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Rug of Smothering | Rug of Smothering (5.1) | 14 | 40 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Deinonychus | Deinonychus (3.5) | 13 | 22 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Elasmosaurus | Elasmosaurus (3.5) | 45 | 72 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Megaraptor | Megaraptor (3.5) | 24 | 43 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Plesiosaurus | Plesiosaurus (5.1) | 24 | 38 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Triceratops | Triceratops (5.1), Triceratops (3.5) | 55 | 100 | severe | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Tyrannosaurus | Tyrannosaurus Rex (5.1), Tyrannosaurus (3.5) | 50 | 96 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Black Dragon Wyrmling | Black Dragon Wyrmling (5.1) | 18 | 43 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Black Dragon | Young Black Dragon (5.1) | 35 | 79 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Black Dragon | Adult Black Dragon (5.1) | 55 | 124 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Black Dragon | Ancient Black Dragon (5.1) | 70 | 175 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Blue Dragon Wyrmling | Blue Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Blue Dragon | Young Blue Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Blue Dragon | Adult Blue Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Blue Dragon | Ancient Blue Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Brass Dragon Wyrmling | Brass Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Brass Dragon | Young Brass Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Brass Dragon | Adult Brass Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Brass Dragon | Ancient Brass Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Bronze Dragon Wyrmling | Bronze Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Bronze Dragon | Young Bronze Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Bronze Dragon | Adult Bronze Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Bronze Dragon | Ancient Bronze Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Copper Dragon Wyrmling | Copper Dragon Wyrmling (5.1) | 18 | 43 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Copper Dragon | Young Copper Dragon (5.1) | 35 | 79 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Copper Dragon | Adult Copper Dragon (5.1) | 55 | 124 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Copper Dragon | Ancient Copper Dragon (5.1) | 70 | 175 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Gold Dragon Wyrmling | Gold Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Gold Dragon | Young Gold Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Gold Dragon | Adult Gold Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Gold Dragon | Ancient Gold Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Green Dragon Wyrmling | Green Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Green Dragon | Young Green Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Green Dragon | Adult Green Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Green Dragon | Ancient Green Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Red Dragon Wyrmling | Red Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Red Dragon | Young Red Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Red Dragon | Adult Red Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Red Dragon | Ancient Red Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Silver Dragon Wyrmling | Silver Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young Silver Dragon | Young Silver Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult Silver Dragon | Adult Silver Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient Silver Dragon | Ancient Silver Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| White Dragon Wyrmling | White Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Young White Dragon | Young White Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Adult White Dragon | Adult White Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Ancient White Dragon | Ancient White Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Aasimar | Aasimar (3.5) | 10 | 10 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Bugbear | Bugbear (5.1), Bugbear (3.5) | 14 | 18 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Centaur | Centaur (5.1), Centaur (3.5) | 20 | 32 | standard | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Deep Dwarf | Deep Dwarf (3.5) | 11 | 16 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Deep Halfling | Deep Halfling (3.5) | 8 | 3 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Drow | Drow (5.1), Drow (3.5) | 10 | 12 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Duergar | Duergar (5.1), Duergar (3.5) | 11 | 17 | minor | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Forest Gnome | Forest Gnome (3.5) | 8 | 1 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Gnoll | Gnoll (5.1), Gnoll (3.5) | 13 | 18 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Goblin | Goblin (5.1), Goblin (3.5) | 9 | 10 | minor | 8 | approved | automated-mechanical-review, 2026-07-31 |
-| Gray Elf | Gray Elf (3.5) | 8 | 13 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Half-Elf | Half-Elf (3.5) | 10 | 14 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Half-Orc | Half-Orc (3.5) | 12 | 14 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Hobgoblin | Hobgoblin (5.1), Hobgoblin (3.5) | 12 | 18 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Kobold | Kobold (5.1), Kobold (3.5) | 7 | 1 | minor | 10 | approved | automated-mechanical-review, 2026-07-31 |
-| Lizardfolk | Lizardfolk (5.1), Lizardfolk (3.5) | 13 | 17 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Merfolk | Merfolk (5.1), Merfolk (3.5) | 11 | 15 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Merrow | Merrow (5.1), Merrow (3.5) | 20 | 33 | standard | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Mountain Dwarf | Mountain Dwarf (3.5) | 11 | 16 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Ogre | Ogre (5.1), Ogre (3.5) | 20 | 31 | standard | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Oni | Oni (5.1), Ogre Mage (3.5) | 22 | 61 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Orc | Orc (5.1), Orc (3.5) | 13 | 17 | minor | 8 | approved | automated-mechanical-review, 2026-07-31 |
-| Sprite | Sprite (5.1), Sprite (3.5) | 2 | 7 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Svirfneblin | Svirfneblin (5.1), Svirfneblin (3.5) | 8 | 6 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Tallfellow Halfling | Tallfellow Halfling (3.5) | 9 | 13 | minor | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Tiefling | Tiefling (3.5) | 10 | 7 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Wild Elf | Wild Elf (3.5) | 10 | 16 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Wood Elf | Wood Elf (3.5) | 11 | 17 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Bear, Black | Black Bear (5.1), Bear, Black (3.5) | 20 | 27 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Bear, Brown | Brown Bear (5.1), Bear, Brown (3.5) | 27 | 46 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Bear, Polar | Polar Bear (5.1), Bear, Polar (3.5) | 29 | 49 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Boar | Boar (5.1), Boar (3.5) | 14 | 19 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Camel | Camel (5.1), Camel (3.5) | 24 | 28 | standard | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Cat | Cat (5.1), Cat (3.5) | 3 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Cheetah | Cheetah (3.5) | 12 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Death Dog | Death Dog (5.1) | 13 | 27 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Deer | Deer (5.1) | 13 | 20 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Dire Wolf | Dire Wolf (5.1), Dire Wolf (3.5) | 18 | 34 | standard | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Dog | Dog (3.5) | 8 | 9 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Donkey | Donkey (3.5) | 18 | 15 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Elephant | Elephant (5.1), Elephant (3.5) | 45 | 78 | major | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Elk | Elk (5.1) | 22 | 34 | standard | 5 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Badger | Giant Badger (5.1) | 12 | 17 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Boar | Giant Boar (5.1) | 22 | 38 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Elk | Giant Elk (5.1) | 28 | 57 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Goat | Giant Goat (5.1) | 18 | 17 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Hyena | Giant Hyena (5.1) | 18 | 29 | standard | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Weasel | Giant Weasel (5.1) | 10 | 11 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Goat | Goat (5.1) | 11 | 4 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Horse, Heavy | Draft Horse (5.1), Horse, Heavy (3.5) | 28 | 32 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Horse, Light | Riding Horse (5.1), Horse, Light (3.5) | 22 | 25 | standard | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Lion | Lion (5.1), Lion (3.5) | 19 | 30 | standard | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Mammoth | Mammoth (5.1) | 55 | 97 | major | 4 | approved | automated-mechanical-review, 2026-07-31 |
-| Mule | Mule (5.1), Mule (3.5) | 20 | 20 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Panther | Panther (5.1) | 14 | 22 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Pony | Pony (5.1), Pony (3.5) | 17 | 15 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Saber-Toothed Tiger | Saber-Toothed Tiger (5.1) | 24 | 43 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Tiger | Tiger (5.1), Tiger (3.5) | 22 | 34 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Warhorse, Heavy | Warhorse (5.1), Warhorse, Heavy (3.5) | 26 | 44 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Wolf | Wolf (5.1), Wolf (3.5) | 13 | 19 | minor | 6 | approved | automated-mechanical-review, 2026-07-31 |
-| Wolverine | Wolverine (3.5) | 13 | 23 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
+| Bat | Bat (5.1), Bat (3.5) | 1 | 1 | minor | 8 | approved | automated-mechanical-review, 2026-08-04 |
+| Blood Hawk | Blood Hawk (5.1) | 3 | 7 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Crab | Crab (5.1) | 2 | 1 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Crocodile | Crocodile (5.1), Crocodile (3.5) | 20 | 30 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Frog | Frog (5.1) | 1 | 1 | minor | 10 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Crab | Giant Crab (5.1) | 15 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Lizard | Giant Lizard (5.1) | 14 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Sea Horse | Giant Sea Horse (5.1) | 18 | 19 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Shark | Giant Shark (5.1) | 35 | 60 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Toad | Giant Toad (5.1) | 12 | 18 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Vulture | Giant Vulture (5.1) | 7 | 10 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Hawk | Hawk (5.1), Hawk (3.5) | 2 | 4 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Hunter Shark | Hunter Shark (5.1) | 24 | 38 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Owl | Owl (5.1), Owl (3.5) | 2 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Porpoise | Porpoise (3.5) | 13 | 20 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Quipper | Quipper (5.1) | 2 | 1 | minor | 12 | approved | automated-mechanical-review, 2026-08-04 |
+| Reef Shark | Reef Shark (5.1) | 11 | 12 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Sea Horse | Sea Horse (5.1) | 1 | 1 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Shark | Shark (3.5) | 16 | 20 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Vulture | Vulture (5.1) | 3 | 1 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Animated Armor | Animated Armor (5.1) | 12 | 36 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Awakened Shrub | Awakened Shrub (5.1) | 5 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Awakened Tree | Awakened Tree (5.1) | 35 | 55 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Clay Golem | Clay Golem (5.1), Clay Golem (3.5) | 30 | 67 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Flying Sword | Flying Sword (5.1) | 6 | 39 | standard | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Rug of Smothering | Rug of Smothering (5.1) | 14 | 40 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Deinonychus | Deinonychus (3.5) | 13 | 22 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Elasmosaurus | Elasmosaurus (3.5) | 45 | 72 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Megaraptor | Megaraptor (3.5) | 24 | 43 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Plesiosaurus | Plesiosaurus (5.1) | 24 | 38 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Triceratops | Triceratops (5.1), Triceratops (3.5) | 55 | 100 | severe | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Tyrannosaurus | Tyrannosaurus Rex (5.1), Tyrannosaurus (3.5) | 50 | 96 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Black Dragon Wyrmling | Black Dragon Wyrmling (5.1) | 18 | 43 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Black Dragon | Young Black Dragon (5.1) | 35 | 79 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Black Dragon | Adult Black Dragon (5.1) | 55 | 124 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Black Dragon | Ancient Black Dragon (5.1) | 70 | 175 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Blue Dragon Wyrmling | Blue Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Blue Dragon | Young Blue Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Blue Dragon | Adult Blue Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Blue Dragon | Ancient Blue Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Brass Dragon Wyrmling | Brass Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Brass Dragon | Young Brass Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Brass Dragon | Adult Brass Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Brass Dragon | Ancient Brass Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Bronze Dragon Wyrmling | Bronze Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Bronze Dragon | Young Bronze Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Bronze Dragon | Adult Bronze Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Bronze Dragon | Ancient Bronze Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Copper Dragon Wyrmling | Copper Dragon Wyrmling (5.1) | 18 | 43 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Copper Dragon | Young Copper Dragon (5.1) | 35 | 79 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Copper Dragon | Adult Copper Dragon (5.1) | 55 | 124 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Copper Dragon | Ancient Copper Dragon (5.1) | 70 | 175 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Gold Dragon Wyrmling | Gold Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Gold Dragon | Young Gold Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Gold Dragon | Adult Gold Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Gold Dragon | Ancient Gold Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Green Dragon Wyrmling | Green Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Green Dragon | Young Green Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Green Dragon | Adult Green Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Green Dragon | Ancient Green Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Red Dragon Wyrmling | Red Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Red Dragon | Young Red Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Red Dragon | Adult Red Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Red Dragon | Ancient Red Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Silver Dragon Wyrmling | Silver Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young Silver Dragon | Young Silver Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult Silver Dragon | Adult Silver Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient Silver Dragon | Ancient Silver Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| White Dragon Wyrmling | White Dragon Wyrmling (5.1) | 18 | 37 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Young White Dragon | Young White Dragon (5.1) | 35 | 80 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Adult White Dragon | Adult White Dragon (5.1) | 55 | 127 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Ancient White Dragon | Ancient White Dragon (5.1) | 70 | 174 | severe | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Aasimar | Aasimar (3.5) | 10 | 10 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Bugbear | Bugbear (5.1), Bugbear (3.5) | 14 | 18 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Centaur | Centaur (5.1), Centaur (3.5) | 20 | 32 | standard | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Deep Dwarf | Deep Dwarf (3.5) | 11 | 16 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Deep Halfling | Deep Halfling (3.5) | 8 | 3 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Drow | Drow (5.1), Drow (3.5) | 10 | 12 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Duergar | Duergar (5.1), Duergar (3.5) | 11 | 17 | minor | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Forest Gnome | Forest Gnome (3.5) | 8 | 1 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Gnoll | Gnoll (5.1), Gnoll (3.5) | 13 | 18 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Goblin | Goblin (5.1), Goblin (3.5) | 9 | 10 | minor | 8 | approved | automated-mechanical-review, 2026-08-04 |
+| Gray Elf | Gray Elf (3.5) | 8 | 13 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Half-Elf | Half-Elf (3.5) | 10 | 14 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Half-Orc | Half-Orc (3.5) | 12 | 14 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Hobgoblin | Hobgoblin (5.1), Hobgoblin (3.5) | 12 | 18 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Kobold | Kobold (5.1), Kobold (3.5) | 7 | 1 | minor | 10 | approved | automated-mechanical-review, 2026-08-04 |
+| Lizardfolk | Lizardfolk (5.1), Lizardfolk (3.5) | 13 | 17 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Merfolk | Merfolk (5.1), Merfolk (3.5) | 11 | 15 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Merrow | Merrow (5.1), Merrow (3.5) | 20 | 33 | standard | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Mountain Dwarf | Mountain Dwarf (3.5) | 11 | 16 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Ogre | Ogre (5.1), Ogre (3.5) | 20 | 31 | standard | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Oni | Oni (5.1), Ogre Mage (3.5) | 22 | 61 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Orc | Orc (5.1), Orc (3.5) | 13 | 17 | minor | 8 | approved | automated-mechanical-review, 2026-08-04 |
+| Sprite | Sprite (5.1), Sprite (3.5) | 2 | 7 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Svirfneblin | Svirfneblin (5.1), Svirfneblin (3.5) | 8 | 6 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Tallfellow Halfling | Tallfellow Halfling (3.5) | 9 | 13 | minor | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Tiefling | Tiefling (3.5) | 10 | 7 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Wild Elf | Wild Elf (3.5) | 10 | 16 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Wood Elf | Wood Elf (3.5) | 11 | 17 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Bear, Black | Black Bear (5.1), Bear, Black (3.5) | 20 | 27 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Bear, Brown | Brown Bear (5.1), Bear, Brown (3.5) | 27 | 46 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Bear, Polar | Polar Bear (5.1), Bear, Polar (3.5) | 29 | 49 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Boar | Boar (5.1), Boar (3.5) | 14 | 19 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Camel | Camel (5.1), Camel (3.5) | 24 | 28 | standard | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Cat | Cat (5.1), Cat (3.5) | 3 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Cheetah | Cheetah (3.5) | 12 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Death Dog | Death Dog (5.1) | 13 | 27 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Deer | Deer (5.1) | 13 | 20 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Dire Wolf | Dire Wolf (5.1), Dire Wolf (3.5) | 18 | 34 | standard | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Dog | Dog (3.5) | 8 | 9 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Donkey | Donkey (3.5) | 18 | 15 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Elephant | Elephant (5.1), Elephant (3.5) | 45 | 78 | major | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Elk | Elk (5.1) | 22 | 34 | standard | 5 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Badger | Giant Badger (5.1) | 12 | 17 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Boar | Giant Boar (5.1) | 22 | 38 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Elk | Giant Elk (5.1) | 28 | 57 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Goat | Giant Goat (5.1) | 18 | 17 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Hyena | Giant Hyena (5.1) | 18 | 29 | standard | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Weasel | Giant Weasel (5.1) | 10 | 11 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Goat | Goat (5.1) | 11 | 4 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Horse, Heavy | Draft Horse (5.1), Horse, Heavy (3.5) | 28 | 32 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Horse, Light | Riding Horse (5.1), Horse, Light (3.5) | 22 | 25 | standard | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Lion | Lion (5.1), Lion (3.5) | 19 | 30 | standard | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Mammoth | Mammoth (5.1) | 55 | 97 | major | 4 | approved | automated-mechanical-review, 2026-08-04 |
+| Mule | Mule (5.1), Mule (3.5) | 20 | 20 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Panther | Panther (5.1) | 14 | 22 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Pony | Pony (5.1), Pony (3.5) | 17 | 15 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Saber-Toothed Tiger | Saber-Toothed Tiger (5.1) | 24 | 43 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Tiger | Tiger (5.1), Tiger (3.5) | 22 | 34 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Warhorse, Heavy | Warhorse (5.1), Warhorse, Heavy (3.5) | 26 | 44 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Wolf | Wolf (5.1), Wolf (3.5) | 13 | 19 | minor | 6 | approved | automated-mechanical-review, 2026-08-04 |
+| Wolverine | Wolverine (3.5) | 13 | 23 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
 | Werebear | Werebear (5.1), Werebear (3.5) | 24 | 41 | standard | 1 | review_required | — |
 | Wereboar | Wereboar (5.1), Wereboar (3.5) | 15 | 26 | standard | 2 | review_required | — |
 | Wererat | Wererat (5.1), Wererat (3.5) | 11 | 15 | minor | 4 | review_required | — |
@@ -155,19 +155,19 @@ fields suit the creature's role as a wandering encounter, a mount or livestock, 
 | Half-Celestial Unicorn | Half-Celestial (3.5) | 23 | 54 | standard | 1 | review_required | — |
 | Half-Fiend Medusa | Half-Fiend (3.5) | 13 | 29 | standard | 1 | review_required | — |
 | Half-Red Dragon Veteran | Half-Red Dragon Veteran (5.1), Half-Dragon (3.5) | 13 | 32 | standard | 1 | review_required | — |
-| Constrictor Snake | Constrictor Snake (5.1), Constrictor Snake (3.5) | 12 | 24 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Constrictor Snake | Giant Constrictor Snake (5.1) | 27 | 68 | major | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Poisonous Snake | Giant Poisonous Snake (5.1) | 7 | 14 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Viper Snake | Poisonous Snake (5.1), Viper Snake (3.5) | 2 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Centipede Swarm | Centipede Swarm (3.5) | 4 | 13 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Locust Swarm | Locust Swarm (3.5) | 3 | 13 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Spider Swarm | Spider Swarm (3.5) | 3 | 7 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Bats | Swarm of Bats (5.1) | 6 | 17 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Insects | Swarm of Insects (5.1) | 4 | 19 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Poisonous Snakes | Swarm of Poisonous Snakes (5.1) | 8 | 28 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Quippers | Swarm of Quippers (5.1) | 10 | 22 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Rats | Swarm of Rats (5.1) | 9 | 18 | minor | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Swarm of Ravens | Swarm of Ravens (5.1) | 10 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
+| Constrictor Snake | Constrictor Snake (5.1), Constrictor Snake (3.5) | 12 | 24 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Constrictor Snake | Giant Constrictor Snake (5.1) | 27 | 68 | major | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Poisonous Snake | Giant Poisonous Snake (5.1) | 7 | 14 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Viper Snake | Poisonous Snake (5.1), Viper Snake (3.5) | 2 | 1 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Centipede Swarm | Centipede Swarm (3.5) | 4 | 13 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Locust Swarm | Locust Swarm (3.5) | 3 | 13 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Spider Swarm | Spider Swarm (3.5) | 3 | 7 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Bats | Swarm of Bats (5.1) | 6 | 17 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Insects | Swarm of Insects (5.1) | 4 | 19 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Poisonous Snakes | Swarm of Poisonous Snakes (5.1) | 8 | 28 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Quippers | Swarm of Quippers (5.1) | 10 | 22 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Rats | Swarm of Rats (5.1) | 9 | 18 | minor | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Swarm of Ravens | Swarm of Ravens (5.1) | 10 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
 | Skeleton | Skeleton (5.1), Skeleton (3.5) | 11 | 21 | minor | 6 | review_required | — |
 | Minotaur Skeleton | Minotaur Skeleton (5.1) | 21 | 48 | standard | 2 | review_required | — |
 | Warhorse Skeleton | Warhorse Skeleton (5.1) | 20 | 31 | standard | 2 | review_required | — |
@@ -177,10 +177,10 @@ fields suit the creature's role as a wandering encounter, a mount or livestock, 
 | Vampire | Vampire (5.1), Vampire (3.5) | 17 | 49 | standard | 1 | review_required | — |
 | Lich | Lich (5.1), Lich (3.5) | 10 | 60 | major | 1 | review_required | — |
 | Mummy Lord | Mummy Lord (5.1), Mummy Lord (3.5) | 20 | 60 | major | 1 | review_required | — |
-| Giant Ant | Giant Ant (3.5) | 14 | 19 | minor | 8 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Centipede | Giant Centipede (5.1) | 4 | 1 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Scorpion | Giant Scorpion (5.1) | 17 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Spider | Giant Spider (5.1), Monstrous Spider (3.5) | 16 | 40 | standard | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Giant Wolf Spider | Giant Wolf Spider (5.1) | 9 | 12 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Scorpion | Scorpion (5.1) | 1 | 1 | minor | 2 | approved | automated-mechanical-review, 2026-07-31 |
-| Spider | Spider (5.1) | 1 | 1 | minor | 3 | approved | automated-mechanical-review, 2026-07-31 |
+| Giant Ant | Giant Ant (3.5) | 14 | 19 | minor | 8 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Centipede | Giant Centipede (5.1) | 4 | 1 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Scorpion | Giant Scorpion (5.1) | 17 | 32 | standard | 1 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Spider | Giant Spider (5.1), Monstrous Spider (3.5) | 16 | 40 | standard | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Giant Wolf Spider | Giant Wolf Spider (5.1) | 9 | 12 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Scorpion | Scorpion (5.1) | 1 | 1 | minor | 2 | approved | automated-mechanical-review, 2026-08-04 |
+| Spider | Spider (5.1) | 1 | 1 | minor | 3 | approved | automated-mechanical-review, 2026-08-04 |

@@ -37,12 +37,14 @@
       "class": "Magical Beast",
       "classTags": [
         "magical-beast",
-        "celestial",
-        "good"
+        "celestial"
       ],
       "tags": [
+        "any-terrain",
+        "guardian",
+        "predator",
         "summoned",
-        "guardian"
+        "good"
       ],
       "covers": [
         {
@@ -50,7 +52,7 @@
           "heading": "Celestial Creature"
         }
       ],
-      "massKg": 200,
+      "massLb": 450,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -156,8 +158,8 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "A lion from a better country. The coat throws light back like beaten gold, the eyes track you with more patience than any animal owes you, and it is only ever met where something upstream decided a lion should be: guarding a shrine, walking beside a summoner, standing over the thing you were about to do. Fight it and it fights like a lion that cannot be poisoned, cursed or frightened.",
-      "notes": [
+      "description": "A lion from a better country. The coat throws light back like beaten gold and the eyes hold on a stranger far longer than any animal's should. It turns up only where something upstream decided a lion should be: at a shrine, beside a summoner, between somebody and what they were about to do. It fights like a lion that cannot be poisoned, cursed or frightened.",
+      "provenanceNotes": [
         "The base animal is the library's Lion; the celestial touch adds dark vision, resistance to magic, poison and disease, and the smite carried as an attack note.",
         "It answers the SRD's Celestial Creature template heading as that page's own printed exemplar."
       ]
@@ -168,13 +170,17 @@
       "class": "Magical Beast",
       "classTags": [
         "magical-beast",
-        "fiendish",
-        "evil"
+        "fiend",
+        "mammal",
+        "vermin"
       ],
       "tags": [
+        "underground",
+        "urban",
         "summoned",
-        "vermin",
-        "night"
+        "diseased",
+        "evil",
+        "nocturnal"
       ],
       "covers": [
         {
@@ -182,7 +188,7 @@
           "heading": "Fiendish Creature"
         }
       ],
-      "massKg": 25,
+      "massLb": 55,
       "sizeModifier": -1,
       "hexes": "1 hex",
       "movement": {
@@ -277,8 +283,8 @@
         "averageNumberAppearing": 6,
         "wanderingWeight": 4
       },
-      "description": "A dog-sized rat with something wrong behind the eyes. Fiendish vermin arrive in numbers, sent rather than strayed, and they do not scatter when the first one dies — whatever holds their leash spends them like copper coins. The fire in the cellar does not bother them. That is your first clue about where they are from.",
-      "notes": [
+      "description": "A dog-sized rat with something wrong behind the eyes. Fiendish vermin arrive in numbers, sent rather than strayed, and they do not scatter when the first one dies — whatever holds their leash spends them like copper. The fire in the cellar does not bother them, which is the first clue about where they came from.",
+      "provenanceNotes": [
         "The base animal is the library's Dire Rat; the fiendish touch adds dark vision, a little resistance to magic, and fire and cold resistance bought as limited Damage Resistance.",
         "It answers the SRD's Fiendish Creature template heading as that page's own printed exemplar."
       ]
@@ -289,12 +295,12 @@
       "class": "Magical Beast",
       "classTags": [
         "magical-beast",
-        "celestial",
-        "good"
+        "celestial"
       ],
       "tags": [
-        "wilderness",
-        "healer",
+        "forest",
+        "good",
+        "talker",
         "flier"
       ],
       "covers": [
@@ -303,7 +309,7 @@
           "heading": "Half-Celestial"
         }
       ],
-      "massKg": 500,
+      "massLb": 1100,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -398,8 +404,8 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 1
       },
-      "description": "A unicorn whose other parent was an angel, and it shows: swan wings, a warmth in the air around it, and a gaze that catalogues your sins without commenting. It heals with a touch of the horn, carries the pure-hearted over battlefields, and kills exactly as gracefully as it does everything else when its forest or its charges are threatened.",
-      "notes": [
+      "description": "A unicorn whose other parent was an angel, and it shows: swan wings, a warmth in the air around it, and a look that goes straight through a person without saying what it found. It heals with a touch of the horn and carries the pure-hearted over battlefields. When its forest or its charges are threatened it kills as gracefully as it does everything else.",
+      "provenanceNotes": [
         "The base creature is the library's Unicorn; the celestial half adds wings that genuinely fly, the celestial resistances, and the healing touch, which is carried in prose because a beneficial art has no place in an offense rating.",
         "It answers the SRD's Half-Celestial template heading as the sample that page prints."
       ]
@@ -410,13 +416,15 @@
       "class": "Monstrous Humanoid",
       "classTags": [
         "monstrous-humanoid",
-        "fiendish",
-        "evil"
+        "fiend"
       ],
       "tags": [
+        "dungeon",
+        "venomous",
+        "evil",
         "talker",
-        "night",
-        "flier"
+        "flier",
+        "nocturnal"
       ],
       "covers": [
         {
@@ -424,7 +432,7 @@
           "heading": "Half-Fiend"
         }
       ],
-      "massKg": 70,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -542,8 +550,8 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 1
       },
-      "description": "A medusa with an infernal parent, which mostly means ambition. The gaze still turns flesh to stone; the wings mean the statue garden has pieces the ground could never have delivered, and the conversation before the gaze is longer, warmer, and much better rehearsed. It wants something from you first. Petrification is what closing the deal looks like.",
-      "notes": [
+      "description": "A medusa with an infernal parent, which mostly means ambition. The gaze still turns flesh to stone. The wings mean the statue garden has pieces the ground could never have delivered, and the conversation beforehand is longer, warmer and much better rehearsed. It wants something first; the petrification is what closing the deal looks like.",
+      "provenanceNotes": [
         "The base creature is the library's Medusa; the fiendish half adds wings, fire resistance, claws, and intent. The gaze is priced through the affliction term exactly as the base medusa's is.",
         "It answers the SRD's Half-Fiend template heading as the sample that page prints."
       ]
@@ -557,8 +565,12 @@
         "dragonblood"
       ],
       "tags": [
-        "talker",
-        "mercenary"
+        "urban",
+        "fire",
+        "soldier",
+        "disciplined",
+        "mercenary",
+        "talker"
       ],
       "covers": [
         {
@@ -570,7 +582,7 @@
           "heading": "Half-Dragon"
         }
       ],
-      "massKg": 100,
+      "massLb": 200,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -666,9 +678,11 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "A career soldier whose mother's side shows in the scales, the slit pupils, and the smell of smoke when the temper goes. Employers pay for the résumé and rediscover the bloodline mid-contract: swords skid on the hide, the fire does not take, and at the worst possible moment the veteran exhales and the front rank is burning.",
+      "description": "A career soldier whose mother's side shows in the scales, the slit pupils, and the smell of smoke when the temper goes. Employers hire the résumé and rediscover the bloodline mid-contract. Swords skid off the hide, fire does not take, and at the worst possible moment the veteran exhales and the front rank is burning.",
       "notes": [
-        "Answers both the 5.1 printed sample and the 3.5 Half-Dragon template heading, as one record: the veteran is what the template's niche looks like on a person.",
+        "This is both the 5.1 printed sample and the 3.5 Half-Dragon template heading. A veteran soldier is what that template looks like on a person."
+      ],
+      "provenanceNotes": [
         "Scales are DR as Tough Skin; the dragon-fire immunity of the full-blood is scaled to strong resistance bought as limited DR."
       ]
     }

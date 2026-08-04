@@ -48,7 +48,7 @@ function scaleCues(monster) {
   return [
     monster.size?.modifier ? `size modifier ${monster.size.modifier}` : null,
     monster.size?.hexes,
-    monster.size?.massKg ? `${monster.size.massKg} kg` : null,
+    monster.size?.massLb ? `${monster.size.massLb} lb` : null,
     sizeNote,
   ]
     .filter(Boolean)

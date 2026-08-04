@@ -163,19 +163,39 @@ function deriveAttributes(entries, sizeModifier, movement) {
   };
 }
 
-/** A GM-facing line for a creature that moves in more than one medium. */
+/**
+ * A body weight in the unit a person would actually say it in. A bat is an
+ * ounce, a wolf is a hundred pounds, and an ancient dragon is twenty-two tons;
+ * writing all three in pounds gets one of them wrong every time.
+ */
+function weight(pounds) {
+  if (pounds * 16 < 0.5) return "under an ounce";
+  if (pounds < 1) return `${Math.round(pounds * 16)} oz`;
+  if (pounds >= 10000) {
+    const tons = pounds / 2000;
+    return `${tons % 1 === 0 ? tons : tons.toFixed(1)} tons`;
+  }
+  return `${pounds.toLocaleString("en-US")} lb`;
+}
+
+/** The Move figures for every medium the build grants. */
 function movementNote(attributes) {
-  const { primary, cruise, sprint, declared } = attributes.movement;
+  const { primary, cruise, sprint } = attributes.movement;
   const parts = [];
   for (const medium of ["ground", "air", "water"]) {
     if (cruise[medium] === null) continue;
     const top = sprint[medium] ? `, ${sprint[medium]} at a sprint` : "";
     parts.push(`${medium} Move ${cruise[medium]}${top}${medium === primary ? " (primary)" : ""}`);
   }
-  const published = declared
-    ? `The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it.`
-    : `The published Move folds this creature's Enhanced Move into a single figure.`;
-  return `Movement: ${parts.join("; ")}. ${published}`;
+  return `Movement: ${parts.join("; ")}.`;
+}
+
+/** Why the published Move reads the way it does. Reviewer material, not table. */
+function movementBasis(attributes) {
+  return attributes.movement.declared
+    ? "The published Move is the primary medium's cruising Move; sprint figures are stated in the movement note "
+      + "and not folded into it."
+    : "The published Move folds this creature's Enhanced Move into a single figure.";
 }
 
 /**
@@ -424,20 +444,16 @@ export function buildRecord(spec, context) {
       .map(traitDisplayName)
       .sort((a, b) => a.localeCompare(b)),
     skills: skills.map(skill => ({ name: skill.name, level: skill.level })),
+    // Stat notes are read at the table, on a sheet, by someone running the
+    // creature. They say what a GM needs and nothing about how the record was
+    // made: which batch authored it, what it was compared against afterwards,
+    // which issue tracks a defect in the rating path. All of that is true and
+    // none of it belongs on a stat block, so it goes to provenanceNotes below
+    // and travels in provenance.conversionNotes instead.
     notes: [
-      `GCS ancestry draft: gcs/${spec.slug}.gct`,
-      `Independent build total: ${templatePoints} points of racial traits plus ${skillPointTotal} points of racial skills.`,
-      `Answers the SRD heading(s): ${covers}. Only the creature identity is taken from the SRD; the GURPS `
-        + "statistics, ratings and prose are this project's own work and reproduce no SRD text.",
-      "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the "
-        + "sheet and the stat block cannot disagree.",
-      ...(spec.massKg === undefined
-        ? []
-        : [`Body mass used to scale this build: ${spec.massKg} kg. ST, Size Modifier and DR are checked `
-          + "against it; see the gurps-animal-sanity-check skill for the bands."]),
+      `Racial cost: ${templatePoints} points of traits plus ${skillPointTotal} ${skillPointTotal === 1 ? "point" : "points"} of skills.`,
+      ...(spec.massLb === undefined ? [] : [`Body weight: ${weight(spec.massLb)}.`]),
       movementNote(attributes),
-      "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short "
-        + "habitat note, because where a wandering animal dens is an encounter fact rather than a loot one.",
       ...(spec.notes ?? []),
     ],
   };
@@ -482,7 +498,7 @@ export function buildRecord(spec, context) {
       hexes: spec.hexes,
       // The mass the build was scaled from. Recorded because it is the one fact
       // that makes an authored animal checkable: ST, SM and DR all follow it.
-      massKg: spec.massKg ?? null,
+      massLb: spec.massLb ?? null,
       heightHexes: null,
       lengthHexes: null,
       widthHexes: null,
@@ -527,6 +543,21 @@ export function buildRecord(spec, context) {
           + "project-authored material; the SRD headings this record answers are in provenance.coversSourceIdentities.",
         "Ratings are recomputed through the consumer CER path on every build, so a mechanics change cannot leave a "
           + "stale rating behind.",
+        "Typical Stats, damage and ratings are derived from the racial template rather than authored beside it, so "
+          + "the sheet and the stat block cannot disagree.",
+        `GCS ancestry draft: gcs/${spec.slug}.gct`,
+        movementBasis(attributes),
+        "Treasure and grappling are not authored for this record and ship as explicit nulls, which reads as known "
+          + "absent rather than forgotten; `lair` carries a short habitat note instead, because where a creature "
+          + "dens is an encounter fact rather than a loot one.",
+        ...(spec.massLb === undefined
+          ? []
+          : ["Body mass is the figure the build was scaled from and the one fact that makes it checkable; see the "
+            + "gurps-animal-sanity-check skill for the bands."]),
+        // How the record was made, logged where an auditor looks rather than
+        // where a GM does: the outside-comparison disclosure ROADMAP.md rule 6
+        // requires, defects in the shared rating path, and cross-record notes.
+        ...(spec.provenanceNotes ?? []),
       ],
       manualReviewStatus: "review_required",
       packageSourceId,

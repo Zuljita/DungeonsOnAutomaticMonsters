@@ -25,9 +25,10 @@ export const PUBLIC_PACKAGE_ID = "enraged-eggplant-monsters";
 export const PUBLIC_LIBRARY_NAME = "Dungeons on Automatic Monster Library";
 
 /**
- * Canonical bestiary page. Consumers deep-link a record as
- * `${PUBLIC_BESTIARY_URL}#${monster.id}`, so this has to be the URL the site
- * actually serves — `/monsters.html` 308s here, and a citation should not
+ * Canonical bestiary index, and the base every record's own page hangs off:
+ * promotion publishes `${PUBLIC_BESTIARY_URL}/${slug}/` per record as
+ * `provenance.bestiaryUrl` (see public-citation.mjs). It has to be the URL the
+ * site actually serves — `/monsters.html` 308s here, and a citation should not
  * spend a redirect.
  */
 export const PUBLIC_BESTIARY_URL = "https://dungeonsonautomatic.com/monsters";

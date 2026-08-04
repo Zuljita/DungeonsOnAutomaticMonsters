@@ -1,5 +1,6 @@
 import { checkFieldShape } from "./review/field-policy.mjs";
 import { checkDescriptionShape } from "./review/descriptions.mjs";
+import { citesOnlyLicensedSources } from "./public-citation.mjs";
 
 const PROVENANCE_KINDS = new Set([
   "workbook_metadata",
@@ -28,7 +29,15 @@ const SOURCE_LICENSES = new Set([
 const REVIEW_STATUSES = new Set(["draft", "review_required", "approved", "rejected"]);
 const PUBLIC_CONTENT_LICENSES = new Set(["cc_by_4_0", "ogl_1_0a"]);
 
-export function validatePackage(pkg, { allowUnapproved = false } = {}) {
+/**
+ * `requirePublicCitations` is what promotion turns on: a published record must
+ * cite only sources this package licences, and must state the public page its
+ * citation resolves to. It is opt-in rather than implied by "not a candidate"
+ * because packages released before the field existed are still valid packages —
+ * the same contract stance description took. See
+ * review/policy/citation-policy.md.
+ */
+export function validatePackage(pkg, { allowUnapproved = false, requirePublicCitations = false } = {}) {
   const errors = [];
   if (!isRecord(pkg)) return ["package root must be an object"];
 
@@ -99,6 +108,7 @@ export function validatePackage(pkg, { allowUnapproved = false } = {}) {
   const monsterIds = new Set();
   for (const [index, monster] of monsters.entries()) {
     validateMonster(monster, index, manifest, sourceIds, sourceById, monsterIds, allowUnapproved, errors);
+    validateCitation(monster, `monsters[${index}]`, requirePublicCitations, errors);
   }
   if (manifest?.art !== undefined) validateArtManifest(manifest.art, monsters.length, "manifest.art", errors);
 
@@ -240,6 +250,43 @@ function validateMonster(monster, index, manifest, sourceIds, sourceById, monste
     if (!retainedOnRecord) {
       errors.push(`${path}.provenance.credits must retain originator credit for ${originator.name}`);
     }
+  }
+}
+
+/**
+ * The citation contract: what a record cites, and where that citation leads.
+ *
+ * `bestiaryUrl` is checked wherever it appears, because a link a consumer
+ * follows has to be openable; the rest only applies to a package being
+ * published, where a citation to a book this project does not licence would be
+ * a lineage claim it cannot stand behind.
+ */
+function validateCitation(monster, path, requirePublicCitations, errors) {
+  if (!isRecord(monster)) return;
+  const bestiaryUrl = monster.provenance?.bestiaryUrl;
+  if (bestiaryUrl !== undefined) {
+    requiredString(bestiaryUrl, `${path}.provenance.bestiaryUrl`, errors);
+    if (typeof bestiaryUrl === "string" && !isHttpUrl(bestiaryUrl)) {
+      errors.push(`${path}.provenance.bestiaryUrl must be an absolute http(s) URL`);
+    }
+  } else if (requirePublicCitations) {
+    errors.push(`${path}.provenance.bestiaryUrl must state the record's public monster page`);
+  }
+
+  if (!requirePublicCitations) return;
+  for (const [field, value] of [["pageRef", monster.pageRef], ["provenance.sourceName", monster.provenance?.sourceName]]) {
+    if (!citesOnlyLicensedSources(value)) {
+      errors.push(`${path}.${field} cites a source this package does not licence: ${value}`);
+    }
+  }
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
   }
 }
 

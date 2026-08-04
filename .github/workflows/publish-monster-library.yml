@@ -78,12 +78,21 @@ jobs:
           cp converted/library-image-manifest.json dist/library-manifest/image-manifest.json
           node scripts/upload-art-to-r2.mjs --art-dir dist/library-manifest --prefix monsters --flat --force
       - name: Advance the stable package pointer
+        # The pointer may already be where this publish would put it: a branch
+        # can regenerate the artifacts itself so the change is reviewable before
+        # release. Committing nothing is then the correct outcome, and `git
+        # commit` exits non-zero on an empty index — which would fail the run
+        # after every upload had succeeded and before the release was created.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add converted/doa-monsters.json converted/library-image-manifest.json packages/latest/manifest.json
-          git commit -m "Publish monster library package ${VERSION}"
-          git push
+          if git diff --cached --quiet; then
+            echo "Package artifacts already match ${VERSION}; pointer left as committed."
+          else
+            git commit -m "Publish monster library package ${VERSION}"
+            git push
+          fi
       - name: Create source release
         env:
           GH_TOKEN: ${{ github.token }}

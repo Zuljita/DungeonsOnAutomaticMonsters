@@ -3,6 +3,7 @@ import { dirname, resolve } from "node:path";
 import { validatePackage } from "./package-validation.mjs";
 import { artRecordMap, readPngMetadata, validateImageManifest } from "./art-validation.mjs";
 import { publicPackageIdentity } from "./package-identity.mjs";
+import { monsterPageCollisions, publicCitation } from "./public-citation.mjs";
 
 const args = process.argv.slice(2);
 const valueFor = name => {
@@ -144,10 +145,19 @@ function publicArt(monster) {
   };
 }
 
+const identity = publicPackageIdentity(candidate.manifest);
+
+// The site refuses to build two monster pages under one slug; refusing here
+// means the package never ships a link the site cannot serve.
+const pageCollisions = monsterPageCollisions(candidate.monsters);
+if (pageCollisions.length > 0) {
+  throw new Error(`Refusing to publish monster pages that collide:\n${pageCollisions.join("\n")}`);
+}
+
 const published = {
   manifest: {
     ...candidate.manifest,
-    ...publicPackageIdentity(candidate.manifest),
+    ...identity,
     version,
     dataUrl: publicDataUrl,
     art: {
@@ -166,21 +176,30 @@ const published = {
       credits: publicCredits(source.credits),
     })),
   },
-  monsters: candidate.monsters.map(monster => ({
-    ...monster,
-    art: publicArt(monster),
-    files: publicFiles(monster),
-    provenance: {
-      ...monster.provenance,
-      sourceUrl: publicPermissionUrl,
-      url: publicPermissionUrl,
-      credits: publicCredits(monster.provenance.credits),
-      notes: `Authorized for publication by Enraged Eggplant; mechanical review approved for package ${version}.`,
-    },
-  })),
+  monsters: candidate.monsters.map(monster => {
+    // The candidate cites the conversion author's own heading, which names the
+    // books he worked from. Publish the SRD lineage this package actually
+    // trades on, and the page the citation resolves to.
+    const citation = publicCitation(monster, identity.packageUrl);
+    return {
+      ...monster,
+      pageRef: citation.pageRef,
+      art: publicArt(monster),
+      files: publicFiles(monster),
+      provenance: {
+        ...monster.provenance,
+        sourceName: citation.sourceName,
+        bestiaryUrl: citation.bestiaryUrl,
+        sourceUrl: publicPermissionUrl,
+        url: publicPermissionUrl,
+        credits: publicCredits(monster.provenance.credits),
+        notes: `Authorized for publication by Enraged Eggplant; mechanical review approved for package ${version}.`,
+      },
+    };
+  }),
 };
 
-const publishedErrors = validatePackage(published);
+const publishedErrors = validatePackage(published, { requirePublicCitations: true });
 if (publishedErrors.length > 0) {
   throw new Error(`Published package is invalid:\n${publishedErrors.join("\n")}`);
 }

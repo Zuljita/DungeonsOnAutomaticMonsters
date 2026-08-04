@@ -48,8 +48,9 @@ test("renaming the shelf never touches originator credit", () => {
 });
 
 test("the bestiary url is the one the site serves, not the redirecting alias", () => {
-  // Consumers deep-link records as `${packageUrl}#${monster.id}`; /monsters.html
-  // 308s to /monsters, and a citation should not spend a redirect.
+  // Every record's published page hangs off this base as `${packageUrl}/${slug}/`
+  // (see public-citation.mjs); /monsters.html 308s to /monsters, and a citation
+  // should not spend a redirect.
   const identity = publicPackageIdentity(CANDIDATE);
   assert.equal(identity.packageUrl, PUBLIC_BESTIARY_URL);
   assert.ok(!identity.packageUrl.endsWith(".html"));

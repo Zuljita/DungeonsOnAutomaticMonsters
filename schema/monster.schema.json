@@ -134,7 +134,10 @@
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
-        "pageRef": { "type": ["string", "null"] },
+        "pageRef": {
+          "type": ["string", "null"],
+          "description": "Citation for the creature: its name, the originator who built it, and the SRD heading it answers to, for example \"Oni (Monsters on Automatic; answers SRD 3.5: Ogre Mage, SRD 5.1)\". The SRD supplies the creature identity, not the statistics, so both halves are named. An edition is named alone when the SRD prints the creature under this record's own name, and the SRD's own heading follows a colon when it differs. Promotion writes this; it never carries a converted source's citation to a book this package does not licence. See review/policy/citation-policy.md."
+        },
         "class": { "type": ["string", "null"] },
         "classTags": { "type": "array", "items": { "type": "string" } },
         "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
@@ -251,7 +254,30 @@
         "contentLicense": { "$ref": "#/$defs/contentLicense" },
         "contentLicenseUrl": { "type": "string", "minLength": 1 },
         "sourceMonsterId": { "type": "string", "minLength": 1 },
-        "sourceName": { "type": "string", "minLength": 1 },
+        "sourceName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The source's own name for this record, minus any citation to a book this package does not licence."
+        },
+        "bestiaryUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Canonical Dungeons on Automatic page for this creature, for example https://dungeonsonautomatic.com/monsters/aboleth/. Promotion emits it for every published record; it is not required by the contract, so packages released before the field existed stay valid. A consumer should link this rather than construct a URL from the record id, which carries a source package name a public URL does not."
+        },
+        "coversSourceIdentities": {
+          "type": "array",
+          "description": "SRD headings this record answers to. Authored SRD-coverage records state them outright; converted records state only which SRDs print the identity, as record tags. The published pageRef is built from whichever a record has.",
+          "items": {
+            "type": "object",
+            "required": ["sourceSystem", "heading", "relationship"],
+            "properties": {
+              "sourceSystem": { "enum": ["srd_3_5", "srd_5_1"] },
+              "heading": { "type": "string", "minLength": 1 },
+              "relationship": { "type": "string", "minLength": 1 },
+              "alsoPrintedAs": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
         "sourceUrl": { "type": "string", "minLength": 1 },
         "sourceCopyrightNotice": { "type": "string", "minLength": 1 },
         "conversionVersion": { "type": "string", "minLength": 1 },

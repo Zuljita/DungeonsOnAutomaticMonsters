@@ -19,6 +19,7 @@ import { dirname, resolve } from "node:path";
 import { validatePackage } from "./package-validation.mjs";
 import { artRecordMap, readPngMetadata, validateImageManifest } from "./art-validation.mjs";
 import { publicPackageIdentity } from "./package-identity.mjs";
+import { monsterPageCollisions, publicCitation } from "./public-citation.mjs";
 
 const args = process.argv.slice(2);
 const valueFor = name => {
@@ -206,23 +207,39 @@ const publishedSources = SOURCES.map(source => {
 // consumer-stored package and source-book keys and restyles only the labels.
 const identity = publicPackageIdentity(publishedSources[0].candidate.manifest);
 
+// One public page per record, checked across every source at once: two sources
+// bringing the same creature name would otherwise both publish the same link.
+const pageCollisions = monsterPageCollisions(publishedSources.flatMap(({ candidate }) => candidate.monsters));
+if (pageCollisions.length > 0) {
+  throw new Error(`Refusing to publish monster pages that collide:\n${pageCollisions.join("\n")}`);
+}
+
 const monsters = publishedSources.flatMap(({ source, candidate, artManifest, artByMonsterId }) =>
-  candidate.monsters.map(monster => ({
-    ...monster,
-    sourceBook: identity.sourceBook.id,
-    sourceBooks: [identity.sourceBook.id],
-    art: publicArt(monster, source, artManifest, artByMonsterId),
-    files: publicFiles(monster, source),
-    ...(source.descriptionRewrites && monster.description
-      ? { description: { ...monster.description, ...source.descriptionRewrites } }
-      : {}),
-    provenance: {
-      ...monster.provenance,
-      ...source.provenanceRewrites,
-      credits: publicCredits(monster.provenance.credits, source.creditUrl),
-      notes: source.notes,
-    },
-  })),
+  candidate.monsters.map(monster => {
+    // The reviewed candidate cites its own source's heading, which for the fan
+    // conversion names books this package does not licence. Publish the SRD
+    // lineage instead, and state the page the citation resolves to.
+    const citation = publicCitation(monster, identity.packageUrl);
+    return {
+      ...monster,
+      pageRef: citation.pageRef,
+      sourceBook: identity.sourceBook.id,
+      sourceBooks: [identity.sourceBook.id],
+      art: publicArt(monster, source, artManifest, artByMonsterId),
+      files: publicFiles(monster, source),
+      ...(source.descriptionRewrites && monster.description
+        ? { description: { ...monster.description, ...source.descriptionRewrites } }
+        : {}),
+      provenance: {
+        ...monster.provenance,
+        ...source.provenanceRewrites,
+        sourceName: citation.sourceName,
+        bestiaryUrl: citation.bestiaryUrl,
+        credits: publicCredits(monster.provenance.credits, source.creditUrl),
+        notes: source.notes,
+      },
+    };
+  }),
 );
 
 const manifestSources = publishedSources.flatMap(({ source, candidate }) =>
@@ -282,7 +299,7 @@ const published = {
   monsters,
 };
 
-const publishedErrors = validatePackage(published);
+const publishedErrors = validatePackage(published, { requirePublicCitations: true });
 if (publishedErrors.length > 0) {
   throw new Error(`Published package is invalid:\n${publishedErrors.join("\n")}`);
 }

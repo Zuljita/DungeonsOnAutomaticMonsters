@@ -35,6 +35,7 @@ from `https://assets.dungeonsonautomatic.com/` if you only need to look at it.
 - `content/srd-monsters/` - independently authored GURPS builds for SRD identities the package does not yet cover; the tracked input everything under `converted/srd-monsters/` is generated from. See [content/srd-monsters/README.md](content/srd-monsters/README.md).
 - `packages/latest/manifest.json` - stable pointer metadata for consumers.
 - `scripts/validate-package.mjs` - no-dependency validation checks for package/provenance basics.
+- `scripts/public-citation.mjs` - what a published record cites and the public page it links to. See [review/policy/citation-policy.md](review/policy/citation-policy.md).
 - `scripts/build-enraged-eggplant-package.mjs` - approval-gated promotion into the stable public package contract.
 - `scripts/build-foundry-module.mjs` - builds the installable Foundry VTT compendium module (GURPS Game Aid) from the published package. See [docs/foundry/README.md](docs/foundry/README.md).
 - `art/enraged-eggplant/` - LFS-backed portraits, transparent overhead tokens, flat-top hex tokens, prompts, and the image manifest for all 304 candidates.
@@ -204,4 +205,14 @@ The promoted package rewrites private provenance links to the public attribution
 
 The source-book **id** is not part of the rename. Dungeons on Automatic writes it into every saved profile and dungeon state as an enabled source book, so changing it would silently drop this library from every existing save. The id is a key, the name is a label, and only the label is ours to restyle.
 
-`packageUrl` is the canonical bestiary page, `https://dungeonsonautomatic.com/monsters` — consumers deep-link a record as `${packageUrl}#${monster.id}`, and `/monsters.html` only 308s there.
+`packageUrl` is the canonical bestiary index, `https://dungeonsonautomatic.com/monsters` — every record's own page hangs off it, and `/monsters.html` only 308s there.
+
+### Citations and links: what a record cites, and where it leads
+
+`scripts/public-citation.mjs` owns what promotion publishes in the three fields a reader sees under a creature's name. The full reasoning is in [review/policy/citation-policy.md](review/policy/citation-policy.md).
+
+- **`pageRef`** — the creature, who built it, and the SRD heading it answers to: `Oni (Monsters on Automatic; answers SRD 3.5: Ogre Mage, SRD 5.1)`, `Aboleth (Enraged Eggplant; answers SRD 3.5, SRD 5.1)`. The SRD prints no GURPS, so it is not where these statistics come from — it supplies the creature identity that somebody's own GURPS expression answers to, and the citation names both. An edition is named alone when the SRD prints the creature under this record's own name, and the SRD's own heading follows a colon when it differs. Reviewed candidates keep their source's own heading, and the authorized conversion's headings cite the books its author worked from; promotion never carries a citation to a book this package does not licence, and refuses to publish one.
+- **`provenance.sourceName`** — the source's own name for the record, minus that citation.
+- **`provenance.bestiaryUrl`** — the creature's canonical page on the public site, `https://dungeonsonautomatic.com/monsters/aboleth/`.
+
+**Link `provenance.bestiaryUrl`. Do not build a URL from `monster.id`.** The id names the source package a record came from (`enraged_eggplant_aboleth`) and the public URL names the creature (`/monsters/aboleth/`), both deliberately; the two do not correspond, and only the record knows its page. Promotion refuses to publish two records that would claim the same page, so the link the package states is always one the site serves.

@@ -176,3 +176,6 @@ Generated repair files are regenerable byte-for-byte; edit the generator, not th
 - [`policy/0.2.0-empty-field-policy.md`](policy/0.2.0-empty-field-policy.md) — lair, treasure, grappling (#7).
 - [`policy/srd-independent-build-policy.md`](policy/srd-independent-build-policy.md) — how SRD-coverage records
   are built, credited and licensed, and why none of them approves itself (#37).
+- [`policy/citation-policy.md`](policy/citation-policy.md) — what a published record cites, why promotion
+  replaces the conversion author's book citations with the SRD lineage, and the per-record page URL a
+  consumer should link.

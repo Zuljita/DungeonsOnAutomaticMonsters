@@ -21,7 +21,7 @@
     "coverage:srd:check": "node scripts/build-srd-coverage.mjs --check",
     "test": "npm run test:unit && npm run validate:public && npm run validate:srd-monsters && npm run coverage:srd:check && npm run review:benchmark-animals:check && npm run validate:enraged-eggplant-art && npm run validate:srd-monsters-art && npm run review:audit-traits:check && npm run validate:foundry",
     "test:unit": "node --test \"scripts/test/*.test.mjs\"",
-    "validate:public": "node scripts/validate-package.mjs converted/doa-monsters.json",
+    "validate:public": "node scripts/validate-package.mjs converted/doa-monsters.json --require-public-citations",
     "validate:enraged-eggplant-candidate": "node scripts/validate-package.mjs converted/enraged-eggplant/doa-monsters.reviewed.json --allow-unapproved",
     "review:lock": "node scripts/review-lock.mjs",
     "review:queue": "node scripts/review-queue.mjs",

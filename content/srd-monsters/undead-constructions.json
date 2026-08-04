@@ -65,9 +65,10 @@
         "skeleton"
       ],
       "tags": [
-        "animated-dead",
         "dungeon",
-        "guardian"
+        "tomb",
+        "guardian",
+        "animated-dead"
       ],
       "covers": [
         {
@@ -79,7 +80,7 @@
           "heading": "Skeleton"
         }
       ],
-      "massKg": 10,
+      "massLb": 20,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -151,11 +152,13 @@
         "averageNumberAppearing": 6,
         "wanderingWeight": 5
       },
-      "description": "Bones with the orders still in them. It does not tire, does not flinch, and does not stop when a blade goes between its ribs, because there is nothing between its ribs. Crushing weapons end it fastest; dry bone breaks in a way flesh does not.",
+      "description": "Bones with the orders still in them. It does not tire, it does not flinch, and a blade between its ribs finds nothing there to matter. Crushing weapons end it fastest, because dry bone breaks in a way flesh does not.",
       "notes": [
-        "A human frame stripped to bone, which is the SM 0 row at about 10 kg.",
-        "Brittle: any major wound shatters structure, and the stat notes trade flesh's forgiveness for that. Impaling and piercing weapons find nothing worth finding; treat the injury tolerance literally.",
-        "FP is stated rather than derived because nothing here has a metabolism to tire (issue #17)."
+        "Brittle: any major wound shatters structure. Impaling and piercing weapons find nothing worth finding, so take the injury tolerance literally."
+      ],
+      "provenanceNotes": [
+        "A human frame stripped to bone, which is the SM 0 row at about 20 lb.",
+        "FP is stated rather than derived: nothing here has a metabolism to tire."
       ]
     },
     {
@@ -167,9 +170,10 @@
         "skeleton"
       ],
       "tags": [
-        "animated-dead",
         "dungeon",
-        "guardian"
+        "tomb",
+        "guardian",
+        "animated-dead"
       ],
       "covers": [
         {
@@ -177,7 +181,7 @@
           "heading": "Minotaur Skeleton"
         }
       ],
-      "massKg": 90,
+      "massLb": 200,
       "sizeModifier": 1,
       "hexes": "1 hex",
       "movement": {
@@ -253,10 +257,12 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 3
       },
-      "description": "A bull-horned frame two heads taller than a man, still walking its maze. The charge is what kills people: it does not slow into the turn, because nothing in it can pull a muscle.",
+      "description": "A bull-horned frame two heads taller than a man, still walking its maze. The charge is what kills people. It does not slow into the turn, having nothing left that can pull a muscle.",
       "notes": [
-        "The living creature's mass drops to bone; SM +1 for the frame's height.",
-        "Brittle, like every dry-bone construction in this batch."
+        "Brittle, like any dry-bone construction."
+      ],
+      "provenanceNotes": [
+        "The living creature's mass drops to bone; SM +1 for the frame's height."
       ]
     },
     {
@@ -268,6 +274,8 @@
         "skeleton"
       ],
       "tags": [
+        "dungeon",
+        "tomb",
         "animated-dead",
         "mount"
       ],
@@ -277,7 +285,7 @@
           "heading": "Warhorse Skeleton"
         }
       ],
-      "massKg": 60,
+      "massLb": 150,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -356,8 +364,8 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 2
       },
-      "description": "A rider's mount reduced to its running gear. It carries whatever it is told to carry at a gallop it never breaks, and it does not shy, because fear needed parts it no longer has.",
-      "notes": [
+      "description": "A rider's mount reduced to its running gear. It carries whatever it is told to carry, at a gallop it never breaks, and it does not shy — fear needed parts it no longer has.",
+      "provenanceNotes": [
         "Still a two-hex quadruped; the ground speed of the living animal is kept with a level of Enhanced Move.",
         "It accepts any rider and no rider; a skeleton mount is tack, not a companion animal."
       ]
@@ -371,9 +379,8 @@
         "zombie"
       ],
       "tags": [
-        "animated-dead",
         "dungeon",
-        "horde"
+        "animated-dead"
       ],
       "covers": [
         {
@@ -385,7 +392,7 @@
           "heading": "Zombie"
         }
       ],
-      "massKg": 70,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -451,8 +458,8 @@
         "averageNumberAppearing": 8,
         "wanderingWeight": 6
       },
-      "description": "The recently dead put back to work. One zombie is a chore for anyone with a weapon and room to move. The problem is that there is never one: they come in the numbers they were buried in, they do not stop for wounds that should drop them, and the doorway you are holding is the only direction they need.",
-      "notes": [
+      "description": "The recently dead, put back to work. One zombie is a chore for anybody with a weapon and room to move. There is never one. They come in the numbers they were buried in, they do not stop for wounds that should drop them, and whichever doorway is being held is the only direction they need.",
+      "provenanceNotes": [
         "Hard to Kill 3 carries the source identity's refusal to fall to what ought to be a finishing blow; a zombie that checks out at 0 HP frequently gets back up.",
         "Slow on purpose: DX below human and no move advantages. Its threat is arithmetic, not skill, and the appearing number is the real stat line."
       ]
@@ -466,8 +473,9 @@
         "zombie"
       ],
       "tags": [
-        "animated-dead",
-        "dungeon"
+        "dungeon",
+        "brute",
+        "animated-dead"
       ],
       "covers": [
         {
@@ -475,7 +483,7 @@
           "heading": "Ogre Zombie"
         }
       ],
-      "massKg": 200,
+      "massLb": 450,
       "sizeModifier": 1,
       "hexes": "1 hex",
       "movement": {
@@ -553,8 +561,8 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 3
       },
-      "description": "An ogre's frame with an ogre's reach and none of the ogre's interest in its own survival. It is a siege tool that walks: pointed at a shield wall or a door, it keeps hitting until the thing it was pointed at is gone or it is.",
-      "notes": [
+      "description": "An ogre's frame with an ogre's reach and none of the ogre's interest in surviving. It is a siege tool that walks. Pointed at a shield wall or a door, it keeps hitting until one of the two is gone.",
+      "provenanceNotes": [
         "The living ogre's ST is kept; the sluggishness of the corpse shows up as reduced DX instead, which is what the source identity describes."
       ]
     },
@@ -567,8 +575,11 @@
         "incorporeal"
       ],
       "tags": [
-        "spirit",
-        "haunt"
+        "tomb",
+        "urban",
+        "talker",
+        "flier",
+        "nocturnal"
       ],
       "covers": [
         {
@@ -580,7 +591,7 @@
           "heading": "Ghost"
         }
       ],
-      "massKg": null,
+      "massLb": null,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -683,11 +694,13 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "Someone still here. It drifts through the walls of the place that holds it, and the cold spot in the room is the only warning before a hand comes out of the stonework. Killing it again solves nothing for long unless whatever holds it here is dealt with.",
+      "description": "Somebody still here. It drifts through the walls of the place that holds it, and the cold spot in the room is the only warning before a hand comes out of the stonework. Killing it again buys a few days. Whatever holds it here has to be dealt with for anything more.",
       "notes": [
+        "Whatever binds it to the site is not on the stat block. Settle that, or it comes back."
+      ],
+      "provenanceNotes": [
         "Insubstantiality is bought with Affect Substantial: the touch works on the living, and walls, armor and grapples do not work on it. Weapons need magic or the spirit's own terms to bite; Diffuse injury tolerance carries that.",
-        "Massless and hovering; movement is flight at a walking pace.",
-        "What binds it to the site is story, not points, and the record deliberately does not price an unfinished purpose."
+        "Massless and hovering; movement is flight at a walking pace."
       ]
     },
     {
@@ -699,9 +712,13 @@
         "vampire"
       ],
       "tags": [
+        "tomb",
+        "urban",
+        "apex",
         "predator",
+        "evil",
         "talker",
-        "night"
+        "nocturnal"
       ],
       "covers": [
         {
@@ -713,7 +730,7 @@
           "heading": "Vampire"
         }
       ],
-      "massKg": 75,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -853,17 +870,19 @@
           "autoHit": true,
           "afflictionPoints": 60,
           "usesFatigueOrSpell": true,
-          "notes": "Meet its eyes and resist with Will or do as you are told and remember agreeing to it. It prefers this to violence; violence is noisy."
+          "notes": "Meet its eyes and resist with Will, or obey and remember it afterwards as a decision freely made. It prefers this to violence; violence is noisy."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "A predator that owns property. It passes for a living aristocrat as long as it feeds carefully, and the household around it exists to make the feeding careful. Sunlight burns it and it knows every hour of the almanac; the fight you get is the one it prepared, at night, indoors, on its ground.",
+      "description": "A predator that owns property. It passes for a living aristocrat as long as it feeds carefully, and the household around it exists to keep the feeding careful. Sunlight burns it and it knows every hour of the almanac, so the fight on offer is the one it prepared: at night, indoors, on its ground.",
       "notes": [
-        "Sunlight is priced as a Weakness doing 1d per minute of exposure; folklore's other bans — thresholds, running water, the stake — vary by telling and stay in the GM's hands rather than the point total.",
-        "Wounds close on their own (Regeneration) but the record does not make it unkillable: fire, beheading, and daylight are the traditional ends, and the stat notes leave them available.",
+        "Sunlight does 1d per minute of exposure. Folklore's other bans — thresholds, running water, the stake — vary by telling and are the GM's to rule.",
+        "Wounds close on their own, which does not make it unkillable. Fire, beheading and daylight are the traditional ends and nothing here rules them out."
+      ],
+      "provenanceNotes": [
         "Fresh blood is a Restricted Diet, not an option: a vampire that will not feed weakens until it must."
       ]
     },
@@ -876,9 +895,13 @@
         "lich"
       ],
       "tags": [
-        "caster",
-        "talker",
-        "apex"
+        "dungeon",
+        "tomb",
+        "fire",
+        "apex",
+        "spellcaster",
+        "evil",
+        "talker"
       ],
       "covers": [
         {
@@ -890,7 +913,7 @@
           "heading": "Lich"
         }
       ],
-      "massKg": 50,
+      "massLb": 100,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -1009,7 +1032,7 @@
           "reach": "C",
           "afflictionPoints": 60,
           "usesFatigueOrSpell": true,
-          "notes": "A hand like winter through the armor's gaps. Resist with HT or the body simply stops answering, and the lich walks past you to the one it actually came for."
+          "notes": "A hand like winter through the armor's gaps. Resist with HT or the body simply stops answering, and the lich walks past to the one it actually came for."
         },
         {
           "name": "Deathly Bolt",
@@ -1018,7 +1041,7 @@
           "type": "burning",
           "reach": "Ranged",
           "usesFatigueOrSpell": true,
-          "notes": "Stated as literal dice: the bolt is a property of the lich's art, not its arm. It costs the creature to cast, and a lich in its own lair has cheaper ways to spend you first."
+          "notes": "Stated as literal dice: the bolt is a property of the lich's art, not its arm. It costs the creature to cast, and a lich in its own lair has cheaper ways to open."
         },
         {
           "name": "Frightening Gaze",
@@ -1029,17 +1052,19 @@
           "autoHit": true,
           "afflictionPoints": 40,
           "usesFatigueOrSpell": true,
-          "notes": "The attention of something that has already outlived your grandchildren. Fright Check at penalty; it uses this on the brave first."
+          "notes": "The full attention of something that outlived everyone's grandparents and expects to outlive their grandchildren. Fright Check at penalty; it uses this on the brave first."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 1
       },
-      "description": "A wizard who solved dying and kept working. Everything about the encounter was decided before you arrived: the approach, the ambush, which of you it wants alive to question. Destroying the body inconveniences it; the vessel that holds its life is elsewhere, and finding that is the real adventure.",
+      "description": "A wizard who solved dying and went back to work. Everything about the encounter was settled before the party arrived — the approach, the ambush, which of them it wants alive to question. Destroying the body is an inconvenience. The vessel holding its life is somewhere else, and finding that is the real adventure.",
       "notes": [
+        "The stat block is the body in the room. The phylactery is not on it, and how the lich comes back is the GM's to decide."
+      ],
+      "provenanceNotes": [
         "The casting identity is carried by Magery 3 and the fatigue-costed attacks; a full spell list belongs to a character sheet, not a bestiary record, and the three attacks price what the rating can see of it.",
-        "The phylactery is story armor, not points: the record prices the body you can fight, and the notes leave its return in the GM's hands.",
         "Perception runs a point behind its towering IQ — centuries of reading by candlelight."
       ]
     },
@@ -1052,9 +1077,13 @@
         "mummy"
       ],
       "tags": [
-        "caster",
+        "desert",
+        "tomb",
         "guardian",
-        "tomb"
+        "spellcaster",
+        "diseased",
+        "evil",
+        "talker"
       ],
       "covers": [
         {
@@ -1066,7 +1095,7 @@
           "heading": "Mummy Lord"
         }
       ],
-      "massKg": 60,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -1195,9 +1224,11 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 1
       },
-      "description": "The buried king still holding court. Wrapped, preserved and furious, it commands its tomb like a garrison: it knows every trap and every shortcut, its priest-craft is intact, and its fist carries a rot that turns a survivable wound into a slow sentence. It does not pursue past its borders. It does not need to.",
+      "description": "The buried king still holding court. Wrapped, preserved and furious, it runs its tomb like a garrison: it knows every trap and every shortcut, its priest-craft is intact, and its fist carries a rot that turns a survivable wound into a slow sentence. It will not pursue past its borders, and it has never needed to.",
       "notes": [
-        "The rot is the identity and it is deliberately not survivable by attrition: the affliction points price a curse whose wounds cannot be healed until it is lifted, and the stat note says so in the GM's terms.",
+        "The rot is a curse rather than a wound. It cannot be healed until the curse is lifted, and it does not wear off with rest."
+      ],
+      "provenanceNotes": [
         "Priestly magic is carried the same way the lich's wizardry is: Magery plus fatigue-costed attacks, with the full liturgy left to prose.",
         "Burning was the old answer and remains a good one; nothing here prices it away."
       ]

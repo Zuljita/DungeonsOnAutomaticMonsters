@@ -31,11 +31,11 @@
       "name": "Deinonychus",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["predator", "pack", "prehistoric", "wandering-encounter"],
+      "tags": ["forest", "plains", "predator", "pack", "prehistoric"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Deinonychus"}
       ],
-      "massKg": 70,
+      "massLb": 150,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -87,11 +87,13 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 4
       },
-      "description": "Man-high, feathered, and far too interested. Deinonychus hunt in company and are the only animal in this batch that will try to work out where a party is going. They come in from more than one side, and the one making noise is not the one that matters.",
+      "description": "Man-high, feathered and far too interested in the party. Deinonychus hunt in company, and they are among the very few animals that will work out where a group is going and be waiting there. They come in from more than one side. The one making noise is not the one to watch.",
       "notes": [
-        "About three metres nose to tail, which is the SM +1 row; most of that is tail.",
+        "The pack is the threat. Run these as a coordinated group."
+      ],
+      "provenanceNotes": [
+        "About ten feet nose to tail, which is the SM +1 row; most of that is tail.",
         "ST from Basic Lift: it holds down and tears apart something its own size.",
-        "The pack is the threat. Run these as a coordinated group.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -100,11 +102,11 @@
       "name": "Elasmosaurus",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["aquatic", "predator", "prehistoric", "open-water"],
+      "tags": ["aquatic", "ocean", "open-water", "apex", "predator", "prehistoric"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Elasmosaurus"}
       ],
-      "massKg": 2000,
+      "massLb": 4400,
       "sizeModifier": 5,
       "hexes": "12 hexes",
       "movement": {
@@ -146,9 +148,9 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "Fourteen metres, and eight of them are neck. It swims under a boat and comes up alongside, and the head arrives from a direction nobody was watching. The body is barely a threat; the reach is the entire animal, and there is no useful distance from it short of shore.",
-      "notes": [
-        "Fourteen metres, which is the SM +5 row — the top of the published table's practical range for a creature at a table.",
+      "description": "Forty-five feet of marine reptile, twenty-five of it neck. It swims under a boat and surfaces alongside, and the head arrives from a direction nobody was watching. The body is barely a threat on its own; the reach is the whole animal, and there is no safe distance from it short of dry land.",
+      "provenanceNotes": [
+        "Forty-five feet, which is the SM +5 row — the top of the published table's practical range for a creature at a table.",
         "Reach is the point of the build. The bite is stated at reach C,4 because the neck, not the jaws, is what makes this dangerous."
       ]
     },
@@ -157,17 +159,17 @@
       "name": "Megaraptor",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["predator", "pack", "prehistoric", "wandering-encounter"],
+      "tags": ["jungle", "predator", "pack", "prehistoric"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Megaraptor"}
       ],
-      "massKg": 500,
+      "massLb": 1100,
       "sizeModifier": 2,
       "hexes": "3 hexes",
       "movement": {
         "primary": "ground"
       },
-      "lair": "A trampled clearing at the centre of a range it has cleared of everything else.",
+      "lair": "A trampled clearing at the center of a range it has cleared of everything else.",
       "traitSets": ["saurian-body", "carnivore"],
       "traits": [
         {"trait": "bloodlust"},
@@ -211,9 +213,9 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 2
       },
-      "description": "The deinonychus problem at five times the mass: five metres of hunting animal that still moves in company and still thinks about angles. Where a tyrannosaur is a catastrophe you survive by not being there, a pair of megaraptors is a fight, and that is considerably worse.",
-      "notes": [
-        "Five metres nose to tail, which is the SM +2 row.",
+      "description": "The deinonychus problem at five times the weight: sixteen feet of hunting animal that still moves in company and still thinks about angles. A tyrannosaur can be survived by being somewhere else. A pair of megaraptors has to be fought.",
+      "provenanceNotes": [
+        "Sixteen feet nose to tail, which is the SM +2 row.",
         "ST from Basic Lift: it tears a limb off something the weight of a horse.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
@@ -223,11 +225,11 @@
       "name": "Plesiosaurus",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["aquatic", "predator", "prehistoric", "coastal"],
+      "tags": ["aquatic", "coastal", "ocean", "predator", "prehistoric"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Plesiosaurus"}
       ],
-      "massKg": 500,
+      "massLb": 1100,
       "sizeModifier": 2,
       "hexes": "3 hexes",
       "movement": {
@@ -270,10 +272,10 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "Four and a half metres of barrel body rowing itself along on four flippers, with a neck that arrives before the rest of it. It hunts fish and has no strong opinion about people, right up until a boat sits between it and the shoal.",
-      "notes": [
-        "Four and a half metres, which is the SM +2 row.",
-        "ST from Basic Lift: it carries off a 120 kg piece of whatever it took."
+      "description": "Fifteen feet of barrel-bodied reptile rowing itself along on four flippers, with a neck that arrives before the rest of it does. It hunts fish and holds no particular opinion about people, right up until a boat sits between it and the shoal.",
+      "provenanceNotes": [
+        "Fifteen feet, which is the SM +2 row.",
+        "ST from Basic Lift: it carries off a 265 lb. piece of whatever it took."
       ]
     },
     {
@@ -281,12 +283,12 @@
       "name": "Triceratops",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["herd", "prehistoric", "plains", "war-beast"],
+      "tags": ["plains", "herd", "prehistoric", "war-beast"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Triceratops"},
         {"sourceSystem": "srd_3_5", "heading": "Triceratops"}
       ],
-      "massKg": 9000,
+      "massLb": 20000,
       "sizeModifier": 4,
       "hexes": "7 hexes",
       "movement": {
@@ -322,7 +324,7 @@
           "basis": "thr",
           "type": "impaling",
           "reach": "C,1",
-          "notes": "Two brow horns a metre long, driven by nine tonnes at a run."
+          "notes": "Two brow horns three feet long, driven by ten tons at a run."
         },
         {
           "name": "Trample",
@@ -338,11 +340,13 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 2
       },
-      "description": "Nine tonnes of armoured herbivore with a bone shield over the neck and two horns it has used on worse than you. It does not hunt and does not need to be provoked cleverly — walking between a cow and a calf is sufficient, and the charge crosses the intervening ground faster than seems reasonable.",
+      "description": "Ten tons of armored herbivore with a bone shield over the neck and two horns that have been used on worse. It does not hunt, and it does not need clever provocation — walking between a cow and a calf will do. The charge covers ground faster than ten tons has any business covering it.",
       "notes": [
-        "Nine metres nose to tail, which is the SM +4 row.",
+        "The frill is bone, but it covers the neck alone and the published DR is a whole-body figure. A GM who wants the frill to count should treat it as cover for the neck rather than raise DR."
+      ],
+      "provenanceNotes": [
+        "Thirty feet nose to tail, which is the SM +4 row.",
         "ST from Basic Lift: it shoves aside a rival of its own species, which is the heaviest thing it ever does on purpose.",
-        "The frill is bone but the build carries it as Tough Skin rather than as armour, because it protects the neck only and DR here is a whole-body figure. A GM wanting the frill to matter should treat it as cover for the neck rather than raising DR.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Peripheral Vision. The comparison surfaced the gap; the build is still ours."
       ]
     },
@@ -351,7 +355,7 @@
       "name": "Tyrannosaurus",
       "class": "Animal",
       "classTags": ["animal", "reptile", "dinosaur"],
-      "tags": ["predator", "prehistoric", "apex", "wandering-encounter"],
+      "tags": ["jungle", "plains", "apex", "predator", "prehistoric"],
       "covers": [
         {
           "sourceSystem": "srd_5_1",
@@ -360,7 +364,7 @@
         },
         {"sourceSystem": "srd_3_5", "heading": "Tyrannosaurus"}
       ],
-      "massKg": 7000,
+      "massLb": 15000,
       "sizeModifier": 5,
       "hexes": "12 hexes",
       "movement": {
@@ -411,12 +415,12 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 1
       },
-      "description": "Twelve metres of animal whose only real predator is another one of itself. It smells a party long before it sees them, it does not stalk, and it does not test — it walks straight in, because in its entire experience nothing has ever been worth caution. The correct response is distance and terrain, not a plan.",
-      "notes": [
-        "Twelve metres nose to tail, which is the SM +5 row.",
+      "description": "Forty feet of animal whose only real predator is another one of itself. It smells a party long before it sees them, and it neither stalks nor tests: it walks straight in, because nothing in its experience has ever been worth caution. Parties survive it with distance and broken ground rather than with tactics.",
+      "provenanceNotes": [
+        "Forty feet nose to tail, which is the SM +5 row.",
         "ST from Basic Lift: it lifts and shakes a carcass the weight of a horse, which is the heaviest thing it demonstrably does. Tonnage would give a larger figure that no encounter could use.",
         "At this Size Modifier the published Strength discount for size has bottomed out, so the racial template prices ST at the floor of its cost rather than lower.",
-        "The bite is impaling rather than cutting. A tyrannosaur's teeth are thick conical pegs built to punch through bone and hold, not serrated blades — which is what separates it from the dromaeosaurs in this batch, whose teeth genuinely are knives.",
+        "The bite is impaling rather than cutting. A tyrannosaur's teeth are thick conical pegs built to punch through bone and hold, not serrated blades — which is what separates it from the dromaeosaurs, whose teeth genuinely are knives.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Night Vision; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     }

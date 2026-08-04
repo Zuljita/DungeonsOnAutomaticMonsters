@@ -37,7 +37,8 @@
         "lycanthrope"
       ],
       "tags": [
-        "wilderness",
+        "forest",
+        "mountain",
         "talker"
       ],
       "covers": [
@@ -50,7 +51,7 @@
           "heading": "Werebear"
         }
       ],
-      "massKg": 220,
+      "massLb": 500,
       "sizeModifier": 1,
       "hexes": "1 hex",
       "movement": {
@@ -128,10 +129,12 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "The one lycanthrope that mostly chose this. Werebears keep the shape on purpose and keep away from people on purpose, and the hybrid you meet on a forest track is usually deciding whether you are a problem for the valley it protects. If you are, it is a head taller than you, four times your weight, and still smarter than the bear it resembles.",
+      "description": "The one lycanthrope that mostly chose this. Werebears keep the shape on purpose and keep away from people on purpose, and the thing standing in the forest track is usually working out whether the party is a problem for the valley it looks after. If it decides they are: a head over a big man, four times the weight, and cleverer than the bear it resembles.",
       "notes": [
-        "Hybrid form throughout; the human life is the Alternate Form. The animal form's numbers sit between the two and are left to prose.",
-        "Wounds dealt by silver do not regenerate; the note carries what no published trait prices cleanly."
+        "Wounds dealt by silver do not regenerate."
+      ],
+      "provenanceNotes": [
+        "Hybrid form throughout; the human life is the Alternate Form. The animal form's numbers sit between the two and are left to prose."
       ]
     },
     {
@@ -143,7 +146,9 @@
         "lycanthrope"
       ],
       "tags": [
-        "wilderness"
+        "forest",
+        "berserk",
+        "talker"
       ],
       "covers": [
         {
@@ -155,13 +160,13 @@
           "heading": "Wereboar"
         }
       ],
-      "massKg": 140,
+      "massLb": 300,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
         "primary": "ground"
       },
-      "lair": "Rough farmland or scrub hills, at the end of the lane the neighbours stopped using.",
+      "lair": "Rough farmland or scrub hills, at the end of the lane the neighbors stopped using.",
       "traitSets": [
         "lycanthrope"
       ],
@@ -204,7 +209,7 @@
           "basis": "thr+1",
           "type": "impaling",
           "reach": "C,1",
-          "notes": "Delivered on a charge when it can get one; the second gore is aimed at whoever helped you up."
+          "notes": "Delivered on a charge when it can get one; the second gore is for whoever helps the first one up."
         },
         {
           "name": "Fists",
@@ -219,9 +224,9 @@
         "averageNumberAppearing": 2,
         "wanderingWeight": 3
       },
-      "description": "Belligerence given tusks. Wereboars do not stalk and do not scheme; they take offence, charge, and keep charging until something stops being upright. The ones with families pass the curse along like a surname, and a pair met on their own ground fight like they have nothing to lose, because they long since stopped counting wounds.",
+      "description": "Belligerence with tusks. Wereboars do not stalk and do not scheme. They take offense, charge, and keep charging until something stops being upright. The ones with families pass the curse along like a surname, and a pair on their own ground fight as though they have stopped counting wounds, because they have.",
       "notes": [
-        "Berserk is the identity: hurt one and it stops defending. The rating sees the frenzy's offense; the note reminds the GM it also stops retreating.",
+        "Berserk is the identity. Hurt one and it stops defending, and it stops retreating as well.",
         "Wounds dealt by silver do not regenerate."
       ]
     },
@@ -234,9 +239,10 @@
         "lycanthrope"
       ],
       "tags": [
+        "underground",
         "urban",
         "talker",
-        "night"
+        "nocturnal"
       ],
       "covers": [
         {
@@ -248,7 +254,7 @@
           "heading": "Wererat"
         }
       ],
-      "massKg": 60,
+      "massLb": 150,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -330,10 +336,12 @@
         "averageNumberAppearing": 4,
         "wanderingWeight": 4
       },
-      "description": "The curse as a criminal enterprise. Wererats recruit, and a nest is a gang: pickets, escape holes, a ledger, and a rule about not killing anyone the city would miss. You meet four, and the four you meet are the ones they could afford to show you.",
+      "description": "The curse run as a criminal enterprise. Wererats recruit, and a nest is a gang — pickets, escape holes, a ledger, and a rule about not killing anyone the city would miss. Four turn up in the alley. Those four are the ones the nest could spare.",
       "notes": [
-        "The smallest and most organized of the line; the appearing number is a patrol from a larger nest.",
         "Wounds dealt by silver do not regenerate."
+      ],
+      "provenanceNotes": [
+        "The smallest and most organized of the line; the appearing number is a patrol from a larger nest."
       ]
     },
     {
@@ -345,9 +353,10 @@
         "lycanthrope"
       ],
       "tags": [
-        "wilderness",
+        "jungle",
         "apex",
-        "night"
+        "talker",
+        "nocturnal"
       ],
       "covers": [
         {
@@ -359,7 +368,7 @@
           "heading": "Weretiger"
         }
       ],
-      "massKg": 160,
+      "massLb": 350,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -441,7 +450,7 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "A hunter who is exactly as calm as the tiger it becomes. Weretigers hunt alone, choose their prey days ahead, and treat the curse as an inheritance to be lived up to. The fight happens where the weretiger wanted it, which you learn at the same moment you learn there is a fight.",
+      "description": "A hunter as calm as the tiger it becomes. Weretigers work alone, choose their prey days ahead, and treat the curse as an inheritance to be lived up to. The fight happens where the weretiger wanted it, and the first anyone knows of it is that it has already started.",
       "notes": [
         "Wounds dealt by silver do not regenerate."
       ]
@@ -455,9 +464,11 @@
         "lycanthrope"
       ],
       "tags": [
-        "wilderness",
-        "night",
-        "wandering-encounter"
+        "forest",
+        "predator",
+        "pack",
+        "talker",
+        "nocturnal"
       ],
       "covers": [
         {
@@ -469,7 +480,7 @@
           "heading": "Werewolf"
         }
       ],
-      "massKg": 90,
+      "massLb": 200,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -552,10 +563,12 @@
         "averageNumberAppearing": 3,
         "wanderingWeight": 4
       },
-      "description": "The classic curse: an ordinary person most of the month, and this the rest of it. A werewolf pack is part family and part affliction support group, and it runs the hills around a settlement that has started counting its dogs. Silver is not a rumor. Bring it or bring rope.",
+      "description": "The classic curse: an ordinary person most of the month and this the rest of it. A werewolf pack is part family and part affliction, running the hills around a settlement that has started counting its dogs. Silver is not a rumor. Bring some, or bring rope.",
       "notes": [
-        "Bestial carries the moon-driven judgment: in hybrid form its problem-solving is a wolf's, whatever it remembers being on Tuesday.",
         "Wounds dealt by silver do not regenerate."
+      ],
+      "provenanceNotes": [
+        "Bestial carries the moon-driven judgment: in hybrid form its problem-solving is a wolf's, whatever it remembers being on Tuesday."
       ]
     }
   ]

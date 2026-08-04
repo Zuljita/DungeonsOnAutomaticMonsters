@@ -2,17 +2,17 @@
   "version": 1,
   "batch": "dragons",
   "issue": 35,
-  "title": "SRD coverage: dragon age and colour variants",
-  "summary": "The 40 identities issue #35 enumerates are ten colours at four ages, and `OML-022` requires the inheritance rule to be decided before any of them is authored. The rule is: age scales the body — Size Modifier, ST, DR, the reach of a limb, the dice of a breath — and colour states the weapon and the mind, which is what that breath is made of, what the creature is immune to, where it lives and what it wants. Neither axis knows about the other. The builder emits the full cross-product as forty concrete records, so a consumer gets a real stat block and the coverage registry gets forty dispositions rather than one row with a footnote; the expansion lives in scripts/srd/expand-matrix.mjs. Dragons speak, so nothing here takes Cannot Speak or Bestial, and they keep their talons as manipulators, so nothing here takes No Fine Manipulators either — which is also why their Strength carries only the published size discount.",
+  "title": "SRD coverage: dragon age and color variants",
+  "summary": "The 40 identities issue #35 enumerates are ten colors at four ages, and `OML-022` requires the inheritance rule to be decided before any of them is authored. The rule is: age scales the body — Size Modifier, ST, DR, the reach of a limb, the dice of a breath — and color states the weapon and the mind, which is what that breath is made of, what the creature is immune to, where it lives and what it wants. Neither axis knows about the other. The builder emits the full cross-product as forty concrete records, so a consumer gets a real stat block and the coverage registry gets forty dispositions rather than one row with a footnote; the expansion lives in scripts/srd/expand-matrix.mjs. Dragons speak, so nothing here takes Cannot Speak or Bestial, and they keep their talons as manipulators, so nothing here takes No Fine Manipulators either — which is also why their Strength carries only the published size discount.",
   "matrix": {
     "sourceSystem": "srd_5_1",
-    "slug": "{colour}-dragon-{age}",
-    "name": "{Colour} Dragon",
-    "heading": "{Colour} Dragon",
+    "slug": "{color}-dragon-{age}",
+    "name": "{Color} Dragon",
+    "heading": "{Color} Dragon",
     "base": {
       "class": "Dragon",
       "classTags": ["dragon", "reptile"],
-      "tags": ["apex", "hoard", "flier", "talker"],
+      "tags": ["apex", "hoard", "talker", "flier"],
       "movement": {
         "primary": "air"
       },
@@ -86,16 +86,18 @@
         }
       ],
       "notes": [
+        "Immunity to its own element covers that one damage type and nothing else, and it is not in the published DR. A red dragon is not armored against a sword by being immune to fire.",
+        "The breath costs the creature to use and cannot be repeated every second, and a dragon that could breathe every turn would be a different fight. The published rating does not yet discount it for that, so it runs high for the sixteen colors whose breath is their best attack, worst for the acid breathers. Read these dragons as somewhat less dangerous than the number says."
+      ],
+      "provenanceNotes": [
         "Breath damage is stated as literal dice rather than derived from ST: it is a property of the creature's element and age, not of how hard it can push.",
-        "The breath is marked as costing fatigue, which halves its contribution to the rating. Without that a dragon would be rated as though it breathed every second, which no dragon does.",
-        "Element immunity is built as heavily Limited Damage Resistance rather than as a special rule. It protects against one damage type and nothing else, and it deliberately does not count toward the record's published DR — a red dragon is not armoured against a sword by being immune to fire.",
         "Extra Attack, Frightful Presence, Extended Lifespan, Infravision and the wing buffet were added after a post-hoc comparison against the local Enraged Eggplant dragon conversions and the SRD stat blocks. A dragon that could only act once a turn and could not frighten anyone was not a dragon; the comparison surfaced the gap and the build is still ours.",
         "KNOWN DEFECT in the shared rating path, found by this batch and not worked around here. scripts/review/cer.mjs documents `usesFatigueOrSpell` as halving an attack's contribution, and damageContribution implements it — but combatProfileFromStats never copies the flag onto the profile, so the halving is dead code for damage and live only for afflictions. Sixteen of these forty dragons pick their breath as the best attack and are therefore rated as if they breathed every second. The acid breathers are worst hit, because corrosion carries a x2 damage multiplier: an ancient black dragon rates 227 against an ancient red's 174 on otherwise identical bodies. The fix belongs in cer.mjs and in the application it mirrors, not in these specs. Filed as issue #55 here and Zuljita/DungeonsOnAutomatic#432 in the application; the two must land together, because both implementations share the omission and the parity smoke test therefore passes while both are wrong."
       ]
     },
     "axes": [
       {
-        "id": "colour",
+        "id": "color",
         "values": {
           "black": {
             "label": "Black",
@@ -104,14 +106,15 @@
               "element": "acid",
               "breathType": "corrosion"
             },
-            "tags": ["swamp", "evil"],
+            "classTags": ["chromatic"],
+            "tags": ["swamp", "aquatic", "acid", "ambusher", "evil"],
             "lair": "A flooded cavern behind a waterfall or under a drowned ruin, reached by swimming.",
             "traits": [
               {"trait": "amphibious"},
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Acid"}
             ],
             "descriptionParts": [
-              "Black dragons keep to swamp and drowned ruin, and they are the meanest of the chromatic line: cruel for its own sake, patient about it, and happy to let a place rot around them. The breath is acid, and it keeps working after it lands."
+              "Black dragons keep to swamp and drowned ruin. They are the meanest of the chromatic line — cruel without needing a reason, patient about it, content to let a place rot around them. The breath is acid, and it goes on working after it lands."
             ]
           },
           "blue": {
@@ -121,14 +124,15 @@
               "element": "lightning",
               "breathType": "burning"
             },
-            "tags": ["desert", "evil"],
+            "classTags": ["chromatic"],
+            "tags": ["desert", "lightning", "ambusher", "evil", "burrower"],
             "lair": "A tunnel system dug under desert rock, with the hoard at the bottom of a sand-drowned shaft.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Lightning"},
               {"trait": "tunneling"}
             ],
             "descriptionParts": [
-              "Blue dragons burrow beneath desert and hunt by lying under the sand until something walks over them. They are vain, orderly and territorial, and they collect gems the way other dragons collect coin. The breath is a bolt of lightning down a straight line."
+              "Blue dragons burrow under desert and hunt by lying beneath the sand until something walks over them. They are vain, orderly and territorial, and they collect gems where other dragons collect coin. The breath is a bolt of lightning down a straight line."
             ]
           },
           "brass": {
@@ -138,14 +142,15 @@
               "element": "fire",
               "breathType": "burning"
             },
-            "tags": ["desert", "talkative"],
+            "classTags": ["metallic"],
+            "tags": ["desert", "fire", "good"],
             "lair": "A sun-warmed ruin half-buried in dune, chosen for the view and the acoustics.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Fire"},
               {"trait": "temperature-tolerance", "levels": 5, "qualifier": "Heat"}
             ],
             "descriptionParts": [
-              "Brass dragons would genuinely rather talk, and will hold a traveller in conversation for hours before letting them go — or before deciding not to. They are gossips with centuries of material. The breath is fire, and it arrives only once the conversation has failed."
+              "Brass dragons would genuinely rather talk. One will hold a traveler in conversation for hours before letting them go, or before deciding not to, and it has centuries of gossip to get through. The breath is fire, and it comes out only after the conversation has failed."
             ]
           },
           "bronze": {
@@ -155,14 +160,15 @@
               "element": "lightning",
               "breathType": "burning"
             },
-            "tags": ["coastal", "just"],
+            "classTags": ["metallic"],
+            "tags": ["coastal", "ocean", "aquatic", "lightning", "good"],
             "lair": "A sea cave with an underwater entrance, above the tide line and dry inside.",
             "traits": [
               {"trait": "amphibious"},
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Lightning"}
             ],
             "descriptionParts": [
-              "Bronze dragons haunt coastlines, take an interest in wars they consider just, and have an unnerving habit of turning up in another shape to see what a party is really like. The breath is lightning, and they give warning first."
+              "Bronze dragons keep to coastlines and take an interest in wars they judge to be just. They have a habit of turning up in some other shape first, to see what a party is actually like. The breath is lightning, and they give warning before using it."
             ]
           },
           "copper": {
@@ -172,13 +178,14 @@
               "element": "acid",
               "breathType": "corrosion"
             },
-            "tags": ["hills", "trickster"],
+            "classTags": ["metallic"],
+            "tags": ["hills", "acid", "good", "trickster"],
             "lair": "A dry hillside cave with a concealed entrance and at least two ways out.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Acid"}
             ],
             "descriptionParts": [
-              "Copper dragons are jokers, and the joke is usually at the expense of whoever came looking for the hoard. They are fast, hard to corner and genuinely funny, right up until they are not. The breath is acid."
+              "Copper dragons are jokers, and the joke is usually on whoever came looking for the hoard. They are fast, hard to corner, and genuinely funny until the moment they stop being funny. The breath is acid."
             ]
           },
           "gold": {
@@ -188,14 +195,15 @@
               "element": "fire",
               "breathType": "burning"
             },
-            "tags": ["any-terrain", "noble"],
+            "classTags": ["metallic"],
+            "tags": ["any-terrain", "fire", "good"],
             "lair": "Somewhere unlikely and beautiful, kept plain, with the hoard behind a door it does not bother to lock.",
             "traits": [
               {"trait": "amphibious"},
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Fire"}
             ],
             "descriptionParts": [
-              "Gold dragons are the ones the stories are actually about: wise, formal, and entirely willing to end a threat rather than negotiate with it. They ask questions a party would rather not answer honestly. The breath is fire, and it is used last."
+              "Gold dragons are the ones the stories are actually about: wise, formal, and perfectly willing to end a threat rather than negotiate with it. They ask questions a party would rather not answer honestly. The breath is fire, and it comes out last."
             ]
           },
           "green": {
@@ -205,13 +213,14 @@
               "element": "poison gas",
               "breathType": "toxic"
             },
-            "tags": ["forest", "evil"],
+            "classTags": ["chromatic"],
+            "tags": ["forest", "poison", "evil"],
             "lair": "The heart of old forest, in a hollow the trees have grown around over centuries.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Poison"}
             ],
             "descriptionParts": [
-              "Green dragons rule a stretch of old forest through everything that lives in it, and would far rather manipulate a party into doing the work than fight them. They lie constantly and well. The breath is a cloud of poison gas that sits in the low ground afterwards."
+              "Green dragons rule a stretch of old forest through everything living in it, and would much rather talk a party into doing the work than fight them. They lie constantly and they lie well. The breath is a cloud of poison gas, and it settles into the low ground afterwards."
             ]
           },
           "red": {
@@ -221,14 +230,15 @@
               "element": "fire",
               "breathType": "burning"
             },
-            "tags": ["mountain", "evil"],
+            "classTags": ["chromatic"],
+            "tags": ["mountain", "fire", "evil"],
             "lair": "A volcanic cave high on a peak, floored with coin melted into the rock.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Fire"},
               {"trait": "temperature-tolerance", "levels": 5, "qualifier": "Heat"}
             ],
             "descriptionParts": [
-              "Red dragons are the arrogant ones, and the greediest of a greedy family: they take a mountain, take everything under it, and take offence at being addressed. There is no version of the encounter where flattery is wasted. The breath is fire."
+              "Red dragons are the arrogant ones and the greediest of a greedy family. They take a mountain, take everything under it, and take offense at being addressed. Flattery is never wasted on one. The breath is fire."
             ]
           },
           "silver": {
@@ -238,14 +248,15 @@
               "element": "freezing cold",
               "breathType": "burning"
             },
-            "tags": ["mountain", "kindly"],
+            "classTags": ["metallic"],
+            "tags": ["mountain", "cold", "good"],
             "lair": "A cloud-height peak, or a perfectly ordinary house in a town where nobody knows.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Cold"},
               {"trait": "temperature-tolerance", "levels": 5, "qualifier": "Cold"}
             ],
             "descriptionParts": [
-              "Silver dragons like people, live among them in other shapes for decades at a time, and are the likeliest of any dragon to simply help. Imposing on that goodwill is a mistake people make once. The breath is a cone of killing cold."
+              "Silver dragons like people and live among them in other shapes for decades at a time. They are likelier than any other dragon to simply help, and people who impose on that goodwill do it once. The breath is a cone of killing cold."
             ]
           },
           "white": {
@@ -255,14 +266,15 @@
               "element": "freezing cold",
               "breathType": "burning"
             },
-            "tags": ["arctic", "evil"],
+            "classTags": ["chromatic"],
+            "tags": ["arctic", "cold", "evil"],
             "lair": "An ice cave above the snow line, with the hoard frozen into the floor along with the previous claimants.",
             "traits": [
               {"trait": "damage-resistance-element", "levels": 15, "qualifier": "Cold"},
               {"trait": "temperature-tolerance", "levels": 5, "qualifier": "Cold"}
             ],
             "descriptionParts": [
-              "White dragons are the smallest and least clever of the chromatic line, and they are pure appetite: they remember slights, they hunt what humiliated them, and they do not plan much beyond that. The breath is a cone of killing cold."
+              "White dragons are the smallest and least clever of the chromatic line, and mostly appetite. They remember slights and they hunt whatever humiliated them, and they do not plan much further than that. The breath is a cone of killing cold."
             ]
           }
         }
@@ -272,12 +284,12 @@
         "values": {
           "wyrmling": {
             "label": "Wyrmling",
-            "namePattern": "{Colour} Dragon Wyrmling",
-            "headingPattern": "{Colour} Dragon Wyrmling",
+            "namePattern": "{Color} Dragon Wyrmling",
+            "headingPattern": "{Color} Dragon Wyrmling",
             "vars": {
               "breathDice": "3d"
             },
-            "massKg": 200,
+            "massLb": 450,
             "sizeModifier": 1,
             "hexes": "2 hexes",
             "encounter": {
@@ -297,21 +309,21 @@
               {"trait": "telescopic-vision", "levels": 1}
             ],
             "descriptionParts": [
-              "A wyrmling is newly out of the shell and already the size of a warhorse, with a full set of teeth and no judgement whatsoever about when to use them."
+              "A wyrmling is newly out of the shell and already the size of a warhorse. It has a full set of teeth and no judgement at all about when to use them."
             ],
-            "notes": [
-              "About 2.5 m nose to tail, which is the SM +1 row.",
+            "provenanceNotes": [
+              "About 8 feet nose to tail, which is the SM +1 row.",
               "ST from Basic Lift: it drags a deer to a place it feels safe eating."
             ]
           },
           "young": {
             "label": "Young",
-            "namePattern": "Young {Colour} Dragon",
-            "headingPattern": "Young {Colour} Dragon",
+            "namePattern": "Young {Color} Dragon",
+            "headingPattern": "Young {Color} Dragon",
             "vars": {
               "breathDice": "6d"
             },
-            "massKg": 1200,
+            "massLb": 2600,
             "sizeModifier": 2,
             "hexes": "3 hexes",
             "encounter": {
@@ -332,10 +344,10 @@
               {"trait": "telescopic-vision", "levels": 2}
             ],
             "descriptionParts": [
-              "A young dragon has its full growth ahead of it and its confidence already complete, which is the combination that gets villages burned over an insult nobody meant."
+              "A young dragon still has its growth ahead of it and none of its confidence. That combination is what gets a village burned over an insult nobody meant."
             ],
-            "notes": [
-              "About 5 m nose to tail, which is the SM +2 row.",
+            "provenanceNotes": [
+              "About 16 feet nose to tail, which is the SM +2 row.",
               "ST from Basic Lift: it carries off a horse."
             ],
             "attacks": [
@@ -346,18 +358,18 @@
                 "reach": "Ranged, 20",
                 "autoHit": true,
                 "afflictionPoints": 20,
-                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defence; it costs the dragon nothing."
+                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defense; it costs the dragon nothing."
               }
             ]
           },
           "adult": {
             "label": "Adult",
-            "namePattern": "Adult {Colour} Dragon",
-            "headingPattern": "Adult {Colour} Dragon",
+            "namePattern": "Adult {Color} Dragon",
+            "headingPattern": "Adult {Color} Dragon",
             "vars": {
               "breathDice": "10d"
             },
-            "massKg": 6000,
+            "massLb": 13000,
             "sizeModifier": 4,
             "hexes": "7 hexes",
             "encounter": {
@@ -379,12 +391,14 @@
               {"trait": "will", "levels": 2}
             ],
             "descriptionParts": [
-              "An adult has held its territory for centuries, knows every road and every lord in it, and has thought about what to do if adventurers ever came. It is not improvising."
+              "An adult has held its territory for centuries and knows every road and every lord in it. It worked out long ago what it would do if adventurers ever turned up, and none of what happens next is improvised."
             ],
             "notes": [
-              "About 9 m nose to tail, which is the SM +4 row.",
-              "ST from Basic Lift: it lifts a cart and its team.",
               "Extra Attack: an adult dragon bites and claws in the same turn, which is most of what makes it different from a very large animal."
+            ],
+            "provenanceNotes": [
+              "About 30 feet nose to tail, which is the SM +4 row.",
+              "ST from Basic Lift: it lifts a cart and its team."
             ],
             "attacks": [
               {
@@ -394,18 +408,18 @@
                 "reach": "Ranged, 20",
                 "autoHit": true,
                 "afflictionPoints": 35,
-                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defence; it costs the dragon nothing."
+                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defense; it costs the dragon nothing."
               }
             ]
           },
           "ancient": {
             "label": "Ancient",
-            "namePattern": "Ancient {Colour} Dragon",
-            "headingPattern": "Ancient {Colour} Dragon",
+            "namePattern": "Ancient {Color} Dragon",
+            "headingPattern": "Ancient {Color} Dragon",
             "vars": {
               "breathDice": "15d"
             },
-            "massKg": 20000,
+            "massLb": 44000,
             "sizeModifier": 5,
             "hexes": "12 hexes",
             "encounter": {
@@ -429,12 +443,14 @@
               {"trait": "will", "levels": 2}
             ],
             "descriptionParts": [
-              "An ancient dragon is older than the kingdom it sleeps under and has outlived everyone who ever knew where it was. It is not a fight. It is a negotiation with something that has already worked out what you want and what you are prepared to trade for it."
+              "An ancient dragon is older than the kingdom it sleeps under and has outlived everyone who knew where it was. What follows is less a fight than a negotiation, conducted by something that worked out what the party wants, and what they will give up to get it, some while before they arrived."
             ],
             "notes": [
-              "About 15 m nose to tail, which is the SM +5 row, and the point at which the published size discount on Strength has all but bottomed out.",
-              "ST from Basic Lift: it lifts a laden wagon in one foot.",
-              "Extra Attack: an adult dragon bites and claws in the same turn, which is most of what makes it different from a very large animal."
+              "Extra Attack: it bites and claws in the same turn, which is most of what makes it different from a very large animal."
+            ],
+            "provenanceNotes": [
+              "About 50 feet nose to tail, which is the SM +5 row, and the point at which the published size discount on Strength has all but bottomed out.",
+              "ST from Basic Lift: it lifts a laden wagon in one foot."
             ],
             "attacks": [
               {
@@ -444,7 +460,7 @@
                 "reach": "Ranged, 20",
                 "autoHit": true,
                 "afflictionPoints": 55,
-                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defence; it costs the dragon nothing."
+                "notes": "Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defense; it costs the dragon nothing."
               }
             ]
           }

@@ -3,7 +3,7 @@
   "batch": "swarms",
   "issue": 36,
   "title": "SRD coverage: swarms",
-  "summary": "Independently authored GURPS builds for the 9 swarm identities issue #36 enumerates. A swarm is one multi-body creature, not a group, and the batch is built to say so: every record appears as exactly one — the builder refuses a swarm spec that claims otherwise — and every one buys Injury Tolerance (Diffuse), which is the trait that makes a sword useless against it. Damage is stated as literal dice rather than derived from ST, because a swarm's bite is a property of how many small bodies are in the hex and not of any one of them pushing; the builder takes literal dice only where a spec states them. Size Modifier is the space the swarm fills, not the size of any body in it. The attacks allow no roll and no active defence, which is the whole reason swarms are frightening and also the reason the rating path can see them at all.",
+  "summary": "Independently authored GURPS builds for the 9 swarm identities issue #36 enumerates. A swarm is one multi-body creature, not a group, and the batch is built to say so: every record appears as exactly one — the builder refuses a swarm spec that claims otherwise — and every one buys Injury Tolerance (Diffuse), which is the trait that makes a sword useless against it. Damage is stated as literal dice rather than derived from ST, because a swarm's bite is a property of how many small bodies are in the hex and not of any one of them pushing; the builder takes literal dice only where a spec states them. Size Modifier is the space the swarm fills, not the size of any body in it. The attacks allow no roll and no active defense, which is the whole reason swarms are frightening and also the reason the rating path can see them at all.",
   "traitSets": {
     "swarm-body": [
       {
@@ -31,11 +31,11 @@
       "name": "Centipede Swarm",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "vermin"],
-      "tags": ["underground", "venomous", "wandering-encounter"],
+      "tags": ["underground", "venomous"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Centipede Swarm"}
       ],
-      "massKg": 5,
+      "massLb": 10,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -66,15 +66,15 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 20,
-          "notes": "Everything in the swarm's hex is bitten, with no attack roll and no defence. Roll HT against the accumulated venom or lose the use of a limb to cramp and swelling."
+          "notes": "Everything in the swarm's hex is bitten, with no attack roll and no defense. Roll HT against the accumulated venom or lose the use of a limb to cramp and swelling."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 4
       },
-      "description": "The floor moves. A thousand hand-length centipedes pouring out from under a flagstone, going up boots and into sleeves, and each bite is nothing until you have taken forty of them. Stamping helps less than it should.",
-      "notes": [
+      "description": "The floor moves. A thousand hand-length centipedes pour out from under a flagstone, up boots and into sleeves, and each bite is nothing until the fortieth. Stamping helps less than it should.",
+      "provenanceNotes": [
         "One hex of swarm, which is where the Size Modifier comes from; no individual in it is larger than a finger.",
         "Damage is stated as literal dice rather than derived from ST. A swarm has no meaningful Strength — the injury comes from how many mouths are in the hex."
       ]
@@ -84,11 +84,11 @@
       "name": "Locust Swarm",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "vermin"],
-      "tags": ["flier", "plains", "plague", "wandering-encounter"],
+      "tags": ["plains", "plague", "flier"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Locust Swarm"}
       ],
-      "massKg": 3,
+      "massLb": 6.5,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -117,16 +117,18 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 10,
-          "notes": "No attack roll and no defence. The injury is trivial; the effect is that nobody in the hex can see, hear an order, or keep their mouth shut long enough to cast."
+          "notes": "No attack roll and no defense. The injury is trivial; the effect is that nobody in the hex can see, hear an order, or keep their mouth shut long enough to cast."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "It is not really trying to hurt anyone. A locust swarm is a wall of insects that strips a season's crop in an afternoon and happens to be crossing the road, and the danger to a party is being inside it — blind, deafened, and unable to say anything without eating one.",
+      "description": "A locust swarm is not trying to hurt anybody. It is a wall of insects that strips a season's crop in an afternoon and happens to be crossing the road. The danger is being inside it: blind, deafened, and unable to say anything without eating one.",
       "notes": [
-        "One hex, which is the game entity. A true plague is many of these across a horizon, and a GM wanting that should place several rather than enlarging one.",
+        "One hex is the game entity. A real plague is many of these across a horizon, so place several rather than enlarging one."
+      ],
+      "provenanceNotes": [
         "The threat is obscurement rather than injury, which is why the disabling ability carries more of the rating than the damage does."
       ]
     },
@@ -135,11 +137,11 @@
       "name": "Spider Swarm",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "vermin"],
-      "tags": ["underground", "venomous", "ambusher"],
+      "tags": ["underground", "ambusher", "venomous"],
       "covers": [
         {"sourceSystem": "srd_3_5", "heading": "Spider Swarm"}
       ],
-      "massKg": 2,
+      "massLb": 4.5,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -169,15 +171,15 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 15,
-          "notes": "No attack roll and no defence. Roll HT against the combined venom of several hundred bites or take fever and a shaking hand for the rest of the day."
+          "notes": "No attack roll and no defense. Roll HT against the combined venom of several hundred bites or take fever and a shaking hand for the rest of the day."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 4
       },
-      "description": "An egg sac breaks and the ceiling comes down in pieces, and the pieces are moving. Individually harmless, in these numbers a spider swarm gets inside armour, inside sleeves, and inside the neck of a cloak, and there is nowhere to hit it that does any good.",
-      "notes": [
+      "description": "An egg sac breaks and the ceiling comes down in pieces, and the pieces are moving. Individually the spiders are harmless. In these numbers they get inside armor, inside sleeves and inside the neck of a cloak, and there is nowhere to hit that does any good.",
+      "provenanceNotes": [
         "One hex of swarm, which is where the Size Modifier comes from.",
         "Clinging matters here: this swarm arrives from above, and the ceiling is where it was waiting."
       ]
@@ -187,11 +189,11 @@
       "name": "Swarm of Bats",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "mammal"],
-      "tags": ["flier", "cave", "nocturnal", "wandering-encounter"],
+      "tags": ["underground", "flier", "nocturnal"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Bats"}
       ],
-      "massKg": 3,
+      "massLb": 6.5,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -223,16 +225,16 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 10,
-          "notes": "No attack roll and no defence. The bites are minor; the swarm's real effect is that anyone inside it is blinded, buffeted and unable to hold a line."
+          "notes": "No attack roll and no defense. The bites are minor; the swarm's real effect is that anyone inside it is blinded, buffeted and unable to hold a line."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 5
       },
-      "description": "Hundreds of them coming out of a shaft at once, filling the passage wall to wall. Nothing in the swarm can hurt a person much on its own and none of that matters — you cannot see, you cannot hear an order, and the torch has already gone out.",
-      "notes": [
-        "One hex of swarm; the individual bat is the Bat record in the bird-fish-aquatic batch.",
+      "description": "Hundreds of them come out of a shaft at once and fill the passage wall to wall. Nothing in the swarm can do a person much harm on its own, and that hardly matters: nobody can see, nobody can hear an order, and the torch has already gone out.",
+      "provenanceNotes": [
+        "One hex of swarm; the individual is the Bat.",
         "Sonar is why a light does nothing to it. Darkness is not this creature's problem."
       ]
     },
@@ -241,11 +243,11 @@
       "name": "Swarm of Insects",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "vermin"],
-      "tags": ["flier", "swamp", "plague", "wandering-encounter"],
+      "tags": ["swamp", "hive", "plague", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Insects"}
       ],
-      "massKg": 5,
+      "massLb": 10,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -274,15 +276,15 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 15,
-          "notes": "No attack roll and no defence. Roll HT or spend the fight swatting: any task needing concentration, and any spell, fails while the swarm is on you."
+          "notes": "No attack roll and no defense. Roll HT or spend the fight swatting: any task needing concentration, and any spell, fails while the swarm is on them."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 5
       },
-      "description": "Whatever the region breeds — hornets, biting flies, ants boiling up out of the ground. It does not care about armour and it cannot be frightened off, and the party's spellcaster is going to have a much worse time than the party's fighter.",
-      "notes": [
+      "description": "Whatever the region breeds — hornets, biting flies, ants boiling up out of the ground. Armor is no help and the swarm cannot be frightened off. Anyone who needs to concentrate for a few seconds is going to have a much worse time than anyone who only needs to swing.",
+      "provenanceNotes": [
         "One hex, and deliberately generic: the SRD heading covers whatever stings locally, and the mechanics are the same either way."
       ]
     },
@@ -291,11 +293,11 @@
       "name": "Swarm of Poisonous Snakes",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "reptile"],
-      "tags": ["venomous", "swamp", "underground", "wandering-encounter"],
+      "tags": ["swamp", "underground", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Poisonous Snakes"}
       ],
-      "massKg": 20,
+      "massLb": 45,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -326,16 +328,16 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 40,
-          "notes": "No attack roll and no defence. Roll HT at a penalty for the sheer number of doses; failure means the limb goes, then the breathing does. This is the most lethal thing in the batch and it is entirely chemical."
+          "notes": "No attack roll and no defense. Roll HT at a penalty for the sheer number of doses; failure means the limb goes, then the breathing does. This is the most lethal thing any of these swarms does, and it is entirely chemical."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "A den's worth of vipers, disturbed all at once and coming out over each other in every direction. There is no way through the hex that does not involve being bitten several times, and the venom does not care that each snake delivered only a little.",
-      "notes": [
-        "One hex of swarm; the individual is the Viper Snake record in the snake batch.",
+      "description": "A den's worth of vipers, disturbed all at once and coming out over each other in every direction. There is no way past them that does not involve being bitten several times, and the venom does not care that each snake delivered only a little.",
+      "provenanceNotes": [
+        "One hex of swarm; the individual is the Viper Snake.",
         "The venom is priced at 40 points and carries most of the rating. That is correct — the bites themselves are trivial and the doses are what kill."
       ]
     },
@@ -344,11 +346,11 @@
       "name": "Swarm of Quippers",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "fish"],
-      "tags": ["aquatic", "freshwater", "predator", "wandering-encounter"],
+      "tags": ["aquatic", "freshwater", "predator"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Quippers"}
       ],
-      "massKg": 40,
+      "massLb": 90,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -375,16 +377,16 @@
           "type": "cutting",
           "reach": "C",
           "autoHit": true,
-          "notes": "No attack roll and no defence. Everything in the water in that hex is being bitten continuously, and blood in the water makes it worse rather than better."
+          "notes": "No attack roll and no defense. Everything in the water in that hex is being bitten continuously, and blood in the water makes it worse rather than better."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 4
       },
-      "description": "The water boils. A quipper shoal takes a pack mule down to bone between one bank and the other, and anyone still in the river when it arrives has about as long as it takes to shout. Getting out is the only tactic that works.",
-      "notes": [
-        "One hex of swarm; the individual is the Quipper record in the bird-fish-aquatic batch.",
+      "description": "The water boils. A quipper shoal takes a pack mule down to bone between one bank and the other, and anybody still in the river when it arrives has about as long as it takes to shout. Getting out is the only tactic that works.",
+      "provenanceNotes": [
+        "One hex of swarm; the individual is the Quipper.",
         "This does the heaviest raw damage of any swarm here and has no disabling ability at all, which is the right shape: quippers do not disable, they consume."
       ]
     },
@@ -393,11 +395,11 @@
       "name": "Swarm of Rats",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "mammal"],
-      "tags": ["urban", "underground", "diseased", "wandering-encounter"],
+      "tags": ["underground", "urban", "diseased"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Rats"}
       ],
-      "massKg": 30,
+      "massLb": 65,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -428,16 +430,18 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 15,
-          "notes": "No attack roll and no defence. Every bite is filthy: roll HT afterwards or take a fever that arrives days later, when the party is somewhere less convenient."
+          "notes": "No attack roll and no defense. Every bite is filthy: roll HT afterwards or take a fever that arrives days later, when the party is somewhere less convenient."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 6
       },
-      "description": "The classic cellar encounter, and still a real one. A rat swarm goes over a person rather than around them, it does not break when hurt, and what actually costs a party is not the bites but what is in them a week later.",
+      "description": "The classic cellar encounter, and still a real one. A rat swarm goes over a person rather than around them and does not break when hurt. What costs a party is not the bites. It is what is in them a week later.",
       "notes": [
-        "One hex of swarm.",
+        "One hex of swarm."
+      ],
+      "provenanceNotes": [
         "Disease is priced as a disabling ability so the rating can see it. The bites alone would rate near nothing, which is not how a rat swarm plays out."
       ]
     },
@@ -446,11 +450,11 @@
       "name": "Swarm of Ravens",
       "class": "Swarm",
       "classTags": ["swarm", "animal", "bird"],
-      "tags": ["flier", "scavenger", "omen", "wandering-encounter"],
+      "tags": ["forest", "plains", "scavenger", "flock", "omen", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Swarm of Ravens"}
       ],
-      "massKg": 50,
+      "massLb": 100,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {
@@ -480,17 +484,17 @@
           "reach": "C",
           "autoHit": true,
           "afflictionPoints": 20,
-          "notes": "No attack roll and no defence. Ravens go for the face and the eyes by preference: roll HT or fight blinded until the swarm is driven off."
+          "notes": "No attack roll and no defense. Ravens go for the face and the eyes by preference: roll HT or fight blinded until the swarm is driven off."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 4
       },
-      "description": "Cleverer than anything else in this batch by a wide margin, and the only swarm here that seems to be choosing. A raven flock that has decided a party is worth mobbing goes for the eyes first, breaks off when it is losing, and comes back at dusk.",
+      "description": "Cleverer than any other swarm by a wide margin, and the only one that appears to be making decisions. A raven flock that has decided a party is worth mobbing goes for the eyes first, breaks off when it is losing, and comes back at dusk.",
       "notes": [
         "One hex of swarm.",
-        "IQ 5 is the highest in the batch and deliberate: corvids plan, and a GM should play this flock as though it has an opinion about who is dangerous."
+        "Corvids plan. Play this flock as though it has an opinion about who is dangerous."
       ]
     }
   ]

@@ -20,7 +20,7 @@
 
 /** Fields whose values accumulate across base and every axis. */
 const CONCATENATED = [
-  "traitSets", "traits", "skills", "attacks", "tags", "classTags", "notes", "descriptionParts",
+  "traitSets", "traits", "skills", "attacks", "tags", "classTags", "notes", "provenanceNotes", "descriptionParts",
 ];
 
 /** Fields that steer expansion and must not survive onto the finished spec. */

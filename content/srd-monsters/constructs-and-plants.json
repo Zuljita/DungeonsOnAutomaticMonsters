@@ -3,7 +3,7 @@
   "batch": "constructs-and-plants",
   "issue": 42,
   "title": "SRD coverage: constructs, animated objects and awakened plants",
-  "summary": "Independently authored GURPS builds for the 6 identities issue #42 enumerates. These are the first records in the coverage programme with no metabolism, which is exactly the case issue #17 flagged: the rating path reads FP and DR, and a thing that has neither is easy to under-rate. Every construct here therefore states FP explicitly rather than leaving it to fall out of HT, and every one buys its Injury Tolerance from the published parts — Homogenous for an object that is the same all the way through, Unliving for a golem that is at least shaped like a body. Animated objects are built as blind: they have no eyes at all, and the awareness that replaces sight is bought as Vibration Sense, which is a much better description of what a walking suit of armour actually does. Size Modifier is read off the published table keyed to longest dimension; ST comes from Basic Lift and from what the thing demonstrably shifts.",
+  "summary": "Independently authored GURPS builds for the 6 identities issue #42 enumerates. These are the first records in the coverage program with no metabolism, which is exactly the case issue #17 flagged: the rating path reads FP and DR, and a thing that has neither is easy to under-rate. Every construct here therefore states FP explicitly rather than leaving it to fall out of HT, and every one buys its Injury Tolerance from the published parts — Homogenous for an object that is the same all the way through, Unliving for a golem that is at least shaped like a body. Animated objects are built as blind: they have no eyes at all, and the awareness that replaces sight is bought as Vibration Sense, which is a much better description of what a walking suit of armor actually does. Size Modifier is read off the published table keyed to longest dimension; ST comes from Basic Lift and from what the thing demonstrably shifts.",
   "traitSets": {
     "construct-body": [
       {"trait": "cannot-speak"},
@@ -34,15 +34,15 @@
       "name": "Animated Armor",
       "class": "Construct",
       "classTags": ["construct", "animated-object"],
-      "tags": ["guardian", "dungeon", "eyeless"],
+      "tags": ["dungeon", "guardian", "eyeless"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Animated Armor"}
       ],
-      "massKg": 25,
+      "massLb": 55,
       "sizeModifier": 0,
       "hexes": "1 hex",
       "movement": {"primary": "ground"},
-      "lair": "The hall it was set to watch, standing where a suit of armour would be expected to stand.",
+      "lair": "The hall it was set to watch, standing where a suit of armor would be expected to stand.",
       "traitSets": ["construct-body", "eyeless"],
       "traits": [
         {"trait": "st", "levels": 2},
@@ -80,11 +80,13 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 2, "wanderingWeight": 3},
-      "description": "An empty harness that turns its helm towards a sound and then comes down the hall at you. There is nothing inside it, which means nothing to cut, nothing to frighten and nothing to reason with — only steel that has been told to keep people out of a room.",
+      "description": "An empty suit of plate that turns its helm toward a sound and then comes down the hall. There is nothing inside it — nothing to cut at, nothing to frighten, nobody to talk to. It was told to keep people out of a room and it is still doing that.",
       "notes": [
-        "A suit of plate standing 1.8 m, which is the SM 0 row.",
-        "Blind, and deliberately so. It has no eyes; what it has is an awareness of movement in the space around it, bought as Vibration Sense. Beyond that radius it genuinely cannot find anyone.",
-        "HP is bought above ST because an object's durability is a property of its mass and construction, not of how hard it can push. FP is stated rather than derived for the same reason issue #17 raises: a thing with no metabolism would otherwise be rated as if it tired."
+        "It has no eyes. What it has instead is an awareness of movement in the space immediately around it, and beyond that radius it genuinely cannot find anybody."
+      ],
+      "provenanceNotes": [
+        "A suit of plate standing 6 feet, which is the SM 0 row.",
+        "HP is bought above ST because an object's durability is a property of its mass and construction, not of how hard it can push. FP is stated rather than derived: a thing with no metabolism would otherwise be rated as if it tired."
       ]
     },
     {
@@ -92,11 +94,11 @@
       "name": "Awakened Shrub",
       "class": "Plant",
       "classTags": ["plant", "awakened"],
-      "tags": ["forest", "talker", "harmless"],
+      "tags": ["forest", "harmless", "talker"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Awakened Shrub"}
       ],
-      "massKg": 20,
+      "massLb": 45,
       "sizeModifier": -2,
       "hexes": "1 hex",
       "movement": {"primary": "ground"},
@@ -125,11 +127,13 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 3},
-      "description": "A waist-high bush that has been given a mind and, unfortunately for it, a full understanding of its situation. It talks, it remembers who planted it, and it is entirely unable to defend itself against anything with an axe. Most awakened shrubs are somebody's informant.",
+      "description": "A waist-high bush that has been given a mind and, unluckily for it, a clear understanding of its position. It talks, it remembers who planted it, and it cannot defend itself against anybody with an axe. Most awakened shrubs end up as somebody's informant.",
       "notes": [
-        "About a metre across, which is the SM -2 row.",
-        "IQ 10 and no Cannot Speak: an awakened plant is awake in the full sense and holds a conversation, which is the whole reason a GM puts one in a scene.",
-        "Fire is the obvious answer to it and the build does not pretend otherwise. Vulnerability is not modelled as a trait here because the package has no vulnerability contract yet; a GM should simply rule it."
+        "An awakened plant is awake in the full sense and will hold a conversation, which is generally why it is in the scene at all.",
+        "Fire is the obvious answer to it. There is no vulnerability on the stat block, so a GM should rule that at the table."
+      ],
+      "provenanceNotes": [
+        "About three feet across, which is the SM -2 row."
       ]
     },
     {
@@ -137,11 +141,11 @@
       "name": "Awakened Tree",
       "class": "Plant",
       "classTags": ["plant", "awakened"],
-      "tags": ["forest", "talker", "guardian"],
+      "tags": ["forest", "guardian", "talker"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Awakened Tree"}
       ],
-      "massKg": 3000,
+      "massLb": 6600,
       "sizeModifier": 3,
       "hexes": "5 hexes",
       "movement": {"primary": "ground"},
@@ -173,9 +177,9 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
-      "description": "Six metres of oak that has opinions. An awakened tree moves at a walking pace it can sustain for days and hits like a falling beam, and it is generally not hostile — but it has watched the wood for a long time and it knows exactly who has been cutting.",
-      "notes": [
-        "About six metres, which is the SM +3 row.",
+      "description": "Twenty feet of oak with opinions. An awakened tree walks at a pace it can hold for days and hits like a falling beam. It is usually not hostile, but it has watched its wood for a long time and it knows precisely who has been cutting.",
+      "provenanceNotes": [
+        "About twenty feet, which is the SM +3 row.",
         "ST from Basic Lift: it lifts and moves timber, which is the heaviest thing it does.",
         "DX 6 is the point of the creature. It hits enormously hard and is trivially easy to avoid, and a party that stands still is making a choice."
       ]
@@ -185,12 +189,12 @@
       "name": "Clay Golem",
       "class": "Construct",
       "classTags": ["construct", "golem"],
-      "tags": ["guardian", "dungeon", "berserk"],
+      "tags": ["dungeon", "guardian", "berserk"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Clay Golem"},
         {"sourceSystem": "srd_3_5", "heading": "Clay Golem"}
       ],
-      "massKg": 600,
+      "massLb": 1300,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {"primary": "ground"},
@@ -224,11 +228,11 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 2},
-      "description": "Two and a half metres of baked earth in a rough human shape, standing in front of the thing it was made to guard. It is slow, it is not clever, and it does not tire or flinch or die of anything a blade does. Damage makes it worse rather than better: past a certain point it stops guarding and simply attacks, and it will not stop again.",
-      "notes": [
-        "Two and a half metres, which is the SM +1 row.",
+      "description": "Eight feet of fired clay in a rough human shape, standing in front of whatever it was made to guard. It is slow, it is not clever, and very little a blade does to it matters. Damage makes it worse rather than better: past a point it stops guarding and starts attacking, and there is no calling it off after that.",
+      "provenanceNotes": [
+        "Eight feet, which is the SM +1 row.",
         "Unliving rather than Homogenous: a golem is at least built like a body, with limbs that can be broken off, which a rug or a sword is not.",
-        "Berserk is the creature's defining behaviour and is bought as the published disadvantage rather than written only into the prose."
+        "Berserk is the creature's defining behavior and is bought as the published disadvantage rather than written only into the prose."
       ]
     },
     {
@@ -236,11 +240,11 @@
       "name": "Flying Sword",
       "class": "Construct",
       "classTags": ["construct", "animated-object"],
-      "tags": ["guardian", "dungeon", "flier", "eyeless"],
+      "tags": ["dungeon", "guardian", "eyeless", "flier"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Flying Sword"}
       ],
-      "massKg": 1.5,
+      "massLb": 3.5,
       "sizeModifier": -1,
       "hexes": "1 hex",
       "movement": {"primary": "air"},
@@ -273,9 +277,9 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 3, "wanderingWeight": 3},
-      "description": "A sword hanging point-down at chest height, turning slowly to face whoever came in. It fights like a duellist with no body to threaten and no face to read, and the only reliable way to end it is to break the blade.",
-      "notes": [
-        "A longsword is about 1.1 m, which is the SM -1 row.",
+      "description": "A sword hanging point-down at chest height, turning slowly to face whoever came in. It fences well, and there is no body behind it to threaten and no face to read. Breaking the blade is the only reliable way to stop it.",
+      "provenanceNotes": [
+        "A longsword is about 3 ft 6 in, which is the SM -1 row.",
         "Damage is stated as literal dice rather than derived from ST: the injury comes from the edge and the enchantment, not from a Strength that does not exist. The builder takes literal dice only where a spec states them.",
         "Flight is bought at full price with no Winged limitation — the thing simply hangs in the air, and nothing about it can be grounded by clipping a wing."
       ]
@@ -285,11 +289,11 @@
       "name": "Rug of Smothering",
       "class": "Construct",
       "classTags": ["construct", "animated-object"],
-      "tags": ["ambusher", "dungeon", "eyeless"],
+      "tags": ["dungeon", "ambusher", "eyeless"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Rug of Smothering"}
       ],
-      "massKg": 15,
+      "massLb": 35,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {"primary": "ground"},
@@ -325,9 +329,9 @@
         }
       ],
       "encounter": {"averageNumberAppearing": 1, "wanderingWeight": 3},
-      "description": "It is a rug. It is a rug right up until it is around your head, and then it is a rug that weighs as much as a man and has folded itself twice. It does no damage whatsoever, which is the horrible part — the person inside is suffocating while their friends work out how to help without stabbing them.",
-      "notes": [
-        "Three metres on the long side, which is the SM +1 row.",
+      "description": "It is a rug. It stays a rug until it is over somebody's head, at which point it weighs as much as a man and has folded itself twice. It does no damage at all. The victim suffocates inside it while everyone else works out how to help without putting a blade through them.",
+      "provenanceNotes": [
+        "Ten feet on the long side, which is the SM +1 row.",
         "It has no damaging attack at all, and the whole record rests on binding ST and a suffocation ability. That is the correct shape and it is also a good check on the rating path, which would score a creature that deals no damage at zero if the disabling ability were not priced.",
         "Stealth is bought high on purpose. Its entire advantage is being furniture until it is not."
       ]

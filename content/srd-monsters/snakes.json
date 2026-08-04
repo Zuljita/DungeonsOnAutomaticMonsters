@@ -3,7 +3,7 @@
   "batch": "snakes",
   "issue": 40,
   "title": "SRD coverage: snakes",
-  "summary": "Independently authored GURPS builds for the 4 serpent identities issue #40 enumerates. Snakes split cleanly into two mechanical shapes and the batch keeps them apart: constrictors buy Constriction Attack and the ST to use it, and venomous snakes buy fangs and a disabling ability, with a bite that does almost nothing on its own. Size Modifier comes from the published table keyed to longest dimension, which for a serpent is its full length — a nine-metre snake reads large on the table even though it is a hand's breadth wide, and the notes say so. ST comes from Basic Lift and from what the animal actually holds: a constrictor's coils have to beat the thing it is crushing.",
+  "summary": "Independently authored GURPS builds for the 4 serpent identities issue #40 enumerates. Snakes split cleanly into two mechanical shapes and the batch keeps them apart: constrictors buy Constriction Attack and the ST to use it, and venomous snakes buy fangs and a disabling ability, with a bite that does almost nothing on its own. Size Modifier comes from the published table keyed to longest dimension, which for a serpent is its full length — a thirty-foot snake reads large on the table even though it is a hand's breadth wide, and the notes say so. ST comes from Basic Lift and from what the animal actually holds: a constrictor's coils have to beat the thing it is crushing.",
   "traitSets": {
     "serpent-body": [
       {
@@ -43,12 +43,12 @@
       "name": "Constrictor Snake",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["ambusher", "jungle", "swamp", "wandering-encounter"],
+      "tags": ["jungle", "swamp", "ambusher"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Constrictor Snake"},
         {"sourceSystem": "srd_3_5", "heading": "Constrictor Snake"}
       ],
-      "massKg": 30,
+      "massLb": 65,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -89,16 +89,16 @@
           "type": "crushing",
           "reach": "C",
           "bindingSt": 12,
-          "notes": "Once it has hold, the coils go on. No attack roll and no defence: win a Quick Contest of ST each second or take crushing damage and lose the breath to shout with."
+          "notes": "Once it has hold, the coils go on. No attack roll and no defense: win a Quick Contest of ST each second or take crushing damage and lose the breath to shout with."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 4
       },
-      "description": "Three metres of muscle that has never needed venom. It lies along a branch with its head down at head height and waits for something warm to pass under, and the whole encounter turns on the first second — before the coils, it is a snake; after them, it is arithmetic.",
-      "notes": [
-        "Three metres, which is the SM +1 row.",
+      "description": "Ten feet of muscle that has never needed venom. It lies along a branch with its head down at about head height, waiting for something warm to pass underneath. Everything turns on the first second. Before the coils it is a snake; after them it is arithmetic.",
+      "provenanceNotes": [
+        "Ten feet, which is the SM +1 row.",
         "ST from Basic Lift: the coils have to beat a struggling animal of its own mass, which is what constriction is.",
         "The coils are priced by binding ST rather than by damage, because they do their work by holding rather than by wounding.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Double Jointed; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
@@ -109,11 +109,11 @@
       "name": "Giant Constrictor Snake",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["ambusher", "jungle", "swamp", "wandering-encounter"],
+      "tags": ["jungle", "swamp", "ambusher"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Constrictor Snake"}
       ],
-      "massKg": 250,
+      "massLb": 550,
       "sizeModifier": 4,
       "hexes": "7 hexes",
       "movement": {
@@ -156,16 +156,16 @@
           "type": "crushing",
           "reach": "C",
           "bindingSt": 27,
-          "notes": "No attack roll and no defence once it has hold. Win a Quick Contest of ST each second or take crushing damage; a failure also costs the victim the ability to breathe, and drowning follows if the snake takes it into the water."
+          "notes": "No attack roll and no defense once it has hold. Win a Quick Contest of ST each second or take crushing damage; a failure also costs the victim the ability to breathe, and drowning follows if the snake takes it into the water."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 2
       },
-      "description": "Nine metres of river snake that eats deer whole and has no reason to think a person is different. It comes out of brown water without a sound, takes hold with the jaws, and puts three coils on before anyone upstream has noticed the splash. There is no trick to fighting it — only how fast the coils are cut.",
-      "notes": [
-        "Nine metres, which is the SM +4 row. Note that this is a length reading: the animal is enormous end to end but no wider than a thigh, so it is easy to hit and hard to stop.",
+      "description": "Thirty feet of river snake that swallows deer whole and sees no reason a person should be different. It comes out of brown water without a sound, takes hold with the jaws, and has three coils on before anyone upstream notices the splash. There is no trick to fighting it, only how fast the coils are cut.",
+      "provenanceNotes": [
+        "Thirty feet, which is the SM +4 row. Note that this is a length reading: the animal is enormous end to end but no wider than a thigh, so it is easy to hit and hard to stop.",
         "ST from Basic Lift: the coils have to beat a deer, and then a person who is pulling the other way.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: Double Jointed; the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
@@ -175,11 +175,11 @@
       "name": "Giant Poisonous Snake",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["venomous", "jungle", "underground", "wandering-encounter"],
+      "tags": ["jungle", "underground", "venomous"],
       "covers": [
         {"sourceSystem": "srd_5_1", "heading": "Giant Poisonous Snake"}
       ],
-      "massKg": 20,
+      "massLb": 45,
       "sizeModifier": 1,
       "hexes": "2 hexes",
       "movement": {
@@ -211,16 +211,16 @@
           "type": "impaling",
           "reach": "C,1",
           "afflictionPoints": 40,
-          "notes": "Two punctures and almost no bleeding. Roll HT: on a failure the limb swells and darkens, the victim loses the use of it within minutes, and without treatment the swelling keeps travelling. This is the entire creature."
+          "notes": "Two punctures and almost no bleeding. Roll HT: on a failure the limb swells and darkens, the victim loses the use of it within minutes, and without treatment the swelling keeps traveling. This is the entire creature."
         }
       ],
       "encounter": {
         "averageNumberAppearing": 1,
         "wanderingWeight": 3
       },
-      "description": "Three metres of snake carrying enough venom to kill a horse, striking from a coil faster than anyone can pull a hand back. It has no interest in a fight it cannot win by chemistry, which is why it warns first — and why the ones that do not warn are the ones that kill people.",
-      "notes": [
-        "Three metres, which is the SM +1 row.",
+      "description": "Ten feet of snake carrying enough venom to kill a horse, striking from a coil faster than a hand can be pulled back. It has no interest in a fight it cannot win by chemistry, so it warns first. The ones that do not warn are the ones that kill people.",
+      "provenanceNotes": [
+        "Ten feet, which is the SM +1 row.",
         "Weak in ST and deliberately so. The venom is priced at 40 points as a disabling ability, and it carries almost the whole rating; a bite that did meaningful damage as well would make this creature something it is not.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
@@ -230,7 +230,7 @@
       "name": "Viper Snake",
       "class": "Animal",
       "classTags": ["animal", "reptile"],
-      "tags": ["venomous", "hazard", "wandering-encounter"],
+      "tags": ["forest", "swamp", "swarm-forming", "familiar", "hazard", "venomous"],
       "covers": [
         {
           "sourceSystem": "srd_5_1",
@@ -243,7 +243,7 @@
           "alsoPrintedAs": ["Snake, Viper"]
         }
       ],
-      "massKg": 1,
+      "massLb": 2,
       "sizeModifier": -2,
       "hexes": "1 hex",
       "movement": {
@@ -282,10 +282,12 @@
         "averageNumberAppearing": 1,
         "wanderingWeight": 6
       },
-      "description": "Under a metre, patterned into invisibility against dead leaves, and encountered by standing on it. A viper is not a monster and does not behave like one: it strikes once, it means it, and it is gone. The consequences arrive later and are what the party will actually have to deal with.",
+      "description": "Under three feet, patterned into invisibility against dead leaves, and usually encountered by standing on it. A viper does not behave like a monster: it strikes once, it means it, and it leaves. The consequences arrive later, and they are what the party actually has to deal with.",
       "notes": [
-        "About 90 cm, which is the SM -2 row.",
-        "The 5.1 corpus prints this as 'Poisonous Snake' and the 3.5 corpus as 'Viper Snake'; both are this record.",
+        "The 5.1 corpus prints this as 'Poisonous Snake' and the 3.5 corpus as 'Viper Snake'; both are this record."
+      ],
+      "provenanceNotes": [
+        "About 3 feet, which is the SM -2 row.",
         "Added after a post-hoc comparison against independent GURPS fan conversions of this creature: the Tracking skill, which a creature with Discriminatory Smell should always have. The comparison surfaced the gap; the build is still ours."
       ]
     }

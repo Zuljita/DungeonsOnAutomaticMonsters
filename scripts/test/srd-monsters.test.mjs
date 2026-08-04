@@ -16,6 +16,7 @@ import { TRAITS, traitDisplayName } from "../srd/trait-library.mjs";
 import { buildRecord } from "../srd/build-srd-record.mjs";
 import { batchMonsters } from "../srd/expand-matrix.mjs";
 import { PACKAGE_SOURCE, SOURCE_BOOK_ID, manifest } from "../srd/package-source.mjs";
+import { checkSpecTags, tagCategory } from "../srd/tag-taxonomy.mjs";
 import { validatePackage } from "../package-validation.mjs";
 import { effectivenessFromStats } from "../review/cer.mjs";
 
@@ -170,7 +171,7 @@ test("every record names the SRD headings it answers, and none of them twice", (
   }
   // 33 land animals (#37), 20 birds/fish/aquatic (#38), 7 vermin (#39),
   // 4 snakes (#40), 6 dinosaurs (#41), 9 swarms (#36), 6 constructs and
-  // awakened plants (#42), 40 dragons (#35) as ten colours by four ages,
+  // awakened plants (#42), 40 dragons (#35) as ten colors by four ages,
   // 28 humanoid folk (#34) answering 29 headings — Oni and Ogre Mage are one
   // creature printed twice — and 19 pre-materialized template constructions
   // (#43): 9 undead, 5 lycanthropes, and 5 planar and dragon-touched samples.
@@ -187,6 +188,104 @@ test("a spec may only name traits the controlled vocabulary defines", () => {
     }
   }
   for (const id of named) assert.ok(TRAITS[id], `trait ${id} is not in the catalogue`);
+});
+
+test("a spec may only name tags the controlled vocabulary defines", () => {
+  for (const { file } of batchFiles) {
+    for (const spec of batchMonsters(file)) {
+      assert.deepEqual(checkSpecTags(spec), [], spec.slug);
+    }
+  }
+});
+
+test("no descriptive tag names a single record, because a filter of one is not a filter", () => {
+  const counts = new Map();
+  for (const { record } of built) {
+    for (const tag of record.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+  // Lineage tags are exempt: `lich` on one record still answers "is this a
+  // lich", and keeps answering when the second lich arrives.
+  const singletons = [...counts]
+    .filter(([tag, count]) => count === 1 && !["lineage", "provenance"].includes(tagCategory(tag)))
+    .map(([tag]) => tag);
+  assert.deepEqual(singletons, []);
+});
+
+/** Everything on a record that someone reads at the table. */
+function tableProse(record) {
+  return [
+    ["description", record.description?.text],
+    ["lair", record.lair],
+    ...record.stats.notes.map(note => ["stat note", note]),
+    ...record.stats.attacks.map(attack => [`${attack.name} note`, attack.notes]),
+  ].filter(([, text]) => text);
+}
+
+test("nothing a GM reads mentions how the record was built", () => {
+  // Which batch authored a creature, what it was compared against afterwards,
+  // which issue tracks a defect in the rating path: all true, none of it a fact
+  // about the monster. It belongs in provenance.conversionNotes, and this is
+  // what keeps it from drifting back onto the stat block.
+  const internal = /\bbatch\b|issue #?\d|scripts\/|\.mjs\b|review\/policy|post-hoc|build policy|\bfor review\b/i;
+  const found = [];
+  for (const { record } of built) {
+    for (const [field, text] of tableProse(record)) {
+      if (internal.test(text)) found.push(`${record.name} ${field}: ${text}`);
+    }
+  }
+  assert.deepEqual(found, []);
+});
+
+test("nothing a GM reads addresses the reader", () => {
+  // The prose describes creatures, not the person holding the book. Mixing the
+  // two reads as two authors.
+  const secondPerson = /\b(you|your|yours|yourself)\b/i;
+  const found = [];
+  for (const { record } of built) {
+    for (const [field, text] of tableProse(record)) {
+      if (secondPerson.test(text)) found.push(`${record.name} ${field}: ${text}`);
+    }
+  }
+  assert.deepEqual(found, []);
+});
+
+test("nothing a GM reads is in metric", () => {
+  // GURPS Basic Lift is in pounds and the published size table is in feet, so
+  // customary is the unit the rules already speak. A record that mixes the two
+  // makes a GM convert mid-encounter.
+  const metric = /\b\d[\d.]*\s?(m|cm|mm|km|kg|g)\b|\bmet(er|re)s?\b|centimet|kilogram|tonnes?/i;
+  const found = [];
+  for (const { record } of built) {
+    for (const [field, text] of tableProse(record)) {
+      if (metric.test(text)) found.push(`${record.name} ${field}: ${text}`);
+    }
+  }
+  assert.deepEqual(found, []);
+});
+
+test("every record says where it lives", () => {
+  const homeless = built
+    .filter(({ record }) => !record.tags.some(tag => tagCategory(tag) === "environment"))
+    .map(({ record }) => record.name);
+  assert.deepEqual(homeless, []);
+});
+
+test("tags that restate the build agree with it", () => {
+  // The build is the authority wherever both speak. A spec states its own tags,
+  // so nothing stops the two disagreeing except this.
+  const derived = [
+    ["flier", record => record.stats.traits.some(trait => /^Flight/.test(trait))],
+    ["stealthy", record => record.stats.traits.some(trait => /^Silence/.test(trait))],
+    ["burrower", record => record.stats.traits.some(trait => /^Tunneling/.test(trait))],
+    ["berserk", record => record.stats.traits.some(trait => /^Berserk/.test(trait))],
+    ["talker", record => !record.stats.traits.some(trait => /^Cannot Speak/.test(trait))
+      && record.stats.attributes.iq >= 6],
+  ];
+  for (const [tag, rule] of derived) {
+    const tagged = built.filter(({ record }) => record.tags.includes(tag)).map(({ record }) => record.name);
+    const expected = built.filter(({ record }) => rule(record)).map(({ record }) => record.name);
+    assert.deepEqual(tagged.sort(), expected.sort(), tag);
+  }
 });
 
 test("a spec that declares a movement block publishes cruising Move, not sprint", () => {
@@ -207,13 +306,13 @@ test("a spec that declares a movement block publishes cruising Move, not sprint"
 
 test("every record scaled from a body mass records it", () => {
   for (const { record } of built) {
-    const mass = record.size.massKg;
-    assert.ok(mass === null || (typeof mass === "number" && mass > 0), `${record.name} massKg`);
+    const mass = record.size.massLb;
+    assert.ok(mass === null || (typeof mass === "number" && mass > 0), `${record.name} massLb`);
   }
   const aquatic = built.filter(entry => entry.record.source.batch === "aquatic-and-avian");
   assert.equal(aquatic.length, 20);
   for (const { record } of aquatic) {
-    assert.ok(typeof record.size.massKg === "number", `${record.name} states no mass`);
+    assert.ok(typeof record.size.massLb === "number", `${record.name} states no mass`);
   }
 });
 

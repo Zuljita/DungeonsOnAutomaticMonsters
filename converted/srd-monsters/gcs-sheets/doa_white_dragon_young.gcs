@@ -479,7 +479,7 @@
 		{
 			"id": "tuHXK49BpJ0HSW0F7",
 			"name": "Young White Dragon",
-			"reference": "Young White Dragon [Monsters on Automatic, SRD coverage: dragon age and colour variants; answers Young White Dragon (SRD 5.1)]",
+			"reference": "Young White Dragon [Monsters on Automatic, SRD coverage: dragon age and color variants; answers Young White Dragon (SRD 5.1)]",
 			"local_notes": "Independent Monsters on Automatic build. Monster statistics, ratings and description prose by Monsters on Automatic; AI-generated first draft, project-reviewed, released under CC BY 4.0.",
 			"container_type": "ancestry",
 			"children": [
@@ -1178,63 +1178,27 @@
 		},
 		{
 			"id": "nkjIz4t8RbsBJfK6U",
-			"text": "Frightful Presence: No attack roll and no active defense. Frightful Presence: Reach Ranged, 20. Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defence; it costs the dragon nothing."
+			"text": "Frightful Presence: No attack roll and no active defense. Frightful Presence: Reach Ranged, 20. Everyone who can see the dragon rolls Will. On a failure they are frightened of it and cannot willingly close, and a bad failure means they run. No attack roll and no defense; it costs the dragon nothing."
 		},
 		{
-			"id": "nNhiO_LFii1ZRfQHv",
-			"text": "GCS ancestry draft: gcs/white-dragon-young.gct"
+			"id": "nG9TopMve11xX1skF",
+			"text": "Racial cost: 487 points of traits plus 18 points of skills."
 		},
 		{
-			"id": "nfXzDQ8UzzuDvYsKK",
-			"text": "Independent build total: 487 points of racial traits plus 18 points of racial skills."
-		},
-		{
-			"id": "nK9DTnzvS_6P-VpJh",
-			"text": "Answers the SRD heading(s): Young White Dragon (SRD 5.1). Only the creature identity is taken from the SRD; the GURPS statistics, ratings and prose are this project's own work and reproduce no SRD text."
-		},
-		{
-			"id": "ni28EnMZZUCOQzNKs",
-			"text": "Typical Stats, damage and ratings are derived from the racial template, not authored beside it, so the sheet and the stat block cannot disagree."
-		},
-		{
-			"id": "n85pFZns_VJcTxiil",
-			"text": "Body mass used to scale this build: 1200 kg. ST, Size Modifier and DR are checked against it; see the gurps-animal-sanity-check skill for the bands."
+			"id": "nR4hsfuaGhpwC6IRz",
+			"text": "Body weight: 2,600 lb."
 		},
 		{
 			"id": "nK3qxXjhiIAV-FuME",
-			"text": "Movement: ground Move 4; air Move 12, 24 at a sprint (primary). The published Move is the primary medium's cruising Move; sprint figures are stated here and not folded into it."
+			"text": "Movement: ground Move 4; air Move 12, 24 at a sprint (primary)."
 		},
 		{
-			"id": "nyOUAfASjMo5jnjK5",
-			"text": "Treasure and grappling are not authored for this batch and ship as explicit nulls; `lair` carries a short habitat note, because where a wandering animal dens is an encounter fact rather than a loot one."
+			"id": "n-WDyeR3edTzme8_q",
+			"text": "Immunity to its own element covers that one damage type and nothing else, and it is not in the published DR. A red dragon is not armored against a sword by being immune to fire."
 		},
 		{
-			"id": "nknN2tDO1xaPcyejN",
-			"text": "Breath damage is stated as literal dice rather than derived from ST: it is a property of the creature's element and age, not of how hard it can push."
-		},
-		{
-			"id": "nc3pQXehB1GCdbjqv",
-			"text": "The breath is marked as costing fatigue, which halves its contribution to the rating. Without that a dragon would be rated as though it breathed every second, which no dragon does."
-		},
-		{
-			"id": "n3f6KlvVIY__AH9G9",
-			"text": "Element immunity is built as heavily Limited Damage Resistance rather than as a special rule. It protects against one damage type and nothing else, and it deliberately does not count toward the record's published DR — a red dragon is not armoured against a sword by being immune to fire."
-		},
-		{
-			"id": "niBMtVqzVSVaJD_x0",
-			"text": "Extra Attack, Frightful Presence, Extended Lifespan, Infravision and the wing buffet were added after a post-hoc comparison against the local Enraged Eggplant dragon conversions and the SRD stat blocks. A dragon that could only act once a turn and could not frighten anyone was not a dragon; the comparison surfaced the gap and the build is still ours."
-		},
-		{
-			"id": "njGYV8PtnljdCL89E",
-			"text": "KNOWN DEFECT in the shared rating path, found by this batch and not worked around here. scripts/review/cer.mjs documents `usesFatigueOrSpell` as halving an attack's contribution, and damageContribution implements it — but combatProfileFromStats never copies the flag onto the profile, so the halving is dead code for damage and live only for afflictions. Sixteen of these forty dragons pick their breath as the best attack and are therefore rated as if they breathed every second. The acid breathers are worst hit, because corrosion carries a x2 damage multiplier: an ancient black dragon rates 227 against an ancient red's 174 on otherwise identical bodies. The fix belongs in cer.mjs and in the application it mirrors, not in these specs. Filed as issue #55 here and Zuljita/DungeonsOnAutomatic#432 in the application; the two must land together, because both implementations share the omission and the parity smoke test therefore passes while both are wrong."
-		},
-		{
-			"id": "nfEYaHVb8i00dRSP7",
-			"text": "About 5 m nose to tail, which is the SM +2 row."
-		},
-		{
-			"id": "n9JE0No-R1uzCwBeD",
-			"text": "ST from Basic Lift: it carries off a horse."
+			"id": "nJoqhmXhhdZTaQ6xy",
+			"text": "The breath costs the creature to use and cannot be repeated every second, and a dragon that could breathe every turn would be a different fight. The published rating does not yet discount it for that, so it runs high for the sixteen colors whose breath is their best attack, worst for the acid breathers. Read these dragons as somewhat less dangerous than the number says."
 		},
 		{
 			"id": "nxdYVKIE7c_LCPbhK",

@@ -72,3 +72,14 @@ art/srd-monsters/thumbs/
 # script is tracked and skips cleanly when the benchmark is absent.
 review/benchmarks/
 review/reports/animal-benchmark-comparison.md
+
+# Art pixels live in the public R2 bucket (doa-assets, served from
+# assets.dungeonsonautomatic.com), not in git: art/<package>/image-manifest.json
+# is the record (bytes + sha256 per asset), scripts/verify-art-on-r2.mjs proves
+# the bucket matches it, and `npm run art:pull` fetches local copies for
+# authoring. Git LFS is no longer used anywhere in the family.
+art/*/portraits/
+art/*/tokens/
+art/*/hex-tokens/
+art/*/thumbs/
+art/*/review/

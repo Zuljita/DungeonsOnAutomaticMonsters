@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 
 const PNG_SIGNATURE = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
@@ -11,7 +11,7 @@ export function readPngMetadata(filePath) {
     // "version https://git-lfs.github.com/spec/v1" — a skip-smudge checkout.
     const dir = path.relative(process.cwd(), path.dirname(filePath)).replace(/\\/g, "/") || ".";
     throw new Error(
-      `${filePath} is a Git LFS pointer, not image bytes. Run: git lfs pull --include="${dir}/*"`,
+      `${filePath} is a Git LFS pointer left over from before the art moved to R2, not image bytes. Delete it and run: npm run art:pull`,
     );
   }
   if (bytes.length < 33 || !bytes.subarray(0, 8).equals(PNG_SIGNATURE)) {
@@ -117,13 +117,33 @@ export function validateImageManifest({
         errors.push(`${assetPath}.assetPath escapes the art root`);
         continue;
       }
+      // Generated assets carry their published byte length and sha256; the
+      // manifest is the record, R2 holds the bytes, and a checkout is not
+      // required to have either (npm run art:pull fetches them for authoring).
+      if (asset.status === "generated") {
+        if (!Number.isInteger(asset.bytes) || asset.bytes <= 0) errors.push(`${assetPath}.bytes must be a positive integer (rebuild the manifest with the art on disk)`);
+        if (!/^[0-9a-f]{64}$/.test(asset.sha256 ?? "")) errors.push(`${assetPath}.sha256 must be sha256 hex (rebuild the manifest with the art on disk)`);
+        generatedCounts[assetType] += 1;
+      } else if (asset.bytes !== undefined || asset.sha256 !== undefined) {
+        errors.push(`${assetPath} is pending but records bytes/sha256; rebuild the manifest`);
+      }
+
+      // Local pixels are optional. When the asset's directory is present the
+      // file must agree with the manifest (and pass the format checks); when
+      // the directory is absent — CI, a fresh clone — the manifest stands alone
+      // and scripts/verify-art-on-r2.mjs proves the published copy.
+      const localDirPresent = existsSync(path.dirname(absolutePath));
+      if (!localDirPresent) continue;
       const exists = existsSync(absolutePath);
-      if (asset.status === "generated" && !exists) errors.push(`${assetPath} is generated but the PNG is missing`);
+      if (asset.status === "generated" && !exists) errors.push(`${assetPath} is generated but the PNG is missing locally; run npm run art:pull (or rebuild the manifest)`);
       if (asset.status === "pending" && exists) errors.push(`${assetPath} is pending but the PNG exists; rebuild the manifest`);
       if (!exists) continue;
 
-      generatedCounts[assetType] += 1;
       try {
+        const onDisk = statSync(absolutePath).size;
+        if (Number.isInteger(asset.bytes) && onDisk !== asset.bytes) {
+          errors.push(`${assetPath} is ${onDisk} B on disk but the manifest records ${asset.bytes} B; rebuild the manifest`);
+        }
         const metadata = readPngMetadata(absolutePath);
         if (metadata.width !== metadata.height) {
           errors.push(`${assetPath} must be square; found ${metadata.width}x${metadata.height}`);

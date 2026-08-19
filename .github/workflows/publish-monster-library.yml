@@ -19,8 +19,6 @@ jobs:
       RELEASE_TAG: monster-library-v${{ inputs.version }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -29,11 +27,14 @@ jobs:
       # The GCS sheets embed each monster's web thumbnail as its portrait, and
       # the thumbnails are generated rather than tracked, so they must exist
       # before the sheets are checked against what is committed.
-      - name: Build web thumbnails
-        run: |
-          pip install pillow
-          python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
-          python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs
+      - name: Verify the image manifests against R2
+        # Art is published from the authoring machine (npm run art:thumbnails,
+        # art:*:hex-tokens, art:upload) — never from CI, which has no pixels.
+        # A package must not ship pointing at art that is not there.
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm run verify:art:r2 -- --require-credentials
       - run: npm run validate:gcs-sheets
       - name: Build approval-gated library package
         run: npm run promote:library -- --version "$VERSION"
@@ -60,13 +61,6 @@ jobs:
         # module.json must NOT be an attachment: Foundry's installer fetches it
         # inline from the stable manifest URL.
         run: node scripts/upload-art-to-r2.mjs --art-dir dist/foundry/release --prefix monsters/enraged-eggplant/foundry --flat --force
-      - name: Upload art to public R2 bucket
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          node scripts/upload-art-to-r2.mjs --attachment --force --concurrency 4
-          node scripts/upload-art-to-r2.mjs --art-dir art/srd-monsters --prefix monsters/srd-monsters --attachment --force --concurrency 4
       - name: Upload library image manifest to public R2 bucket
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

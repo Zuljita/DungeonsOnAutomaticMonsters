@@ -55,6 +55,8 @@
     "review:audit-traits:check": "node scripts/review-trait-audit.mjs --check",
     "report:body-plans": "node scripts/build-body-plan-report.mjs",
     "check:foundry-schema": "node scripts/check-foundry-schema.mjs",
-    "art:srd-monsters:thumbnails": "python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs"
+    "art:srd-monsters:thumbnails": "python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs",
+    "art:pull": "node scripts/download-art-from-r2.mjs",
+    "verify:art:r2": "node scripts/verify-art-on-r2.mjs"
   }
 }

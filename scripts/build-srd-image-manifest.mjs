@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { describeLocalFile } from "./art-files.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourcePath = path.join(
@@ -116,6 +117,17 @@ function buildTokenPrompt(monster) {
   ].join(" ");
 }
 
+/**
+ * Where an asset stands, as the manifest records it: generated assets carry
+ * their byte length and sha256 so the validator (without a local copy), CI
+ * (without LFS) and the R2 verifier can check the published object against
+ * the manifest without touching pixels. Pending assets carry neither.
+ */
+async function assetState(filePath) {
+  const described = await describeLocalFile(filePath);
+  return described ? { status: "generated", ...described } : { status: "pending" };
+}
+
 function promptSha256(prompt) {
   return createHash("sha256").update(prompt).digest("hex");
 }
@@ -124,7 +136,7 @@ fs.mkdirSync(portraitsRoot, { recursive: true });
 fs.mkdirSync(tokensRoot, { recursive: true });
 fs.mkdirSync(hexTokensRoot, { recursive: true });
 
-const records = monsters.map((monster) => {
+const records = await Promise.all(monsters.map(async (monster) => {
   const filename = `${monster.id}.png`;
   const portraitPath = path.posix.join("art", artPackage, "portraits", filename);
   const tokenPath = path.posix.join("art", artPackage, "tokens", filename);
@@ -149,27 +161,27 @@ const records = monsters.map((monster) => {
     assets: {
       portrait: {
         assetPath: portraitPath,
-        status: fs.existsSync(path.join(portraitsRoot, filename)) ? "generated" : "pending",
+        ...(await assetState(path.join(portraitsRoot, filename))),
         prompt: portraitPrompt,
         promptSha256: promptSha256(portraitPrompt),
       },
       token: {
         assetPath: tokenPath,
-        status: fs.existsSync(path.join(tokensRoot, filename)) ? "generated" : "pending",
+        ...(await assetState(path.join(tokensRoot, filename))),
         chromaKey: tokenChromaKey(monster),
         prompt: tokenPrompt,
         promptSha256: promptSha256(tokenPrompt),
       },
       hexToken: {
         assetPath: hexTokenPath,
-        status: fs.existsSync(path.join(hexTokensRoot, filename)) ? "generated" : "pending",
+        ...(await assetState(path.join(hexTokensRoot, filename))),
         derivedFrom: tokenPath,
         derivationStyleId: "doa-flat-top-hex-v2",
         sourcePromptSha256: promptSha256(tokenPrompt),
       },
     },
   };
-});
+}));
 
 const generatedCount = (assetType) => records.filter(
   (record) => record.assets[assetType].status === "generated",

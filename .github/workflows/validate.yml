@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -19,3 +17,12 @@ jobs:
       # The conversion queue is untracked, so this validates the review ledger
       # and reports "skipped" for the parts that need the local base package.
       - run: npm run review:verify
+      - name: Verify the image manifests against R2
+        # The art bytes are not in git; the manifests record what is published
+        # and this proves the bucket agrees (existence + byte length, thumbs
+        # included). Self-skips without credentials (fork PRs), so it can never
+        # fail for lack of a secret — only for art that is genuinely missing.
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm run verify:art:r2

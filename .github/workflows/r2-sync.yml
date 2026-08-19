@@ -1,15 +1,18 @@
-# Make the R2 bucket match the repository without minting a package release.
+# Keep the R2 bucket's policy in step with the repository, and prove the bucket
+# holds what the image manifests say — without minting a package release.
 #
-# The publish workflow is the right tool when the package itself changes. When
-# only art bytes change - a token re-rendered, an orientation corrected - the
-# package JSON is identical and a new version would be an empty release. This
-# uploads the changed files instead.
+# Art bytes are not in git any more (see README "Where the art lives"): they are
+# uploaded from the authoring machine with `npm run art:upload` after the
+# thumbnails and hex tokens are built there. CI has no pixels, so this workflow
+# no longer builds or uploads art; it applies the bucket's CORS policy and runs
+# the manifest ↔ R2 verifier so a missing or mismatched object is reported
+# before the publish workflow (which fails on it) ever runs.
 #
-# It also owns the bucket's CORS policy. The site draws an optional facing bar
-# on hex tokens and offers the marked token as a download; building that file
-# means reading the PNG into a canvas, which a browser refuses cross-origin
-# unless the bucket says otherwise.
-name: Sync art and CORS to R2
+# CORS matters because the site draws an optional facing bar on hex tokens and
+# offers the marked token as a download; building that file means reading the
+# PNG into a canvas, which a browser refuses cross-origin unless the bucket
+# says otherwise.
+name: Sync CORS and verify art on R2
 
 on:
   workflow_dispatch:
@@ -18,11 +21,6 @@ on:
         description: Apply scripts/r2-cors.json to the bucket
         required: false
         default: true
-        type: boolean
-      force:
-        description: Re-upload every file, not just changed ones
-        required: false
-        default: false
         type: boolean
 
 permissions:
@@ -36,32 +34,11 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Apply CORS policy
         if: ${{ inputs.set_cors }}
         run: npx --yes wrangler@4 r2 bucket cors set doa-assets --file scripts/r2-cors.json --force
-      # The bestiary gallery loads thumbs/<id>.webp for every card; the thumbs
-      # are derived from the portraits rather than tracked, so build them here
-      # or the sync can never upload them.
-      - name: Build web thumbnails
-        run: |
-          pip install pillow
-          python scripts/build-web-thumbnails.py --input-dir art/enraged-eggplant/portraits --output-dir art/enraged-eggplant/thumbs
-          python scripts/build-web-thumbnails.py --input-dir art/srd-monsters/portraits --output-dir art/srd-monsters/thumbs
-      - name: Upload art
-        # Without --force the script skips objects whose size already matches,
-        # so a routine run costs one HEAD per file and uploads only what moved.
-        run: >-
-          node scripts/upload-art-to-r2.mjs --attachment --concurrency 4
-          ${{ inputs.force && '--force' || '' }}
-      - name: Upload SRD draft art
-        run: >-
-          node scripts/upload-art-to-r2.mjs
-          --art-dir art/srd-monsters
-          --prefix monsters/srd-monsters
-          --attachment --concurrency 4
-          ${{ inputs.force && '--force' || '' }}
+      - name: Verify the image manifests against R2
+        run: npm run verify:art:r2 -- --require-credentials

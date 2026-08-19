@@ -8,18 +8,31 @@ This repository owns the publishable monster-data contract, conversion tools, va
 
 ## Cloning
 
-The art directories (`art/enraged-eggplant/`, `art/srd-monsters/`) are Git LFS-backed — roughly 2 GB of
-portraits and tokens. Most data, review, schema, and validation work never reads those binaries, and this
-repository's GitHub LFS bandwidth is a finite free-tier quota, so default to a clone that keeps them as
-pointer files:
-
 ```
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Zuljita/DungeonsOnAutomaticMonsters.git
+git clone https://github.com/Zuljita/DungeonsOnAutomaticMonsters.git
 ```
 
-When a task genuinely needs art locally (thumbnail builds, art validation against real pixels), fetch just
-the subset: `git lfs pull --include="art/enraged-eggplant/portraits/*"`. The published art is also served
-from `https://assets.dungeonsonautomatic.com/` if you only need to look at it.
+No Git LFS. Since 2026-08-19 the art pixels — roughly 2.4 GB of portraits, tokens and hex tokens — are
+**not in the repository**; see "Where the art lives" below. A plain clone is small and every data, review,
+schema and validation task works on it as-is.
+
+## Where the art lives
+
+The public R2 bucket `doa-assets` (served from `https://assets.dungeonsonautomatic.com/`) is the store of
+record for the art. In git, `art/<package>/image-manifest.json` is the contract: one row per monster and
+asset with its prompt, status, **byte length and sha256**, recorded when the manifest is built on a machine
+that has the files. Everything else keys off that manifest:
+
+| Need | Command | Notes |
+| --- | --- | --- |
+| Local copies for authoring, review, thumbnails, full validation | `npm run art:pull` | Fetches every generated asset (+ web thumbnails) from the public CDN into `art/…`; skips files already present with the recorded size. No credentials; egress is free. |
+| Publish new or re-rendered art | `npm run art:thumbnails`, `npm run art:enraged-eggplant:hex-tokens` (or the `srd-monsters` twins), then `npm run art:upload` (`--art-dir art/srd-monsters --prefix monsters/srd-monsters` for the SRD set) | Runs where the art was generated; needs `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`. Then rebuild the manifest (`art:*:manifest`) so bytes/sha256 are current, and commit it. |
+| Prove the bucket matches the manifests | `npm run verify:art:r2` | Lists `monsters/<package>/` and checks every generated asset exists with the recorded size, thumbnails included. CI runs it on every push (self-skips without credentials); the publish workflow requires it. |
+
+Validation adapts to what is on disk: with `art/<package>/portraits/` present it checks the PNGs against
+the manifest (size, square, ≥1024 px, real alpha on tokens); without them (CI, a fresh clone) it validates
+the manifest alone and leaves the pixels to `verify:art:r2`. The `art/*/portraits|tokens|hex-tokens|thumbs`
+directories are gitignored, so an `art:pull` never shows up as changes.
 
 ## Repository Layout
 
@@ -38,7 +51,7 @@ from `https://assets.dungeonsonautomatic.com/` if you only need to look at it.
 - `scripts/public-citation.mjs` - what a published record cites and the public page it links to. See [review/policy/citation-policy.md](review/policy/citation-policy.md).
 - `scripts/build-enraged-eggplant-package.mjs` - approval-gated promotion into the stable public package contract.
 - `scripts/build-foundry-module.mjs` - builds the installable Foundry VTT compendium module (GURPS Game Aid) from the published package. See [docs/foundry/README.md](docs/foundry/README.md).
-- `art/enraged-eggplant/` - LFS-backed portraits, transparent overhead tokens, flat-top hex tokens, prompts, and the image manifest for all 304 candidates.
+- `art/enraged-eggplant/` - the image manifest (prompts, status, bytes, sha256) for all 304 candidates plus prompt overrides; the portraits, transparent overhead tokens and flat-top hex tokens themselves live in R2 (`npm run art:pull` fetches them).
 - `licenses/` - license boundary notes and required notice templates.
 - `CREDITS.md` - originator-credit policy and canonical structured credit lines.
 - `LICENSE.md` - repository-wide license map for data, software, and source-specific exceptions.

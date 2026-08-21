@@ -24,9 +24,14 @@ jobs:
           node-version: 22
       - run: npm test
       - run: npm run review:verify
-      # The GCS sheets embed each monster's web thumbnail as its portrait, and
-      # the thumbnails are generated rather than tracked, so they must exist
-      # before the sheets are checked against what is committed.
+      # Art left git for R2 in #75, so a CI checkout has no pixels at all, and
+      # everything from here down needs the files themselves: the GCS sheets
+      # embed each monster's web thumbnail as its portrait, so they must exist
+      # before the sheets are checked against what is committed, and
+      # promote:library reads PNG metadata off every portrait, token and hex
+      # token. The bucket is public and R2 egress is free, so no credentials.
+      - name: Fetch published art from R2
+        run: npm run art:pull
       - name: Verify the image manifests against R2
         # Art is published from the authoring machine (npm run art:thumbnails,
         # art:*:hex-tokens, art:upload) — never from CI, which has no pixels.

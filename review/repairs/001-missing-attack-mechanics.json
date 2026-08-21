@@ -7,15 +7,15 @@
     {
       "recordId": "enraged_eggplant_assassin_vine",
       "monster": "Assassin Vine",
-      "rationale": "Not an extraction failure. The vine attacks by grappling with Wrestling and then constricting, and entangles an area with Binding 10; neither is written as a skill-roll attack line, so the parser produced nothing. Constriction damage is thrust for ST 20 (2d-1), or ST 18 under Knowing Your Own Strength (1d+2).",
+      "rationale": "Not an extraction failure. The vine attacks by grappling with Wrestling and then constricting, and entangles an area with Binding 10; neither is written as a skill-roll attack line, so the parser produced nothing. Constriction damage is thrust for ST 20 (2d-1).",
       "set": {
         "stats.attacks": [
           {
             "name": "Constriction",
             "skill": 14,
-            "damage": "thrust 2d-1 crushing (KYOS: 1d+2 crushing)",
+            "damage": "thrust 2d-1 crushing",
             "reach": "C",
-            "notes": "Constriction Attack. Grapple first with Wrestling-14, then constrict each following turn for thrust damage from ST 20 (KYOS: ST 18). The vine has Double-Jointed and Constriction Attack; it cannot be disarmed."
+            "notes": "Constriction Attack. Grapple first with Wrestling-14, then constrict each following turn for thrust damage from ST 20. The vine has Double-Jointed and Constriction Attack; it cannot be disarmed."
           },
           {
             "name": "Entangle (Binding 10)",
@@ -29,7 +29,7 @@
         ]
       },
       "appendConversionNotes": [
-        "Issue #5: the empty attack list was a parser limitation, not missing source mechanics. Constriction (Wrestling-14, thrust from ST 20 / KYOS ST 18) and the Binding 10 vegetation entangle were added from the source's stated mechanics."
+        "Issue #5: the empty attack list was a parser limitation, not missing source mechanics. Constriction (Wrestling-14, thrust from ST 20) and the Binding 10 vegetation entangle were added from the source's stated mechanics."
       ]
     },
     {

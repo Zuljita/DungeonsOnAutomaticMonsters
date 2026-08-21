@@ -376,11 +376,11 @@ not a measurement.
 | Salt Mephit | 5 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Regeneration or extreme durability; Extreme mobility or reach |
 | Phantom Fungus | 5 | minor | 12 | Unusual immunities; Save-or-disable effect |
 | Pseudodragon | 5 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
-| Grig | 5 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Succubus | 4 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Homunculus | 4 | minor | 12 | Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Cockatrice | 3 | minor | 12 | Insubstantiality / possession; Unusual immunities; Save-or-disable effect; Extreme mobility or reach |
 | Dust Mephit | 3 | minor | 12 | Regeneration or extreme durability; Extreme mobility or reach |
+| Grig | 3 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Extreme mobility or reach |
 | Monstrous Centipede (Medium) | 2 | minor | 12 | Save-or-disable effect |
 | Steam Mephit | 2 | minor | 12 | Unusual immunities; Regeneration or extreme durability; Extreme mobility or reach |
 | Pixie | 2 | minor | 12 | Gaze, aura, engulf, contact, or area attack; Save-or-disable effect; Extreme mobility or reach |

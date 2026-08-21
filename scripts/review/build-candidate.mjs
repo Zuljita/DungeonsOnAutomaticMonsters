@@ -12,6 +12,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { effectivenessFromStats } from "./cer.mjs";
 import { applyRepairs, loadRepairFiles, repairsByRecord } from "./repairs.mjs";
+import { stripKyos } from "./kyos.mjs";
 import {
   DESCRIPTION_NOTE,
   applyDescription,
@@ -66,7 +67,14 @@ export function buildRecord(
   { repairs = [], description = null, decision = null, manifestEntry = null } = {},
 ) {
   const baseSha256 = recordHash(baseRecord);
-  const { record: repairedRecord, applied } = applyRepairs(baseRecord, repairs);
+  const { record: sourceRecord, applied } = applyRepairs(baseRecord, repairs);
+
+  // The source states every attack twice, the second reading under Knowing Your
+  // Own Strength, which this project does not use. That notation is dropped here:
+  // after repairs, so a repair may quote the source verbatim without carrying the
+  // alternate reading into the package, and before the CER recompute below, so a
+  // rating is always derived from the damage the record actually ships.
+  const repairedRecord = stripKyos(sourceRecord);
 
   // Every record carries the description key, described or not, for the reason
   // lair and treasure carry theirs: a consumer reads the field without an
